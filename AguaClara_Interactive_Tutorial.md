@@ -82,11 +82,11 @@ There are several ways to import an image.
 Unformatted Image:
 ![CornellSeal](https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true)
 
-Image with Height and Width Adjusted
+Image with Height and Width Adjusted:
 
 <img src="https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true" height=200 width=100>
 
-1. Import an image of your hometown or pet from your images folder in your personal repository:
+1. Import an image of your hometown or pet from your images folder in your personal repository. Do it both unformatted, and formatted to change the size:
 
 <!--- Fill you answer here. --->
 
@@ -111,7 +111,7 @@ Tables in Markdown are slightly harder, but there's an automatic function that a
 |:-------- |:--------:| --------:|
 | 1        |    2     |        3 |
 
-1. Create a table of your favorite animal, food, and place. Try out the different cell justifications:
+1. Create a table listing your favorite animal, food, book, and place on campus. Try out the different cell justifications:
 
 <!--- Fill you answer here. --->
 
