@@ -1,5 +1,5 @@
 # AguaClara Interactive Tutorial
-The aim of this interactive tutorial is to get you acclimated to working out of a Markdown, or `.md`, file. Markdown is a markup language with plain text formatting that has a lot of functionality. Some of the benefits of working out of markdown include the ability to write text, create charts, write functioning code in a whole bunch of languages, and render LaTeX equations. Markdown gives you all the functionality of a Jupyter Notebook. Despite this, there isn't a clean way to directly convert a `.pynb` file to a `.md` file.
+The aim of this interactive tutorial is to get you acclimated to working out of a Markdown, or `.md`, file. Markdown is a markup language with plain text formatting that has a lot of functionality. Some of the benefits of working out of markdown include the ability to write text, create charts, write functioning code in a whole bunch of languages, and render LaTeX equations. Markdown gives you all the functionality of a Jupyter Notebook. Despite this, there isn't a clean way to directly convert a `.ipynb` file to a `.md` file.
 
 This tutorial will go over how to write in Markdown, how to code in Python, and how to run your code using Hydrogen.
 
