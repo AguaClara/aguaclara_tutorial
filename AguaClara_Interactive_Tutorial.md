@@ -1,7 +1,7 @@
 # AguaClara Interactive Tutorial
-The aim of this interactive tutorial is to get you acclimated to working out of a Markdown, or `.md`, file. Markdown is a markup language with plain text formatting that has a lot of functionality. Some of the benefits of working out of markdown include the ability to write text, create charts, write functioning code in a whole bunch of languages, and render LaTeX equations. Markdown gives you all the functionality of a Jupyter Notebook. Despite this, there isn't a clean way to directly convert a `.ipynb` file to a `.md` file.
+The aim of this interactive tutorial is to get you acclimated to working out of a Markdown, or `.md`, file. Markdown is a markup language with plain text formatting that has a lot of functionality. Some of the benefits of working out of markdown include the ability to write text, create charts, write functioning code in a whole bunch of languages, and render LaTeX equations. Markdown gives you all the functionality of a Jupyter Notebook. Despite this, there isn't a clean way to directly convert a `.ipynb` file to a `.md` file, meaning there's no way to easily convert between the two files.
 
-This tutorial will go over how to write in Markdown, how to code in Python, and how to run your code using Hydrogen.
+This tutorial will go over how to write in Markdown, how to code in Python, how to run your code using Hydrogen, and how to use Teletype and GitHub in Atom.
 
 # How To View This Markdown File
 To view this file in a nice format, press `Cntrl + Shift + M` in Atom. You should now see a preview window that shows what the source code looks like when it's formatted. ***Note that all the interactive parts of this tutorial need to be completed in the source code format.***
@@ -49,7 +49,7 @@ There are several different ways to emphasize text: *italics*, **bold**, ***comb
 
 * To get *italics*, your italicized text should be enclose in single asterisks as such: `*Italics*`
 * To get **bold**, your bolded text should be enclosed in double asterisks as such: `**Bold**`
-* To get ***Combined***, your text should be enclosed in triple asterisks as such: `***Combined***`
+* To get ***combined***, your text should be enclosed in triple asterisks as such: `***Combined***`
 * To get ~~strikethrough~~, your text should be enclosed in double tildes as such `~~strikethrough~~`
 
 1. Write 4 of your favorite words using each type of emphasis:
@@ -78,6 +78,7 @@ There are several ways to import an image.
 * You can also import an image that's formatted for size using this source code `<img src="YOUR IMAGE URL" height=a width=b>`
   - You have the option to modify both the image height and width or only one if you desire
   - If you modify only one of them, the image will not distort
+  - If you modify both, your image may distort
 
 Unformatted Image:
 ![CornellSeal](https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true)
@@ -106,10 +107,28 @@ To insert a link, all you have to do is enclose your linked text in `[]` followe
 ## Tables
 Tables in Markdown are slightly harder, but there's an automatic function that allows to you make one easily. When working in a `.md` file, all you have to do is type `table` and hit enter. It will initialize a 2 by 2 table, but you can easily increase the width by going to the last column and hitting `Tab` or it's height by clicking in any cell and hitting `Enter`. Notice in the example how the text below the header is justified left, center, and right. This is due to the line below the header. A line with a colon on the far left of the dashes only indicates left justified, colons on both sides of the dashes indicates centered, and a colon on the far right of the dashes indicates right justified.
 
+```
+| Column 1 | Column 2 | Column 3 |
+|:-------- |:--------:| --------:|
+| 1        |    2     |        3 |
+```
 
 | Column 1 | Column 2 | Column 3 |
 |:-------- |:--------:| --------:|
 | 1        |    2     |        3 |
+
+When making tables, it's not important that the lines match up. For example, the following table code will still give you a nice table:
+
+```
+| Column 1 | Column 2 | Column 3 |
+|:--------    |:--------:|----:|
+| 1        |         2     |             3 |
+```
+
+| Column 1 | Column 2 | Column 3 |
+|:--------    |:--------:|----:|
+| 1        |         2     |             3 |
+
 
 1. Create a table listing your favorite animal, food, book, and place on campus. Try out the different cell justifications:
 
@@ -123,6 +142,12 @@ Notice how throughout this document there have been computer and programming rel
 Syntax highlighting is a great way to emphasize and point out commands, single lines of code, or file types. Basically anything in a paragraph that's related to coding or computer syntax should be syntax highlighted. To do this, use a back tick around your word, phrase, or line. For example, I want to show the Python print function in syntax highlighting as such: `print('Welcome to My Tutorial!')`.
 
 For larger code blocks where you report multiple lines of code, you always start with triple back ticks. If you know you want to write in Python, you would follow your triple back ticks with the word "python". **Note: Python must be lowercase after the back ticks**. To end your code block, you would put down another set of triple back ticks on the line following the last line of code.
+
+~~~~
+```python
+# Your code goes here
+```
+~~~~
 
 1. Below, write a Python print function with a different string using syntax highlighting:
 
