@@ -177,7 +177,6 @@ $$ Re_D = \frac{uD}{\nu} $$
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
 
 ```python
-import numpy as np
 from aide_design.play import*
 
 xArray = u.Quantity(np.arange(0.1, 0.5, 0.01), u.m)
