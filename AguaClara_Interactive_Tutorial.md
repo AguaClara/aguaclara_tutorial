@@ -87,7 +87,7 @@ Image with Height and Width Adjusted:
 
 <img src="https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true" height=200 width=100>
 
-1. Import an image of your hometown or pet from your images folder in your personal repository. Do it both unformatted, and formatted to change the size:
+1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it both unformatted, and formatted to change the size:
 
 <!--- Fill you answer here. --->
 
@@ -130,7 +130,7 @@ When making tables, it's not important that the lines match up. For example, the
 | 1        |         2     |             3 |
 
 
-1. Create a table listing your favorite animal, food, book, and place on campus. Try out the different cell justifications:
+1. Create a table listing your 3 favorite animals, foods, books, and places on campus. Try out the different cell justifications:
 
 <!--- Fill you answer here. --->
 
@@ -172,8 +172,8 @@ $$ Re_D = \frac{uD}{\nu} $$
 # Using Python and Running it With Hydrogen in Markdown
 
 ## Running Code With Hydrogen
-1. Below this, I've copied the code I wrote for the [Python Basics Tutorial](https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-Python-Basics). You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run`.
-2. For the second line, use `Hydrogen: Run and Move Down`.
+1. Below this, I've copied the code I wrote for the [Python Basics Tutorial](https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-Python-Basics). You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run` (`Cmnd + Enter`).
+2. For the second line, use `Hydrogen: Run and Move Down` (`Shift + Enter`).
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
 
 ```python
