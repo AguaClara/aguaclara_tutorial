@@ -71,7 +71,7 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 ## Images
 To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
 
-To get your image URL, go to your GitHub repository on your web browser and navigate to the file where your image is stored. Click on the image name, and it should pop up. Right click on the image, and copy image address to get it's URL.
+To get your image URL, go to your GitHub repository on your web browser and navigate to the file where your image is stored. Click on the image name, and it should pop up. Right click on the image, and copy image address to get it's URL. You can also click on the image file name and open the image in a new tab by right clicking on it. This will bring you to a webpage containing only the image, and no GitHub user interface. You can then right click on the image itself to copy its address. **(Note: You should never copy the URL to the folder where the image is stored in the repository.)**
 
 There are several ways to import an image.
 * You can import an image unformatted by using this source code `![Some_Description_of_the_Image](YOUR IMAGE URL)`
