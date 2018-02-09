@@ -69,27 +69,34 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 <!--- Fill you answer here. --->
 
 ## Images
-To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
+To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL or file path from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
 
 To get your image URL, go to your GitHub repository on your web browser and navigate to the file where your image is stored. Click on the image name, and it should pop up. Right click on the image, and copy image address to get it's URL. **(Note: You should never copy the URL to the folder where the image is stored in the repository.)**
 
 ![CopyImageAddress](https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/CopyImageAddress.png)
 
+When you're trying to insert an image that's stored in a folder in the same repository as your Markdown file, you can use a relative file path to that image to insert it rather than using a URL. For example, the relative file path for the Cornell seal image you see in here is `/Images/Cornell_University_seal.svg.png`. Notice how the first part of the path is the folder within this repository where I store my images, and the second part is the image file name and extension.
+
 There are several ways to import an image.
-* You can import an image unformatted by using this source code `![Some_Description_of_the_Image](YOUR IMAGE URL)`
+* You can import an image unformatted by using this source code `![Some_Description_of_the_Image](YOUR IMAGE URL or /path/to/image.ext)`
 * You can also import an image that's formatted for size using this source code `<img src="YOUR IMAGE URL" height=a width=b>`
   - You have the option to modify both the image height and width or only one if you desire
   - If you modify only one of them, the image will not distort
   - If you modify both, your image may distort
 
 Unformatted Image:
+
+Using a URL:
 ![CornellSeal](https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true)
+
+Using a Relative File Path:
+![CornellSeal](/Images/Cornell_University_seal.svg.png)
 
 Image with Height and Width Adjusted:
 
 <img src="https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true" height=200 width=100>
 
-1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it both unformatted, and formatted to change the size:
+1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it unformatted using the image URL and the relative file path method, then do it again but instead change the height and width of your image:
 
 <!--- Fill you answer here. --->
 
