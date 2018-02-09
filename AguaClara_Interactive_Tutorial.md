@@ -9,6 +9,8 @@ To view this file in a nice format, press `Cntrl + Shift + M` in Atom. You shoul
 # How To Modify This Markdown File Without Changing It For Others
 Because this tutorial exists on a repository that all of AguaClara can access, any change that you make in this file will make that change for all other members after you `commit` and `push`. In order to avoid this, you should make a personal GitHub repository, clone it to your local drive, and copy this file into it. To make a personal repository, go to the [GitHub website](https://github.com). Click on the green `New repository` button, and create a repository named "Personal", and clone it using Atom. ***Note: This repository should not exist within the AguaClara GitHub organization, but rather should be tied to your personal account***.
 
+Alternatively, you can fork this repository, but for the sake of practicing how to clone, you should not try this.
+
 You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-GitHub-Basics) to go over anything related to GitHub.
 
 # Writing and Formatting in Markdown
