@@ -18,7 +18,9 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 
 1. Below this, write a sentence or two about yourself: 
 
-My name is Sung Min and I like watching cooking videos.
+<!--- Fill you answer here. --->
+
+
 
 
 ## Headers
@@ -42,7 +44,7 @@ To signify a header, use `#`. The more `#` you use, the smaller the header gets.
 
 1. Make a header of similar size as Header 3 with whatever text you want:
 
-###Hot Tea
+<!--- Fill you answer here. --->
 
 ## Emphasis
 There are several different ways to emphasize text: *italics*, **bold**, ***combined***, and ~~strikethrough~~.
@@ -54,7 +56,8 @@ There are several different ways to emphasize text: *italics*, **bold**, ***comb
 
 1. Write 4 of your favorite words using each type of emphasis:
 
-*temperature*, **enery-water nexus**, ***strawberry***, ~~technology~~
+<!--- Fill you answer here. --->
+
 
 ## Lists
 Lists are very easy to do. For a bulleted list, use the asterisk and for a numbered list, use the number followed by a period. Hitting `Enter` after a bullet or number continues the list automatically. Hitting `Enter` followed by `Tab` gets you a sub item for a bulleted list. For example:
@@ -65,13 +68,7 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 
 1. Now try it out for yourself. Write down a list of things you hope to achieve this semester, and elaborate on them with sub items:
 
-
-1. Getting the 1LPS operational
-   * set-up of the CDC and entrance tank
-2. Running water through the plant
-   * set-up of drain
-3. Testing performance
-   * set-up of procoda
+<!--- Fill you answer here. --->
 
 ## Images
 To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL or file path from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
@@ -103,14 +100,9 @@ Image with Height and Width Adjusted:
 
 1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it unformatted using the image URL and the relative file path method, then do it again but instead change the height and width of your image:
 
-Using URL
-![My baby](https://github.com/sk2795/images.git)
-
-Using Relative File Path
+<!--- Fill you answer here. --->
 
 
-Image with Height and Width Adjusted
-<img src="https://github.com/sk2795/images.gi" height=200 width=100>
 
 
 
@@ -121,7 +113,7 @@ To insert a link, all you have to do is enclose your linked text in `[]` followe
 
 1. Below, write a sentence describing your major, and insert a link to your major's department website.
 
-Environmental Engineering is the study of air, waste, water, soil and energy. The link to CEE is [here](http://www.cee.cornell.edu/)  
+<!--- Fill you answer here. --->
 
 ## Tables
 Tables in Markdown are slightly harder, but there's an automatic function that allows to you make one easily. When working in a `.md` file, all you have to do is type `table` and hit enter. It will initialize a 2 by 2 table, but you can easily increase the width by going to the last column and hitting `Tab` or it's height by clicking in any cell and hitting `Enter`. Notice in the example how the text below the header is justified left, center, and right. This is due to the line below the header. A line with a colon on the far left of the dashes only indicates left justified, colons on both sides of the dashes indicates centered, and a colon on the far right of the dashes indicates right justified.
@@ -151,11 +143,7 @@ When making tables, it's not important that the lines match up. For example, the
 
 1. Create a table listing your 3 favorite animals, foods, books, and places on campus. Try out the different cell justifications:
 
-| Animals | Foods| Books    | Places on Campus     |
-|:---------- |:---------- | --- | --- |
-| Dogs   | Rice |   Left Neglected  | Hollister 207    |
-|     Wolves       |  Salad          | Walk Two Moons    |  Olin 6th Floor   |
-|  Lions          |   Bread         |   It's Kinda a Funny Story  |  Cook Library   |
+<!--- Fill you answer here. --->
 
 
 
@@ -174,13 +162,12 @@ For larger code blocks where you report multiple lines of code, you always start
 
 1. Below, write a Python print function with a different string using syntax highlighting:
 
-`print('This is my tutorial.')`
+<!--- Fill you answer here. --->
 
 2. Now write a block of Python code for that same print statement:
 
-```python
-print('This is my tutorial.')
-```
+<!--- Fill you answer here. --->
+
 
 
 ## LaTeX Equations
@@ -190,7 +177,7 @@ $$ Re_D = \frac{uD}{\nu} $$
 
 1. Try it on your own! Write your favorite equation using LaTeX source code and toggle the LaTeX preview to see it formatted:
 
-$$ P= \frac{F}{A} $$
+<!--- Fill you answer here. --->
 
 
 # Using Python and Running it With Hydrogen in Markdown
@@ -199,9 +186,6 @@ $$ P= \frac{F}{A} $$
 1. Below this, I've copied the code I wrote for the [Python Basics Tutorial](https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-Python-Basics). You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run` (`Cmnd + Enter`).
 2. For the second line, use `Hydrogen: Run and Move Down` (`Shift + Enter`).
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
-
-I don't have a Mac so the first and second are both Shift + Enter for me. The difference between 2 and 3 is that highlighting a block of code enables me to run an entire script without selecting all the code.
-
 
 ```python
 from aide_design.play import*
@@ -229,53 +213,40 @@ These questions are meant to test what you've learned from the Python Basics tut
 
 1. Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
 
-```python
-if x == 10:
-  print ('x is 10')
-elif x == 1:
-  print ('x is 1')
-else:
-  print ('x is neither 10 nor 1')
+<!--- Fill you answer here. --->
 
-```
+
+
 
 2. Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
 
+<!--- Fill you answer here. --->
 
-```python
-y=0
-for i in range(20):
-  y= y + i
-print('y is ', y)
-```
+
+
+
+
+
+
+
 
 3. Using the NumPy package, calculate the value of sin(4), and use the sigfig function from the utility module in aide_design to get your answer to 3 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
 
-```python
-import numpy as np
-sin4= ut.sig(np.sin(4),3)
-print(sin4)
-```
+<!--- Fill you answer here. --->
+
+
 
 4. Create a `list` of length 5, and verify the length of your list. Once you've done that, turn your `list` into an `array` and apply units of meters to it. After that, create a 5x5 `array`, extract the middle row and middle column. Verify the size of your 2D `array` and apply units of liters to it.
 
-```python
-from aide_design.play import*
-import numpy as np
+<!--- Fill you answer here. --->
 
-lion = [1,2,3,4,5]
-print(len(lion))
 
-lionarray= np.array(lion)*u.m
 
-squrrl= np.array([[1,2,3,4,5], [1,2,3,4,5], [1,2,3,4,5],[1,2,3,4,5], [1,2,3,4,5]])
 
-print(squrrl[:2])
-print(squrrl[2:])
-print(np.size(squrrl))
 
-squrrlarray=np.array(squrrl)*u.L
-```
+
+
+
 
 5.  One of the most famous equations for a particle diffusing through a liquid at low Reynolds Number is the Stokes-Einstein Equation where k<sub>B</sub> is the Boltzmann constant, T is the temperature in Kelvin, eta is the dynamic viscosity in kg/(m*s), and r is the particle radius. Write a function that takes a temperature in Kelvin, a particle radius in meters, and a viscosity of water to calculate the diffusion coefficient D.
 
@@ -286,31 +257,24 @@ squrrlarray=np.array(squrrl)*u.L
 $$ D = \frac{k_BT}{6\pi\eta r} $$
 
 ```python
-import numpy as np
-import math as math
-import aide_design import physchem as pc
 from scipy.constants import Boltzmann as kB_sc # I've imported the unitless value for kB from SciPy
 
 kB = kB_sc * u.joule / u.kelvin # I've given kB units for you in J/K; you can use the kB variable to give you Boltzmann's constant with units
 
-def Stokes-Einstein(T, r):
-temp=u.Quantity(T,u.degK)
-radius= r*u.m
-nu=pc.viscosity_kinematic(temp)
-D= kB*temp/(6*math.pi*radius*nu)
-print(D)
+# Write your code here
+
 ```
 
-6. You have a pipe with a radius of 0.2 m with water flowing in it at 2 m<sup>3</sup>/s. You want to see how the Reynolds Number changes as viscosity changes due to a change in temperature from 0 to 200<sup>o</sup>C. Create a plot of Reynolds Number against Temperature in Kelvin to show a relationship. Make sure your plot has a title, labeled axes, and axes grid. You can use functions from `physchem` like `pc.re_pipe` and `pc.viscosity_kinematic`. *(Hint: Make an array of temperatures to input into the `pc.viscosity_kinematic` function)*. Make sure to save your plot to your images folder in your personal repository, and display it below using `plt.show()` and an image insertion using a relative file path to the image.
+6. You have a pipe with a radius of 0.2 m with water flowing in it at 2 m<sup>3</sup>/s. You want to see how the Reynolds Number changes as viscosity changes due to a change in temperature from 0 to 200<sup>o</sup>C. Create a plot of Reynolds Number against Temperature in Kelvin to show a relationship. Make sure your plot has a title, labeled axes, and axes grid. You can use functions from `physchem` like `pc.re_pipe` and `pc.viscosity_kinematic`. *(Hint: Make an array of temperatures to input into the `pc.viscosity_kinematic` function)*. Make sure to save you plot to your images folder in your personal repository, and display it below using `plt.show()` and a relative file path to the image.
 
-
+<!--- Fill you answer here. --->
 
 # Teletype Basics
 In this section you and your team can practice using Teletype together.
 
 1. Create a portal for your team members to join. Have them write you words of  encouragement in the space below, and be sure they sign their name next to their encouragements.
 
-You're so awesome and I love you! <3 -sidneylok
+<!--- Fill you answer here. --->
 
 
 
