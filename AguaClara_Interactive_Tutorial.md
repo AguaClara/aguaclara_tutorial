@@ -16,7 +16,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 # Writing and Formatting in Markdown
  Writing in Markdown is very easy. When writing in a `.md` file, unformatted text in source code translates to regular text, just like any word processor.
 
-1. Below this, write a sentence or two about yourself: 
+1. Below this, write a sentence or two about yourself:
 
 <!--- Fill you answer here. --->
 
@@ -230,7 +230,7 @@ These questions are meant to test what you've learned from the Python Basics tut
 
 
 
-3. Using the NumPy package, calculate the value of sin(4), and use the sigfig function from the utility module in aide_design to get your answer to 3 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
+3. Using the NumPy package and `unit_registry`, calculate the value of sin(4) meters, and use the sigfig function from the unit unit_registry module in aide_design to get your answer to 2 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
 
 <!--- Fill you answer here. --->
 
