@@ -16,7 +16,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 # Writing and Formatting in Markdown
  Writing in Markdown is very easy. When writing in a `.md` file, unformatted text in source code translates to regular text, just like any word processor.
 
-1. Below this, write a sentence or two about yourself:
+1. Below this, write a sentence or two about yourself: 
 
 <!--- Fill you answer here. --->
 
