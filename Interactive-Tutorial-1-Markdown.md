@@ -76,3 +76,9 @@ Write your favorite quote. It must be attributed to Albert Einstein.
 Add a horizontal rule.
 
 <!-- Write your answer here. -->
+
+## LaTeX Formatting
+
+Copy the equation towards the end of the [Markdown tutorial](https://github.com/AguaClara/aguaclara_tutorial/wiki/Markdown#latex-formatting) and paste it here:
+
+<!-- Write your answer here. -->
