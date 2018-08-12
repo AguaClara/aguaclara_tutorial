@@ -33,9 +33,14 @@ print('Rice and beans')
 volume = 7 ** 2 * 5
 print(volume)
 
-#Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
+# TODO 3: Lists
+# TODO 4: Dicts
 
-#Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
+# TODO 5: Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
+
+# TODO 6: Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
+
+# TODO 7: Functions 
 
 #######################################################################
 # Don't touch this! This is for checking your code.
