@@ -183,7 +183,7 @@ $$ Re_D = \frac{uD}{\nu} $$
 # Using Python and Running it With Hydrogen in Markdown
 
 ## Running Code With Hydrogen
-1. Below this, I've copied the code I wrote for the [Python Basics Tutorial](https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-Python-Basics). You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run` (`Cmnd + Enter`).
+1. Below this, I've copied the code I wrote for the [Writing Python](https://github.com/AguaClara/aguaclara_tutorial/wiki/Writing Python) tutorial. You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run` (`Cmnd + Enter`).
 2. For the second line, use `Hydrogen: Run and Move Down` (`Shift + Enter`).
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
 
