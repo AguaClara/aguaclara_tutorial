@@ -9,11 +9,13 @@ def start():
 
     # Save default stdout stream.
     old_stdout = sys.stdout
-
-    if(get_python_version() == 2):
+    
+    python_version = sys.version_info[0]
+    
+    if(python_version == 2):
         import StringIO
         sys.stdout = buffer = StringIO.StringIO()
-    elif(get_python_version() == 3):
+    elif(python_version == 3):
         import io
         sys.stdout = buffer = io.StringIO()
 
@@ -26,6 +28,3 @@ def stop():
     printed_lines = buffer.getvalue()
     print('\n' + printed_lines)
     return printed_lines.splitlines(True)
-
-def get_python_version():
-    return sys.version_info[0]
