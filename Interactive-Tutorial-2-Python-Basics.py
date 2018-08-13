@@ -34,7 +34,7 @@ print(favorite_food)
 # TODO 2: Calculate the volume of a 7 x 7 x 5 cube using Python math
 # operations.
 
-volume = '' # Your answer here
+volume = 0 # Your answer here
 
 print(volume)
 
