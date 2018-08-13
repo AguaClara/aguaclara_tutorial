@@ -4,7 +4,7 @@ import sys
 old_stdout = ''
 buffer = ''
 
-def start():
+def start_recording():
     global old_stdout, buffer
 
     # Save default stdout stream.
@@ -19,11 +19,14 @@ def start():
         import io
         sys.stdout = buffer = io.StringIO()
 
-def stop():
-    global old_stdout, buffer
+def stop_recording():
+    global old_stdout
 
     # Restore default stdout stream.
     sys.stdout = old_stdout
+
+def get_prints():
+    global buffer
 
     printed_lines = buffer.getvalue()
     print('\n' + printed_lines)
