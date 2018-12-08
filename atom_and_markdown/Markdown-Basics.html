@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Markdown &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Using Markdown</a><ul>
+<li><a class="reference internal" href="#id2">Basic Text</a></li>
+<li><a class="reference internal" href="#id3">Headers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#to-write-a-header-write-a-pound-symbol-followed-by-a-space-followed-by-your-header-text">To write a header, write a pound symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>), followed by a space, followed by your header text.</a><ul>
+<li><a class="reference internal" href="#add-pound-symbols-to-write-lower-level-smaller-headers">Add pound symbols to write lower level (smaller) headers.</a></li>
+<li><a class="reference internal" href="#id4">Emphasis</a></li>
+<li><a class="reference internal" href="#id7">Lists</a></li>
+<li><a class="reference internal" href="#id8">Links</a></li>
+<li><a class="reference internal" href="#id9">Images</a></li>
+<li><a class="reference internal" href="#id10">Code Formatting</a></li>
+<li><a class="reference internal" href="#id11">Tables</a></li>
+<li><a class="reference internal" href="#id12">Blockquotes</a></li>
+<li><a class="reference internal" href="#id13">Horizontal Rules</a></li>
+<li><a class="reference internal" href="#id14">LaTeX Formatting</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Using Markdown</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/atom_and_markdown/Markdown-Basics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --><ul class="simple">
+<li><a class="reference external" href="#using-markdown">Using Markdown</a><ul>
+<li><a class="reference external" href="#basic-text">Basic Text</a></li>
+<li><a class="reference external" href="#headers">Headers</a></li>
+<li><a class="reference external" href="#emphasis">Emphasis</a></li>
+<li><a class="reference external" href="#lists">Lists</a></li>
+<li><a class="reference external" href="#links">Links</a></li>
+<li><a class="reference external" href="#images">Images</a></li>
+<li><a class="reference external" href="#code-formatting">Code Formatting</a></li>
+<li><a class="reference external" href="#tables">Tables</a></li>
+<li><a class="reference external" href="#blockquotes">Blockquotes</a></li>
+<li><a class="reference external" href="#horizontal-rules">Horizontal Rules</a></li>
+<li><a class="reference external" href="#latex-formatting">LaTeX Formatting</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update --><div class="section" id="id1">
+<h1>Using Markdown<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>We’ll be using <strong>Atom</strong> to edit Markdown files and preview them nicely:</p>
+<ol class="arabic simple">
+<li>Open <strong>Atom</strong> and open the <code class="docutils literal notranslate"><span class="pre">aguaclara_tutorial/</span></code> repository folder that you cloned (or any other project folder you have).</li>
+<li>Click on one of the <code class="docutils literal notranslate"><span class="pre">*.md</span></code> files in the left Project pane to open it.</li>
+<li>Press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">M</span></code> to open a formatted preview on the right.<ul>
+<li>If a preview didn’t show up, review the instructions on <a class="reference external" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software-Tools">installing Atom</a>.</li>
+</ul>
+</li>
+</ol>
+<p>All Markdown files must be <strong>text files with the ``.md`` file extension</strong>. All of the text files within the <code class="docutils literal notranslate"><span class="pre">aguaclara_tutorial</span></code> repository are already Markdown files.</p>
+<div class="section" id="id2">
+<h2>Basic Text<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Regular text comes out normally.</p>
+<p>Leave an empty line between paragraphs.</p>
+</div>
+<div class="section" id="id3">
+<h2>Headers<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="to-write-a-header-write-a-pound-symbol-followed-by-a-space-followed-by-your-header-text">
+<h1>To write a header, write a pound symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>), followed by a space, followed by your header text.<a class="headerlink" href="#to-write-a-header-write-a-pound-symbol-followed-by-a-space-followed-by-your-header-text" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="add-pound-symbols-to-write-lower-level-smaller-headers">
+<h2>Add pound symbols to write lower level (smaller) headers.<a class="headerlink" href="#add-pound-symbols-to-write-lower-level-smaller-headers" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>Emphasis<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p><em>To write in italics, begin and end your text with single asterisks.</em></p>
+<p><strong>To write in bold, begin and end your text with double asterisks.</strong></p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a><em>To write in bold and italics, begin and end your text with triple asterisks.</em>**</p>
+<p><span class="raw-html-m2r"><del>To write in strikethrough, begin and end your text with double tildes.</del></span></p>
+</div>
+<div class="section" id="id7">
+<h2>Lists<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Numbers followed by a period and space</li>
+<li>make ordered lists.</li>
+</ol>
+<ul class="simple">
+<li>Dashes followed by a space</li>
+<li>make unordered lists.</li>
+</ul>
+<ol class="arabic simple">
+<li>You can indent<ol class="arabic">
+<li>ordered lists</li>
+<li>or unordered lists<ul>
+<li>to make sublists.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="id8">
+<h2>Links<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>To insert a link, <a class="reference external" href="http://aguaclara.cornell.edu">put the displayed text in square brackets and the URL in parentheses</a>.</p>
+<p>Unformatted URL’s automatically become links: <a class="reference external" href="http://aguaclara.cornell.edu">http://aguaclara.cornell.edu</a></p>
+</div>
+<div class="section" id="id9">
+<h2>Images<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>To insert an image, put an exclamation point (!) before a link.
+.. image:: <a class="reference external" href="http://aguaclara.cornell.edu/images/logo.png">http://aguaclara.cornell.edu/images/logo.png</a></p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">target:</th><td class="field-body"><a class="reference external" href="http://aguaclara.cornell.edu/images/logo.png">http://aguaclara.cornell.edu/images/logo.png</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">alt:</th><td class="field-body">The display text appears when you hover over the image.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>You can also link to local files, although they won’t show up online on Github.
+.. image:: ../Images/AguaClaraHome.png</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">target:</th><td class="field-body">../Images/AguaClaraHome.png</td>
+</tr>
+<tr class="field-even field"><th class="field-name">alt:</th><td class="field-body">This image is in the wiki repository.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h2>Code Formatting<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>To add formatted code, <code class="docutils literal notranslate"><span class="pre">begin</span> <span class="pre">and</span> <span class="pre">end</span> <span class="pre">your</span> <span class="pre">code</span> <span class="pre">with</span> <span class="pre">backticks</span> <span class="pre">(`)</span></code>.</p>
+<p>The backtick (`) is usually found under the Esc button on your keyboard. It is NOT an apostrophe (‘) !</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Add the name of your programming language after the first triple backticks to add syntax highlighting.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Tables<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id12">
+<h2>Blockquotes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>To add a blockquote, write a greater than symbol (&gt;), followed by a space, followed by your quoted text.</div></blockquote>
+</div>
+<div class="section" id="id13">
+<h2>Horizontal Rules<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>To add a horizontal rule, put three dashes (-) on a line.</p>
+<hr class="docutils" />
+<p><em>For some more ways to use Markdown, check out the `Markdown Cheatsheet &lt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&gt;`_.</em></p>
+</div>
+<div class="section" id="id14">
+<h2>LaTeX Formatting<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>In Atom, <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">M</span></code> will automatically display LaTeX formatted equations within Markdown files. They won’t show up on this wiki page, but try pasting this line into a Markdown file in Atom:</p>
+<p>Please refer to <a class="reference external" href="https://www.latex-tutorial.com/tutorials/amsmath/">this LaTeX tutorial</a> to learn how to write equations.</p>
+<!-- TODO: Elaborate on writing LaTeX equations in a separate tutorial. --><p><strong>Now, complete Lesson 1 of the interactive tutorials. It’s in the ``Interactive-Tutorial-1-Markdown.md`` file in your ``aguaclara_tutorial`` repository.</strong></p>
+<p><strong>Then, continue with the `Saving Markdown to PDF &lt;https://github.com/AguaClara/aguaclara_tutorial/wiki/Saving-Markdown-to-PDF&gt;`_ tutorial.</strong></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

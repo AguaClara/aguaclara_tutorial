@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Atom &amp; Sync Settings &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Atom &amp; Sync Settings</a></li>
+<li><a class="reference internal" href="#id2">Git</a></li>
+<li><a class="reference internal" href="#id5">Anaconda &amp; Python</a></li>
+<li><a class="reference internal" href="#pip-packages"><code class="docutils literal notranslate"><span class="pre">pip</span></code> Packages</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Atom &amp; Sync Settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installing_software/On-MacOS.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --><ul class="simple">
+<li><a class="reference external" href="#atom--sync-settings">Atom &amp; Sync Settings</a></li>
+<li><a class="reference external" href="#git">Git</a></li>
+<li><a class="reference external" href="#anaconda--python">Anaconda &amp; Python</a></li>
+<li><cite>``pip`</cite> Packages &lt;#pip-packages&gt;`_</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update --><div class="section" id="id1">
+<h1>Atom &amp; Sync Settings<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Download <a class="reference external" href="https://atom.io/">Atom</a>, extract the zipped file, then drag the Atom application to your Applications folder. Next, open up Atom.</li>
+<li>Open Atom settings by going to File &gt; Settings (or Control + Comma).</li>
+<li>Go to Install and search for <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code>. Click on the blue Install button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
+<li>Once it’s done installing, click on the Settings button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
+<li>Create a new <a class="reference external" href="https://github.com/settings/tokens/new">Github personal access token</a>. You may set the name to anything you’d like, but we recommend that you call it something descriptive, like “aguaclara-atom-configuration”.</li>
+<li>Check the “<strong>gist</strong>: Create gists” permission, then click Generate Token. Copy the generated token.</li>
+<li>In the Atom <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> settings, paste your generated token in Personal Access Token.</li>
+<li>Set the Gist Id to <code class="docutils literal notranslate"><span class="pre">8cb1fed2721e41873e9bcb315c804579</span></code>.<ul>
+<li>This synchronizes your Atom settings and plug-ins with the required <a class="reference external" href="https://gist.github.com/ethan92429/8cb1fed2721e41873e9bcb315c804579">AguaClara Atom configuration</a>.</li>
+</ul>
+</li>
+<li>Restart Atom. <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> will do its job in the background. You can check on its progress in File &gt; Settings &gt; Packages.<ul>
+<li>If you get a dialog box saying that <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> is out of date, click “Restore”.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h1>Git<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Open <strong>Terminal</strong> and enter the following command:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code></li>
+</ul>
+</li>
+<li>If you don’t alread have Git, Xcode will prompt you to install it. Follow the prompts to install Git.</li>
+<li>Open <strong>Terminal</strong> and un the two following commands with your name and Cornell email, carefully observing spaces and punctuation:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Firstname</span> <span class="pre">Lastname&quot;</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;NetID&#64;cornell.edu&quot;</span></code><ul>
+<li><a href="#id3"><span class="problematic" id="id4">**</span></a><em>The quotation marks are important!</em>** For example, the command should say something like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Monroe</span> <span class="pre">Weber-Shirk&quot;</span></code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h1>Anaconda &amp; Python<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Download the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda installer</a> and double-click it to begin installation.</li>
+<li>When the installer displays Advanced Options, select “Add Anaconda to my PATH environment variable”.<ul>
+<li>Aside from this, you can just click “Next” through the entire installation.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="pip-packages">
+<h1><code class="docutils literal notranslate"><span class="pre">pip</span></code> Packages<a class="headerlink" href="#pip-packages" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Open <strong>Terminal</strong>, as you did when <a class="reference external" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-on-Windows#git">installing Git</a>.</li>
+<li>Run the following command, carefully observing spaces and punctuation:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara_research</span> <span class="pre">aide_design</span> <span class="pre">--user</span></code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Now, you’re ready to get the `Interactive Tutorials &lt;https://github.com/AguaClara/aguaclara_tutorial/wiki/Interactive-Tutorials&gt;`_.</strong></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

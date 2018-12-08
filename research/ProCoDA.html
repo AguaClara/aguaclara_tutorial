@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ProCoDA How-to’s &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">ProCoDA How-to’s</a><ul>
+<li><a class="reference internal" href="#important-parts-of-procoda-imagine-it-as-a-washing-machine">Important Parts of ProCoDA (Imagine it as a washing machine)</a><ul>
+<li><a class="reference internal" href="#how-to-set-up-a-pump-for-a-test">How to set up a pump for a test</a></li>
+<li><a class="reference internal" href="#how-to-set-up-a-timed-test">How to set up a timed test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ProCoDA How-to’s</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/research/ProCoDA.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [ProCoDA How-to's](#procoda-how-tos)
+  - [Important Parts of ProCoDA (Imagine it as a washing machine)](#important-parts-of-procoda-imagine-it-as-a-washing-machine)
+    - [How to set up a pump for a test](#how-to-set-up-a-pump-for-a-test)
+    - [How to set up a timed test](#how-to-set-up-a-timed-test)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update --><div class="section" id="procoda-how-to-s">
+<h1>ProCoDA How-to’s<a class="headerlink" href="#procoda-how-to-s" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="important-parts-of-procoda-imagine-it-as-a-washing-machine">
+<h2>Important Parts of ProCoDA (Imagine it as a washing machine)<a class="headerlink" href="#important-parts-of-procoda-imagine-it-as-a-washing-machine" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Setpoints: There are two types of setpoints in ProCoDA, constants and variables. These are the numbers thatProCoDA uses to run any of its functions (These are things like warm or cold water)</li>
+<li>States: States are the different ways ProCoDA can run (These are the parts of a laundry cycle like wash, rinse, spin)</li>
+<li>Rules: These control when ProCoDA changes between states (These are like going from rinse to spin)
+## General Notes</li>
+<li>When you input a value that it a decimal it will convert it into a form without the decimal (i.e. 0.3 will become 300m)</li>
+<li>The required set points give the order of the set points and the set points must be in the same order when you input them</li>
+<li>All added set points should be added after ON and OFF, always add setpoint after because it will mess with the selected set points
+### Connect a turbidimeter</li>
+<li>Edit Rules</li>
+<li>Add a set point for the unitID</li>
+<li>Set the value to usually 1</li>
+<li>Add a second setpoint the turbidity</li>
+<li>Change the turbidity from a constant to a variable</li>
+<li>Now more options will appear click on the folder which will open a window</li>
+<li>Click on HF Turbidimeter</li>
+<li>Then choose the com that the turbidimeter is connected to the computer with</li>
+<li>Select the required set points(If you don’t know you can always try all of them and see which one has the correct value displayed, if it is not the right one the value will be -999)
+### Connect a sensor</li>
+<li>Go to Configuration → Click on the volts symbol</li>
+<li>Make sure your sensor is plugged into the procoda box</li>
+<li>Click insert sensor and change the channel to the correct port</li>
+<li>Then open the folder button and click the type of sensor you have and what you want it to record (i.e. cm of water for headloss)</li>
+<li>Name it sensor</li>
+<li>To zero the sensor, click the zero button
+### Connecting a pump
+There are many ways to connect a pump, I am going to stick to one pump head because it is easier and adding more is fairly straight-forward. I will also be doing it with the code that uses mL/s and tubing ID, but you can use the other codes just make sure that you have the required set points</li>
+<li>Add a constant set point with the mL/s that you want the pump to run at</li>
+<li>Add a constant set point with the tubing size that you will be using</li>
+<li>Add a variable set point</li>
+<li>Click on the folder and open the peristaltic folder and choose the right code you want to use for this tutorial it is single head pump control (mL per second, Tubing Size)</li>
+<li>Select the set points</li>
+<li>It should display the rpm of the pump as a decimal in the value</li>
+<li>You can calculate the rpm of the pump using the auto tutorial for peristaltic pumps on the wiki
+### How to save data from a test:
+Under Datalog directory path, click on the folder, and choose where you want data to be stored. Procoda will store information from all variables and sensors there.</li>
+</ul>
+<div class="section" id="how-to-set-up-a-pump-for-a-test">
+<h3>How to set up a pump for a test<a class="headerlink" href="#how-to-set-up-a-pump-for-a-test" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Edit Rules</li>
+<li>Click Rules and Outputs</li>
+<li>Add a new state</li>
+<li>Click on Outputs</li>
+<li>Look at which pump port it is connected to</li>
+<li>Turn pump on/off to on</li>
+<li>Turn pump cw/ccw on or off depending on which way you want it to turn</li>
+<li>For pump speed choose the variable set point you created when you connected the pump</li>
+<li>To test it go to process operation and change the state to the state you added</li>
+<li>If your pump is not running at the speed ProCoDA displays you can calibrate it using the pump calibration button</li>
+</ol>
+</div>
+<div class="section" id="how-to-set-up-a-timed-test">
+<h3>How to set up a timed test<a class="headerlink" href="#how-to-set-up-a-timed-test" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Edit Rules</li>
+<li>Create a constant set point with the value as the number of SECONDS you want to test to go on for</li>
+<li>Go to Rules &amp; Outputs</li>
+<li>Click on the state that runs the test then click on rules</li>
+<li>Then it is basically like a computer program</li>
+<li>If elapsed time in current state&gt; run time of test</li>
+<li>Then go to next state usually it is OFF</li>
+<li>You can also do many other conditional statements with this function like have pumps turn off based on pressure and such</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
