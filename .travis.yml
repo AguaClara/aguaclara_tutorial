@@ -1,5 +1,8 @@
 language: generic
 
+install:
+- pip install Sphinx
+
 script:
 - cd docs
 - make html
