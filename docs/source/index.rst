@@ -1,22 +1,29 @@
+.. _home:
+
+====
+Home
+====
+
 Welcome to the AguaClara Tutorial Wiki!
-==============================================
+=======================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Here, you will find useful tutorials on Atom, Python, Git and Github, and
+other software tools used in AguaClara. These tutorials are meant to give you
+a basic understanding of these software tools, and how to best use them for
+your work.
 
-Here, you will find useful tutorials on Atom, Git and Github, Python, and other software tools used in AguaClara. All of these tutorials are meant to give you a basic understanding of these software tools, and how to best use them for your work.
+**To get started, visit** :ref:`installing-software` **.**
 
 These tutorials have 5 sections:
 
+.. toctree::
+   :maxdepth: 2
 
-#. `Installing Software <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software>`_
-#. `Atom and Markdown <https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown>`_
-#. `Python and Hydrogen <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-and-Hydrogen>`_
-#. `Git and Github <https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github>`_
-#. `Research <https://github.com/AguaClara/aguaclara_tutorial/wiki/Research>`_
-
-**To get started, visit the `Installing Software <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software>`_ section.**
+   installing_software/installing-software
+   atom-and-markdown/atom-and-markdown
+   python-and-hydrogen/python-and-hydrogen
+   git-and-github/git-and-github
+   research
 
 Helpful Links
 -------------

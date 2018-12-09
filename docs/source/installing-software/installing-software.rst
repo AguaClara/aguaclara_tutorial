@@ -1,13 +1,8 @@
+.. _installing-software:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
+===================
+Installing Software
+===================
 * `What do I need to install? <#what-do-i-need-to-install>`_
 * `Why install these software tools? <#why-install-these-software-tools>`_
 
