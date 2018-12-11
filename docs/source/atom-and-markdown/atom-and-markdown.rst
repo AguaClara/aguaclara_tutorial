@@ -1,32 +1,4 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
-
-
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `What is Atom? <#what-is-atom>`_
-
-  * `Text Editor vs. IDE <#text-editor-vs-ide>`_
-  * `Why use Atom? <#why-use-atom>`_
-
-* `What is Markdown? <#what-is-markdown>`_
-
-  * `Why use Markdown? <#why-use-markdown>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+.. _atom-and-markdown:
 
 What is Atom?
 =============

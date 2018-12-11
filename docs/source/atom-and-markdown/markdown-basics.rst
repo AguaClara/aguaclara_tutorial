@@ -1,37 +1,4 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
-
-
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `Using Markdown <#using-markdown>`_
-
-  * `Basic Text <#basic-text>`_
-  * `Headers <#headers>`_
-  * `Emphasis <#emphasis>`_
-  * `Lists <#lists>`_
-  * `Links <#links>`_
-  * `Images <#images>`_
-  * `Code Formatting <#code-formatting>`_
-  * `Tables <#tables>`_
-  * `Blockquotes <#blockquotes>`_
-  * `Horizontal Rules <#horizontal-rules>`_
-  * `LaTeX Formatting <#latex-formatting>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+.. _markdown-basics:
 
 Using Markdown
 ==============

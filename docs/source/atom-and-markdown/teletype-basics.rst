@@ -1,36 +1,4 @@
-
-
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypeIcon.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypeIcon.png
-   :alt: Teletype Icon
-
-
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `What is Teletype? <#what-is-teletype>`_
-
-  * `Why Teletype instead of Google Docs? <#why-teletype-instead-of-google-docs>`_
-
-* `Setting up Teletype <#setting-up-teletype>`_
-* `Using Teletype <#using-teletype>`_
-
-  * `Hosting a Portal <#hosting-a-portal>`_
-  * `Joining a Portal <#joining-a-portal>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+.. _teletype-basics:
 
 What is Teletype?
 =================

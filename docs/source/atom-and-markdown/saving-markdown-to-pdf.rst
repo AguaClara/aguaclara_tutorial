@@ -1,4 +1,4 @@
-
+.. _saving-markdown-to-pdf:
 
 #. Open **Atom**\ , open the Markdown file that you want to convert, and open the formatted preview (\ ``Ctrl + Shift + M``\ ).
 #. Right click on the formatted preview and click on "Open in Browser".
