@@ -1,7 +1,11 @@
 .. _markdown-basics:
 
+***************
+Markdown Basics
+***************
+
 Using Markdown
-==============
+--------------
 
 We'll be using **Atom** to edit Markdown files and preview them nicely:
 
@@ -15,7 +19,7 @@ We'll be using **Atom** to edit Markdown files and preview them nicely:
 All Markdown files must be **text files with the ``.md`` file extension**. All of the text files within the ``aguaclara_tutorial`` repository are already Markdown files.
 
 Basic Text
-----------
+^^^^^^^^^^
 
 .. code-block::
 
@@ -28,7 +32,7 @@ Regular text comes out normally.
 Leave an empty line between paragraphs.
 
 Headers
--------
+^^^^^^^
 
 .. code-block::
 
@@ -36,7 +40,7 @@ Headers
    header text.
 
 To write a header, write a pound symbol (\ ``#``\ ), followed by a space, followed by your header text.
-=======================================================================================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block::
 
@@ -46,7 +50,7 @@ Add pound symbols to write lower level (smaller) headers.
 ---------------------------------------------------------
 
 Emphasis
---------
+^^^^^^^^
 
 .. code-block::
 

@@ -1,7 +1,11 @@
 .. _teletype-basics:
 
+===============
+Teletype Basics
+===============
+
 What is Teletype?
-=================
+-----------------
 
 **An Atom feature that allows people to collaborate on the same file at the same time.**
 
@@ -11,7 +15,7 @@ Why Teletype instead of Google Docs?
 **Teletype supports code and gives you more control over file collaborators.**
 
 Setting up Teletype
-===================
+^^^^^^^^^^^^^^^^^^^
 
 Click on the Teletype icon (a radio tower) in the bottom right. You should see this window:
 

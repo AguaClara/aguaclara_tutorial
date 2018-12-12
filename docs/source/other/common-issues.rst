@@ -1,26 +1,8 @@
+.. _common-issues:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `\ ``python`` Command Not Found <#python-command-not-found>`_
-* `If-Else Statements in Hydrogen <#if-else-statements-in-hydrogen>`_
-* `Linter/Pycodestyle and Teletype <#linterpycodestyle-and-teletype>`_
-* `Clone Error Using ``https`` <#clone-error-using-https>`_
-* `Tell Me Who You Are GitHub Error <#tell-me-who-you-are-github-error>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+*************
+Common Issues
+*************
 
 ``python`` Command Not Found
 ================================
