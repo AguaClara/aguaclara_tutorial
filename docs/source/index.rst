@@ -7,7 +7,7 @@ Welcome to the AguaClara Tutorial Wiki!
 Here, you will find useful tutorials on Atom, Python, Git, Github, and
 other software tools used in AguaClara. These tutorials are meant to give you
 a basic understanding of these software tools, and how to best use them for
-your work.
+your research.
 
 Getting Started
 ===============
