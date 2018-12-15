@@ -18,7 +18,7 @@ bottom of the page.
 Helpful Links
 =============
 
-If you run into a problem, check :ref:`common-issues`, then open an issue in the :code:`aguaclara_tutorial` `repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.
+If you run into a problem, check :ref:`common-issues`, then open an issue in the ``aguaclara_tutorial`` `repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.
 
 If you would like to see a new section in this tutorial, visit :ref:`contributing-to-the-tutorial`.
 
