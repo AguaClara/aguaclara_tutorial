@@ -1,29 +1,8 @@
+.. _contributing-to-the-tutorial:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `I want a new tutorial... <#i-want-a-new-tutorial>`_
-
-  * `...and I'll write it. <#and-ill-write-it>`_
-  * `...but I don't know how to write it. <#but-i-dont-know-how-to-write-it>`_
-
-* `I want to change... <#i-want-to-change>`_
-
-  * `...an existing tutorial. <#an-existing-tutorial>`_
-  * `...how the wiki is organized. <#how-the-wiki-is-organized>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
+****************************
+Contributing to the Tutorial
+****************************
 
 
 I want a new tutorial...

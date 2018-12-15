@@ -12,21 +12,15 @@ your research.
 Getting Started
 ===============
 
-To get started, visit :ref:`installing-software`, or click "Next" at the bottom
-of the page.
+To get started, visit :ref:`installing-software`, or click "Next" at the
+bottom of the page.
 
 Helpful Links
 =============
 
-If you run into a problem, check :ref:`common-issues`, then `open an issue in this repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.
+If you run into a problem, check :ref:`common-issues`, then open an issue in the :code:`aguaclara_tutorial` `repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.
 
-If you would like to see a new section in this tutorial, visit the `Contributing to the Wiki <https://github.com/AguaClara/aguaclara_tutorial/wiki/Contributing-to-the-Wiki>`_ tutorial.
-
-Table of Contents
-=================
-
-Here's a table of contents to quickly find what you're looking for. You can
-also find sections using the search bar in the left panel.
+If you would like to see a new section in this tutorial, visit :ref:`contributing-to-the-tutorial`.
 
 .. toctree::
    :maxdepth: 2
