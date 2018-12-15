@@ -67,24 +67,28 @@ Emphasis
 
    ***To write in bold and italics, begin and end your text with triple asterisks.***
 
-**To write in bold and italics, begin and end your text with triple asterisks.** asdfadf
+**To write in bold and italics, begin and end your text with triple
+asterisks.** (This webpage's line can't be bolded and italicized due to the
+`limitations of RST
+<https://stackoverflow.com/questions/11984652/bold-italic-in-restructuredtext>`_!)
 
 .. code-block:: md
 
    ~~To write in strikethrough, begin and end your text with double tildes.~~
 
-:raw-html-m2r:`<del>To write in strikethrough, begin and end your text with double tildes.</del>`
+To write in strikethrough, begin and end your text with double tildes. (This
+webpage's line can't be strikethrough'd due to the limitations of RST!)
 
 Lists
 -----
 
 .. code-block:: md
 
-   1. Numbers followed by a period and space
-   2. make ordered lists.
+   1. Ones followed by a period and space
+   1. make ordered lists.
 
 
-#. Numbers followed by a period and space
+#. Ones followed by a period and space
 #. make ordered lists.
 
 .. code-block:: md
@@ -107,9 +111,10 @@ Lists
 #. You can indent
 
    #. ordered lists
-   #. or unordered lists
 
-      * to make sublists.
+   * or unordered lists
+
+     * to make sublists.
 
 Links
 -----
@@ -130,52 +135,49 @@ Images
 
 .. code-block:: md
 
-   To insert an image, put an exclamation point (!) before a link to the image. ![The
-   display text appears when you hover over the image.]
-   (http://aguaclara.cornell.edu/images/logo.png)
+   To insert an image, put an exclamation point (!) before a link to the image.
+   ![The display text appears when you hover over the image.](http://aguaclara.cornell.edu/images/logo.png)
 
-   You can also link to local files, although they won't show up on Github online.
-   ![This image is in the wiki repository.](../Images/AguaClaraHome.png)
+   You can also link to local files.
+   ![This image is in ``docs/images``.](../images/logo.png)
 
-To insert an image, put an exclamation point (!) before a link. 
+To insert an image, put an exclamation point (!) before a link.
+
 .. image:: http://aguaclara.cornell.edu/images/logo.png
    :target: http://aguaclara.cornell.edu/images/logo.png
    :alt: The display text appears when you hover over the image.
 
+You can also link to local files. 
 
-You can also link to local files, although they won't show up online on Github. 
-.. image:: ../Images/AguaClaraHome.png
-   :target: ../Images/AguaClaraHome.png
-   :alt: This image is in the wiki repository.
-
+.. image:: ../images/logo.png
+   :alt: This image is in ``docs/images``.
 
 Code Formatting
 ---------------
 
 .. code-block:: md
 
-   To add formatted code, `begin and end your code with backticks (`) `.
+   To add formatted code, `begin and end your code with backticks`.
 
-   The backtick (`) is usually found under the Esc button on your keyboard. It is NOT an
+   The backtick is usually found under the Esc button on your keyboard. It is NOT an
    apostrophe (') !
 
    ```
-   To make a block of formatted code, begin and end your code with triple backticks (`).
+   To make a block of formatted code, begin and end your code with triple backticks.
    ```
 
    ```python
    def foo():
-       print("Add the name of your programming language after the first triple backticks
-       to add syntax highlighting.")
+       print("Add the name of your programming language after the first triple backticks to add syntax highlighting.")
    ```
 
-To add formatted code, ``begin and end your code with backticks (`)``.
+To add formatted code, ``begin and end your code with backticks``.
 
-The backtick (`) is usually found under the Esc button on your keyboard. It is NOT an apostrophe (') !
+The backtick is usually found under the Esc button on your keyboard. It is NOT an apostrophe (') !
 
 .. code-block:: md
 
-   To make a block of formatted code, begin and end your code with triple backticks (`).
+   To make a block of formatted code, begin and end your code with triple backticks.
 
 .. code-block:: python
 
@@ -189,7 +191,7 @@ Tables
 
    | Heading | Above | Dashes |
    | --- | :---: | ---: |
-   | Separate row | entries with | pipes | |
+   | Separate row | entries with | pipes |
    | Use | colons | for alignment |
    | Left | Center | Right |
 
@@ -201,8 +203,7 @@ Tables
      - Dashes
    * - Separate row
      - entries with
-     - pipes \
-     - 
+     - pipes
    * - Use
      - colons
      - for alignment
@@ -210,18 +211,20 @@ Tables
      - Center
      - Right
 
+(Alignment doesn't work in this webpage due to the limitations of RST!)
 
 Blockquotes
 -----------
 
 .. code-block:: md
 
-   > To add a blockquote, write a greater than symbol (>), followed by a space, followed
-   by your quoted text.
+   > To add a blockquote, write a greater than symbol, followed by a space,
+   followed by your quoted text.
 
 ..
 
-   To add a blockquote, write a greater than symbol (>), followed by a space, followed by your quoted text.
+   To add a blockquote, write a greater than symbol, followed by a space,
+   followed by your quoted text.
 
 
 Horizontal Rules
@@ -237,10 +240,10 @@ To add a horizontal rule, put three dashes (-) on a line.
 
 ----
 
-*For some more ways to use Markdown, check out the `Markdown Cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_.*
+*For some more ways to use Markdown, check out the* `Markdown Cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_.
 
 LaTeX Formatting
-----------------
+================
 
 In Atom, ``Ctrl + Shift + M`` will automatically display LaTeX formatted equations within Markdown files. They won't show up on this wiki page, but try pasting this line into a Markdown file in Atom:
 
@@ -250,13 +253,6 @@ In Atom, ``Ctrl + Shift + M`` will automatically display LaTeX formatted equatio
 
 Please refer to `this LaTeX tutorial <https://www.latex-tutorial.com/tutorials/amsmath/>`_ to learn how to write equations.
 
-
-.. raw:: html
-
-   <!-- TODO: Elaborate on writing LaTeX equations in a separate tutorial. -->
-
-
-
-**Now, complete Lesson 1 of the interactive tutorials. It's in the ``Interactive-Tutorial-1-Markdown.md`` file in your ``aguaclara_tutorial`` repository.**
-
-**Then, continue with the `Saving Markdown to PDF <https://github.com/AguaClara/aguaclara_tutorial/wiki/Saving-Markdown-to-PDF>`_ tutorial.**
+**Now, complete Lesson 1 of the interactive tutorials. It's in the**
+``Interactive-Tutorial-1-Markdown.md`` **file in your** ``aguaclara_tutorial``
+**repository.**
