@@ -1,23 +1,10 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
+.. _git-and-github-introduction:
 
+***************************
+Git and GitHub Introduction
+***************************
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-   **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-   - [What are Git and Github?](#what-are-git-and-github)
-     - [Git is not Github!](#git-is-not-github)
-     - [Why not use Google Drive?](#why-not-use-google-drive)
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-
-What are Git and Github?
+What are Git and GitHub?
 ========================
 
 **Software tools for storing files in the cloud, keeping track of their changes, and organizing tasks among team members.**
@@ -34,8 +21,8 @@ Git is not Github!
 **Just like how a jellyfish is not a fish.**
 
 A common misconception is that Git and Github are the same thing because of the similar names. However, there are key differences between the two software tools:
-:raw-html-m2r:`<!-- Make this a table -->`
 
+.. TODO: make this a table.
 
 * **Git** lives on your computer's command line and gives you a lot of control over managing the files that you edit.
 * **Github** is an online service that mainly stores the files that you manage; it doesn't offer as much control over them, though.

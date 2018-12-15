@@ -55,7 +55,7 @@ Tell Me Who You Are GitHub Error
 
 When some people commit their changes to a file using Atom's built in GitHub, they get a red error box that asks them who they are. The error message is shown below:
 
-.. code-block::
+.. code-block:: none
 
    *** Please tell me who you are.
 
@@ -77,7 +77,7 @@ To write a ``.gitconfig`` file, follow these steps:
 #. Open TextEdit for Mac or Notepad for Windows.
 #. Write the following lines in TextEdit or Notepad:
 
-.. code-block::
+.. code-block:: none
 
    [user]
          name = "YOUR GITHUB USERNAME"

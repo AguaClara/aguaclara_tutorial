@@ -50,3 +50,12 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    python-and-hydrogen/python-packages
    python-and-hydrogen/hydrogen-basics
    python-and-hydrogen/good-coding-practices
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Git and GitHub
+
+   git-and-github/git-and-github-introduction
+   git-and-github/git-basics
+   git-and-github/git-in-the-command-line
+   git-and-github/github-basics

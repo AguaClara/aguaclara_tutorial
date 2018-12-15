@@ -1,22 +1,8 @@
+.. _git-in-the-command-line:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-   **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-   - [What is Git?](#what-is-git)
-   - [Why use Git at all?  Why not just use Atom?](#why-use-git-at-all--why-not-just-use-atom)
-   - [Installing Git](#installing-git)
-   - [Using the Command Line](#using-the-command-line)
-   - [Using Git in the command line](#using-git-in-the-command-line)
-     - [Pulling](#pulling)
-     - [Pushing](#pushing)
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+***********************
+Git in the Command Line
+***********************
 
 What is Git?
 ============

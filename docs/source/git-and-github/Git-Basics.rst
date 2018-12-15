@@ -1,3 +1,8 @@
+.. _git-basics:
+
+**********
+Git Basics
+**********
 
 Git Terminology
 ===============

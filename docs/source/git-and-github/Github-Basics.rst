@@ -1,6 +1,8 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
+.. _github-basics:
 
+*************
+GitHub Basics
+*************
 
 Updating Your Profile
 =====================
@@ -93,7 +95,7 @@ Adding a project folder
 
 Before you can start working on a project, you'll have to add the project folder to Atom. Project folders are the same things as repositories, so every time you add a project folder, you're adding the entire repository to Atom. To add a project forlder, use ``Cmnd + Shift + O`` or ``Cntrl + Shift + O``\ , and navigate to the repository you wish to work out of. Your project will then appear in a side bar within the Atom interface. Clicking on it enables you to open any file within the repository.
 
-:raw-html-m2r:`<img src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GitProject.png" height=600>`
+.. TODO: Add image of Git project.
 
 Navigating branches
 -------------------
@@ -137,7 +139,7 @@ Committing
 
 To open the GitHub commit GUI, use ``Cntrl + Shift + 9``\ , or find it in ``Toggle Git Tab`` within ``GitHub`` under the ``Packages`` tab in the menu bar. The GUI looks like this:
 
-:raw-html-m2r:`<img src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GitGUI.png" height=700>`
+.. TODO: Add GUI image.
 
 When you save a file that's in one of the repositories your working on using ``Save As``\ , ``Cmnd + S``\ , or ``Cntrl + S``\ , the file name will appear uder the ``Unstaged Changes`` tab. In order to commit your files, you first have to stage them either using the ``Stage All`` button or selecting the files you want to stage and staging them using a right click on the file name. Once you've done that, the files will appear under ``Staged Changes``.
 
