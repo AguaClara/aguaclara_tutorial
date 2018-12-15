@@ -1,48 +1,10 @@
+.. _writing-python-code:
+
+*******************
+Writing Python Code
+*******************
 
 **\ *NOTE: This is not a comprehensive guide to writing Python code!*\ ** We've only put the basics that would be useful in the context of an AguaClara research report. To continue learning Python, review `these external resources <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-and-Hydrogen#external-resources>`_.
-
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `Writing Python in Atom <#writing-python-in-atom>`_
-
-  * `How this tutorial works <#how-this-tutorial-works>`_
-
-* `Basic Operations <#basic-operations>`_
-
-  * `Printing <#printing>`_
-  * `Comments <#comments>`_
-  * `Math <#math>`_
-  * `Logic <#logic>`_
-
-* `Data Structures <#data-structures>`_
-
-  * `Variables <#variables>`_
-  * `Lists <#lists>`_
-  * `Dictionaries <#dictionaries>`_
-
-* `Conditional Statements and Loops <#conditional-statements-and-loops>`_
-
-  * `\ ``if elif else`` <#if-elif-else>`_
-  * `\ ``for`` <#for>`_
-  * `\ ``while`` <#while>`_
-  * `Nesting <#nesting>`_
-
-* `Functions <#functions>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
 
 Writing Python in Atom
 ======================

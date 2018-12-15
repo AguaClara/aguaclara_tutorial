@@ -1,3 +1,8 @@
+.. _good-coding-practices:
+
+*********************
+Good Coding Practices
+*********************
 
 Doctest
 =======
@@ -24,7 +29,7 @@ Using doctesting is fairly straight forward. There are several key things that y
 
   * This can be done by running the code that you wish to test using Hydrogen, and copying and pasting the output that it gives you to the doctest
   * For outputs that contain units, which most of your code should have, Hydrogen will not give you the Python interpreter output. To get that output, you must enter the test output as ``<Quantity(THE NUMERICAL PART OF THE OUTPUT, 'STRING OF THE UNITS ASSOCIATED WITH YOUR OUTPUT')>``
-  * If you're testing a function with a ``print()`` statement and a ``return`` value, you must include the output produced by both in your doctest. Usually the ``print()`` statement output appears before the function's return value. **\ *Remember that ``aide_design.play`` automatically sets the number of sigfigs in a print statement to 3 sig figs. Hydrogen will always give the full numerical answer*\ **
+  * If you're testing a function with a ``print()`` statement and a ``return`` value, you must include the output produced by both in your doctest. Usually the ``print()`` statement output appears before the function's return value. **Remember that ``aide_design.play`` automatically sets the number of sigfigs in a print statement to 3 sig figs. Hydrogen will always give the full numerical answer.**
   * Array outputs are always enclosed in ``[]`` if you ``print()`` it, as nothing if you only assign it to a variable name, or as ``array([YOUR ARRAY])`` if you don't assign it to a variable name or ``print()`` it
   * If you're testing a loop or ``if-statement``\ , you must show the indentation in the inout using ``...`` followed by tabs
 
@@ -126,7 +131,7 @@ In the next code block, I've shown how to write doctests for code containing loo
 
    doctest.testmod(verbose=True)
 
-**\ *It is important to note that any white spaces (spaces in your code) in your inputs or outputs of your doctest will be interpreted in the test. These will throw a failed test even if the output is correct, so it is extremely important to check that your doctests don't have white spaces.*\ **
+**It is important to note that any white spaces (spaces in your code) in your inputs or outputs of your doctest will be interpreted in the test. These will throw a failed test even if the output is correct, so it is extremely important to check that your doctests don't have white spaces.**
 
 AguaClara Coding Standards and Variable Naming
 ==============================================
@@ -134,5 +139,7 @@ AguaClara Coding Standards and Variable Naming
 When coding for AguaClara, you should stick closely to our style guide and variable naming conventions.
 
 
-* For variable naming, check out `this Wiki page <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`_.
-* For coding standards, check out `this Wiki page <https://github.com/AguaClara/aide_design/wiki/Standards>`_.
+* For variable naming, check out `the aguaclara naming conventions <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`_.
+* For coding standards, check out `the aguaclara coding standards <https://github.com/AguaClara/aide_design/wiki/Standards>`_.
+
+.. TODO: change those links to the latest version.

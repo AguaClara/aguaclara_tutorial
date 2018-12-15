@@ -1,25 +1,8 @@
+.. _running-python-code:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `Python in Command Line <#python-in-command-line>`_
-
-  * `Interactive Python Interpreter <#interactive-python-interpreter>`_
-  * `Python Scripts <#python-scripts>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+*******************
+Running Python Code
+*******************
 
 Now that you've written Python code, it's time to see how to run it!
 

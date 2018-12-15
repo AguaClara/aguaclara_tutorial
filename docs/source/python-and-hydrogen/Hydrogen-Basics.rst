@@ -1,35 +1,15 @@
+.. _hydrogen-basics:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `How do I write Python code in a ``.md`` file? <#how-do-i-write-python-code-in-a-md-file>`_
-* `Running the code with Hydrogen <#running-the-code-with-hydrogen>`_
-
-  * `\ ``Hydrogen: Run`` <#hydrogen-run>`_
-  * `\ ``Hydrogen: Run All`` and ``Hydrogen: Run All Above`` <#hydrogen-run-all-and-hydrogen-run-all-above>`_
-
-* `How do I know if my code has been executed by Hydrogen? <#how-do-i-know-if-my-code-has-been-executed-by-hydrogen>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+***************
+Hydrogen Basics
+***************
 
 How do I write Python code in a ``.md`` file?
 =================================================
 
 Markdown has a wonderfully easy function that enables you to insert blocks of code written in dozens of common programming languages like Python directly into the file itself. To do this, simply type three consecutive backticks/backquotes, that key with the tilda that you probably seldomly use, followed by the name of the programming language you wish to write in. In our case, we'll always use Python. On a new line, you can begin writing your block of code. Once you finish writing your code, make sure to end the block with three more backticks/backquotes on the line below your final line of code. You should end up with something that looks like this:
 
-.. code-block::
+.. code-block:: md
 
    ```python
    myGreeting = 'Welcome to AguaClara!'

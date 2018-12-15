@@ -1,11 +1,13 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
+.. _python-packages:
 
+***************
+Python Packages
+***************
 
 Built-In Python Functions
 -------------------------
 
-Python has a lot of built-in functions that you can use to code. Read about the syntax and what they do `here <https://docs.python.org/3/library/functions.html>`_.
+Python has a lot of built-in functions that you can use to code. Read about the syntax and what they do on the `official Python documentation <https://docs.python.org/3/library/functions.html>`_.
 
 Python ``math`` Package
 ---------------------------
@@ -22,17 +24,17 @@ Notice how I abbreviated the ``math`` package as ``m``. This is because Python u
 
    myValue = m.sin(m.pi)
 
-The Python ``math`` package has a whole bunch of useful mathematical functions that you can read about `here <https://docs.python.org/3/library/math.html>`_.
+The Python ``math`` package has a whole bunch of useful mathematical functions that you can read about on the `Python documentation for math <https://docs.python.org/3/library/math.html>`_.
 
 Advanced Math Functions
 -----------------------
 
-In the rare case that your code requires something more than the basic math operations that Python has built-in, you can take advantage of the SciPy package, which also comes with Anaconda. SciPy is great for things like calculus, differential equations, linear algebra, and statistics. You can learn more about it `here <https://docs.scipy.org/doc/scipy/reference/>`_. Additionally, you can perform symbolical calculations using SymPy, which you can learn about `here <http://www.sympy.org/en/index.html>`_.
+In the rare case that your code requires something more than the basic math operations that Python has built-in, you can take advantage of the SciPy package, which also comes with Anaconda. SciPy is great for things like calculus, differential equations, linear algebra, and statistics. You can learn more about it at the `SciPy documentation <https://docs.scipy.org/doc/scipy/reference/>`_. Additionally, you can perform symbolical calculations using SymPy, which you can learn about on the `SymPy documentation <http://www.sympy.org/en/index.html>`_.
 
 ``aide_design`` Package
 ---------------------------
 
-AguaClara has a python package called ``aide_design``\ , which comes with many useful modules including ``unit_registry``\ , ``physchem``\ , ``utility``\ , and ``pipedatabase``. The ``unit_registry`` module allows us to apply units to our calculations, which is talked about later. The ``physchem`` module comes with many pre-defined functions related to hydraulics, flocculation, and sedimentation to name a few. You can explore all the different functions and inputs along with what they calculate `here <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`_.The ``utility`` module comes with many functions that do useful things unrelated to the physical/chemical process of water treatment. To explore the different functions available, go `here <https://github.com/AguaClara/aide_design/blob/master/aide_design/utility.py>`_. Lastly, the ``pipedatabase`` module contains many functions related to pipe sizing. You can check out the different functions available `here <https://github.com/AguaClara/aide_design/blob/master/aide_design/pipedatabase.py>`_.
+AguaClara has a python package called ``aide_design``\ , which comes with many useful modules including ``unit_registry``\ , ``physchem``\ , ``utility``\ , and ``pipedatabase``. The ``unit_registry`` module allows us to apply units to our calculations, which is talked about later. The ``physchem`` module comes with many pre-defined functions related to hydraulics, flocculation, and sedimentation to name a few. You can explore all the different functions and inputs along with what they calculate in `the physchem source code <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`_.The ``utility`` module comes with many functions that do useful things unrelated to the physical/chemical process of water treatment. To explore the different functions available, go to the `utility source code <https://github.com/AguaClara/aide_design/blob/master/aide_design/utility.py>`_. Lastly, the ``pipedatabase`` module contains many functions related to pipe sizing. You can check out the different functions available in the `pipedatabase source code <https://github.com/AguaClara/aide_design/blob/master/aide_design/pipedatabase.py>`_.
 
 In addition to the modules developed by AguaClara, the ``aide_design`` package imports third party packages that are useful for calculations and data manipulation. These include ``numpy``\ , which is useful for arrays, ``matplotlib``\ , which is used for plotting, and ``pandas``\ , which can be used to extract data from files like a ``.csv``.
 
@@ -91,7 +93,7 @@ Now we are ready to use units. As an example of how to use them, say I want to d
 
    QPlant = 10 * u.mL / u.s
 
-Let's say I want to convert the units to its metric base units m\ :raw-html-m2r:`<sup>3</sup>`\ /s. I can do this in two ways.
+Let's say I want to convert the units to its metric base units (meters cubed). I can do this in two ways.
 
 .. code-block:: python
 
@@ -101,18 +103,19 @@ Let's say I want to convert the units to its metric base units m\ :raw-html-m2r:
    # Or I can do this:
    QPlant.to_base_units()
 
-Pint also includes constants, which you can find `here <https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt>`_.
+Pint also includes constants, which you can find on the `Pint documentation <https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt>`_.
 
 Plotting and Pandas
 -------------------
 
 A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the ``pandas`` package, Python has the capability of opening and parsing data from a ``.csv`` file. You can then use this data with ``matplotlib.pyplot`` to plot your raw data. Anaconda automatically comes with these packages, and by importing ``aide_design.play``\ , these are automatically imported into your file.
 
-Using ``pandas`` to read and use data is relatively simple, and the developers have created nice tutorials on how to use the package `here <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_.
+Using ``pandas`` to read and use data is relatively simple, and the developers have created nice tutorials on how to use the package on `the Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_.
 
 Plotting in Python is relatively straight forward. Below is an example of how to plot the entrance length of fully developed flow of water with velocity of 1 m/s at room temperature as a function of pipe diameter, d, using the Blasius Equation:
 
-:raw-html-m2r:`<img src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/BlasiusEq.png"  width=200>`
+.. image:: ../images/blasius-equation.png
+    :alt: Blasius Equation
 
 .. code-block:: python
 
@@ -189,7 +192,7 @@ Functions Within ``matplotlib.plt``
 
   * Shows the plot in Atom when you run the code with Hydrogen
 
-For more tutorials on plotting, check out this `page <https://matplotlib.org/users/pyplot_tutorial.html>`_ or this `page <https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python>`_. You can also access a ``matplotlib`` cheatsheet `here <https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf>`_.
+For more tutorials on plotting, check out this `pyplot tutorial <https://matplotlib.org/users/pyplot_tutorial.html>`_ or this `matplotlib tutorial <https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python>`_. You can also access a ``matplotlib`` `cheat sheet <https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf>`_.
 
 Arrays and Lists in Python
 ==========================
@@ -239,4 +242,4 @@ NumPy arrays also support units, which are mentioned later in this guide. If I w
 
 Say I want an array of a specified size starting from 0, something that would be helpful for generating a plot. I could use ``np.arange()`` to do this. If I want an array from 0 to 9, or of size 10, I would simply run ``np.arange(10)``. I can also specify two bounds and a step size if I want to have even greater control over my array. To do this, I would still use ``np.arange()``\ , but with 3 inputs as such: ``np.arange(low, high, step size)``\ , so ``np.arange(0, 1, 0.1)`` would give me an array from 0 to, but not including, 1 in 0.1 increments.
 
-NumPy has many capabilities, which I won't be able to discuss in-depth on the Wiki, but `here's <https://www.dataquest.io/blog/numpy-cheat-sheet/>`_ a great guide to learn more about NumPy's power.
+NumPy has many capabilities, which I won't be able to discuss in-depth on the Wiki, but `numpy's cheat sheet <https://www.dataquest.io/blog/numpy-cheat-sheet/>`_ is a great guide to learn more about NumPy's power.

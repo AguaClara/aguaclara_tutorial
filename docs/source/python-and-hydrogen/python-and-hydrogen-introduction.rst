@@ -1,32 +1,8 @@
+.. _python-and-hydrogen-introduction:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `What is Python? <#what-is-python>`_
-
-  * `Why Code in Python? <#why-code-in-python>`_
-  * `Learning Python <#learning-python>`_
-
-    * `Debugging <#debugging>`_
-    * `External Resources <#external-resources>`_
-
-* `What is Hydrogen? <#what-is-hydrogen>`_
-
-  * `Why use Hydrogen? <#why-use-hydrogen>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+********************************
+Python and Hydrogen Introduction
+********************************
 
 What is Python?
 ===============

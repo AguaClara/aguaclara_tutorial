@@ -39,3 +39,14 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    atom-and-markdown/markdown-basics
    atom-and-markdown/saving-markdown-to-pdf
    atom-and-markdown/teletype-basics
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Python and Hydrogen
+
+   python-and-hydrogen/python-and-hydrogen-introduction
+   python-and-hydrogen/writing-python-code
+   python-and-hydrogen/running-python-code
+   python-and-hydrogen/python-packages
+   python-and-hydrogen/hydrogen-basics
+   python-and-hydrogen/good-coding-practices
