@@ -19,8 +19,7 @@ Setting up Teletype
 
 Click on the Teletype icon (a radio tower) in the bottom right. You should see this window:
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypeSignIn.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypeSignIn.png
+.. image:: ../images/teletype-signin.png
    :alt: Teletype Sign In
 
 When you use Teletype for the first time, you'll need to give it access to your Github account:
@@ -40,8 +39,7 @@ Hosting a Portal
 
 1. In Teletype, click on the "Share" switch. You should see this window:
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypePortalHost.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypePortalHost.png
+.. image:: ../images/teletype-portal-host.png
    :alt: Teletype Portal Host
 
 2. *Copy* the URL and message it to your collaborators.
@@ -53,8 +51,7 @@ Joining a Portal
 
 1. In Teletype, click on "Join a portal". You should see this window:
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypeJoinPortal.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown/Images/TeletypeJoinPortal.png
+.. image:: ../images/teletype-join-portal.png
    :alt: Teletype Join Portal
 
 2. Copy the URL that your host shared, paste it in Teletype, then click
