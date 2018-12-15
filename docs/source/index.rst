@@ -12,8 +12,8 @@ your research.
 Getting Started
 ===============
 
-To get started, visit :ref:`installing-software`, or click "Next" at the
-bottom of the page.
+To get started, visit :ref:`installing-software-introduction`, or click "Next"
+at the bottom of the page.
 
 Helpful Links
 =============
@@ -21,6 +21,15 @@ Helpful Links
 If you run into a problem, check :ref:`common-issues`, then open an issue in the ``aguaclara_tutorial`` `repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.
 
 If you would like to see a new section in this tutorial, visit :ref:`contributing-to-the-tutorial`.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Installing Software
+
+   installing-software/installing-software-introduction
+   installing-software/installing-on-macos
+   installing-software/installing-on-windows
+   installing-software/installing-interactive-tutorials
 
 .. toctree::
    :maxdepth: 2

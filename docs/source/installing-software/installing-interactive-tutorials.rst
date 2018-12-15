@@ -1,33 +1,10 @@
+.. _installing-interactive-tutorials:
+
+********************************
+Installing Interactive Tutorials
+********************************
 
 At the ends of some sections, you'll need to complete *interactive tutorials* from the ``aguaclara_tutorial`` repository; this tutorial will explain how to use them.
-
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `The Command Line <#the-command-line>`_
-
-  * `Why use the command line? <#why-use-the-command-line>`_
-  * `What is my command line? <#what-is-my-command-line>`_
-  * `Basic Commands <#basic-commands>`_
-
-* `Using the Interactive Tutorials <#using-the-interactive-tutorials>`_
-
-  * `Fork the Repository <#fork-the-repository>`_
-  * `Clone Your Repository <#clone-your-repository>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
 
 The Command Line
 ================
@@ -45,7 +22,7 @@ Using the command line is usually intimidating at first, but it doesn't have to 
 
 
 #. *Read* the messages that the command line is putting out.
-#. *Adding ``--help``\ * to the end of your commands will usually show help on how to use them.
+#. *Adding* ``--help`` to the end of your commands will usually show help on how to use them.
 #. If you get error messages or don't know how to do something, *search* them online. Chances are that someone else has faced the same problem as you in the past!
 
 What is my command line?

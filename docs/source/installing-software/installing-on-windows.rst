@@ -1,31 +1,14 @@
+.. _installing-on-windows:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-
-
-* `Atom & Sync Settings <#atom--sync-settings>`_
-* `Git <#git>`_
-* `Anaconda & Python <#anaconda--python>`_
-* `\ ``pip`` Packages <#pip-packages>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+*********************
+Installing on Windows
+*********************
 
 Atom & Sync Settings
 ====================
 
 
-#. Download `Atom <https://atom.io/>`_\ , extract the zipped file, then drag the Atom application to your Applications folder. Next, open up Atom.
+#. Download the `Atom installer <https://atom.io/>`_ and double-click it to begin installation. Atom should open up once it's installed.
 #. Open Atom settings by going to File > Settings (or Control + Comma).
 #. Go to Install and search for ``sync-settings``. Click on the blue Install button in the ``sync-settings`` box.
 #. Once it's done installing, click on the Settings button in the ``sync-settings`` box.
@@ -44,17 +27,18 @@ Git
 ===
 
 
-#. Open **Terminal** and enter the following command:
+#. Download the `Git installer <https://git-scm.com/downloads>`_ and double-click it to begin installation.
+#. When the installer asks which text editor you would like to use with Git (the default is Vim), select Nano instead. While powerful, Vim is difficult to use and not necessary for Git.
 
-   * ``git --version``
+   * Aside from this, you can just click "Next" through the entire installation.
 
-#. If you don't alread have Git, Xcode will prompt you to install it. Follow the prompts to install Git.
-#. Open **Terminal** and un the two following commands with your name and Cornell email, carefully observing spaces and punctuation:
+#. After the installation is complete, open **PowerShell** or **Command Prompt**.
+#. Run the two following commands with your name and Cornell email, carefully observing spaces and punctuation:
 
    * ``git config --global user.name "Firstname Lastname"``
    * ``git config --global user.email "NetID@cornell.edu"``
 
-     * **\ *The quotation marks are important!*\ ** For example, the command should say something like ``git config --global user.name "Monroe Weber-Shirk"``.
+     * The quotation marks are important! For example, the command should say something like ``git config --global user.name "Monroe Weber-Shirk"``.
 
 Anaconda & Python
 =================
@@ -69,7 +53,7 @@ Anaconda & Python
 ====================
 
 
-#. Open **Terminal**\ , as you did when `installing Git <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-on-Windows#git>`_.
+#. Open **PowerShell** or **Command Prompt**\ , as you did when `installing Git <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-on-Windows#git>`_.
 #. Run the following command, carefully observing spaces and punctuation:
 
    * ``pip install aguaclara_research aide_design --user``

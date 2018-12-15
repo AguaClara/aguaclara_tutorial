@@ -1,17 +1,8 @@
-.. _installing-software:
+.. _installing-software-introduction:
 
-===================
-Installing Software
-===================
-* `What do I need to install? <#what-do-i-need-to-install>`_
-* `Why install these software tools? <#why-install-these-software-tools>`_
-
-
-.. raw:: html
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+********************************
+Installing Software Introduction
+********************************
 
 What do I need to install?
 ==========================
