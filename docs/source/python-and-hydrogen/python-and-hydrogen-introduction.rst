@@ -37,13 +37,13 @@ Debugging
 If you run into any errors or bugs while writing Python code, follow these general steps to resolve them:
 
 
-#. **\ *Read the error message.*\ ** Error messages give very valuable information on how to solve code problems - don't ignore them! Many times, they'll tell you exactly how to fix your code.
-#. **\ *Search for a solution online.*\ ** It's very likely that someone else has experienced the same problem that you're facing, and discussed it online. Try searching for both
+#. **Read the error message.** Error messages give very valuable information on how to solve code problems - don't ignore them! Many times, they'll tell you exactly how to fix your code.
+#. **Search for a solution online.** It's very likely that someone else has experienced the same problem that you're facing, and discussed it online. Try searching for both
 
    * The error message
    * What you're trying to do with the code
 
-#. **\ *Ask someone for help.*\ ** Sometimes you may not find the answer online - ask your subteam lead, RA, or someone on Apps & Algorithms for help. Better yet, open an issue on `Github <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_ or a question on `Stack Overflow <https://stackoverflow.com>`_ so that more people can see it and try to figure it out.
+#. **Ask someone for help.** Sometimes you may not find the answer online - ask your subteam lead, RA, or someone on Apps & Algorithms for help. Better yet, open an issue on `Github <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_ or a question on `Stack Overflow <https://stackoverflow.com>`_ so that more people can see it and try to figure it out.
 
 External Resources
 ^^^^^^^^^^^^^^^^^^

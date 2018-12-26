@@ -4,7 +4,7 @@
 Writing Python Code
 *******************
 
-**\ *NOTE: This is not a comprehensive guide to writing Python code!*\ ** We've only put the basics that would be useful in the context of an AguaClara research report. To continue learning Python, review `these external resources <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-and-Hydrogen#external-resources>`_.
+**NOTE: This is not a comprehensive guide to writing Python code!** We've only put the basics that would be useful in the context of an AguaClara research report. To continue learning Python, review `these external resources <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-and-Hydrogen#external-resources>`_.
 
 Writing Python in Atom
 ======================
