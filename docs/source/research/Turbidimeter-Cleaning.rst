@@ -1,8 +1,12 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
+.. _turbidimeter-cleaning:
 
+*********************
+Turbidimeter Cleaning
+*********************
 
-Turbidimeters should be emptied and washed out before every experiment. :raw-html-m2r:`<!--with distilled or tap water?-->`
+Turbidimeters should be emptied and washed out before every experiment.
+.. with distilled or tap water?
+
 Even if the reading displays 0.0 NTU, there may be clay or flocs that have collected in the top or bottom of the turbidimeter vials. These deposits can interfere with your experimental results, as they can be stirred up again by changes in flow rate.
 
 Cleaning Procedure
@@ -25,7 +29,7 @@ Cleaning Procedure
 
 
 #. Unscrew the glass vial, empty and rinse it, then fill it with clean water. Tap water is sufficient. If there is still buildup or the glass is dirty wrap two Kim wipes around a brush until it is covered and use that to scrub the inside of the vial.
-   :raw-html-m2r:`<span style="color:red"> <b> Is it?? </b> </span>`
+.. Is it?
 
 <p align = center>
 <img src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb4.jpeg" width = 250>
