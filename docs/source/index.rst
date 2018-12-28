@@ -59,3 +59,12 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    git-and-github/git-basics
    git-and-github/git-in-the-command-line
    git-and-github/github-basics
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Other Tutorials
+
+   other-tutorials/common-issues
+   other-tutorials/transitioning-from-matlab
+   other-tutorials/contributing-to-the-tutorial
+   other-tutorials/video-tutorials

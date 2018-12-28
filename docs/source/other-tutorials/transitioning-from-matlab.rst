@@ -1,23 +1,8 @@
+.. _transitioning-from-matlab:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-   **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-   - [Differences Between Python and MATLAB](#differences-between-python-and-matlab)
-     - [Indentation](#indentation)
-     - [Ending statements](#ending-statements)
-     - [Data indexing](#data-indexing)
-     - [Functions](#functions)
-     - [Statements](#statements)
-     - [Printing](#printing)
-   - [External Resources](#external-resources)
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
+*************************
+Transitioning from MATLAB
+*************************
 
 Differences Between Python and MATLAB
 =====================================

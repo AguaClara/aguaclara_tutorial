@@ -1,3 +1,8 @@
+.. _video-tutorials:
+
+***************
+Video Tutorials
+***************
 
 This page will link you to video tutorials for things like GitHub, Hydrogen, Markdown, and Teletype. If there's a tutorial that you'd like to see become a video, let us know in the issues section of this repository.
 
