@@ -32,6 +32,8 @@ For *MacOS and Linux*\ , the command line is called **Terminal**.
 
 For *Windows*\ , the command lines are called **PowerShell** and **Command Prompt**. While Command Prompt is more widely known and used, PowerShell is more powerful and uses the same commands as Terminal. For the rest of these tutorials, **please use PowerShell**.
 
+.. _installing-interactive-tutorials-basic-commands:
+
 Basic Commands
 --------------
 

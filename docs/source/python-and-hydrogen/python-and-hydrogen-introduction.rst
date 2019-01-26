@@ -45,6 +45,8 @@ If you run into any errors or bugs while writing Python code, follow these gener
 
 #. **Ask someone for help.** Sometimes you may not find the answer online - ask your subteam lead, RA, or someone on Apps & Algorithms for help. Better yet, open an issue on `Github <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_ or a question on `Stack Overflow <https://stackoverflow.com>`_ so that more people can see it and try to figure it out.
 
+.. _python-and-hydrogen-introduction-external-resources:
+
 External Resources
 ^^^^^^^^^^^^^^^^^^
 

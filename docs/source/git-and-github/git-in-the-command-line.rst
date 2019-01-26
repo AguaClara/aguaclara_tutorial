@@ -9,7 +9,7 @@ What is Git?
 
 Git is a free and open source control system used for managing projects through Github.  Every time you push or pull your work through Atom, Atom is running Git commands to facilitate this.
 
-**Note:** This tutorial assumes some knowledge of the basic commands of Github.  To refresh on those, refer to the `Github Basics Tutorial <https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-GitHub-Basics>`_
+**Note:** This tutorial assumes some knowledge of the basic commands of Github.  To refresh on those, refer to :ref:`github-basics`
 
 Why use Git at all?  Why not just use Atom?
 ===========================================

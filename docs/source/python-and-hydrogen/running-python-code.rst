@@ -16,7 +16,7 @@ There are two methods to run Python code in the Command Line: the *Interactive P
 Interactive Python Interpreter
 ------------------------------
 
-Remember how the `Writing Python Code <https://github.com/AguaClara/aguaclara_tutorial/wiki/Writing-Python-Code#how-this-tutorial-works>`_ tutorial was formatted?
+Remember how the :ref:`writing-python-code` tutorial was formatted?
 
 .. code-block:: python
 
@@ -70,7 +70,7 @@ The **Interactive Python Interpreter** is great for quickly testing lines of Pyt
 In the last tutorial, you wrote part of a **Python script**\ : a file with the ``*.py`` extension. To run the code in a Python script in the command line:
 
 
-#. Navigate to the script's directory with the ``ls`` and ``cd`` commands. `Need a refresher? <https://github.com/AguaClara/aguaclara_tutorial/wiki/Interactive-Tutorials#basic-commands>`_
+#. Navigate to the script's directory with the ``ls`` and ``cd`` commands. Need a refresher? See :ref:`installing-interactive-tutorials-basic-commands`
 #. Enter ``python``\ , followed by a space, followed by the name of the file.
 
 Let's say we have a script called ``foo.py`` containing this line:

@@ -14,7 +14,7 @@ We'll be using **Atom** to edit Markdown files and preview them nicely:
 #. Click on one of the ``*.md`` files in the left Project pane to open it.
 #. Press ``Ctrl + Shift + M`` to open a formatted preview on the right.
 
-   * If a preview didn't show up, review the instructions on `installing Atom <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software-Tools>`_.
+   * If a preview didn't show up, review the instructions on :ref:`installing-on-macos` or :ref:`installing-on-windows`.
 
 All Markdown files must be **text files with the** ``.md`` **file extension**. All of the text files within the ``aguaclara_tutorial`` repository are already Markdown files.
 

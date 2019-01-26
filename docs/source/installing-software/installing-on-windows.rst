@@ -23,6 +23,8 @@ Atom & Sync Settings
 
    * If you get a dialog box saying that ``sync-settings`` is out of date, click "Restore".
 
+.. _installing-on-windows-git:
+
 Git
 ===
 
@@ -53,7 +55,7 @@ Anaconda & Python
 ====================
 
 
-#. Open **PowerShell** or **Command Prompt**\ , as you did when `installing Git <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-on-Windows#git>`_.
+#. Open **PowerShell** or **Command Prompt**\ , as you did when installing :ref:`installing-on-windows-git`.
 #. Run the following command, carefully observing spaces and punctuation:
 
    * ``pip install aguaclara_research aide_design --user``

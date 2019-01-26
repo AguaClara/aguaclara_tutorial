@@ -10,18 +10,18 @@ What do I need to install?
 There are a few pieces of software that you'll need to install before beginning work on AguaClara:
 
 
-* `Atom <https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom>`_\ : for writing code.
+* Atom : for writing code.
 
-  * `Sync Settings <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installation#setting-up-atom-for-aguaclara-development>`_\ : for making your Atom settings and plug-ins ready for AguaClara development.
+  * Sync Settings : for making your Atom settings and plug-ins ready for AguaClara development.
 
-* `Git <https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github>`_\ : for maintaining and uploading your code to GitHub.
-* `Anaconda <https://www.anaconda.com/download/#linux>`_\ : for installing/maintaining Python and its packages.
+* Git : for maintaining and uploading your code to GitHub.
+* Anaconda : for installing/maintaining Python and its packages.
 
-  * `Python <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python>`_\ : for running your code.
+  * Python : for running your code.
   * ``pip`` : `for installing Python packages <https://pypi.org/project/pip/>`_\ (collections of code with useful functions)
 
-    * The ``aguaclara`` `Python package <https://github.com/AguaClara/aguaclara>`_\.
-* `Interactive Tutorials <https://github.com/AguaClara/aguaclara_tutorial/wiki/Interactive-Tutorials>`_\ : for practice with using these pieces of software.
+    * The ``aguaclara`` Python package.
+* Interactive Tutorials : for practice with using these pieces of software.
 
 Why install these software tools?
 =================================

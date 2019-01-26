@@ -83,7 +83,7 @@ You can edit the columns to have whatever organization you'd like, but if you're
 GitHub for Atom
 ===============
 
-Perhaps the best part of Atom is GitHub integration, which comes installed with Atom. This means there's no extra steps to install Git or GitHub packages! The beauty of GitHub integration is that all of your GitHub actions can be done through a GUI in the Atom IDE, which circumvents the need to install GitHub desktop or learn the tedious Command Shell or Terminal Git commands. To learn more about how to use the GitHub integration, check out the `GitHub Basics Wiki <https://github.com/AguaClara/aguaclara_tutorial/wiki/Tutorial:-GitHub-Basics>`_ within aguaclara_tutorial. This page also has useful information about the different GitHub terminology and how to use GitHub in Atom.
+Perhaps the best part of Atom is GitHub integration, which comes installed with Atom. This means there's no extra steps to install Git or GitHub packages! The beauty of GitHub integration is that all of your GitHub actions can be done through a GUI in the Atom IDE, which circumvents the need to install GitHub desktop or learn the tedious Command Shell or Terminal Git commands. To learn more about how to use the GitHub integration, check out :ref:`github-basics` within aguaclara_tutorial. This page also has useful information about the different GitHub terminology and how to use GitHub in Atom.
 
 How to use GitHub in Atom
 =========================
