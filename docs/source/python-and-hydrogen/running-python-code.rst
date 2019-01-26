@@ -36,9 +36,9 @@ To enter the **Interactive Python Interpreter**\ , open your command line (MacOS
    Type "help", "copyright", "credits" or "license" for more information.
    >>> _
 
-`Help: the ``python`` command isn't working! <https://github.com/AguaClara/aguaclara_tutorial/wiki/Common-Issues#python-command-not-found>`_
+*If the command doesn't work, see* :ref:`python-command-not-found`.
 
-(\ **\ *Note*\ **\ : The ``$`` on the first line indicates that we're in **Terminal** - it's *not* part of the command that you type. In **Powershell**\ , you'd see a ``>`` instead.)
+(**Note** : The ``$`` on the first line indicates that we're in **Terminal** - it's *not* part of the command that you type. In **Powershell**\ , you'd see a ``>`` instead.)
 
 Now you can run any lines of Python code that you'd like: try it out for yourself!
 
@@ -106,6 +106,4 @@ Command line:
 
 Python runs code lines in order from start to end; if you don't define functions at the beginning, Python won't know what to do when you call them!
 
-**Now, run the code in ``Interactive-Tutorial-2-Python-Basics.py``. Fix any TODO's that fail the tests.**
-
-**Then, continue with the `Python Packages <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-Packages>`_ tutorial.**
+**Now, run the code in** ``Interactive-Tutorial-2-Python-Basics.py``. **Fix any TODO's that fail the tests.**

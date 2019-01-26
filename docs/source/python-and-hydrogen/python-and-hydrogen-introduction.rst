@@ -85,6 +85,6 @@ Why use Hydrogen?
 * Hydrogen allows you to complement the information in your reports with Python code.
 * Hydrogen and Python are open source, fulfilling AguaClara's devotion to open source software.
 
-**If you're new to Python, or would like a refresher, start with the `Writing Python Code <https://github.com/AguaClara/aguaclara_tutorial/wiki/Writing-Python-Code>`_ tutorial.**
+**If you're new to Python, or would like a refresher, start with** :ref:`writing-python-code`.
 
-**If you have experience with Python, go to the `Python Packages <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-Packages>`_ tutorial.**
+**If you have experience with Python, go to** :ref:`python-packages`.

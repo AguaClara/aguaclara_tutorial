@@ -4,6 +4,8 @@
 Common Issues
 *************
 
+.. _python-command-not-found:
+
 ``python`` Command Not Found
 ================================
 

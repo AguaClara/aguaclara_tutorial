@@ -15,7 +15,7 @@ Like with Markdown, we'll be using **Atom** to edit Python files (also known as 
 #. Open **Atom** and open the ``aguaclara_tutorial/`` repository folder that you cloned (or any other project folder you have).
 #. Click on one of the ``*.py`` files in the left Project pane to open it.
 
-All Python scripts must be **files with the ``.py`` file extension**.
+All Python scripts must be **files with the** ``.py`` **file extension**.
 
 How this tutorial works
 -----------------------
@@ -282,6 +282,6 @@ Functions
    >>> parity(40)
    40 is even.
 
-**Now, complete Lesson 2 of the interactive tutorials. It's in the ``Interactive-Tutorial-2-Python-Basics.py`` file in your ``aguaclara_tutorial`` repository.**
+**Now, complete Lesson 2 of the interactive tutorials. It's in the** ``Interactive-Tutorial-2-Python-Basics.py`` **file in your** ``aguaclara_tutorial`` **repository.**
 
-**Then, continue with the `Running Python Code <https://github.com/AguaClara/aguaclara_tutorial/wiki/Running-Python-Code>`_ tutorial.**
+**Then, continue with** :ref:`running-python-code`.

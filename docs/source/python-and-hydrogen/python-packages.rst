@@ -31,20 +31,20 @@ Advanced Math Functions
 
 In the rare case that your code requires something more than the basic math operations that Python has built-in, you can take advantage of the SciPy package, which also comes with Anaconda. SciPy is great for things like calculus, differential equations, linear algebra, and statistics. You can learn more about it at the `SciPy documentation <https://docs.scipy.org/doc/scipy/reference/>`_. Additionally, you can perform symbolical calculations using SymPy, which you can learn about on the `SymPy documentation <http://www.sympy.org/en/index.html>`_.
 
-``aide_design`` Package
+``aguaclara`` Package
 ---------------------------
 
-AguaClara has a python package called ``aide_design``\ , which comes with many useful modules including ``unit_registry``\ , ``physchem``\ , ``utility``\ , and ``pipedatabase``. The ``unit_registry`` module allows us to apply units to our calculations, which is talked about later. The ``physchem`` module comes with many pre-defined functions related to hydraulics, flocculation, and sedimentation to name a few. You can explore all the different functions and inputs along with what they calculate in `the physchem source code <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`_.The ``utility`` module comes with many functions that do useful things unrelated to the physical/chemical process of water treatment. To explore the different functions available, go to the `utility source code <https://github.com/AguaClara/aide_design/blob/master/aide_design/utility.py>`_. Lastly, the ``pipedatabase`` module contains many functions related to pipe sizing. You can check out the different functions available in the `pipedatabase source code <https://github.com/AguaClara/aide_design/blob/master/aide_design/pipedatabase.py>`_.
+AguaClara has a python package called ``aguaclara``\ , which comes with many useful modules including ``unit_registry``\ , ``physchem``\ , ``utility``\ , and ``pipedatabase``. The ``unit_registry`` module allows us to apply units to our calculations, which is talked about later. The ``physchem`` module comes with many pre-defined functions related to hydraulics, flocculation, and sedimentation to name a few. You can explore all the different functions and inputs along with what they calculate in `the physchem source code <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py>`_.The ``utility`` module comes with many functions that do useful things unrelated to the physical/chemical process of water treatment. To explore the different functions available, go to the `utility source code <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/utility.py>`_. Lastly, the ``pipes`` module contains many functions related to pipe sizing. You can check out the different functions available in the `pipes source code <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/pipes.py>`_.
 
-In addition to the modules developed by AguaClara, the ``aide_design`` package imports third party packages that are useful for calculations and data manipulation. These include ``numpy``\ , which is useful for arrays, ``matplotlib``\ , which is used for plotting, and ``pandas``\ , which can be used to extract data from files like a ``.csv``.
+In addition to the modules developed by AguaClara, the ``aguaclara`` package imports third party packages that are useful for calculations and data manipulation. These include ``numpy``\ , which is useful for arrays, ``matplotlib``\ , which is used for plotting, and ``pandas``\ , which can be used to extract data from files like a ``.csv``.
 
-To install the package, simply run ``pip install aide_design`` in your Command Shell (PC) or Terminal (Mac). To update the package, use ``pip install -U no-deps aide_design`` or ``sudo pip install aide_design --upgrade`` if the other did not work.
+To install the package, simply run ``pip install aguaclara`` in your Command Shell (PC) or Terminal (Mac). To update the package, use ``pip install -U no-deps aguaclara`` or ``sudo pip install aguaclara --upgrade`` if the other did not work.
 
 In order to use these modules within your Python script, you'll have to import them. At the start of your Python code, you should write the line of code as shown below to take advantage of the packages:
 
 .. code-block:: python
 
-   from aide_design.play import*
+   from aguaclara.play import*
 
 In all code written for AguaClara, the modules are always specified using dot notation with abbreviations for the module names. Here's a quick guide for what the abbreviations are:
 
@@ -85,7 +85,7 @@ To change the number of significant figures displayed, simply change the 3 with 
 Units
 -----
 
-In engineering, units are incredibly important to us. They help as a sanity check to confirm our answers or reveal problems with our solutions. We'll be using Pint. The ``aide_design`` package that you installed comes with the necessary units module. When you use the import code as shown in the ``aide_design`` packages section of this Wiki, your script will have access to the unit registry.
+In engineering, units are incredibly important to us. They help as a sanity check to confirm our answers or reveal problems with our solutions. We'll be using Pint. The ``aguaclara`` package that you installed comes with the necessary units module. When you use the import code as shown in the ``aguaclara`` packages section of this Wiki, your script will have access to the unit registry.
 
 Now we are ready to use units. As an example of how to use them, say I want to define a flow rate with units of mL/s. I would simply do as follows:
 
@@ -108,7 +108,7 @@ Pint also includes constants, which you can find on the `Pint documentation <htt
 Plotting and Pandas
 -------------------
 
-A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the ``pandas`` package, Python has the capability of opening and parsing data from a ``.csv`` file. You can then use this data with ``matplotlib.pyplot`` to plot your raw data. Anaconda automatically comes with these packages, and by importing ``aide_design.play``\ , these are automatically imported into your file.
+A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the ``pandas`` package, Python has the capability of opening and parsing data from a ``.csv`` file. You can then use this data with ``matplotlib.pyplot`` to plot your raw data. Anaconda automatically comes with these packages, and by importing ``aguaclara.play``\ , these are automatically imported into your file.
 
 Using ``pandas`` to read and use data is relatively simple, and the developers have created nice tutorials on how to use the package on `the Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_.
 
@@ -119,7 +119,7 @@ Plotting in Python is relatively straight forward. Below is an example of how to
 
 .. code-block:: python
 
-   from aide_design.play import*
+   from aguaclara.play import*
 
    xArray = u.Quantity(np.arange(0, 0.5, 0.01), u.m)
 
@@ -140,9 +140,7 @@ Plotting in Python is relatively straight forward. Below is an example of how to
    plt.savefig('./Images/Blasius_Plot.png')
    plt.show()
 
-When I run the above code, I get the following plot:
-
-[[/Images/Blasius_Plot.png|PlotExample]]
+.. TODO: Add photo of output.
 
 Functions Within ``matplotlib.plt``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -203,11 +201,11 @@ Python has no native array type. Instead, it has lists, which are defined using 
 
    myList = [0, 1, 2, 3]
 
-In order to use arrays, we will utilize the NumPy package, which comes with the Anaconda installation. Like the ``math`` package, NumPy has to be imported into your code. Typically, we will import it via ``aide_design.play`` as ``np`` as you will see in a lot of AguaClara code. To turn my list into an array, I would simply write this code:
+In order to use arrays, we will utilize the NumPy package, which comes with the Anaconda installation. Like the ``math`` package, NumPy has to be imported into your code. Typically, we will import it via ``aguaclara.play`` as ``np`` as you will see in a lot of AguaClara code. To turn my list into an array, I would simply write this code:
 
 .. code-block:: python
 
-   from aide_design.play import*
+   from aguaclara.play import*
    myArray = np.array(myList)
 
 To make a 2D array, I can use the same ``np.array()`` command. Below is an example of how to make a 2D array.
