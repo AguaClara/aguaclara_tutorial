@@ -57,4 +57,4 @@ Anaconda & Python
 
    * ``pip install aguaclara_research aide_design --user``
 
-**Now, you're ready to get the `Interactive Tutorials <https://github.com/AguaClara/aguaclara_tutorial/wiki/Interactive-Tutorials>`_.**
+**Now, you're ready for** :ref:`installing-interactive-tutorials`.

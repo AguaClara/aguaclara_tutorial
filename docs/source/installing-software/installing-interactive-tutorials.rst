@@ -62,7 +62,7 @@ Fork the Repository
 You need to first create a *fork*\ , or copy, of the original ``aguaclara_tutorial`` repository - we wouldn't want everyone editing the same tutorials!
 
 
-#. On the original `\ ``aguaclara_tutorial`` repository <https://github.com/AguaClara/aguaclara_tutorial>`_\ , click "Fork" and then choose your Github account.
+#. On the original ``aguaclara_tutorial`` `repository <https://github.com/AguaClara/aguaclara_tutorial>`_\ , click "Fork" and then choose your Github account.
 
    * If you haven't made one yet, `create a Github account <https://github.com/join?source=header-home>`_.
 
@@ -92,6 +92,6 @@ Now we'll *clone*\ , or download, the repository that you just forked.
 
 
 
-**Congratulations, you've completed the `Installing Software <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software>`_ section!**
+**Congratulations, you've completed the Installing Software section!**
 
-**Now, continue with the `Atom and Markdown <https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown>`_ section.**
+**Click "Next" to continue learning about Atom and Markdown.**
