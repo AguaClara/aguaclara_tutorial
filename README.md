@@ -4,4 +4,4 @@ Welcome to the AguaClara Tutorial repository! Here, you'll find useful tutorials
 
 ## Using the tutorial
 
-***Don't start here!*** Visit the [AguaClara Tutorial wiki](https://github.com/AguaClara/aguaclara_tutorial/wiki) and follow the instructions there.
+***Don't start here!*** Visit the [AguaClara Tutorial wiki](https://aguaclara.github.io/aguaclara_tutorial/) and follow the instructions there.
