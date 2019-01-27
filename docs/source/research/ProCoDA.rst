@@ -1,22 +1,8 @@
+.. _procoda:
 
-
-.. raw:: html
-
-   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-   **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-   - [ProCoDA How-to's](#procoda-how-tos)
-     - [Important Parts of ProCoDA (Imagine it as a washing machine)](#important-parts-of-procoda-imagine-it-as-a-washing-machine)
-       - [How to set up a pump for a test](#how-to-set-up-a-pump-for-a-test)
-       - [How to set up a timed test](#how-to-set-up-a-timed-test)
-
-   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-
-ProCoDA How-to's
-================
+*******
+ProCoDA
+*******
 
 Important Parts of ProCoDA (Imagine it as a washing machine)
 ------------------------------------------------------------

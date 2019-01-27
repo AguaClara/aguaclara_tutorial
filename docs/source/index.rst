@@ -1,34 +1,79 @@
+.. _index:
+
+#######################################
 Welcome to the AguaClara Tutorial Wiki!
-==============================================
+#######################################
+
+Here, you will find useful tutorials on Atom, Python, Git, Github, and
+other software tools used in AguaClara. These tutorials are meant to give you
+a basic understanding of these software tools, and how to best use them for
+your research.
+
+Getting Started
+===============
+
+To get started, visit :ref:`installing-software-introduction`, or click "Next"
+at the bottom of the page.
+
+Helpful Links
+=============
+
+If you run into a problem, check :ref:`common-issues`, then open an issue in the ``aguaclara_tutorial`` `repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.
+
+If you would like to see a new section in this tutorial, visit :ref:`contributing-to-the-tutorial`.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Installing Software
 
-Here, you will find useful tutorials on Atom, Git and Github, Python, and other software tools used in AguaClara. All of these tutorials are meant to give you a basic understanding of these software tools, and how to best use them for your work.
+   installing-software/installing-software-introduction
+   installing-software/installing-on-macos
+   installing-software/installing-on-windows
+   installing-software/installing-interactive-tutorials
 
-These tutorials have 5 sections:
+.. toctree::
+   :maxdepth: 2
+   :caption: Atom and Markdown
 
+   atom-and-markdown/atom-and-markdown-introduction
+   atom-and-markdown/markdown-basics
+   atom-and-markdown/saving-markdown-to-pdf
+   atom-and-markdown/teletype-basics
 
-#. `Installing Software <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software>`_
-#. `Atom and Markdown <https://github.com/AguaClara/aguaclara_tutorial/wiki/Atom-and-Markdown>`_
-#. `Python and Hydrogen <https://github.com/AguaClara/aguaclara_tutorial/wiki/Python-and-Hydrogen>`_
-#. `Git and Github <https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github>`_
-#. `Research <https://github.com/AguaClara/aguaclara_tutorial/wiki/Research>`_
+.. toctree::
+   :maxdepth: 2
+   :caption: Python and Hydrogen
 
-**To get started, visit the `Installing Software <https://github.com/AguaClara/aguaclara_tutorial/wiki/Installing-Software>`_ section.**
+   python-and-hydrogen/python-and-hydrogen-introduction
+   python-and-hydrogen/writing-python-code
+   python-and-hydrogen/running-python-code
+   python-and-hydrogen/python-packages
+   python-and-hydrogen/hydrogen-basics
+   python-and-hydrogen/good-coding-practices
 
-Helpful Links
--------------
+.. toctree::
+   :maxdepth: 2
+   :caption: Git and GitHub
 
-**If you run into a problem, check `Common Issues <https://github.com/AguaClara/aguaclara_tutorial/wiki/Common-Issues>`_\ , then `open an issue in this repository <https://github.com/AguaClara/aguaclara_tutorial/issues/new>`_.**
+   git-and-github/git-and-github-introduction
+   git-and-github/git-basics
+   git-and-github/git-in-the-command-line
+   git-and-github/github-basics
 
-**If you would like to see a new section in this tutorial, visit the `Contributing to the Wiki <https://github.com/AguaClara/aguaclara_tutorial/wiki/Contributing-to-the-Wiki>`_ tutorial.**
+.. toctree::
+   :maxdepth: 2
+   :caption: Research
 
+   research/procoda
+   research/turbidimeter-calibration
+   research/turbidimeter-cleaning
+   research/common-turbidimeter-problems
 
-Indices and tables
-==================
+.. toctree::
+   :maxdepth: 2
+   :caption: Other Tutorials
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   other-tutorials/common-issues
+   other-tutorials/transitioning-from-matlab
+   other-tutorials/contributing-to-the-tutorial
+   other-tutorials/video-tutorials

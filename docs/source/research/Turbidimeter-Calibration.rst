@@ -1,3 +1,8 @@
+.. _turbidimeter-calibration:
+
+************************
+Turbidimeter Calibration
+************************
 
 Turbidimeters need to be recalibrated every two months. The calibration kit is located in the AguaClara Lab in Hollister Hall. Perform the following steps to successfully calibrate turbidimeters.
 
