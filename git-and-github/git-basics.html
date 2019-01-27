@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Git Basics &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Git in the Command Line" href="git-in-the-command-line.html" />
+    <link rel="prev" title="Git and GitHub Introduction" href="git-and-github-introduction.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Atom and Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/atom-and-markdown-introduction.html">Atom and Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/markdown-basics.html">Markdown Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/teletype-basics.html">Teletype Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python and Hydrogen</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/python-and-hydrogen-introduction.html">Python and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/writing-python-code.html">Writing Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/running-python-code.html">Running Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/good-coding-practices.html">Good Coding Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git Basics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-terminology">Git Terminology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#repository">Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#branches-and-forks">Branches and Forks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clone">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull">Pull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commit">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#push">Push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge-conflicts">Merge Conflicts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Git Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/git-and-github/git-basics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git-basics">
+<span id="id1"></span><h1>Git Basics<a class="headerlink" href="#git-basics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="git-terminology">
+<h2>Git Terminology<a class="headerlink" href="#git-terminology" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of GitHub is to allow multiple people to work on a coding project and maintain consistency. In order to accomplish this Git employs a number of tools such as pull, push, commit, and merge conflicts which are explained below. To aid(e) in this explanation let’s imagine that AguaClara is a company which owns a chain of sandwich restaurants.</p>
+<div class="section" id="repository">
+<h3>Repository<a class="headerlink" href="#repository" title="Permalink to this headline">¶</a></h3>
+<p>A repository is like a folder in Git. If AguaClara were a restaurant chain, then each individual restaurant would be a repository. You can save many associated files in a repository and give specific users permission to edit the files in the repository. There are a number of repositories on the AguaClara GitHub including this one, aguaclara_tutorial.</p>
+</div>
+<div class="section" id="branches-and-forks">
+<h3>Branches and Forks<a class="headerlink" href="#branches-and-forks" title="Permalink to this headline">¶</a></h3>
+<p>A repository can have a number of different branches and forks. These branches allow different people to make edits to the code without disrupting each other. This is sort of like how one chef could be working on a BLT while another scooped ice cream (for the record, an ice cream cone is a sandwich). Then at the end the branches can be merged together. If some of the ice cream melted onto the BLT then there might be a merge conflict which needs to be resolved (this is explained in more detail below). Most research teams will use only a single branch, the master.</p>
+</div>
+<div class="section" id="clone">
+<h3>Clone<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h3>
+<p>When you first want to access a repository locally you’ll have to clone it. By cloning the repository you make a local copy to which you’ll be able to pull updates from online and push your changes to the repository. If pulling and pushing don’t make sense yet don’t worry, just read the sections below.</p>
+<p>P.S. I’m not sure how exactly cloning works in the sandwich analogy, ideas are welcome</p>
+</div>
+<div class="section" id="pull">
+<h3>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h3>
+<p>A pull request takes the most recent version of whatever branch you’re in and downloads it onto your computer. Basically the chef double checks the recipe for his sandwich and updates it accordingly. Then from there he can modify the sandwich from the most recent recipe in order to minimize conflicts.</p>
+</div>
+<div class="section" id="commit">
+<h3>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h3>
+<p>Once the chef creates a new sandwich and taste tests it, she’ll want to save the recipe so that she can recreate the sandwich. In computer terms, a commit is saving the changes you’ve made locally, and it’s important to commit before pushing any changes to a repository. How could you publish a recipe for others to use if you never write it down, right?</p>
+</div>
+<div class="section" id="push">
+<h3>Push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h3>
+<p>Now that the chef has written down the recipe, she will want to update the restaurant’s recipe. Updating the branch on GitHub is accomplished through a push. Once a push occurs, other chefs will be able to pull request the most updated recipe so they can try the delicious sandwich and modify it themselves.</p>
+</div>
+<div class="section" id="merge-conflicts">
+<h3>Merge Conflicts<a class="headerlink" href="#merge-conflicts" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s say two chefs were working on changing the recipe for the same sandwich simultaneously. One decides to add cheese to the BLT, while the other doesn’t like tomato so he takes that out and puts in avocado instead. When they go to publish the recipe (push), the restaurant manager won’t know which recipe to use. This is called a merge conflict. How a merge conflict is resolved is explained in more detail below.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="git-in-the-command-line.html" class="btn btn-neutral float-right" title="Git in the Command Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="git-and-github-introduction.html" class="btn btn-neutral" title="Git and GitHub Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

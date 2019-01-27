@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installing on Windows &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing Interactive Tutorials" href="installing-interactive-tutorials.html" />
+    <link rel="prev" title="Installing on MacOS" href="installing-on-macos.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing Software</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing on Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#atom-sync-settings">Atom &amp; Sync Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#anaconda-python">Anaconda &amp; Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pip-packages"><code class="docutils literal notranslate"><span class="pre">pip</span></code> Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Atom and Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/atom-and-markdown-introduction.html">Atom and Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/markdown-basics.html">Markdown Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/teletype-basics.html">Teletype Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python and Hydrogen</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/python-and-hydrogen-introduction.html">Python and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/writing-python-code.html">Writing Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/running-python-code.html">Running Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-and-hydrogen/good-coding-practices.html">Good Coding Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Installing on Windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installing-software/installing-on-windows.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installing-on-windows">
+<span id="id1"></span><h1>Installing on Windows<a class="headerlink" href="#installing-on-windows" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="atom-sync-settings">
+<h2>Atom &amp; Sync Settings<a class="headerlink" href="#atom-sync-settings" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Download the <a class="reference external" href="https://atom.io/">Atom installer</a> and double-click it to begin installation. Atom should open up once it’s installed.</li>
+<li>Open Atom settings by going to File &gt; Settings (or Control + Comma).</li>
+<li>Go to Install and search for <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code>. Click on the blue Install button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
+<li>Once it’s done installing, click on the Settings button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
+<li>Create a new <a class="reference external" href="https://github.com/settings/tokens/new">Github personal access token</a>. You may set the name to anything you’d like, but we recommend that you call it something descriptive, like “aguaclara-atom-configuration”.</li>
+<li>Check the “<strong>gist</strong>: Create gists” permission, then click Generate Token. Copy the generated token.</li>
+<li>In the Atom <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> settings, paste your generated token in Personal Access Token.</li>
+<li>Set the Gist Id to <code class="docutils literal notranslate"><span class="pre">8cb1fed2721e41873e9bcb315c804579</span></code>.<ul>
+<li>This synchronizes your Atom settings and plug-ins with the required <a class="reference external" href="https://gist.github.com/ethan92429/8cb1fed2721e41873e9bcb315c804579">AguaClara Atom configuration</a>.</li>
+</ul>
+</li>
+<li>Restart Atom. <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> will do its job in the background. You can check on its progress in File &gt; Settings &gt; Packages.<ul>
+<li>If you get a dialog box saying that <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> is out of date, click “Restore”.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="git">
+<span id="installing-on-windows-git"></span><h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Download the <a class="reference external" href="https://git-scm.com/downloads">Git installer</a> and double-click it to begin installation.</li>
+<li>When the installer asks which text editor you would like to use with Git (the default is Vim), select Nano instead. While powerful, Vim is difficult to use and not necessary for Git.<ul>
+<li>Aside from this, you can just click “Next” through the entire installation.</li>
+</ul>
+</li>
+<li>After the installation is complete, open <strong>PowerShell</strong> or <strong>Command Prompt</strong>.</li>
+<li>Run the two following commands with your name and Cornell email, carefully observing spaces and punctuation:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Firstname</span> <span class="pre">Lastname&quot;</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;NetID&#64;cornell.edu&quot;</span></code><ul>
+<li>The quotation marks are important! For example, the command should say something like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Monroe</span> <span class="pre">Weber-Shirk&quot;</span></code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="anaconda-python">
+<h2>Anaconda &amp; Python<a class="headerlink" href="#anaconda-python" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Download the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda installer</a> and double-click it to begin installation.</li>
+<li>When the installer displays Advanced Options, select “Add Anaconda to my PATH environment variable”.<ul>
+<li>Aside from this, you can just click “Next” through the entire installation.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="pip-packages">
+<h2><code class="docutils literal notranslate"><span class="pre">pip</span></code> Packages<a class="headerlink" href="#pip-packages" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Open <strong>PowerShell</strong> or <strong>Command Prompt</strong>, as you did when installing <a class="reference internal" href="#installing-on-windows-git"><span class="std std-ref">Git</span></a>.</li>
+<li>Run the following command, carefully observing spaces and punctuation:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara_research</span> <span class="pre">aide_design</span> <span class="pre">--user</span></code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Now, you’re ready for</strong> <a class="reference internal" href="installing-interactive-tutorials.html#installing-interactive-tutorials"><span class="std std-ref">Installing Interactive Tutorials</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installing-interactive-tutorials.html" class="btn btn-neutral float-right" title="Installing Interactive Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installing-on-macos.html" class="btn btn-neutral" title="Installing on MacOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

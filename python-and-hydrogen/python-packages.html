@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python Packages &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hydrogen Basics" href="hydrogen-basics.html" />
+    <link rel="prev" title="Running Python Code" href="running-python-code.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Atom and Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/atom-and-markdown-introduction.html">Atom and Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/markdown-basics.html">Markdown Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/teletype-basics.html">Teletype Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python and Hydrogen</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python-and-hydrogen-introduction.html">Python and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing-python-code.html">Writing Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-python-code.html">Running Python Code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#built-in-python-functions">Built-In Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-math-package">Python <code class="docutils literal notranslate"><span class="pre">math</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-math-functions">Advanced Math Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aguaclara-package"><code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sig-figs">Sig-Figs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#units">Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-and-pandas">Plotting and Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions-within-matplotlib-plt">Functions Within <code class="docutils literal notranslate"><span class="pre">matplotlib.plt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arrays-and-lists-in-python">Arrays and Lists in Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="good-coding-practices.html">Good Coding Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Python Packages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python-and-hydrogen/python-packages.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-packages">
+<span id="id1"></span><h1>Python Packages<a class="headerlink" href="#python-packages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="built-in-python-functions">
+<h2>Built-In Python Functions<a class="headerlink" href="#built-in-python-functions" title="Permalink to this headline">¶</a></h2>
+<p>Python has a lot of built-in functions that you can use to code. Read about the syntax and what they do on the <a class="reference external" href="https://docs.python.org/3/library/functions.html">official Python documentation</a>.</p>
+</div>
+<div class="section" id="python-math-package">
+<h2>Python <code class="docutils literal notranslate"><span class="pre">math</span></code> Package<a class="headerlink" href="#python-math-package" title="Permalink to this headline">¶</a></h2>
+<p>Python also comes with a pre-installed math package with a whole assortment of different functions and mathematical values like <code class="docutils literal notranslate"><span class="pre">pi</span></code> and <code class="docutils literal notranslate"><span class="pre">e</span></code>. In order to use the package, you’ll have to <code class="docutils literal notranslate"><span class="pre">import</span></code> the package at the start of your script. Below I’ve imported the math function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="kn">as</span> <span class="nn">m</span>
+</pre></div>
+</div>
+<p>Notice how I abbreviated the <code class="docutils literal notranslate"><span class="pre">math</span></code> package as <code class="docutils literal notranslate"><span class="pre">m</span></code>. This is because Python uses dot notation, so every time I want to use a function within <code class="docutils literal notranslate"><span class="pre">math</span></code>, I have to do <code class="docutils literal notranslate"><span class="pre">m.function()</span></code>, which is much simpler than using <code class="docutils literal notranslate"><span class="pre">math.function()</span></code>. For example, say I want to use <code class="docutils literal notranslate"><span class="pre">sin()</span></code> to get the value of sin(pi), I would have to call it like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myValue</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The Python <code class="docutils literal notranslate"><span class="pre">math</span></code> package has a whole bunch of useful mathematical functions that you can read about on the <a class="reference external" href="https://docs.python.org/3/library/math.html">Python documentation for math</a>.</p>
+</div>
+<div class="section" id="advanced-math-functions">
+<h2>Advanced Math Functions<a class="headerlink" href="#advanced-math-functions" title="Permalink to this headline">¶</a></h2>
+<p>In the rare case that your code requires something more than the basic math operations that Python has built-in, you can take advantage of the SciPy package, which also comes with Anaconda. SciPy is great for things like calculus, differential equations, linear algebra, and statistics. You can learn more about it at the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/">SciPy documentation</a>. Additionally, you can perform symbolical calculations using SymPy, which you can learn about on the <a class="reference external" href="http://www.sympy.org/en/index.html">SymPy documentation</a>.</p>
+</div>
+<div class="section" id="aguaclara-package">
+<h2><code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> Package<a class="headerlink" href="#aguaclara-package" title="Permalink to this headline">¶</a></h2>
+<p>AguaClara has a python package called <code class="docutils literal notranslate"><span class="pre">aguaclara</span></code>, which comes with many useful modules including <code class="docutils literal notranslate"><span class="pre">unit_registry</span></code>, <code class="docutils literal notranslate"><span class="pre">physchem</span></code>, <code class="docutils literal notranslate"><span class="pre">utility</span></code>, and <code class="docutils literal notranslate"><span class="pre">pipedatabase</span></code>. The <code class="docutils literal notranslate"><span class="pre">unit_registry</span></code> module allows us to apply units to our calculations, which is talked about later. The <code class="docutils literal notranslate"><span class="pre">physchem</span></code> module comes with many pre-defined functions related to hydraulics, flocculation, and sedimentation to name a few. You can explore all the different functions and inputs along with what they calculate in <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py">the physchem source code</a>.The <code class="docutils literal notranslate"><span class="pre">utility</span></code> module comes with many functions that do useful things unrelated to the physical/chemical process of water treatment. To explore the different functions available, go to the <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/utility.py">utility source code</a>. Lastly, the <code class="docutils literal notranslate"><span class="pre">pipes</span></code> module contains many functions related to pipe sizing. You can check out the different functions available in the <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/pipes.py">pipes source code</a>.</p>
+<p>In addition to the modules developed by AguaClara, the <code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> package imports third party packages that are useful for calculations and data manipulation. These include <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, which is useful for arrays, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, which is used for plotting, and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, which can be used to extract data from files like a <code class="docutils literal notranslate"><span class="pre">.csv</span></code>.</p>
+<p>To install the package, simply run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara</span></code> in your Command Shell (PC) or Terminal (Mac). To update the package, use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">no-deps</span> <span class="pre">aguaclara</span></code> or <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara</span> <span class="pre">--upgrade</span></code> if the other did not work.</p>
+<p>In order to use these modules within your Python script, you’ll have to import them. At the start of your Python code, you should write the line of code as shown below to take advantage of the packages:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.play</span> <span class="kn">import</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>In all code written for AguaClara, the modules are always specified using dot notation with abbreviations for the module names. Here’s a quick guide for what the abbreviations are:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">pc</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">physchem</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">u</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">unit_registry</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">ut</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">utility</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">pipe</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">pipedatabase</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">exp</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">expert_inputs</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">mat</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">materials_database</span></code> mmodule</li>
+<li><code class="docutils literal notranslate"><span class="pre">k</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">k_value_of_reductions_utility</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">pipline</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">pipeline_utility</span></code> module</li>
+<li><code class="docutils literal notranslate"><span class="pre">np</span></code> is used to abbreviate the NumPy package</li>
+<li><code class="docutils literal notranslate"><span class="pre">pd</span></code> is used to abbreviate the Pandas package</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt</span></code> is used to abbreviate MatPlotLib’s plotting module</li>
+</ul>
+<p>When I want to use a function or something from these modules, I have to use dot notation. For example, if I want to make use of a Reynolds Number function in <code class="docutils literal notranslate"><span class="pre">physchem</span></code>, I would do this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span><span class="o">.</span><span class="n">re_pipe</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Note that the 1s are the function&#39;s respective inputs (Flow Rate, Pipe Diameter, and Kinematic Viscosity)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sig-figs">
+<h2>Sig-Figs<a class="headerlink" href="#sig-figs" title="Permalink to this headline">¶</a></h2>
+<p>When you perform a calculation in Python and print the result, the output tends to be an answer that contains an unnecessary number of decimal places. In order to set the number of significant figures for your printed result, you would simply use the line as shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">default_format</span> <span class="o">=</span> <span class="s1">&#39;.3f&#39;</span> <span class="c1"># This will give my printed value in 3 significant figures</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span> <span class="c1"># This will print 0.571 meter</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># This will print 0.857 meter</span>
+</pre></div>
+</div>
+<p>To change the number of significant figures displayed, simply change the 3 with your desired number of sig-figs. You only need to have <code class="docutils literal notranslate"><span class="pre">u.default_format</span></code> once in your code for all printed values to have the same number of sig-figs. It should be noted that significant figures only take place if you <code class="docutils literal notranslate"><span class="pre">print()</span></code> your calculated value with units. This means <code class="docutils literal notranslate"><span class="pre">print(3</span> <span class="pre">/</span> <span class="pre">9)</span></code> will still give you a lot of sig-figs.</p>
+</div>
+<div class="section" id="units">
+<h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<p>In engineering, units are incredibly important to us. They help as a sanity check to confirm our answers or reveal problems with our solutions. We’ll be using Pint. The <code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> package that you installed comes with the necessary units module. When you use the import code as shown in the <code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> packages section of this Wiki, your script will have access to the unit registry.</p>
+<p>Now we are ready to use units. As an example of how to use them, say I want to define a flow rate with units of mL/s. I would simply do as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">QPlant</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mL</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>Let’s say I want to convert the units to its metric base units (meters cubed). I can do this in two ways.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># If I already know the base units, I can do this:</span>
+<span class="n">QPlant</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># Or I can do this:</span>
+<span class="n">QPlant</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Pint also includes constants, which you can find on the <a class="reference external" href="https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt">Pint documentation</a>.</p>
+</div>
+<div class="section" id="plotting-and-pandas">
+<h2>Plotting and Pandas<a class="headerlink" href="#plotting-and-pandas" title="Permalink to this headline">¶</a></h2>
+<p>A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package, Python has the capability of opening and parsing data from a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. You can then use this data with <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> to plot your raw data. Anaconda automatically comes with these packages, and by importing <code class="docutils literal notranslate"><span class="pre">aguaclara.play</span></code>, these are automatically imported into your file.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to read and use data is relatively simple, and the developers have created nice tutorials on how to use the package on <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">the Pandas documentation</a>.</p>
+<p>Plotting in Python is relatively straight forward. Below is an example of how to plot the entrance length of fully developed flow of water with velocity of 1 m/s at room temperature as a function of pipe diameter, d, using the Blasius Equation:</p>
+<img alt="Blasius Equation" src="../_images/blasius-equation.png" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.play</span> <span class="kn">import</span><span class="o">*</span>
+
+<span class="n">xArray</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+<span class="nd">@u.wraps</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">],</span> <span class="bp">False</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">re_flat_plate</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="n">nu</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;This function calculates the Reynolds Number for flow past a plate using fluid velocity, plate length, and kinematic viscosity.&quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">dist</span> <span class="o">/</span> <span class="n">nu</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xArray</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">xArray</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">re_flat_plate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">xArray</span><span class="p">,</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="mi">293</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kelvin</span><span class="p">))),</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Blasius Solution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Distance From Leading Edge (Meters)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Boundary Layer Thickness (Meters)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Blasius Solution for Water at 293 K&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">minorticks_on</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;major&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;minor&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;lower right&#39;</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./Images/Blasius_Plot.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="functions-within-matplotlib-plt">
+<h3>Functions Within <code class="docutils literal notranslate"><span class="pre">matplotlib.plt</span></code><a class="headerlink" href="#functions-within-matplotlib-plt" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><ul>
+<li>This function takes in x values (typically an array), y values (sometimes an array or sometimes a function), a plot type (usually <code class="docutils literal notranslate"><span class="pre">'.'</span></code> for dots and <code class="docutils literal notranslate"><span class="pre">'-'</span></code> for smooth) to generate a plot, and label (a string that identifies the name of your plot).<ul>
+<li>Usually you won’t need to insert inputs beyond the plot label</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code><ul>
+<li>These functions take in strings to create axes labels</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.title()</span></code><ul>
+<li>This function takes in a string to make a plot title</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.minorticks_on()</span></code><ul>
+<li>Turns on the ability to use minor ticks</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code><ul>
+<li>Takes in a string (either <code class="docutils literal notranslate"><span class="pre">'major'</span></code> or <code class="docutils literal notranslate"><span class="pre">'minor'</span></code>) to determine which tick lines are displayed on the plot</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code><ul>
+<li>Takes a string for the location (<code class="docutils literal notranslate"><span class="pre">loc</span></code>) of the plot legend and the number of columns in your legend (<code class="docutils literal notranslate"><span class="pre">ncol</span></code>) to produce a plot legend</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.savefig()</span></code><ul>
+<li>Takes a string for a file path for where you want to save your image (this will usually be an images folder in your repository)</li>
+<li>When using a path, be sure to use forward slashes</li>
+<li>If you’re saving an image to a folder within the same repository as your Markdown file, you can use a relative path as shown above</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code><ul>
+<li>Takes a range of values (i.e. 0:0.5 for our example above) to restrict the axes range</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.tight_layout()</span></code><ul>
+<li>Ensures that your plot doesn’t get cut off when saving as an image</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code><ul>
+<li>Shows the plot in Atom when you run the code with Hydrogen</li>
+</ul>
+</li>
+</ul>
+<p>For more tutorials on plotting, check out this <a class="reference external" href="https://matplotlib.org/users/pyplot_tutorial.html">pyplot tutorial</a> or this <a class="reference external" href="https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python">matplotlib tutorial</a>. You can also access a <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> <a class="reference external" href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf">cheat sheet</a>.</p>
+<div class="section" id="arrays-and-lists-in-python">
+<h4>Arrays and Lists in Python<a class="headerlink" href="#arrays-and-lists-in-python" title="Permalink to this headline">¶</a></h4>
+<p>Python has no native array type. Instead, it has lists, which are defined using <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In order to use arrays, we will utilize the NumPy package, which comes with the Anaconda installation. Like the <code class="docutils literal notranslate"><span class="pre">math</span></code> package, NumPy has to be imported into your code. Typically, we will import it via <code class="docutils literal notranslate"><span class="pre">aguaclara.play</span></code> as <code class="docutils literal notranslate"><span class="pre">np</span></code> as you will see in a lot of AguaClara code. To turn my list into an array, I would simply write this code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.play</span> <span class="kn">import</span><span class="o">*</span>
+<span class="n">myArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To make a 2D array, I can use the same <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> command. Below is an example of how to make a 2D array.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my2DArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>If I want to pull out a single row or column from my 2D array, I would do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my2DArray</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># This will give me the middle column</span>
+
+<span class="n">my2DArray</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span> <span class="c1"># This will give me the middle row</span>
+</pre></div>
+</div>
+<p>To find the length of a 1D array or size or shape of a 2D array, I can do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span> <span class="c1"># This tells me the length of myArray</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">my2DArray</span><span class="p">)</span> <span class="c1"># This tells me the size of my2DArray</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">my2DArray</span><span class="p">)</span> <span class="c1"># This tells me the dimensions of my2DArray</span>
+</pre></div>
+</div>
+<p>NumPy arrays also support units, which are mentioned later in this guide. If I wanted to apply units to my array, I would run this code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myArrayUnits</span> <span class="o">=</span> <span class="n">myArray</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+</pre></div>
+</div>
+<p>Say I want an array of a specified size starting from 0, something that would be helpful for generating a plot. I could use <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> to do this. If I want an array from 0 to 9, or of size 10, I would simply run <code class="docutils literal notranslate"><span class="pre">np.arange(10)</span></code>. I can also specify two bounds and a step size if I want to have even greater control over my array. To do this, I would still use <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code>, but with 3 inputs as such: <code class="docutils literal notranslate"><span class="pre">np.arange(low,</span> <span class="pre">high,</span> <span class="pre">step</span> <span class="pre">size)</span></code>, so <code class="docutils literal notranslate"><span class="pre">np.arange(0,</span> <span class="pre">1,</span> <span class="pre">0.1)</span></code> would give me an array from 0 to, but not including, 1 in 0.1 increments.</p>
+<p>NumPy has many capabilities, which I won’t be able to discuss in-depth on the Wiki, but <a class="reference external" href="https://www.dataquest.io/blog/numpy-cheat-sheet/">numpy’s cheat sheet</a> is a great guide to learn more about NumPy’s power.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hydrogen-basics.html" class="btn btn-neutral float-right" title="Hydrogen Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="running-python-code.html" class="btn btn-neutral" title="Running Python Code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
