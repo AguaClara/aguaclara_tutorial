@@ -1,12 +1,12 @@
 # Using Python and Running it With Hydrogen in Markdown
 
 ## Running Code With Hydrogen
-1. Below this, I've copied the code I wrote for the [Writing Python](https://github.com/AguaClara/aguaclara_tutorial/wiki/Writing Python) tutorial. You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run` (`Cmnd + Enter`).
+1. Below this, I've copied the code I wrote for the [Python Packages](https://aguaclara.github.io/aguaclara_tutorial/python-and-hydrogen/python-packages.html) tutorial. You should familiarize yourself with the different Hydrogen commands using this code. For the first line, use `Hydrogen: Run` (`Cmd + Enter`).
 2. For the second line, use `Hydrogen: Run and Move Down` (`Shift + Enter`).
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
 
 ```python
-from aide_design.play import*
+from aguaclara.play import *
 
 xArray = u.Quantity(np.arange(0.1, 0.5, 0.01), u.m)
 
