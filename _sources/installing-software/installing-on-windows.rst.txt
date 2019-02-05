@@ -58,6 +58,6 @@ Anaconda & Python
 #. Open **PowerShell** or **Command Prompt**\ , as you did when installing :ref:`installing-on-windows-git`.
 #. Run the following command, carefully observing spaces and punctuation:
 
-   * ``pip install aguaclara_research aide_design --user``
+   * ``pip install aguaclara --user``
 
 **Now, you're ready for** :ref:`installing-interactive-tutorials`.
