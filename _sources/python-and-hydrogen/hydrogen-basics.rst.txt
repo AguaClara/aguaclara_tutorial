@@ -75,3 +75,6 @@ Hydrogen will also tell you when your code is bad and won't execute by giving yo
    :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/BadHydrogenRun.png
    :alt: BadHydrogenRun
 
+**Now, complete Lesson 3 of the interactive tutorials. It's in the**
+``Interactive-Tutorial-3-Hydrogen.md`` **file in your** ``aguaclara_tutorial``
+**repository.**
