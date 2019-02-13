@@ -9,7 +9,7 @@ Atom & Sync Settings
 
 
 #. Download `Atom <https://atom.io/>`_\ , extract the zipped file, then drag the Atom application to your Applications folder. Next, open up Atom.
-#. Open Atom settings by going to File > Settings (or Control + Comma).
+#. Open Atom settings by going to Atom > Preferences (or Control + Comma).
 #. Go to Install and search for ``sync-settings``. Click on the blue Install button in the ``sync-settings`` box.
 #. Once it's done installing, click on the Settings button in the ``sync-settings`` box.
 #. Create a new `Github personal access token <https://github.com/settings/tokens/new>`_. You may set the name to anything you'd like, but we recommend that you call it something descriptive, like "aguaclara-atom-configuration".
@@ -46,9 +46,14 @@ Anaconda & Python
 
 
 #. Download the `Anaconda installer <https://www.anaconda.com/download/>`_ and double-click it to begin installation.
-#. When the installer displays Advanced Options, select "Add Anaconda to my PATH environment variable".
+#. When the installer displays Advanced Options, select "Add Anaconda to my PATH environment variable".\*
 
    * Aside from this, you can just click "Next" through the entire installation.
+
+\*If the installer did not give the option to "Add Anaconda to my PATH environment variable", follow the steps below after the installation:
+   * Open **Terminal** and enter ``which python``.
+   * Copy the directory the terminal outputs. (This is the directory Python has been installed in.)
+   * Enter the command ``export PATH=$PATH<directory>``, replacing "<directory>" with the directory you copied above.
 
 ``pip`` Packages
 ====================
@@ -58,5 +63,6 @@ Anaconda & Python
 #. Run the following command, carefully observing spaces and punctuation:
 
    * ``pip install aguaclara --user``
+      * If you get the error "bash: pip: command not found", follow the steps in the **Anaconda and Python** section after the asterisk.
 
 **Now, you're ready for** :ref:`installing-interactive-tutorials`.
