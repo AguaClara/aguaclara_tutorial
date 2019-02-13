@@ -40,8 +40,8 @@ Basic Commands
 The command line functions much like **Finder** or **Windows Explorer** in that you can look through your computer's files and make changes to them:
 
 
-* ``ls``\ : **lists** all of the files and folders in the folder you're currently in.
-* `cd`: **changes** the **directory** (folder) that you're in. You must add one of the following options after `cd`:
+* ``ls`` (MacOS and Linux) or ``dir`` (Windows) : **lists** all of the files and folders in the folder (**dir**ectory) you're currently in.
+* ```cd``: **changes** the **directory** (folder) that you're in. You must add one of the following options after `cd`:
 
   * ``subdirectory-name/``\ : goes *down* into the specified subdirectory.
   * ``..`` : goes *up* into the superdirectory of your current directory.
@@ -68,7 +68,7 @@ You need to first create a *fork*\ , or copy, of the original ``aguaclara_tutori
 
    * If you haven't made one yet, `create a Github account <https://github.com/join?source=header-home>`_.
 
-#. Under the green "Clone or Download" button, *copy* the URL. 
+#. Under the green "Clone or Download" button, *copy* the URL.
 
 Clone Your Repository
 ---------------------
@@ -77,11 +77,11 @@ Now we'll *clone*\ , or download, the repository that you just forked.
 
 
 #. Open your *command line*.
-#. Enter ``ls``
+#. Enter ``ls`` or ``dir``
 
    * The command line starts in your "home" directory, which should contain folders like ``Desktop/``\ , ``Documents/``\ , ``Pictures/``\ , etc.
 
-#. If you'd like to put the *Interactive Tutorials* elsewhere, use ``ls`` and ``cd`` to get to your preferred directory.
+#. If you'd like to put the *Interactive Tutorials* elsewhere, use ``ls``/``dir`` and ``cd`` to get to your preferred directory.
 #. Enter ``git clone``\ , a space, and then the URL that you copied above.
 
    * The command should look like ``git clone https://github.com/<yourusername>/aguaclara_tutorial.git``

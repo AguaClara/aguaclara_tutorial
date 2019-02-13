@@ -205,7 +205,7 @@
 <h2>Atom &amp; Sync Settings<a class="headerlink" href="#atom-sync-settings" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Download <a class="reference external" href="https://atom.io/">Atom</a>, extract the zipped file, then drag the Atom application to your Applications folder. Next, open up Atom.</li>
-<li>Open Atom settings by going to File &gt; Settings (or Control + Comma).</li>
+<li>Open Atom settings by going to Atom &gt; Preferences (or Control + Comma).</li>
 <li>Go to Install and search for <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code>. Click on the blue Install button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
 <li>Once it’s done installing, click on the Settings button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
 <li>Create a new <a class="reference external" href="https://github.com/settings/tokens/new">Github personal access token</a>. You may set the name to anything you’d like, but we recommend that you call it something descriptive, like “aguaclara-atom-configuration”.</li>
@@ -243,18 +243,34 @@
 <h2>Anaconda &amp; Python<a class="headerlink" href="#anaconda-python" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Download the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda installer</a> and double-click it to begin installation.</li>
-<li>When the installer displays Advanced Options, select “Add Anaconda to my PATH environment variable”.<ul>
+<li>When the installer displays Advanced Options, select “Add Anaconda to my PATH environment variable”.*<ul>
 <li>Aside from this, you can just click “Next” through the entire installation.</li>
 </ul>
 </li>
 </ol>
+<dl class="docutils">
+<dt>*If the installer did not give the option to “Add Anaconda to my PATH environment variable”, follow the steps below after the installation:</dt>
+<dd><ul class="first last simple">
+<li>Open <strong>Terminal</strong> and enter <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code>.</li>
+<li>Copy the directory the terminal outputs. (This is the directory Python has been installed in.)</li>
+<li>Enter the command <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=$PATH&lt;directory&gt;</span></code>, replacing “&lt;directory&gt;” with the directory you copied above.</li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="pip-packages">
 <h2><code class="docutils literal notranslate"><span class="pre">pip</span></code> Packages<a class="headerlink" href="#pip-packages" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Open <strong>Terminal</strong>, as you did when installing <a class="reference internal" href="#installing-on-macos-git"><span class="std std-ref">Git</span></a>.</li>
 <li>Run the following command, carefully observing spaces and punctuation:<ul>
-<li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara</span> <span class="pre">--user</span></code></li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara</span> <span class="pre">--user</span></code></dt>
+<dd><ul class="first last">
+<li>If you get the error “bash: pip: command not found”, follow the steps in the <strong>Anaconda and Python</strong> section after the asterisk.</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </li>
 </ol>
