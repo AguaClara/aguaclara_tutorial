@@ -40,8 +40,8 @@ Basic Commands
 The command line functions much like **Finder** or **Windows Explorer** in that you can look through your computer's files and make changes to them:
 
 
-* ``ls`` (MacOS and Linux) or ``dir`` (Windows) : **lists** all of the files and folders in the folder (**dir**ectory) you're currently in.
-* ```cd``: **changes** the **directory** (folder) that you're in. You must add one of the following options after `cd`:
+* ``ls`` (MacOS and Linux) or ``dir`` (Windows) : **lists** all of the files and folders in the folder (**dir**\ ectory) you're currently in.
+* ``cd``: **changes** the **directory** (folder) that you're in. You must add one of the following options after ``cd``:
 
   * ``subdirectory-name/``\ : goes *down* into the specified subdirectory.
   * ``..`` : goes *up* into the superdirectory of your current directory.

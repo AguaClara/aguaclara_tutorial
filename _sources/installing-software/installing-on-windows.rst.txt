@@ -51,10 +51,10 @@ Anaconda & Python
 
    * Aside from this, you can just click "Next" through the entire installation.
 
-\*If the installer did not give the option to "Add Anaconda to my PATH environment variable", follow the steps below after the installation:
-   * Open **Terminal** and enter ``which python``.
-   * Copy the directory the terminal outputs. (This is the directory Python has been installed in.)
-   * Enter the command ``export PATH=$PATH<directory>``, replacing "<directory>" with the directory you copied above.
+\* If the installer did not give the option to "Add Anaconda to my PATH environment variable", follow the steps below after the installation:
+  * Open **Terminal** and enter ``which python``
+  * Copy the directory the terminal outputs. (This is the directory Python has been installed in.)
+  * Enter the command ``export PATH=$PATH<directory>``, replacing ``<directory>`` with the directory you copied above.
 
 ``pip`` Packages
 ====================
@@ -64,6 +64,6 @@ Anaconda & Python
 #. Run the following command, carefully observing spaces and punctuation:
 
    * ``pip install aguaclara --user``
-      * If you get the error "bash: pip: command not found", follow the steps in the **Anaconda and Python** section after the asterisk.
+      * If you get the error ``bash: pip: command not found``, follow the steps in the **Anaconda and Python** section after the asterisk.
 
 **Now, you're ready for** :ref:`installing-interactive-tutorials`.
