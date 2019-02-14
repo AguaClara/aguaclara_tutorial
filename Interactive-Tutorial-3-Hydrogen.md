@@ -10,7 +10,6 @@ from aguaclara.play import *
 
 xArray = u.Quantity(np.arange(0.1, 0.5, 0.01), u.m)
 
-@u.wraps(None, [u.m / u.s, u.m, u.m ** 2 / u.s], False)
 def re_flat_plate(velocity, dist, nu):
   """This function calculates the Reynolds Number for flow past a plate using fluid velocity, plate length, and kinematic viscosity."""
   return (velocity * dist / nu)
