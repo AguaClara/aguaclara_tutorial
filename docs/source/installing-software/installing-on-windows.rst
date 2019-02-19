@@ -52,9 +52,9 @@ Anaconda & Python
    * Aside from this, you can just click "Next" through the entire installation.
 
 \* If the installer did not give the option to "Add Anaconda to my PATH environment variable", follow the steps below after the installation:
-  * Open **Terminal** and enter ``which python``
-  * Copy the directory the terminal outputs. (This is the directory Python has been installed in.)
-  * Enter the command ``export PATH=$PATH<directory>``, replacing ``<directory>`` with the directory you copied above.
+  * Open **Terminal** and enter ``whereis python``
+  * Copy the path the terminal outputs. (This is the folder Python has been installed in.)
+  * Enter the command ``set PATH=%PATH%;\path\to\python``, replacing ``\path\to\python`` with the path you copied above.
 
 ``pip`` Packages
 ====================
