@@ -252,9 +252,9 @@
 <dl class="docutils">
 <dt>* If the installer did not give the option to “Add Anaconda to my PATH environment variable”, follow the steps below after the installation:</dt>
 <dd><ul class="first last simple">
-<li>Open <strong>Terminal</strong> and enter <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code></li>
-<li>Copy the directory the terminal outputs. (This is the directory Python has been installed in.)</li>
-<li>Enter the command <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=$PATH&lt;directory&gt;</span></code>, replacing <code class="docutils literal notranslate"><span class="pre">&lt;directory&gt;</span></code> with the directory you copied above.</li>
+<li>Open <strong>Command Prompt</strong> (not PowerShell) and enter <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code></li>
+<li>Copy the path the terminal outputs. (This is the folder Python has been installed in.)</li>
+<li>Enter the command <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">PATH=%PATH%;C:\path\to\python</span></code>, replacing <code class="docutils literal notranslate"><span class="pre">C:\path\to\python</span></code> with the path you copied above.</li>
 </ul>
 </dd>
 </dl>
