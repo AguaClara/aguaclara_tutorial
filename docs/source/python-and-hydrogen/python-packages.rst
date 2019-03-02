@@ -105,8 +105,8 @@ Let's say I want to convert the units to its metric base units (meters cubed). I
 
 Pint also includes constants, which you can find on the `Pint documentation <https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt>`_.
 
-Plotting and Pandas
--------------------
+Plotting
+--------
 
 A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the ``pandas`` package, Python has the capability of opening and parsing data from a ``.csv`` file. You can then use this data with ``matplotlib.pyplot`` to plot your raw data. Anaconda automatically comes with these packages, and by importing ``aguaclara.play``\ , these are automatically imported into your file.
 
@@ -191,6 +191,217 @@ Functions Within ``matplotlib.plt``
   * Shows the plot in Atom when you run the code with Hydrogen
 
 For more tutorials on plotting, check out this `pyplot tutorial <https://matplotlib.org/users/pyplot_tutorial.html>`_ or this `matplotlib tutorial <https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python>`_. You can also access a ``matplotlib`` `cheat sheet <https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf>`_.
+
+Pandas
+------
+
+Load Data from CSV Files
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+CSV files are good for transferring and storing data, good for business and data analysis. Pandas is the most popular data manipulation package in Python, and DataFrames are the Panda data type for storing tabular 2D data. To load data from CSV files, one can use the read_csv function in Pandas.
+
+To start, one must first load the Pandas libraries with alias 'pd.'
+
+.. code-block:: python
+  import pandas as pd
+
+Then, one can read data from the file "filename.csv." data = pd.read_csv("filename.csv")
+
+One must add the path to the csv file in parentheses and assign this to the variable data.
+
+There are several concepts that are important for understanding CSV files:
+
+1. Filetypes and file extensions: data is stored in files with different names of different types. File is read by file extensions, which is the code following the dot.
+
+2. CSV is a basic text file and any text editor can open it. Commas separate different columns and newlines separate rows.
+
+3. Python looks in current working directory. Using relative paths is more common, which means starting at the current working directory until ending at the desired file location.
+
+Possible Errors
+
+File Not Found: path setup, current directory, or file name confusion
+Unicode Decode: not specifying encoding which happens with non-standard characters
+Parse Error: data format. If one adds the parameter engine='python', the data reading function is slower but more stable.
+
+Helpful Pandas Functions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Boolean Indexing**
+
+This would filter values of a column based on conditions from another set of columns. The conditions would be true or false.
+
+.. code-block:: python
+  data.loc[(data["Column 1"]=="Condition 1") & (data["Column 2"]=="Condition 2") & (data["Column 3"]=="Condition 3"), [Column 1, Column 2, Column 3]]
+
+**Apply Function**
+
+Returns some value after passing each row/column of a data frame with some function. Very common for playing with data and creating new variables.
+
+.. code-block:: python
+#Applying per column
+data.apply(function, axis=0) #axis=0 defines that function is to be applied to each column
+
+#Applying per row
+data.apply(function, axis=1) #axis=1 defines that function is to be applied on each row
+#use .head() after axis=#) if there are many rows
+
+**Input Missing Files**
+
+Can update missing values with mean/mode/median of the column. In this example we will use mode.
+
+To find the mode you first need to import a function to determine the mode.
+
+.. code-block:: python
+  from scipy.stats import mode
+  mode(data['Column name'])
+
+This will return both the mode and count. Mode can be an array since there can be multiple values with high frequency. We take the first one by default:
+
+.. code-block:: python
+  mode(data['Gender']).mode[0]
+
+This function is everything integrated together:
+
+.. code-block:: python
+  data['Column name'].fillna(mode(data['Column name']).mode[0], inplace=True)
+  data['Column name 2'].fillna(mode(data['Column name 2']).mode[0], inplace=True)
+  data['Column name 3'].fillna(mode(data['Column name 3']).mode[0], inplace=True)
+
+**Pivot Table**
+
+Input missing values.
+
+.. code-block:: python
+  impute_grps = data.pivot_table(values=["Column 1"], index=["Group 1"], index=["Group 2", "Group 3", "Group 4"], aggfunc=np.mean)
+  print impute_grps
+
+**Multi-Indexing**
+
+One index can be a combination of several values, and it helps to perform operations really fast.
+
+.. code-block:: python
+  for i, row in data.loc[data['Column 1'].isnull(),:].iterrows():
+    ind = tuple([row['Group 1'], row['Group 2'], row['Group 3']])
+    data.loc[i, 'Column 1'] = impute_grps.loc[ind].values[0]
+
+It requires a tuple to hav ea loc statement. The values[0] suffix is required because by default, the answer returned would not match with the answer that you are looking for.
+
+**Cross Tab**
+
+Gets an initial "feel," or view, of the data. Can validate some basic hypothesis.
+
+.. code-block:: python
+  pd.crosstab(data["Column 1"], data["Column 2"], margins=True)
+
+You can also use percentages instead of absolute numbers to make quick insights by the apply function.
+
+.. code-block:: python
+  def percConvert(ser):
+    return ser/float(ser[-1])
+    pd.crosstab(data["Column 1"], data["Column 2"], margins=True).apply(percConvert, axis=1)
+
+**Merge DataFrames**
+
+Need to collate information from different sources.
+
+.. code-block:: python
+  data = pd.DataFrame([1, 2, 3], index=['Type 1', 'Type 2', 'Type 3'], columns=['factors'])
+data)
+
+Now can merge this information with the original dataframe as:
+
+.. code-block:: python
+  data_merged = data.merge(right=certain_factors, how='inner', left_on='Columns', right_index=True, sort=False)
+  data_merged.pivot_table(values='subject', index=['Columns', 'factors'], aggfunc=len)
+
+The pivot table validates successful merge operation. The 'values' argument is irrelevant here because we are counting the values.
+
+**Sorting DataFrames**
+
+Pandas allow easy sorting based on multiple columns, as shown here:
+
+.. code-block:: python
+  data_sorted = data.sort_values(['Column 1', 'Column 2'], ascending=False)
+  data_sorted[['Column 1', 'Column 2']].head(10)
+
+**Plotting (Boxplot & Histogram)**
+
+Boxplots and histograms can be directly plotted in Pandas, so calling matplotlib separately is unnecessary. It is just a one-line command. An example is comparing the distribution of the two columns:
+
+.. code-block:: python
+  import matplotlib.pyplot as plt
+  %matplotlib inline
+  data.boxplot(column="Column 1", by="Column 2")
+
+.. code-block:: python
+  data.hist(column="Column 1", by="Column 2",bins=30)
+
+**Cut function for binning**
+
+Numerical values can make more sense if clustered together. Modeling this way is more intuitive and will avoid overfitting. This is a simple function which can be reused for binning any variable pretty easily:
+
+.. code-block:: python
+  def binning(col, cut_points, labels=None):
+  #Define min and max values:
+  minval = col.min()
+  maxval = col.max()
+
+  #create list by adding min and max to cut_points
+  break_points = [minval] + cut_points + [maxval]
+
+  #if no labels provided, use default labels 0 ... (n-1)
+  if not labels:
+     labels = range(len(cut_points)+1)
+
+  #Binning using cut function of pandas
+  colBin = pd.cut(col,bins=break_points,labels=labels,
+  include_lowest=True)
+  return colBin
+
+**Coding Nominal Data**
+
+Sometimes it is necessary to modify nominal variable categories. This may be because of:
+
+- Algorithms like Logistic Regression needing all inputs to be numeric, so nominal variables are usually coded as 0, 1...(n-1)
+- Category may be represented in two ways. For example, temperature might be recorded as "High," "medium," "low," "H," "Low." "High" and "H" are the same category, and "low" and "Low" are, but python would read them as different
+- Some categories may have low frequencies so one should combine them
+
+.. code-block:: python
+  #Replace function
+  def coding(col, codeDict):
+    colCoded = pd.Series(col, copy=True)
+    for key, value in codeDict.items():
+      colCoded.replace(key, value, inplace=True)
+      return colCoded
+
+  #Coding Status as Y=1, N=0:
+  print 'Before Coding:'
+  print pd.value_counts(data["Status"])
+  data["Status"] = coding(data["Status"], {'N':0, 'Y':1})
+  print '\nAfter Coding:'
+  print pd.value_counts(data["Status_Coded"])
+
+**Iterating over rows of a dataframe**
+
+Though this operation isn't frequently used, there are times when you may have to iterate through all rows using a for loop. For example, a common problem is treating variables incorrectly in Python. Usually, this happens when: nominal variables with numeric categories are treated as numerical, or numeric variables with characters entered in one of the rows because of a data error are considered categorical.
+
+It's usually a good idea to manually define column types. If we check current data types of all columns:
+
+.. code-block:: python
+  data.dtypes
+
+**Functions Within ``matplotlib.plt``**
+
+- ``plt.plot()``
+
+
+
+
+
+
+
+#To check missing values to confirm:
+print data.apply(num_missing, axis=0)
 
 Arrays and Lists in Python
 ==========================
