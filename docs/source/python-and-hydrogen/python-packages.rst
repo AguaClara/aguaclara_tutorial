@@ -267,6 +267,9 @@ This function is everything integrated together:
   data['Column name 2'].fillna(mode(data['Column name 2']).mode[0], inplace=True)
   data['Column name 3'].fillna(mode(data['Column name 3']).mode[0], inplace=True)
 
+  #To check missing values to confirm:
+  print data.apply(num_missing, axis=0)
+
 **Pivot Table**
 
 Input missing values.
@@ -390,21 +393,8 @@ It's usually a good idea to manually define column types. If we check current da
 .. code-block:: python
   data.dtypes
 
-**Functions Within ``matplotlib.plt``**
-
-- ``plt.plot()``
-
-
-
-
-
-
-
-#To check missing values to confirm:
-print data.apply(num_missing, axis=0)
-
 Arrays and Lists in Python
-==========================
+--------------------------
 
 Python has no native array type. Instead, it has lists, which are defined using ``[ ]``\ :
 
