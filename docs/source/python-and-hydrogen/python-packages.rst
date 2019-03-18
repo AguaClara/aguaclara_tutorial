@@ -195,8 +195,7 @@ For more tutorials on plotting, check out this `pyplot tutorial <https://matplot
 Reading Data with Pandas
 ------------------------
 
-Pandas is a popular Python package for data manipulation and analysis. We'll show you in this tutorial how to use Pandas to read files of data using and begin to perform calculations on the data. Remember that you can always check `the Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_ and `API Reference <http://pandas.pydata.org/pandas-docs/stable/reference/index.html>`_ to read more about the functions available.
-
+Pandas is a popular Python package for data manipulation and analysis. We'll show you in this tutorial how to use Pandas to read files of data and begin to perform analyze it. Remember that you can always check `the Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_ and `API Reference <http://pandas.pydata.org/pandas-docs/stable/reference/index.html>`_ to read more about the functions available.
 
 To start, we first load the Pandas library with alias 'pd.'
 
@@ -217,18 +216,28 @@ For example, to read data from the file ``/path/to/file/filename.cvs`` and store
 
   data = pd.read_csv("/path/to/file/filename.csv")
 
-If Python cannot find your file, make sure that you are giving the right path to your file. You can provide an absolute path, which starts from ``C:/Users/...`` for Windows or ``/Users/...`` for MacOS. You can also give a relative path, in which case Python will look for the file starting from your working directory (where you are running the code).
+The output of this is a *DataFrame*, a data structure defined in the Pandas package for holding tabular data, i.e. data in rows and columns. Each row and column of a DataFrame is a *Series*, another data structure in Pandas.
+
+.. If Python cannot find your file, make sure that you are giving the right path to your file. You can provide an absolute path, which starts from ``C:/Users/...`` for Windows or ``/Users/...`` for MacOS. You can also give a relative path, in which case Python will look for the file starting from your working directory (where you are running the code from).
 
 Helpful Pandas Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Boolean Indexing**
+**Indexing Methods**
 
-This would filter values of a column based on conditions from another set of columns. The conditions would be true or false.
+Given a DataFrame named ``data``,
 
-.. code-block:: python
+* ``data.columns``: returns a Series of the column labels in the DataFrame
 
-  data.loc[(data["Column 1"]=="Condition 1") & (data["Column 2"]=="Condition 2") & (data["Column 3"]=="Condition 3"), [Column 1, Column 2, Column 3]]
+* ``data.loc["Label"]``: returns a Series of the data in the column with label "Label" in the DataFrame (keep the quotation marks)
+* ``data.loc[["l1", "l2", "l3", "ln"]]``: returns a DataFrame with only the columns labeled with the labels specified in the list (in this example,"l1", "l2", "l3", and "ln")
+* ``data.loc[boolean_array]``: returns a DataFrame with only the entries corresponding with values of "True" in the boolean array (use a 1D list to index rows)
+
+* ``data.iloc[row_number]``: returns a Series of the data in the row of number ``row_number`` (must be an integer; 1st row is 0)
+* ``data.iloc[:, column_number]``: returns a Series of the data in the column of number ``column_number`` (must be an integer; 1st row is 0)
+* ``data.iloc[[r1, r2, rn]]``: returns a DataFrame with only the rows specified in the list (must be integers; in this example, ``r1``, ``r2``, and ``rn``)
+* ``data.iloc[begin_row : end_row]``: returns a DataFrame with only the rows in the slice object ``begin_row : end_row``, i.e. from ``begin_row`` to ``end_row`` inclusive
+* ``data.iloc[boolean_array]``: returns a DataFrame with only the entries corresponding with values of "True" in the boolean array (use a 1D list to index rows)
 
 **Apply Function**
 
@@ -243,54 +252,26 @@ Returns some value after passing each row/column of a data frame with some funct
   data.apply(function, axis=1) #axis=1 defines that function is to be applied on each row
   #use .head() after axis=#) if there are many rows
 
-**Input Missing Files**
-
-Can update missing values with mean/mode/median of the column. In this example we will use mode.
-
-To find the mode you first need to import a function to determine the mode.
-
-.. code-block:: python
-
-  from scipy.stats import mode
-  mode(data['Column name'])
-
-This will return both the mode and count. Mode can be an array since there can be multiple values with high frequency. We take the first one by default:
-
-.. code-block:: python
-
-  mode(data['Gender']).mode[0]
-
-This function is everything integrated together:
-
-.. code-block:: python
-
-  data['Column name'].fillna(mode(data['Column name']).mode[0], inplace=True)
-  data['Column name 2'].fillna(mode(data['Column name 2']).mode[0], inplace=True)
-  data['Column name 3'].fillna(mode(data['Column name 3']).mode[0], inplace=True)
-
-  #To check missing values to confirm:
-  print data.apply(num_missing, axis=0)
-
-**Pivot Table**
-
-Input missing values.
-
-.. code-block:: python
-
-  impute_grps = data.pivot_table(values=["Column 1"], index=["Group 1"], index=["Group 2", "Group 3", "Group 4"], aggfunc=np.mean)
-  print impute_grps
-
-**Multi-Indexing**
-
-One index can be a combination of several values, and it helps to perform operations really fast.
-
-.. code-block:: python
-
-  for i, row in data.loc[data['Column 1'].isnull(),:].iterrows():
-    ind = tuple([row['Group 1'], row['Group 2'], row['Group 3']])
-    data.loc[i, 'Column 1'] = impute_grps.loc[ind].values[0]
-
-It requires a tuple to hav ea loc statement. The values[0] suffix is required because by default, the answer returned would not match with the answer that you are looking for.
+.. **Pivot Table**
+..
+.. Input missing values.
+..
+.. .. code-block:: python
+..
+..   impute_grps = data.pivot_table(values=["Column 1"], index=["Group 1"], index=["Group 2", "Group 3", "Group 4"], aggfunc=np.mean)
+..   print impute_grps
+..
+.. **Multi-Indexing**
+..
+.. One index can be a combination of several values, and it helps to perform operations really fast.
+..
+.. .. code-block:: python
+..
+..   for i, row in data.loc[data['Column 1'].isnull(),:].iterrows():
+..     ind = tuple([row['Group 1'], row['Group 2'], row['Group 3']])
+..     data.loc[i, 'Column 1'] = impute_grps.loc[ind].values[0]
+..
+.. It requires a tuple to hav ea loc statement. The values[0] suffix is required because by default, the answer returned would not match with the answer that you are looking for.
 
 **Cross Tab**
 
@@ -306,34 +287,9 @@ You can also use percentages instead of absolute numbers to make quick insights 
 
   def percConvert(ser):
     return ser/float(ser[-1])
-    pd.crosstab(data["Column 1"], data["Column 2"], margins=True).apply(percConvert, axis=1)
 
-**Merge DataFrames**
+  pd.crosstab(data["Column 1"], data["Column 2"], margins=True).apply(percConvert, axis=1)
 
-Need to collate information from different sources.
-
-.. code-block:: python
-
-  data = pd.DataFrame([1, 2, 3], index=['Type 1', 'Type 2', 'Type 3'], columns=['factors'])
-data)
-
-Now can merge this information with the original dataframe as:
-
-.. code-block:: python
-
-  data_merged = data.merge(right=certain_factors, how='inner', left_on='Columns', right_index=True, sort=False)
-  data_merged.pivot_table(values='subject', index=['Columns', 'factors'], aggfunc=len)
-
-The pivot table validates successful merge operation. The 'values' argument is irrelevant here because we are counting the values.
-
-**Sorting DataFrames**
-
-Pandas allow easy sorting based on multiple columns, as shown here:
-
-.. code-block:: python
-
-  data_sorted = data.sort_values(['Column 1', 'Column 2'], ascending=False)
-  data_sorted[['Column 1', 'Column 2']].head(10)
 
 **Plotting (Boxplot & Histogram)**
 
@@ -349,62 +305,6 @@ Boxplots and histograms can be directly plotted in Pandas, so calling matplotlib
 
   data.hist(column="Column 1", by="Column 2",bins=30)
 
-**Cut function for binning**
-
-Numerical values can make more sense if clustered together. Modeling this way is more intuitive and will avoid overfitting. This is a simple function which can be reused for binning any variable pretty easily:
-
-.. code-block:: python
-
-  def binning(col, cut_points, labels=None):
-  #Define min and max values:
-  minval = col.min()
-  maxval = col.max()
-
-  #create list by adding min and max to cut_points
-  break_points = [minval] + cut_points + [maxval]
-
-  #if no labels provided, use default labels 0 ... (n-1)
-  if not labels:
-     labels = range(len(cut_points)+1)
-
-  #Binning using cut function of pandas
-  colBin = pd.cut(col,bins=break_points,labels=labels,
-  include_lowest=True)
-  return colBin
-
-**Coding Nominal Data**
-
-Sometimes it is necessary to modify nominal variable categories. This may be because of:
-
-- Algorithms like Logistic Regression needing all inputs to be numeric, so nominal variables are usually coded as 0, 1...(n-1)
-- Category may be represented in two ways. For example, temperature might be recorded as "High," "medium," "low," "H," "Low." "High" and "H" are the same category, and "low" and "Low" are, but python would read them as different
-- Some categories may have low frequencies so one should combine them
-
-.. code-block:: python
-
-  #Replace function
-  def coding(col, codeDict):
-    colCoded = pd.Series(col, copy=True)
-    for key, value in codeDict.items():
-      colCoded.replace(key, value, inplace=True)
-      return colCoded
-
-  #Coding Status as Y=1, N=0:
-  print 'Before Coding:'
-  print pd.value_counts(data["Status"])
-  data["Status"] = coding(data["Status"], {'N':0, 'Y':1})
-  print '\nAfter Coding:'
-  print pd.value_counts(data["Status_Coded"])
-
-**Iterating over rows of a dataframe**
-
-Though this operation isn't frequently used, there are times when you may have to iterate through all rows using a for loop. For example, a common problem is treating variables incorrectly in Python. Usually, this happens when: nominal variables with numeric categories are treated as numerical, or numeric variables with characters entered in one of the rows because of a data error are considered categorical.
-
-It's usually a good idea to manually define column types. If we check current data types of all columns:
-
-.. code-block:: python
-
-  data.dtypes
 
 Arrays and Lists in Python
 --------------------------
