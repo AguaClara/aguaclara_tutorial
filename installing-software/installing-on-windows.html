@@ -204,19 +204,21 @@
 <div class="section" id="atom-sync-settings">
 <h2>Atom &amp; Sync Settings<a class="headerlink" href="#atom-sync-settings" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Download the <a class="reference external" href="https://atom.io/">Atom installer</a> and double-click it to begin installation. Atom should open up once it’s installed.</li>
-<li>Open Atom settings by going to File &gt; Settings (or Control + Comma).</li>
-<li>Go to Install and search for <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code>. Click on the blue Install button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
-<li>Once it’s done installing, click on the Settings button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</li>
-<li>Create a new <a class="reference external" href="https://github.com/settings/tokens/new">Github personal access token</a>. You may set the name to anything you’d like, but we recommend that you call it something descriptive, like “aguaclara-atom-configuration”.</li>
-<li>Check the “<strong>gist</strong>: Create gists” permission, then click Generate Token. Copy the generated token.</li>
-<li>In the Atom <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> settings, paste your generated token in Personal Access Token.</li>
-<li>Set the Gist Id to <code class="docutils literal notranslate"><span class="pre">8cb1fed2721e41873e9bcb315c804579</span></code>.<ul>
-<li>This synchronizes your Atom settings and plug-ins with the required <a class="reference external" href="https://gist.github.com/ethan92429/8cb1fed2721e41873e9bcb315c804579">AguaClara Atom configuration</a>.</li>
+<li><p>Download the <a class="reference external" href="https://atom.io/">Atom installer</a> and double-click it to begin installation. Atom should open up once it’s installed.</p></li>
+<li><p>Open Atom settings by going to File &gt; Settings (or Control + Comma).</p></li>
+<li><p>Go to Install and search for <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code>. Click on the blue Install button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</p></li>
+<li><p>Once it’s done installing, click on the Settings button in the <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> box.</p></li>
+<li><p>Create a new <a class="reference external" href="https://github.com/settings/tokens/new">Github personal access token</a>. You may set the name to anything you’d like, but we recommend that you call it something descriptive, like “aguaclara-atom-configuration”.</p></li>
+<li><p>Check the “<strong>gist</strong>: Create gists” permission, then click Generate Token. Copy the generated token.</p></li>
+<li><p>In the Atom <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> settings, paste your generated token in Personal Access Token.</p></li>
+<li><p>Set the Gist Id to <code class="docutils literal notranslate"><span class="pre">8cb1fed2721e41873e9bcb315c804579</span></code>.</p>
+<ul class="simple">
+<li><p>This synchronizes your Atom settings and plug-ins with the required <a class="reference external" href="https://gist.github.com/ethan92429/8cb1fed2721e41873e9bcb315c804579">AguaClara Atom configuration</a>.</p></li>
 </ul>
 </li>
-<li>Restart Atom. <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> will do its job in the background. You can check on its progress in File &gt; Settings &gt; Packages.<ul>
-<li>If you get a dialog box saying that <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> is out of date, click “Restore”.</li>
+<li><p>Restart Atom. <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> will do its job in the background. You can check on its progress in File &gt; Settings &gt; Packages.</p>
+<ul class="simple">
+<li><p>If you get a dialog box saying that <code class="docutils literal notranslate"><span class="pre">sync-settings</span></code> is out of date, click “Restore”.</p></li>
 </ul>
 </li>
 </ol>
@@ -224,16 +226,19 @@
 <div class="section" id="git">
 <span id="installing-on-windows-git"></span><h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Download the <a class="reference external" href="https://git-scm.com/downloads">Git installer</a> and double-click it to begin installation.</li>
-<li>When the installer asks which text editor you would like to use with Git (the default is Vim), select Nano instead. While powerful, Vim is difficult to use and not necessary for Git.<ul>
-<li>Aside from this, you can just click “Next” through the entire installation.</li>
+<li><p>Download the <a class="reference external" href="https://git-scm.com/downloads">Git installer</a> and double-click it to begin installation.</p></li>
+<li><p>When the installer asks which text editor you would like to use with Git (the default is Vim), select Nano instead. While powerful, Vim is difficult to use and not necessary for Git.</p>
+<ul class="simple">
+<li><p>Aside from this, you can just click “Next” through the entire installation.</p></li>
 </ul>
 </li>
-<li>After the installation is complete, open <strong>PowerShell</strong> or <strong>Command Prompt</strong>.</li>
-<li>Run the two following commands with your name and Cornell email, carefully observing spaces and punctuation:<ul>
-<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Firstname</span> <span class="pre">Lastname&quot;</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;NetID&#64;cornell.edu&quot;</span></code><ul>
-<li>The quotation marks are important! For example, the command should say something like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Monroe</span> <span class="pre">Weber-Shirk&quot;</span></code>.</li>
+<li><p>After the installation is complete, open <strong>PowerShell</strong> or <strong>Command Prompt</strong>.</p></li>
+<li><p>Run the two following commands with your name and Cornell email, carefully observing spaces and punctuation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Firstname</span> <span class="pre">Lastname&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;NetID&#64;cornell.edu&quot;</span></code></p>
+<ul>
+<li><p>The quotation marks are important! For example, the command should say something like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;Monroe</span> <span class="pre">Weber-Shirk&quot;</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -243,18 +248,18 @@
 <div class="section" id="anaconda-python">
 <h2>Anaconda &amp; Python<a class="headerlink" href="#anaconda-python" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Download the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda installer</a> and double-click it to begin installation.</li>
-<li>When the installer displays Advanced Options, select “Add Anaconda to my PATH environment variable”.<ul>
-<li>Aside from this, you can just click “Next” through the entire installation.</li>
+<li><p>Download the <a class="reference external" href="https://www.anaconda.com/download/">Anaconda installer</a> and double-click it to begin installation.</p></li>
+<li><p>When the installer displays Advanced Options, select “Add Anaconda to my PATH environment variable”.</p>
+<ul class="simple">
+<li><p>Aside from this, you can just click “Next” through the entire installation.</p></li>
 </ul>
 </li>
 </ol>
-<dl class="docutils">
-<dt>* If the installer did not give the option to “Add Anaconda to my PATH environment variable”, follow the steps below after the installation:</dt>
-<dd><ul class="first last simple">
-<li>Open <strong>Command Prompt</strong> (not PowerShell) and enter <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code></li>
-<li>Copy the path the terminal outputs. (This is the folder Python has been installed in.)</li>
-<li>Enter the command <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">PATH=%PATH%;C:\path\to\python</span></code>, replacing <code class="docutils literal notranslate"><span class="pre">C:\path\to\python</span></code> with the path you copied above.</li>
+<dl class="simple">
+<dt>* If the installer did not give the option to “Add Anaconda to my PATH environment variable”, follow the steps below after the installation:</dt><dd><ul class="simple">
+<li><p>Open <strong>Command Prompt</strong> (not PowerShell) and enter <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code></p></li>
+<li><p>Copy the path the terminal outputs. (This is the folder Python has been installed in.)</p></li>
+<li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">PATH=%PATH%;C:\path\to\python</span></code>, replacing <code class="docutils literal notranslate"><span class="pre">C:\path\to\python</span></code> with the path you copied above.</p></li>
 </ul>
 </dd>
 </dl>
@@ -262,12 +267,12 @@
 <div class="section" id="pip-packages">
 <h2><code class="docutils literal notranslate"><span class="pre">pip</span></code> Packages<a class="headerlink" href="#pip-packages" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Open <strong>PowerShell</strong> or <strong>Command Prompt</strong>, as you did when installing <a class="reference internal" href="#installing-on-windows-git"><span class="std std-ref">Git</span></a>.</li>
-<li>Run the following command, carefully observing spaces and punctuation:<ul>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara</span> <span class="pre">--user</span></code></dt>
-<dd><ul class="first last">
-<li>If you get the error <code class="docutils literal notranslate"><span class="pre">bash:</span> <span class="pre">pip:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code>, follow the steps in the <strong>Anaconda and Python</strong> section after the asterisk.</li>
+<li><p>Open <strong>PowerShell</strong> or <strong>Command Prompt</strong>, as you did when installing <a class="reference internal" href="#installing-on-windows-git"><span class="std std-ref">Git</span></a>.</p></li>
+<li><p>Run the following command, carefully observing spaces and punctuation:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aguaclara</span> <span class="pre">--user</span></code></dt><dd><ul>
+<li><p>If you get the error <code class="docutils literal notranslate"><span class="pre">bash:</span> <span class="pre">pip:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code>, follow the steps in the <strong>Anaconda and Python</strong> section after the asterisk.</p></li>
 </ul>
 </dd>
 </dl>

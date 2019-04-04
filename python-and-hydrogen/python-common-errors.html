@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Common Errors in Python &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installing Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Atom and Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/atom-and-markdown-introduction.html">Atom and Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/markdown-basics.html">Markdown Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom-and-markdown/teletype-basics.html">Teletype Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python and Hydrogen</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python-and-hydrogen-introduction.html">Python and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing-python-code.html">Writing Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-python-code.html">Running Python Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="good-coding-practices.html">Good Coding Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeter-calibration.html">Turbidimeter Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeter-cleaning.html">Turbidimeter Cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/common-turbidimeter-problems.html">Common Turbidimeter Problems</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Common Errors in Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python-and-hydrogen/python-common-errors.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common-errors-in-python">
+<span id="python-common-errors"></span><h1>Common Errors in Python<a class="headerlink" href="#common-errors-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax-errors">
+<h2>Syntax Errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">¶</a></h2>
+<p>If you get an error when you run the code…</p>
+</div>
+<div class="section" id="attribute-error">
+<h2>Attribute Error<a class="headerlink" href="#attribute-error" title="Permalink to this headline">¶</a></h2>
+<p>This occurs if you call a method on the wrong type of object.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">AttributeError</span>: <span class="n">&#39;int&#39; object has no attribute &#39;append&#39;</span>
+</pre></div>
+</div>
+<p>Reasoning: different object types have different attributes, including functions you can perform on them. For example, lists have insert(), remove(), and sort(), etc. However, not all objects have these attributes. So if we try to access attributes on an object type that does not have these attributes, we may run into an error. Above, we use append on an integer and receive an AttributeError because integer types do not have that attribute.</p>
+<p>What may help: calling the help() method on a type object returns what attributes are possible for that type.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="syntax-error">
+<h2>Syntax Error<a class="headerlink" href="#syntax-error" title="Permalink to this headline">¶</a></h2>
+<p>Made a typo, such as:</p>
+<ul class="simple">
+<li><p>Forgot quotes around a string</p></li>
+<li><p>Forgot a colon at the end of a <code class="docutils literal notranslate"><span class="pre">def</span></code>/<code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">for</span></code> line</p></li>
+<li><p>Different number of open and close brackets in a statement</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">whille</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You have entered an even number.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since the keyword whille is misspelled, the python interpreter will give the following error. Python often points to the first character after the actual syntax error. As seen below, the error is in the word “while”, not the variable x.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">File</span> <span class="s2">&quot;filename.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+  <span class="n">whille</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+     <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-error">
+<h2>Type Error<a class="headerlink" href="#type-error" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Object which you think has a value is actually None</p></li>
+<li><p>Used non-integer numbers in a list slice</p></li>
+<li><p>Called a method or function with the wrong number or type of arguments</p></li>
+<li><p>Used an operator on the wrong type of objects</p></li>
+</ul>
+<p>Two examples of the last type of TypeError are shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="s2">&quot;two&quot;</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">unsupported operand type(s) for +:</span>
+<span class="go">&#39;int&#39; and &#39;str&#39;</span>
+</pre></div>
+</div>
+<p>Reasoning: plus operator (+) expects two numeric parameters. One parameter was the incorrect type.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Number</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Number</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;int&#39; object is not subscriptable</span>
+</pre></div>
+</div>
+<p>Reasoning: can’t access int type objects by index like with list, tuple, and string type objects.</p>
+<p>Something that might help troubleshoot a TypeError is calling the type() function on an object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;lovely&quot;</span><span class="p">)</span>
+<span class="go">&lt;type &#39;str&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indentation-error">
+<h2>Indentation Error<a class="headerlink" href="#indentation-error" title="Permalink to this headline">¶</a></h2>
+<p>This happens if you use a mixture of tabs and spaces when trying to indent your lines, or if you haven’t indented all lines in a block equally. Also, python is whitespace-sensitive, so you must indent lines in an if statement or a for loop to show they are in the body.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+      <span class="o">^</span>
+<span class="ne">IndentationError</span><span class="p">:</span> <span class="n">expected</span> <span class="n">an</span> <span class="n">indented</span> <span class="n">block</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="name-error">
+<h2>Name Error<a class="headerlink" href="#name-error" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Misspelled variable function or method name</p></li>
+<li><p>Forgotten to import a module</p></li>
+<li><p>Forgotten to define a variable</p></li>
+<li><p>Uses a variable outside scope of where it’s defined (See Scope in Writing Python Code)</p></li>
+<li><p>Code calls a function before it’s defined</p></li>
+<li><p>Tries to print a single word and forgot the quotes</p></li>
+</ul>
+<p>For example, try to print variable name <code class="docutils literal notranslate"><span class="pre">hello</span></code> in this file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">hello</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="k">global</span> <span class="n">name</span> <span class="s1">&#39;hello&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</pre></div>
+</div>
+<p>Reasoning: the first part tells you what file had the error. In the example above, the file is filename.py and the error occurs on line 7. The next line shows the actual line of code where the error occurred, which executes the main() function. Then the next two lines say that the error occurred on line 5, within main, and that the line with the error is print hello. The error is that the global name ‘hello’ is not defined, which means that Python tried to use the variable name hello but it hasn’t been defined at this point.</p>
+</div>
+<div class="section" id="io-error">
+<h2>IO Error<a class="headerlink" href="#io-error" title="Permalink to this headline">¶</a></h2>
+<p>Tries to open a file that doesn’t exist. Make sure the file in question exists and the file path is correct. The file path can be found in Folders.</p>
+</div>
+<div class="section" id="key-error">
+<h2>Key Error<a class="headerlink" href="#key-error" title="Permalink to this headline">¶</a></h2>
+<p>Tries to look up a key that doesn’t exist in a dict. One example is making this simple dictionary:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Try accessing the values by keys:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a_dict</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;Hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_dict</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;filename.py&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+    <span class="n">a_dict</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="gr">KeyError</span>: <span class="n">4</span>
+</pre></div>
+</div>
+<p>Reasoning: keys at index 1 and 3 exist so the respective values for those keys are displayed. Key 4 does not exist.</p>
+</div>
+</div>
+<div class="section" id="if-you-don-t-get-an-error-while-running-the-code">
+<h1>If you don’t get an error while running the code…<a class="headerlink" href="#if-you-don-t-get-an-error-while-running-the-code" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="if-the-code-uses-if-statements">
+<h2>If the code uses if statements:<a class="headerlink" href="#if-the-code-uses-if-statements" title="Permalink to this headline">¶</a></h2>
+<p>Two number which should be equal are not. For example: compare a number with a string representation of that number.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span><span class="o">==</span><span class="s1">&#39;3&#39;</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>A complex condition is not giving the expected result. For example: the order of precedence in the condition is ambiguous, so it is important to add some parentheses. Like, in PEMDAS, if there is an addition operator before a multiplication operator, one would need some parentheses.</p>
+</div>
+<div class="section" id="if-the-code-uses-loops">
+<h2>If the code uses loops:<a class="headerlink" href="#if-the-code-uses-loops" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list-only-has-one-value">
+<h3>List only has one value<a class="headerlink" href="#list-only-has-one-value" title="Permalink to this headline">¶</a></h3>
+<p>For example: you defined the list inside the loop, so you should move it outside.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">newlist</span><span class="p">:</span>
+  <span class="n">newlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If the list originally only has one value:</p>
+</div>
+<div class="section" id="loop-that-uses-the-range-function-misses-the-last-value">
+<h3>Loop that uses the range function misses the last value<a class="headerlink" href="#loop-that-uses-the-range-function-misses-the-last-value" title="Permalink to this headline">¶</a></h3>
+<p>Remember that the range function uses size, which starts at 1, but index starts at 0. For example, if you wanted to print numbers between 1 and 5, since index starts at 0, you would not be able to do range(5):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>You would have to do range(1, 6):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Also remember that for index, the last number is omitted.</p>
+</div>
+</div>
+<div class="section" id="if-the-code-doesn-t-have-for-loops-or-if-statements">
+<h2>If the code doesn’t have for loops or if statements:<a class="headerlink" href="#if-the-code-doesn-t-have-for-loops-or-if-statements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-variable-that-should-have-a-value-does-not">
+<h3>A variable that should have a value does not<a class="headerlink" href="#a-variable-that-should-have-a-value-does-not" title="Permalink to this headline">¶</a></h3>
+<p>You are storing the return value of a function which changes the variable itself:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">no_return</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+  <span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">no_return</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>None will be printed, because in the function body, there is no return statement.</p>
+<p>A return statement is needed in the function body.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">empty_return</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">c</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">return_sum</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

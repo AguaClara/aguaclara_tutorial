@@ -107,18 +107,20 @@
 <li class="toctree-l1"><a class="reference internal" href="running-python-code.html">Running Python Code</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python Packages</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#built-in-python-functions">Built-In Python Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-math-package">Python <code class="docutils literal notranslate"><span class="pre">math</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#math-package"><code class="docutils literal notranslate"><span class="pre">math</span></code> Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced-math-functions">Advanced Math Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#aguaclara-package"><code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sig-figs">Sig-Figs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#units">Units</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plotting-and-pandas">Plotting and Pandas</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#functions-within-matplotlib-plt">Functions Within <code class="docutils literal notranslate"><span class="pre">matplotlib.plt</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arrays-and-lists-in-python">Arrays and Lists in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aguaclara-package"><code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sig-figs">Sig-Figs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#units">Units</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-with-matplotlib">Plotting with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-data-with-pandas">Reading Data with Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#load-data-from-spreadsheet-files">Load Data from Spreadsheet Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helpful-pandas-functions">Helpful Pandas Functions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#arrays-and-lists-in-python">Arrays and Lists in Python</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hydrogen-basics.html">Hydrogen Basics</a></li>
@@ -214,8 +216,8 @@
 <h2>Built-In Python Functions<a class="headerlink" href="#built-in-python-functions" title="Permalink to this headline">¶</a></h2>
 <p>Python has a lot of built-in functions that you can use to code. Read about the syntax and what they do on the <a class="reference external" href="https://docs.python.org/3/library/functions.html">official Python documentation</a>.</p>
 </div>
-<div class="section" id="python-math-package">
-<h2>Python <code class="docutils literal notranslate"><span class="pre">math</span></code> Package<a class="headerlink" href="#python-math-package" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="math-package">
+<h2><code class="docutils literal notranslate"><span class="pre">math</span></code> Package<a class="headerlink" href="#math-package" title="Permalink to this headline">¶</a></h2>
 <p>Python also comes with a pre-installed math package with a whole assortment of different functions and mathematical values like <code class="docutils literal notranslate"><span class="pre">pi</span></code> and <code class="docutils literal notranslate"><span class="pre">e</span></code>. In order to use the package, you’ll have to <code class="docutils literal notranslate"><span class="pre">import</span></code> the package at the start of your script. Below I’ve imported the math function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="kn">as</span> <span class="nn">m</span>
 </pre></div>
@@ -241,25 +243,24 @@
 </div>
 <p>In all code written for AguaClara, the modules are always specified using dot notation with abbreviations for the module names. Here’s a quick guide for what the abbreviations are:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">pc</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">physchem</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">u</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">unit_registry</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">ut</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">utility</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">pipe</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">pipedatabase</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">exp</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">expert_inputs</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">mat</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">materials_database</span></code> mmodule</li>
-<li><code class="docutils literal notranslate"><span class="pre">k</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">k_value_of_reductions_utility</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">pipline</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">pipeline_utility</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">np</span></code> is used to abbreviate the NumPy package</li>
-<li><code class="docutils literal notranslate"><span class="pre">pd</span></code> is used to abbreviate the Pandas package</li>
-<li><code class="docutils literal notranslate"><span class="pre">plt</span></code> is used to abbreviate MatPlotLib’s plotting module</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pc</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">physchem</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">u</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">unit_registry</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ut</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">utility</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipe</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">pipedatabase</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exp</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">expert_inputs</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mat</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">materials_database</span></code> mmodule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">k_value_of_reductions_utility</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipline</span></code> is used to abbreviate the <code class="docutils literal notranslate"><span class="pre">pipeline_utility</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np</span></code> is used to abbreviate the NumPy package</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd</span></code> is used to abbreviate the Pandas package</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt</span></code> is used to abbreviate MatPlotLib’s plotting module</p></li>
 </ul>
 <p>When I want to use a function or something from these modules, I have to use dot notation. For example, if I want to make use of a Reynolds Number function in <code class="docutils literal notranslate"><span class="pre">physchem</span></code>, I would do this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span><span class="o">.</span><span class="n">re_pipe</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Note that the 1s are the function&#39;s respective inputs (Flow Rate, Pipe Diameter, and Kinematic Viscosity)</span>
 </pre></div>
 </div>
-</div>
 <div class="section" id="sig-figs">
-<h2>Sig-Figs<a class="headerlink" href="#sig-figs" title="Permalink to this headline">¶</a></h2>
+<h3>Sig-Figs<a class="headerlink" href="#sig-figs" title="Permalink to this headline">¶</a></h3>
 <p>When you perform a calculation in Python and print the result, the output tends to be an answer that contains an unnecessary number of decimal places. In order to set the number of significant figures for your printed result, you would simply use the line as shown below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">default_format</span> <span class="o">=</span> <span class="s1">&#39;.3f&#39;</span> <span class="c1"># This will give my printed value in 3 significant figures</span>
 <span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span> <span class="c1"># This will print 0.571 meter</span>
@@ -271,7 +272,7 @@
 <p>To change the number of significant figures displayed, simply change the 3 with your desired number of sig-figs. You only need to have <code class="docutils literal notranslate"><span class="pre">u.default_format</span></code> once in your code for all printed values to have the same number of sig-figs. It should be noted that significant figures only take place if you <code class="docutils literal notranslate"><span class="pre">print()</span></code> your calculated value with units. This means <code class="docutils literal notranslate"><span class="pre">print(3</span> <span class="pre">/</span> <span class="pre">9)</span></code> will still give you a lot of sig-figs.</p>
 </div>
 <div class="section" id="units">
-<h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<h3>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
 <p>In engineering, units are incredibly important to us. They help as a sanity check to confirm our answers or reveal problems with our solutions. We’ll be using Pint. The <code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> package that you installed comes with the necessary units module. When you use the import code as shown in the <code class="docutils literal notranslate"><span class="pre">aguaclara</span></code> packages section of this Wiki, your script will have access to the unit registry.</p>
 <p>Now we are ready to use units. As an example of how to use them, say I want to define a flow rate with units of mL/s. I would simply do as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">QPlant</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mL</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
@@ -287,10 +288,10 @@
 </div>
 <p>Pint also includes constants, which you can find on the <a class="reference external" href="https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt">Pint documentation</a>.</p>
 </div>
-<div class="section" id="plotting-and-pandas">
-<h2>Plotting and Pandas<a class="headerlink" href="#plotting-and-pandas" title="Permalink to this headline">¶</a></h2>
-<p>A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package, Python has the capability of opening and parsing data from a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. You can then use this data with <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> to plot your raw data. Anaconda automatically comes with these packages, and by importing <code class="docutils literal notranslate"><span class="pre">aguaclara.play</span></code>, these are automatically imported into your file.</p>
-<p>Using <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to read and use data is relatively simple, and the developers have created nice tutorials on how to use the package on <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">the Pandas documentation</a>.</p>
+</div>
+<div class="section" id="plotting-with-matplotlib">
+<h2>Plotting with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#plotting-with-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>A lot of us are comfortable plotting in Excel or MATLAB, but did you know Python has the same capabilities, and is just as good? With the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package, Python has the capability of opening and parsing data from a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file (see <a class="reference internal" href="#reading-data-with-pandas">Reading Data with Pandas</a>). You can then use this data with <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> to plot your raw data. Anaconda automatically comes with these packages, and by importing <code class="docutils literal notranslate"><span class="pre">aguaclara.play</span></code>, these are automatically imported into your file.</p>
 <p>Plotting in Python is relatively straight forward. Below is an example of how to plot the entrance length of fully developed flow of water with velocity of 1 m/s at room temperature as a function of pipe diameter, d, using the Blasius Equation:</p>
 <img alt="Blasius Equation" src="../_images/blasius-equation.png" />
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.play</span> <span class="kn">import</span><span class="o">*</span>
@@ -315,58 +316,134 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="section" id="functions-within-matplotlib-plt">
-<h3>Functions Within <code class="docutils literal notranslate"><span class="pre">matplotlib.plt</span></code><a class="headerlink" href="#functions-within-matplotlib-plt" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><ul>
-<li>This function takes in x values (typically an array), y values (sometimes an array or sometimes a function), a plot type (usually <code class="docutils literal notranslate"><span class="pre">'.'</span></code> for dots and <code class="docutils literal notranslate"><span class="pre">'-'</span></code> for smooth) to generate a plot, and label (a string that identifies the name of your plot).<ul>
-<li>Usually you won’t need to insert inputs beyond the plot label</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code></p>
+<ul>
+<li><p>This function takes in x values (typically an array), y values (sometimes an array or sometimes a function), a plot type (usually <code class="docutils literal notranslate"><span class="pre">'.'</span></code> for dots and <code class="docutils literal notranslate"><span class="pre">'-'</span></code> for smooth) to generate a plot, and label (a string that identifies the name of your plot).</p>
+<ul>
+<li><p>Usually you won’t need to insert inputs beyond the plot label</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code><ul>
-<li>These functions take in strings to create axes labels</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code></p>
+<ul>
+<li><p>These functions take in strings to create axes labels</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.title()</span></code><ul>
-<li>This function takes in a string to make a plot title</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.title()</span></code></p>
+<ul>
+<li><p>This function takes in a string to make a plot title</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.minorticks_on()</span></code><ul>
-<li>Turns on the ability to use minor ticks</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.minorticks_on()</span></code></p>
+<ul>
+<li><p>Turns on the ability to use minor ticks</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code><ul>
-<li>Takes in a string (either <code class="docutils literal notranslate"><span class="pre">'major'</span></code> or <code class="docutils literal notranslate"><span class="pre">'minor'</span></code>) to determine which tick lines are displayed on the plot</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code></p>
+<ul>
+<li><p>Takes in a string (either <code class="docutils literal notranslate"><span class="pre">'major'</span></code> or <code class="docutils literal notranslate"><span class="pre">'minor'</span></code>) to determine which tick lines are displayed on the plot</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code><ul>
-<li>Takes a string for the location (<code class="docutils literal notranslate"><span class="pre">loc</span></code>) of the plot legend and the number of columns in your legend (<code class="docutils literal notranslate"><span class="pre">ncol</span></code>) to produce a plot legend</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code></p>
+<ul>
+<li><p>Takes a string for the location (<code class="docutils literal notranslate"><span class="pre">loc</span></code>) of the plot legend and the number of columns in your legend (<code class="docutils literal notranslate"><span class="pre">ncol</span></code>) to produce a plot legend</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.savefig()</span></code><ul>
-<li>Takes a string for a file path for where you want to save your image (this will usually be an images folder in your repository)</li>
-<li>When using a path, be sure to use forward slashes</li>
-<li>If you’re saving an image to a folder within the same repository as your Markdown file, you can use a relative path as shown above</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.savefig()</span></code></p>
+<ul>
+<li><p>Takes a string for a file path for where you want to save your image (this will usually be an images folder in your repository)</p></li>
+<li><p>When using a path, be sure to use forward slashes</p></li>
+<li><p>If you’re saving an image to a folder within the same repository as your Markdown file, you can use a relative path as shown above</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code><ul>
-<li>Takes a range of values (i.e. 0:0.5 for our example above) to restrict the axes range</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code></p>
+<ul>
+<li><p>Takes a range of values (i.e. 0:0.5 for our example above) to restrict the axes range</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.tight_layout()</span></code><ul>
-<li>Ensures that your plot doesn’t get cut off when saving as an image</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.tight_layout()</span></code></p>
+<ul>
+<li><p>Ensures that your plot doesn’t get cut off when saving as an image</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code><ul>
-<li>Shows the plot in Atom when you run the code with Hydrogen</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></p>
+<ul>
+<li><p>Shows the plot in Atom when you run the code with Hydrogen</p></li>
 </ul>
 </li>
 </ul>
 <p>For more tutorials on plotting, check out this <a class="reference external" href="https://matplotlib.org/users/pyplot_tutorial.html">pyplot tutorial</a> or this <a class="reference external" href="https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python">matplotlib tutorial</a>. You can also access a <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> <a class="reference external" href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf">cheat sheet</a>.</p>
+</div>
+<div class="section" id="reading-data-with-pandas">
+<span id="pandas"></span><h2>Reading Data with Pandas<a class="headerlink" href="#reading-data-with-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Pandas is a popular Python package for data manipulation and analysis. We’ll show you in this tutorial how to use Pandas to read files of data and begin to perform analyze it. Remember that you can always check <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">the Pandas documentation</a> and <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/reference/index.html">API Reference</a> to read more about the functions available.</p>
+<p>To start, we first load the Pandas library with alias ‘pd.’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+<div class="section" id="load-data-from-spreadsheet-files">
+<h3>Load Data from Spreadsheet Files<a class="headerlink" href="#load-data-from-spreadsheet-files" title="Permalink to this headline">¶</a></h3>
+<p>Spreadsheet files can come in many forms and corresponding file extensions, such as .xls for Microsoft Excel files, .csv for Comma-Separated Value files, and .tsv for Tab-Separated Value files. Pandas has functions for reading all of these, but we’ll focus on <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, which loads the contents of a CSV file.</p>
+<p>(Side note: A CSV file is actually a text file that text editor can open. Since it represents tabular data, commas are used to separate columns and new lines to separate rows.)</p>
+<p>For example, to read data from the file <code class="docutils literal notranslate"><span class="pre">/path/to/file/filename.cvs</span></code> and store it in a variable, we write</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/to/file/filename.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The output of this is a <em>DataFrame</em>, a data structure defined in the Pandas package for holding tabular data, i.e. data in rows and columns. Each row and column of a DataFrame is a <em>Series</em>, another data structure in Pandas.</p>
+</div>
+<div class="section" id="helpful-pandas-functions">
+<h3>Helpful Pandas Functions<a class="headerlink" href="#helpful-pandas-functions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Indexing Methods</strong></p>
+<p>Given a DataFrame named <code class="docutils literal notranslate"><span class="pre">data</span></code>,</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data.columns</span></code>: returns a Series of the column labels in the DataFrame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.loc[&quot;Label&quot;]</span></code>: returns a Series of the data in the column with label “Label” in the DataFrame (keep the quotation marks)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.loc[[&quot;l1&quot;,</span> <span class="pre">&quot;l2&quot;,</span> <span class="pre">&quot;l3&quot;,</span> <span class="pre">&quot;ln&quot;]]</span></code>: returns a DataFrame with only the columns labeled with the labels specified in the list (in this example,”l1”, “l2”, “l3”, and “ln”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.loc[boolean_array]</span></code>: returns a DataFrame with only the entries corresponding with values of “True” in the boolean array (use a 1D list to index rows)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.iloc[row_number]</span></code>: returns a Series of the data in the row of number <code class="docutils literal notranslate"><span class="pre">row_number</span></code> (must be an integer; 1st row is 0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.iloc[:,</span> <span class="pre">column_number]</span></code>: returns a Series of the data in the column of number <code class="docutils literal notranslate"><span class="pre">column_number</span></code> (must be an integer; 1st row is 0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.iloc[[r1,</span> <span class="pre">r2,</span> <span class="pre">rn]]</span></code>: returns a DataFrame with only the rows specified in the list (must be integers; in this example, <code class="docutils literal notranslate"><span class="pre">r1</span></code>, <code class="docutils literal notranslate"><span class="pre">r2</span></code>, and <code class="docutils literal notranslate"><span class="pre">rn</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.iloc[begin_row</span> <span class="pre">:</span> <span class="pre">end_row]</span></code>: returns a DataFrame with only the rows in the slice object <code class="docutils literal notranslate"><span class="pre">begin_row</span> <span class="pre">:</span> <span class="pre">end_row</span></code>, i.e. from <code class="docutils literal notranslate"><span class="pre">begin_row</span></code> to <code class="docutils literal notranslate"><span class="pre">end_row</span></code> inclusive</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data.iloc[boolean_array]</span></code>: returns a DataFrame with only the entries corresponding with values of “True” in the boolean array (use a 1D list to index rows)</p></li>
+</ul>
+<p><strong>Apply Function</strong></p>
+<p>Returns some value after passing each row/column of a data frame with some function. Very common for playing with data and creating new variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Applying per column</span>
+<span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#axis=0 defines that function is to be applied to each column</span>
+
+<span class="c1">#Applying per row</span>
+<span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#axis=1 defines that function is to be applied on each row</span>
+<span class="c1">#use .head() after axis=#) if there are many rows</span>
+</pre></div>
+</div>
+<p><strong>Cross Tab</strong></p>
+<p>Gets an initial “feel,” or view, of the data. Can validate some basic hypothesis.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Column 1&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Column 2&quot;</span><span class="p">],</span> <span class="n">margins</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also use percentages instead of absolute numbers to make quick insights by the apply function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">percConvert</span><span class="p">(</span><span class="n">ser</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">ser</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Column 1&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Column 2&quot;</span><span class="p">],</span> <span class="n">margins</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">percConvert</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Plotting (Boxplot &amp; Histogram)</strong></p>
+<p>Boxplots and histograms can be directly plotted in Pandas, so calling matplotlib separately is unnecessary. It is just a one-line command. An example is comparing the distribution of the two columns:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">data</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;Column 1&quot;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;Column 2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;Column 1&quot;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;Column 2&quot;</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="arrays-and-lists-in-python">
-<h4>Arrays and Lists in Python<a class="headerlink" href="#arrays-and-lists-in-python" title="Permalink to this headline">¶</a></h4>
+<h2>Arrays and Lists in Python<a class="headerlink" href="#arrays-and-lists-in-python" title="Permalink to this headline">¶</a></h2>
 <p>Python has no native array type. Instead, it has lists, which are defined using <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </pre></div>
@@ -400,8 +477,6 @@
 </div>
 <p>Say I want an array of a specified size starting from 0, something that would be helpful for generating a plot. I could use <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> to do this. If I want an array from 0 to 9, or of size 10, I would simply run <code class="docutils literal notranslate"><span class="pre">np.arange(10)</span></code>. I can also specify two bounds and a step size if I want to have even greater control over my array. To do this, I would still use <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code>, but with 3 inputs as such: <code class="docutils literal notranslate"><span class="pre">np.arange(low,</span> <span class="pre">high,</span> <span class="pre">step</span> <span class="pre">size)</span></code>, so <code class="docutils literal notranslate"><span class="pre">np.arange(0,</span> <span class="pre">1,</span> <span class="pre">0.1)</span></code> would give me an array from 0 to, but not including, 1 in 0.1 increments.</p>
 <p>NumPy has many capabilities, which I won’t be able to discuss in-depth on the Wiki, but <a class="reference external" href="https://www.dataquest.io/blog/numpy-cheat-sheet/">numpy’s cheat sheet</a> is a great guide to learn more about NumPy’s power.</p>
-</div>
-</div>
 </div>
 </div>
 

@@ -204,8 +204,9 @@
 <p>Doctesting is important to your work because it helps with documentation and debugging. When you use doctesting, you’re essentially telling the test that your code should produce a specific output in the development stage it’s currently in. This is useful during the transition between semesters when teams are changing personnel. Having that doctest tells the new members what the code was previously producing, so if the code isn’t producing what was previously expected, they can try to identify the source of the problem. Additionally, doctesting lets you keep track of your code’s progress throughout the development stages. If your tests are failing, it can be an indication that an unexpected change occured in the code, which can then be identified and fixed.</p>
 <p>Using doctesting is fairly straight forward. There are several key things that your code will need in order to doctest.</p>
 <ul class="simple">
-<li>You <strong>must</strong> have your tests in docstrings<ul>
-<li>Docstrings are sets of triple double quotations as follows:</li>
+<li><p>You <strong>must</strong> have your tests in docstrings</p>
+<ul>
+<li><p>Docstrings are sets of triple double quotations as follows:</p></li>
 </ul>
 </li>
 </ul>
@@ -213,20 +214,22 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li>Within your docstring, you must us <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> to indicate a Python interpreter input<ul>
-<li>This is what you would see if you called a Python function or ran a block of Python code in Terminal or Command Shell</li>
+<li><p>Within your docstring, you must us <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> to indicate a Python interpreter input</p>
+<ul>
+<li><p>This is what you would see if you called a Python function or ran a block of Python code in Terminal or Command Shell</p></li>
 </ul>
 </li>
-<li>Below each input, you <strong>must</strong> put the output that would be displayed in the interpreter if you ran your function or block of code<ul>
-<li>This can be done by running the code that you wish to test using Hydrogen, and copying and pasting the output that it gives you to the doctest</li>
-<li>For outputs that contain units, which most of your code should have, Hydrogen will not give you the Python interpreter output. To get that output, you must enter the test output as <code class="docutils literal notranslate"><span class="pre">&lt;Quantity(THE</span> <span class="pre">NUMERICAL</span> <span class="pre">PART</span> <span class="pre">OF</span> <span class="pre">THE</span> <span class="pre">OUTPUT,</span> <span class="pre">'STRING</span> <span class="pre">OF</span> <span class="pre">THE</span> <span class="pre">UNITS</span> <span class="pre">ASSOCIATED</span> <span class="pre">WITH</span> <span class="pre">YOUR</span> <span class="pre">OUTPUT')&gt;</span></code></li>
-<li>If you’re testing a function with a <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement and a <code class="docutils literal notranslate"><span class="pre">return</span></code> value, you must include the output produced by both in your doctest. Usually the <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement output appears before the function’s return value. <strong>Remember that</strong> <code class="docutils literal notranslate"><span class="pre">aguaclara.play</span></code> <strong>automatically sets the number of sigfigs in a print statement to 3 sig figs. Hydrogen will always give the full numerical answer.</strong></li>
-<li>Array outputs are always enclosed in <code class="docutils literal notranslate"><span class="pre">[]</span></code> if you <code class="docutils literal notranslate"><span class="pre">print()</span></code> it, as nothing if you only assign it to a variable name, or as <code class="docutils literal notranslate"><span class="pre">array([YOUR</span> <span class="pre">ARRAY])</span></code> if you don’t assign it to a variable name or <code class="docutils literal notranslate"><span class="pre">print()</span></code> it</li>
-<li>If you’re testing a loop or <code class="docutils literal notranslate"><span class="pre">if-statement</span></code>, you must show the indentation in the inout using <code class="docutils literal notranslate"><span class="pre">...</span></code> followed by tabs</li>
+<li><p>Below each input, you <strong>must</strong> put the output that would be displayed in the interpreter if you ran your function or block of code</p>
+<ul>
+<li><p>This can be done by running the code that you wish to test using Hydrogen, and copying and pasting the output that it gives you to the doctest</p></li>
+<li><p>For outputs that contain units, which most of your code should have, Hydrogen will not give you the Python interpreter output. To get that output, you must enter the test output as <code class="docutils literal notranslate"><span class="pre">&lt;Quantity(THE</span> <span class="pre">NUMERICAL</span> <span class="pre">PART</span> <span class="pre">OF</span> <span class="pre">THE</span> <span class="pre">OUTPUT,</span> <span class="pre">'STRING</span> <span class="pre">OF</span> <span class="pre">THE</span> <span class="pre">UNITS</span> <span class="pre">ASSOCIATED</span> <span class="pre">WITH</span> <span class="pre">YOUR</span> <span class="pre">OUTPUT')&gt;</span></code></p></li>
+<li><p>If you’re testing a function with a <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement and a <code class="docutils literal notranslate"><span class="pre">return</span></code> value, you must include the output produced by both in your doctest. Usually the <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement output appears before the function’s return value. <strong>Remember that</strong> <code class="docutils literal notranslate"><span class="pre">aguaclara.play</span></code> <strong>automatically sets the number of sigfigs in a print statement to 3 sig figs. Hydrogen will always give the full numerical answer.</strong></p></li>
+<li><p>Array outputs are always enclosed in <code class="docutils literal notranslate"><span class="pre">[]</span></code> if you <code class="docutils literal notranslate"><span class="pre">print()</span></code> it, as nothing if you only assign it to a variable name, or as <code class="docutils literal notranslate"><span class="pre">array([YOUR</span> <span class="pre">ARRAY])</span></code> if you don’t assign it to a variable name or <code class="docutils literal notranslate"><span class="pre">print()</span></code> it</p></li>
+<li><p>If you’re testing a loop or <code class="docutils literal notranslate"><span class="pre">if-statement</span></code>, you must show the indentation in the inout using <code class="docutils literal notranslate"><span class="pre">...</span></code> followed by tabs</p></li>
 </ul>
 </li>
-<li>At the start of your code, you should <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">doctest</span></code> to use the doctest functionality in Python</li>
-<li>At the end of the code, you should have a line with <code class="docutils literal notranslate"><span class="pre">doctest.testmod(verbose=True)</span></code></li>
+<li><p>At the start of your code, you should <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">doctest</span></code> to use the doctest functionality in Python</p></li>
+<li><p>At the end of the code, you should have a line with <code class="docutils literal notranslate"><span class="pre">doctest.testmod(verbose=True)</span></code></p></li>
 </ul>
 <p>Let’s use doctesting on the function for the calculating the number of moles for an ideal gas written above.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.play</span> <span class="kn">import</span><span class="o">*</span>

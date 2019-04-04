@@ -205,68 +205,68 @@
 <div class="section" id="important-parts-of-procoda-imagine-it-as-a-washing-machine">
 <h2>Important Parts of ProCoDA (Imagine it as a washing machine)<a class="headerlink" href="#important-parts-of-procoda-imagine-it-as-a-washing-machine" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Setpoints: There are two types of setpoints in ProCoDA, constants and variables. These are the numbers thatProCoDA uses to run any of its functions (These are things like warm or cold water)</li>
-<li>States: States are the different ways ProCoDA can run (These are the parts of a laundry cycle like wash, rinse, spin)</li>
-<li>Rules: These control when ProCoDA changes between states (These are like going from rinse to spin)
-## General Notes</li>
-<li>When you input a value that it a decimal it will convert it into a form without the decimal (i.e. 0.3 will become 300m)</li>
-<li>The required set points give the order of the set points and the set points must be in the same order when you input them</li>
-<li>All added set points should be added after ON and OFF, always add setpoint after because it will mess with the selected set points
-### Connect a turbidimeter</li>
-<li>Edit Rules</li>
-<li>Add a set point for the unitID</li>
-<li>Set the value to usually 1</li>
-<li>Add a second setpoint the turbidity</li>
-<li>Change the turbidity from a constant to a variable</li>
-<li>Now more options will appear click on the folder which will open a window</li>
-<li>Click on HF Turbidimeter</li>
-<li>Then choose the com that the turbidimeter is connected to the computer with</li>
-<li>Select the required set points(If you don’t know you can always try all of them and see which one has the correct value displayed, if it is not the right one the value will be -999)
-### Connect a sensor</li>
-<li>Go to Configuration → Click on the volts symbol</li>
-<li>Make sure your sensor is plugged into the procoda box</li>
-<li>Click insert sensor and change the channel to the correct port</li>
-<li>Then open the folder button and click the type of sensor you have and what you want it to record (i.e. cm of water for headloss)</li>
-<li>Name it sensor</li>
-<li>To zero the sensor, click the zero button
+<li><p>Setpoints: There are two types of setpoints in ProCoDA, constants and variables. These are the numbers thatProCoDA uses to run any of its functions (These are things like warm or cold water)</p></li>
+<li><p>States: States are the different ways ProCoDA can run (These are the parts of a laundry cycle like wash, rinse, spin)</p></li>
+<li><p>Rules: These control when ProCoDA changes between states (These are like going from rinse to spin)
+## General Notes</p></li>
+<li><p>When you input a value that it a decimal it will convert it into a form without the decimal (i.e. 0.3 will become 300m)</p></li>
+<li><p>The required set points give the order of the set points and the set points must be in the same order when you input them</p></li>
+<li><p>All added set points should be added after ON and OFF, always add setpoint after because it will mess with the selected set points
+### Connect a turbidimeter</p></li>
+<li><p>Edit Rules</p></li>
+<li><p>Add a set point for the unitID</p></li>
+<li><p>Set the value to usually 1</p></li>
+<li><p>Add a second setpoint the turbidity</p></li>
+<li><p>Change the turbidity from a constant to a variable</p></li>
+<li><p>Now more options will appear click on the folder which will open a window</p></li>
+<li><p>Click on HF Turbidimeter</p></li>
+<li><p>Then choose the com that the turbidimeter is connected to the computer with</p></li>
+<li><p>Select the required set points(If you don’t know you can always try all of them and see which one has the correct value displayed, if it is not the right one the value will be -999)
+### Connect a sensor</p></li>
+<li><p>Go to Configuration → Click on the volts symbol</p></li>
+<li><p>Make sure your sensor is plugged into the procoda box</p></li>
+<li><p>Click insert sensor and change the channel to the correct port</p></li>
+<li><p>Then open the folder button and click the type of sensor you have and what you want it to record (i.e. cm of water for headloss)</p></li>
+<li><p>Name it sensor</p></li>
+<li><p>To zero the sensor, click the zero button
 ### Connecting a pump
-There are many ways to connect a pump, I am going to stick to one pump head because it is easier and adding more is fairly straight-forward. I will also be doing it with the code that uses mL/s and tubing ID, but you can use the other codes just make sure that you have the required set points</li>
-<li>Add a constant set point with the mL/s that you want the pump to run at</li>
-<li>Add a constant set point with the tubing size that you will be using</li>
-<li>Add a variable set point</li>
-<li>Click on the folder and open the peristaltic folder and choose the right code you want to use for this tutorial it is single head pump control (mL per second, Tubing Size)</li>
-<li>Select the set points</li>
-<li>It should display the rpm of the pump as a decimal in the value</li>
-<li>You can calculate the rpm of the pump using the auto tutorial for peristaltic pumps on the wiki
+There are many ways to connect a pump, I am going to stick to one pump head because it is easier and adding more is fairly straight-forward. I will also be doing it with the code that uses mL/s and tubing ID, but you can use the other codes just make sure that you have the required set points</p></li>
+<li><p>Add a constant set point with the mL/s that you want the pump to run at</p></li>
+<li><p>Add a constant set point with the tubing size that you will be using</p></li>
+<li><p>Add a variable set point</p></li>
+<li><p>Click on the folder and open the peristaltic folder and choose the right code you want to use for this tutorial it is single head pump control (mL per second, Tubing Size)</p></li>
+<li><p>Select the set points</p></li>
+<li><p>It should display the rpm of the pump as a decimal in the value</p></li>
+<li><p>You can calculate the rpm of the pump using the auto tutorial for peristaltic pumps on the wiki
 ### How to save data from a test:
-Under Datalog directory path, click on the folder, and choose where you want data to be stored. Procoda will store information from all variables and sensors there.</li>
+Under Datalog directory path, click on the folder, and choose where you want data to be stored. Procoda will store information from all variables and sensors there.</p></li>
 </ul>
 <div class="section" id="how-to-set-up-a-pump-for-a-test">
 <h3>How to set up a pump for a test<a class="headerlink" href="#how-to-set-up-a-pump-for-a-test" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Edit Rules</li>
-<li>Click Rules and Outputs</li>
-<li>Add a new state</li>
-<li>Click on Outputs</li>
-<li>Look at which pump port it is connected to</li>
-<li>Turn pump on/off to on</li>
-<li>Turn pump cw/ccw on or off depending on which way you want it to turn</li>
-<li>For pump speed choose the variable set point you created when you connected the pump</li>
-<li>To test it go to process operation and change the state to the state you added</li>
-<li>If your pump is not running at the speed ProCoDA displays you can calibrate it using the pump calibration button</li>
+<li><p>Edit Rules</p></li>
+<li><p>Click Rules and Outputs</p></li>
+<li><p>Add a new state</p></li>
+<li><p>Click on Outputs</p></li>
+<li><p>Look at which pump port it is connected to</p></li>
+<li><p>Turn pump on/off to on</p></li>
+<li><p>Turn pump cw/ccw on or off depending on which way you want it to turn</p></li>
+<li><p>For pump speed choose the variable set point you created when you connected the pump</p></li>
+<li><p>To test it go to process operation and change the state to the state you added</p></li>
+<li><p>If your pump is not running at the speed ProCoDA displays you can calibrate it using the pump calibration button</p></li>
 </ol>
 </div>
 <div class="section" id="how-to-set-up-a-timed-test">
 <h3>How to set up a timed test<a class="headerlink" href="#how-to-set-up-a-timed-test" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Edit Rules</li>
-<li>Create a constant set point with the value as the number of SECONDS you want to test to go on for</li>
-<li>Go to Rules &amp; Outputs</li>
-<li>Click on the state that runs the test then click on rules</li>
-<li>Then it is basically like a computer program</li>
-<li>If elapsed time in current state&gt; run time of test</li>
-<li>Then go to next state usually it is OFF</li>
-<li>You can also do many other conditional statements with this function like have pumps turn off based on pressure and such</li>
+<li><p>Edit Rules</p></li>
+<li><p>Create a constant set point with the value as the number of SECONDS you want to test to go on for</p></li>
+<li><p>Go to Rules &amp; Outputs</p></li>
+<li><p>Click on the state that runs the test then click on rules</p></li>
+<li><p>Then it is basically like a computer program</p></li>
+<li><p>If elapsed time in current state&gt; run time of test</p></li>
+<li><p>Then go to next state usually it is OFF</p></li>
+<li><p>You can also do many other conditional statements with this function like have pumps turn off based on pressure and such</p></li>
 </ol>
 </div>
 </div>
