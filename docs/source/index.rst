@@ -66,9 +66,7 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    :caption: Research
 
    research/procoda
-   research/turbidimeter-calibration
-   research/turbidimeter-cleaning
-   research/common-turbidimeter-problems
+   research/turbidimeters
 
 .. toctree::
    :maxdepth: 2
