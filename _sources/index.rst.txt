@@ -46,6 +46,7 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
 
    python-and-hydrogen/python-and-hydrogen-introduction
    python-and-hydrogen/writing-python-code
+   python-and-hydrogen/python-common-errors
    python-and-hydrogen/running-python-code
    python-and-hydrogen/python-packages
    python-and-hydrogen/hydrogen-basics
