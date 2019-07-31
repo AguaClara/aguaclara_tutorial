@@ -62,11 +62,12 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    git-and-github/github-basics
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Research
 
    research/procoda
    research/turbidimeters
+   research/data-analysis
 
 .. toctree::
    :maxdepth: 2
