@@ -9,6 +9,51 @@ You may be familiar with viewing, graphing, and performing calculations on your 
 .. We'll be taking advantage of the Python libraries `Matplotlib <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html>`_, `NumPy <https://docs.scipy.org/doc/numpy/reference/>`_, `Pandas <https://pandas.pydata.org/pandas-docs/stable/reference/index.html>`_, and `SciPy <https://docs.scipy.org/doc/scipy/reference/>`_ and our own `AguaClara package <https://aguaclara.github.io/aguaclara/>`_.
 .. To learn more about the functions and modules available in each package, explore the documentation links above.
 
+Running Calculations on Sets of Data
+====================================
+Given a Python list of values and a calculation you need to perform on each value, your instinct might be to write a loop that runs the calculation for each value. After all, Python can't run calculations on every element in a list at once, called *element-wise operations*, using basic operators:
+
+.. code-block:: python
+
+  x = [1, 2, 3, 4, 5]
+  x/2
+
+  TypeError: unsupported operand type(s) for /: 'list' and 'int'
+
+However, there are other data types that can do this! We'll focus on the **NumPy array**. If our data is stored as a NumPy array, we can use the usual ``+``, ``-``, ``*``, ``/``, ``%``, and ``**`` operators to add (or subtract, etc.) each value in the array with either one constant value or values in another NumPy array (this array must be of the same dimensions).
+
+Here is an example that calculates repeats a hypotenuse calculation for 5 triangles. We can use ``np.array()`` to convert Python lists to NumPy arrays.
+
+.. code-block:: python
+
+  import numpy as np
+
+  a = np.array([1, 3, 5, 7, 9])
+  b = np.array([0, 4, 12, 24, 40])
+  c = np.sqrt(a ** 2 + b ** 2)
+  c
+
+  array([ 1.,  5., 13., 25., 41.])
+
+.. >>> import numpy as np
+.. >>> a = np.array([1, 3, 5, 7, 9])
+.. >>> b = np.array([0, 4, 12, 24, 40])
+.. >>> a ** 2
+.. array([ 1,  9, 25, 49, 81])
+.. >>> b ** 2
+.. array([   0,   16,  144,  576, 1600])
+.. >>> a ** 2 + b ** 2
+.. array([   1,   25,  169,  625, 1681])
+.. >>> c = np.sqrt(a ** 2 + b ** 2)
+.. >>> c
+.. array([ 1.,  5., 13., 25., 41.])
+
+Note that NumPy is also built so that many of its mathematical functions, such as ``np.sqrt()`` above, can perform scalar (number to number) or element-wise (array to array) operations.
+
+Reading Data Files with Pandas
+==============================
+LEFT OFF HERE
+
 Plotting with Matplotlib
 ========================
 `Matplotlib <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html>`_ is a popular library for plotting in Python. Most of what you’ll need is in the collection of functions called ``matplotlib.pyplot``, which we’ll abbreviate to ``plt`` here on.
@@ -42,7 +87,6 @@ Of course, there are several issues with this graph. For one, discrete data shou
 - **Axis labels**: Use ``plt.xlabel("...")`` and ``plt.ylabel("...")`` for your x- and y-axis labels, respectively.
 - **Grid lines**: Use ``plt.grid("major")`` for major grid lines or ``plt.grid("minor")`` for minor grid lines.
 - **Manual axis ranges**: ``plt.plot()`` will automatically scale the graph to your data, but you can alter axis ranges manually with ``plt.xlim(left, right)`` and ``plt.ylim(bottom, top)``.
-- **Text in a graph**: In the rare case that you need to include text in your graph (excluding legends, which will be covered next)
 
 Here is an improvement of the above graph, along with its code:
 
@@ -62,8 +106,94 @@ Here is an improvement of the above graph, along with its code:
 
 Multiple Plots
 ^^^^^^^^^^^^^^
-To plot multiple sets of data, we can just call ``plt.plot()`` multiple times.
-LEFT OFF HERE
+To plot multiple sets of data, we can just call ``plt.plot()`` multiple times, perhaps with different line or marker styles to distinguish plots. Adding a legend and plotting with two y-axes, however, takes a few more steps.
+
+Adding a legend
+~~~~~~~~~~~~~~~
+We can use ``plt.legend()`` with the inputs ``plt.legend(labels)`` or ``plt.legend(handles, labels)``.
+
+1. **Labels only**: Labels for data sets must be given as a tuple of strings. Matplotlib automatically labels data sets in the order in which they were plotted. Below is an example:
+
+.. code-block:: python
+
+    import matplotlib.pyplot as plt
+
+    hour = [1, 2, 3, 4, 8, 10]
+    trial1 = [7.4, 5.8, 2.1, 0.5, 5.7, 10.1]
+    trial2 = [6.5, 5.5, 3, 2, 5.1, 9.4]
+
+    plt.plot(hour, trial1, "ro")
+    plt.plot(hour, trial2, "bs")
+    plt.xlabel("Time (hr)")
+    plt.ylabel("Water Height (m)")
+    plt.legend(("Trial 1", "Trial 2"))
+
+.. image:: Images/Data_Analysis/legend.png
+    :align: center
+
+2. **Handles and labels**: To have full control over which plots receive which labels, we can use line handles output by ``plt.plot()``. Along with creating a plot, the function outputs a tuple of objects representing the plotted data. The line handle we need is the *first* object in the tuple, so we can assign the handle to a variable by unpacking the tuple and ignoring every object after the first. We do this by assigning the output of ``plt.plot()`` to a variable followed by a comma and nothing else.
+
+   Then, we input our line handles and line labels as two tuples to ``plt.legend()``, so that the data represented by the first handle gets the first label; the second handle, the second label; etc.
+
+.. code-block:: python
+
+    # ... same as previous code block
+    line1, = plt.plot(hour, trial1, "ro")
+    line2, = plt.plot(hour, trial2, "bs")
+    # ...
+    plt.legend((line1, line2), ("Trial 1", "Trial 2"))
+
+The graph output by this code is the same as before.
+
+Plotting with Two Y-Axes
+~~~~~~~~~~~~~~~~~~~~~~~~
+To plot multiple data sets on the same x-axes but different y-axes, first use ``plt.subplots()`` to get an axis handle for the first (left) y-axis. The axis handle is the second output of ``plt.subplots()``, so in order to access it we need to also access the first output, which we'll store as ``fig``.
+
+.. code-block:: python
+
+    fig, ax1 = plt.subplots()
+
+From the axis handle for the first y-axis, create a second that shares the same x-axis using ``twinx()``:
+
+.. code-block:: python
+
+    ax2 = ax1.twinx()
+
+Instead of ``plt.plot()``, ``plt.xlabel()``, ``plt.ylabel()``, ``plt.xlim()``, and ``plt.ylim()`` we must now call ``plot()``, ``set_xlabel``, ``set_ylabel``, ``set_xlim``, or ``set_ylim`` on a specific axis. Here is an example:
+
+.. code-block:: python
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    t = np.arange(0, 10, 0.1)
+    x = t ** 3 - t ** 2 + t
+    v = 3*t**2 - 2*t + 1
+
+    fig, ax1 = plt.subplots()
+    line1, = ax1.plot(t, x, "b")
+    ax1.set_xlabel("Time (seconds)")
+    ax1.set_ylabel("Displacement (m)")
+
+    ax2 = ax1.twinx()
+    line2, = ax2.plot(t, v, "g")
+    ax2.set_ylabel("Velocity (m/s)")
+
+    plt.legend((line1, line2), ("Displacement", "Velocity"))
+
+.. image:: Images/Data_Analysis/two_y_axes.png
+    :align: center
+
+Other Matplotlib Features
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Here are some other useful functions in ``plt``. For more details and features, check out the `Matplotlib Pyplot API <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html>`_.
+
+* ``plt.savefig(“/path/to/folder/figure_name.png”)``: include this after plotting your data to save the generated figure as an image. Replace ``/path/to/folder/`` with your desired directory and ``figure_name.png`` with your desired figure name (other image extensions, just as .jpeg, work as well).
+* ``plt.loglog(x, y)`` plots ``x`` and ``y`` on logarithmic scales.
+* ``plt.semilogx(x, y)`` plots ``x`` on a log scale and ``y`` on a linear scale.
+* ``plt.semilogy(x, y)`` plots ``x`` on a linear scale and ``y`` on a log scale.
+* ``plt.text(x, y, text)`` writes text on the figure at the coordinate (``x``, ``y``) according to your axis scales.
+
 
 Reading ProCoDA Data with the AguaClara Package
 ===============================================
