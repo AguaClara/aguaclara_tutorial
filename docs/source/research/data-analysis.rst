@@ -6,12 +6,9 @@ Data Analysis in Python
 
 You may be familiar with viewing, graphing, and performing calculations on your data in Excel, MATLAB, or R. We'll show you in this tutorial that Python can be just as useful for data analysis!
 
-.. We'll be taking advantage of the Python libraries `Matplotlib <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html>`_, `NumPy <https://docs.scipy.org/doc/numpy/reference/>`_, `Pandas <https://pandas.pydata.org/pandas-docs/stable/reference/index.html>`_, and `SciPy <https://docs.scipy.org/doc/scipy/reference/>`_ and our own `AguaClara package <https://aguaclara.github.io/aguaclara/>`_.
-.. To learn more about the functions and modules available in each package, explore the documentation links above.
-
-Running Calculations on Sets of Data
-====================================
-Given a Python list of values and a calculation you need to perform on each value, your instinct might be to write a loop that runs the calculation for each value. After all, Python can't run calculations on every element in a list at once, called *element-wise operations*, using basic operators:
+Calculations on Sets of Data
+============================
+Given a Python list of values and a calculation you need to perform on each value, you might write a loop that runs the calculation for each value. After all, Python can't run calculations on every element in a list at once, called *element-wise operations*, using basic operators:
 
 .. code-block:: python
 
@@ -20,9 +17,9 @@ Given a Python list of values and a calculation you need to perform on each valu
 
   TypeError: unsupported operand type(s) for /: 'list' and 'int'
 
-However, there are other data types that can do this! We'll focus on the **NumPy array**. If our data is stored as a NumPy array, we can use the usual ``+``, ``-``, ``*``, ``/``, ``%``, and ``**`` operators to add (or subtract, etc.) each value in the array with either one constant value or values in another NumPy array (this array must be of the same dimensions).
+Fortunately, there are other data types that can do this! If our data is stored as a **NumPy array**, we can use the usual ``+``, ``-``, ``*``, ``/``, ``%``, and ``**`` operators to add (or subtract, etc.) each value in the array with either one constant value or values in another NumPy array (of the same dimension).
 
-Here is an example that calculates repeats a hypotenuse calculation for 5 triangles. We can use ``np.array()`` to convert Python lists to NumPy arrays.
+Here is an example that calculates the hypotenuse for 5 triangles. We use ``np.array()`` to convert Python lists to NumPy arrays. Also, many of NumPy's mathematical functions, such as ``np.sqrt()``, can perform both scalar (number to number) and element-wise (array to array) operations.
 
 .. code-block:: python
 
@@ -33,34 +30,180 @@ Here is an example that calculates repeats a hypotenuse calculation for 5 triang
   c = np.sqrt(a ** 2 + b ** 2)
   c
 
-  array([ 1.,  5., 13., 25., 41.])
+  Output: array([ 1.,  5., 13., 25., 41.])
 
-.. >>> import numpy as np
-.. >>> a = np.array([1, 3, 5, 7, 9])
-.. >>> b = np.array([0, 4, 12, 24, 40])
-.. >>> a ** 2
-.. array([ 1,  9, 25, 49, 81])
-.. >>> b ** 2
-.. array([   0,   16,  144,  576, 1600])
-.. >>> a ** 2 + b ** 2
-.. array([   1,   25,  169,  625, 1681])
-.. >>> c = np.sqrt(a ** 2 + b ** 2)
-.. >>> c
-.. array([ 1.,  5., 13., 25., 41.])
+NumPy Arrays and Units
+^^^^^^^^^^^^^^^^^^^^^^
+NumPy functions and arrays are also compatible with units! However, units must be attached to the *entire array*, not to each element. To demonstrate,
 
-Note that NumPy is also built so that many of its mathematical functions, such as ``np.sqrt()`` above, can perform scalar (number to number) or element-wise (array to array) operations.
+.. code-block:: python
+
+  from aguaclara.core.units import u
+  x = np.array([1*u.m, 2*u.m, 3*u.m])
+
+  ValueError: setting an array element with a sequence.
+
+gives a ValueError, but the next example works.
+
+.. code-block:: python
+
+  x = np.array([1, 2, 3]) * u.m
+  x / (4 * u.s)
+
+  Output: <Quantity([0.25 0.5  0.75], 'meter / second')>
+
+WARNING: ``np.append(array, values)``, which appends ``values`` to the end of ``array``, removes units from both the NumPy array and the values. If you use this function, you may need to reapply units to the new array after doing so.
 
 Reading Data Files with Pandas
 ==============================
-LEFT OFF HERE
+`Pandas <http://pandas.pydata.org/pandas-docs/stable/reference/index.html>`_ is a Python package for data manipulation and analysis. We'll use ``pd`` to refer to Pandas from here on.
+
+Loading Data Files
+^^^^^^^^^^^^^^^^^^
+Most spreadsheets can be loaded into Python using the Pandas function ``pd.read_csv()``. A **CSV (Comma Separated Value)** file is a text file that represents a spreadsheet by separating rows with new lines and columns with commas. A **TSV (Tab Separated Value)** file separates columns with tabs and can be read with the same function. ``pd.read_csv()`` outputs a **DataFrame**, a data structure in the Pandas package for tabular data. Each row and each column of a DataFrame is a **Series**, another data structure in Pandas.
+
+To read the CSV file ``/path/to/file/filename.csv`` and store the resulting DataFrame, we can write:
+
+.. code-block:: python
+
+  import pandas as pd
+  df = pd.read_csv('/path/to/file/filename.csv')
+
+To read the TSV file ``/path/to/file/filename.tsv``, we do the same but specify that the separator is a tab (the default is a comma):
+
+.. code-block:: python
+
+  df = pd.read_csv('/path/to/file/filename.tsv', sep='\t')
+
+In addition to local directories, ``pd.read_csv()`` can also accept URL's that lead to raw spreadsheet files.
+
+Getting Data
+^^^^^^^^^^^^
+
+Given a DataFrame ``df``, we can get its columns, rows, and specific entries with these functions:
+
+**Getting Labels and Shape**
+
+* ``df.columns``: returns the column labels in ``df``
+* ``df.index``: returns the row labels in ``df``
+* ``df.shape``: returns a tuple of the number of rows and the number of columns in ``df``
+
+**Using Labels**
+
+* ``df[column_label(s)]``: returns the **column(s)** with the given label(s) (a string/string list) as a Series/DataFrame
+
+* ``df.loc[row_label(s)]``: returns the **row(s)** with the given label(s) (a string/string list) as a Series/DataFrame
+  * Multiple row labels can also be given as a *slice*. For example, ``df.loc[start_label : end_label]`` returns the rows from the row labeled ``start_label`` to that labeled ``end_label``, inclusive.
+
+* ``df.loc[row_label(s), column_label(s)]``: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame
+  * Row slices also apply here (see above sub-bullet).
+
+**Using Positions**
+
+* ``df.iloc[row_index(es)]``: returns the row(s) of the given index(es) (an integer/integer list) as a Series/DataFrame
+* ``df.iloc[:, column_index(es)]``: returns the column(s) with the given index(es) (an integer/integer list) as a Series/DataFrame
+* ``df.iloc[row_index(s), column_index(s)]``: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame
+
+IMPORTANT: All indexes start from 0. Also, both rows and columns can be given as slices. Unlike for the ``loc[]`` function, the last index in a positional slice is exclusive. For example, ``df.iloc[i : j]`` returns the ``i``th row to the ``j-1``th row.
+
+**Using Conditionals**
+
+* ``df.loc[booleans]`` or ``df.iloc[booleans]``: returns a DataFrame of rows corresponding with values of ``True`` in the given boolean array or Series (the array/Series must have the same length as the row axis)
+
+
+Here are some example usages of the functions. Except for the last example, two lines of code (marked by ``>>>``) followed by one output means that the two lines produce the same output.
+
+Note that for this data, we can use row numbers for both ``loc[]`` and ``iloc[]`` because the row labels are numbers (see the output of ``oxygen_solubility.index``).
+
+.. code-block:: python
+
+    >>> import pandas as pd
+    >>> path = 'https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv'
+    >>> oxygen_solubility = pd.read_csv(path, sep='\t')
+
+    >>> oxygen_solubility.columns
+    Index(['Temperature (degC)', 'Solubility (mg/L)',
+           'Dissolved Concentration (mg/L)'],
+          dtype='object')
+
+    >>> oxygen_solubility.index
+    RangeIndex(start=0, stop=11, step=1)
+
+    >>> oxygen_solubility['Temperature (degC)']
+    >>> oxygen_solubility.iloc[:,0]
+    0      0
+    1      5
+    2     10
+    3     15
+    4     20
+    5     25
+    6     30
+    7     35
+    8     40
+    9     45
+    10    50
+    Name: Temperature (degC), dtype: int64
+
+    >>> oxygen_solubility[['Temperature (degC)', 'Solubility (mg/L)']]
+    >>> oxygen_solubility.iloc[:, 0:2]
+        Temperature (degC)  Solubility (mg/L)
+    0                    0               14.6
+    1                    5               12.8
+    2                   10               11.3
+    3                   15               10.1
+    4                   20                9.1
+    5                   25                8.3
+    6                   30                7.6
+    7                   35                7.0
+    8                   40                6.5
+    9                   45                6.0
+    10                  50                5.6
+
+    >>> oxygen_solubility.loc[5]
+    >>> oxygen_solubility.iloc[5]
+    Temperature (degC)                25.0
+    Solubility (mg/L)                  8.3
+    Dissolved Concentration (mg/L)     7.9
+    Name: 5, dtype: float64
+
+    >>> oxygen_solubility.loc[[0, 1, 2, 3, 4]]
+    >>> oxygen_solubility.iloc[0:5]
+        Temperature (degC)	Solubility (mg/L)	Dissolved Concentration (mg/L)
+    0	                   0	             14.6	                          14.9
+    1	                   5	             12.8	                          12.8
+    2	                   10	             11.3	                          11.4
+    3	                   15              10.1	                           9.8
+    4	                   20	              9.1	                           8.5
+
+    >>> oxygen_solubility.loc[4, 'Solubility (mg/L)']
+    >>> oxygen_solubility.iloc[4, 1]
+    9.1
+
+    >>> oxygen_solubility.loc[0:4, ['Temperature (degC)', 'Solubility (mg/L)']]
+    >>> oxygen_solubility.iloc[0:5, 0:2]
+       Temperature (degC)  Solubility (mg/L)
+    0                   0               14.6
+    1                   5               12.8
+    2                  10               11.3
+    3                  15               10.1
+    4                  20                9.1
+
+    >>> deficit = oxygen_solubility['Solubility (mg/L)'] - oxygen_solubility['Dissolved Concentration (mg/L)']
+    >>> oxygen_solubility.loc[deficit >= 0, 'Dissolved Concentration (mg/L)']
+    0    14.9
+    1    12.8
+    2    11.4
+    Name: Dissolved Concentration (mg/L), dtype: float64
+
+The last example may look unfamiliar, but it's actually demonstrating two element-wise operations! (Remember `Calculations on Sets of Data`_?) Just like for NumPy arrays, ordinary math operators (e.g. ``-``) can be used to subtract one Pandas Series from another or one constant from a Series. Logical operators (e.g. ``>=``) can also create a boolean Series from the comparison of one Series to another or one Series to a single constant.
 
 Plotting with Matplotlib
 ========================
-`Matplotlib <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html>`_ is a popular library for plotting in Python. Most of what you’ll need is in the collection of functions called ``matplotlib.pyplot``, which we’ll abbreviate to ``plt`` here on.
+`Matplotlib <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html>`_ is a library for plotting in Python. Most of what you’ll need is in the collection of functions called ``matplotlib.pyplot``, which we’ll abbreviate to ``plt`` here on.
 
 Plt.plot()
 ^^^^^^^^^^
-To graph a set of data, we can simply use the function ``plt.plot(x,y)``, where ``x`` and ``y`` are replaced with our sets of x- and y-coordinates, respectively. These sets can be Python lists, NumPy arrays, or Pandas series (we'll discuss the last two later).
+To graph a set of data, we can simply use the function ``plt.plot(x,y)``, where ``x`` and ``y`` are replaced with our sets of x- and y-coordinates, respectively. These sets can be Python lists, NumPy arrays, or Pandas series.
 For example,
 
 .. code-block:: python
@@ -79,8 +222,8 @@ outputs the following graph:
 
 Figure Formatting
 ^^^^^^^^^^^^^^^^^
-Of course, there are several issues with this graph. For one, discrete data should plotted with data symbols, not a line. Also, both axes should be labeled, and these labels should include units when appropriate.
-(For more guidelines, see the Figure Requirements section of the `Report Template <https://github.com/AguaClara/team_resources/blob/master/Report_Template.md>`_.) Fortunately, Matlotlib contains many features for the formatting we need.
+However, there are several issues with this graph. Discrete data should plotted with data symbols, not a line. Also, both axes should be labeled, and these labels should include units when appropriate.
+(For more guidelines, see the Figure Requirements section of the `Report Template <https://github.com/AguaClara/team_resources/blob/master/Report_Template.md>`_.) Fortunately, Matlotlib contains features for the formatting we need.
 
 - **Line and marker style**: These can be specified as additional inputs to the ``plt.plot()`` function. For example, ``plt.plot(hour, water_height, 'ro')`` would plot our previous graph with red (r) circular (o) markers and no connecting lines.
   For more line specification options, visit the ``plt.plot()`` `documentation page <https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.plot.html>`_.
@@ -88,7 +231,7 @@ Of course, there are several issues with this graph. For one, discrete data shou
 - **Grid lines**: Use ``plt.grid("major")`` for major grid lines or ``plt.grid("minor")`` for minor grid lines.
 - **Manual axis ranges**: ``plt.plot()`` will automatically scale the graph to your data, but you can alter axis ranges manually with ``plt.xlim(left, right)`` and ``plt.ylim(bottom, top)``.
 
-Here is an improvement of the above graph, along with its code:
+Here is an improvement of the above graph:
 
 .. code-block:: python
 
@@ -106,13 +249,13 @@ Here is an improvement of the above graph, along with its code:
 
 Multiple Plots
 ^^^^^^^^^^^^^^
-To plot multiple sets of data, we can just call ``plt.plot()`` multiple times, perhaps with different line or marker styles to distinguish plots. Adding a legend and plotting with two y-axes, however, takes a few more steps.
+To plot multiple sets of data, we can just call ``plt.plot()`` multiple times, but adding a legend and plotting with two y-axes takes a few more steps.
 
 Adding a legend
 ~~~~~~~~~~~~~~~
 We can use ``plt.legend()`` with the inputs ``plt.legend(labels)`` or ``plt.legend(handles, labels)``.
 
-1. **Labels only**: Labels for data sets must be given as a tuple of strings. Matplotlib automatically labels data sets in the order in which they were plotted. Below is an example:
+1. **Labels only**: Labels for data sets must be given as a tuple of strings. Matplotlib automatically labels data sets in the order in which they were plotted. For example:
 
 .. code-block:: python
 
@@ -131,9 +274,9 @@ We can use ``plt.legend()`` with the inputs ``plt.legend(labels)`` or ``plt.lege
 .. image:: Images/Data_Analysis/legend.png
     :align: center
 
-2. **Handles and labels**: To have full control over which plots receive which labels, we can use line handles output by ``plt.plot()``. Along with creating a plot, the function outputs a tuple of objects representing the plotted data. The line handle we need is the *first* object in the tuple, so we can assign the handle to a variable by unpacking the tuple and ignoring every object after the first. We do this by assigning the output of ``plt.plot()`` to a variable followed by a comma and nothing else.
+2. **Handles and labels**: Using line handles gives full control over which label assignments. ``plt.plot()`` outputs a list of objects representing the plotted data. The line handle we need is the *first* object in the list, so we'll assign the output of ``plt.plot()`` to a variable followed by a only comma, signaling that we want to ignore every object after the first.
 
-   Then, we input our line handles and line labels as two tuples to ``plt.legend()``, so that the data represented by the first handle gets the first label; the second handle, the second label; etc.
+   Then, we input our line handles and line labels as two tuples to ``plt.legend()``, so that the data represented by the first handle gets the first label, the second handle gets the second label, etc.
 
 .. code-block:: python
 
@@ -147,19 +290,14 @@ The graph output by this code is the same as before.
 
 Plotting with Two Y-Axes
 ~~~~~~~~~~~~~~~~~~~~~~~~
-To plot multiple data sets on the same x-axes but different y-axes, first use ``plt.subplots()`` to get an axis handle for the first (left) y-axis. The axis handle is the second output of ``plt.subplots()``, so in order to access it we need to also access the first output, which we'll store as ``fig``.
+To plot multiple data sets on the same x-axes but different y-axes, first use ``plt.subplots()`` to get an axis handle for the first (left) y-axis. The axis handle is the second output of ``plt.subplots()``, so in order to access it we need to also access the first output, which we'll store as ``fig``. From the axis handle for the first y-axis, create a second that shares the same x-axis using ``twinx()``:
 
 .. code-block:: python
 
     fig, ax1 = plt.subplots()
-
-From the axis handle for the first y-axis, create a second that shares the same x-axis using ``twinx()``:
-
-.. code-block:: python
-
     ax2 = ax1.twinx()
 
-Instead of ``plt.plot()``, ``plt.xlabel()``, ``plt.ylabel()``, ``plt.xlim()``, and ``plt.ylim()`` we must now call ``plot()``, ``set_xlabel``, ``set_ylabel``, ``set_xlim``, or ``set_ylim`` on a specific axis. Here is an example:
+Now, instead of ``plt.plot()``, ``plt.xlabel()``, ``plt.ylabel()``, ``plt.xlim()``, and ``plt.ylim()`` we must call ``plot()``, ``set_xlabel``, ``set_ylabel``, ``set_xlim``, or ``set_ylim`` on a specific axis. Here is an example:
 
 .. code-block:: python
 
@@ -172,7 +310,7 @@ Instead of ``plt.plot()``, ``plt.xlabel()``, ``plt.ylabel()``, ``plt.xlim()``, a
 
     fig, ax1 = plt.subplots()
     line1, = ax1.plot(t, x, "b")
-    ax1.set_xlabel("Time (seconds)")
+    ax1.set_xlabel("Time (s)")
     ax1.set_ylabel("Displacement (m)")
 
     ax2 = ax1.twinx()
@@ -197,286 +335,154 @@ Here are some other useful functions in ``plt``. For more details and features, 
 
 Reading ProCoDA Data with the AguaClara Package
 ===============================================
-The `AguaClara package <https://aguaclara.github.io/aguaclara/>`_ is a publicly available Python package written by AguaClara members to assist research subteams with scientific calculations, experimental design, and data analysis.
+The `AguaClara package <https://aguaclara.github.io/aguaclara/>`_ contains functions and modules for physical, chemical, and hydraulic calculations, experimental design, and data analysis. We'll use the ``aguaclara.research.procoda_parser`` module, abbreviated to``pp``, to read data files from ProCoDA.
 
-The ``aguaclara.research.procoda_parser`` module in the AguaClara  package contains functions for analyzing ProCoDA datalogs. Click `here <https://aguaclara.github.io/aguaclara/research/procoda_parser.html>`_ to see all its functions.
+Reading Columns of Data and Time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To read a column of data from a ProCoDA data file, we can use the function ``pp.column_of_data(path, start, column, end, units)``, where
 
-Example 1: Reading one column of data for a specified TIME
-----------------------------------------------------------
-The function
+* ``path`` is the file path or URL of the file
+* ``start`` and ``end`` are the first and last indexes of the rows of interest (``end`` defaults to the last row)
+* ``column`` is a column index or label
+* ``units`` is the units you wish to apply to the column (defaults to dimensionless).
 
-.. code-block:: python
+To read the time column, we can use ``pp.column_of_time(path, start, end)``.
 
-  get_data_by_time(path, columns, dates,
-                   start_time="00:00", end_time="23:59")
-
-in the `procoda_parser` module extracts data from a ProCoDA datalog based on the `path` (folder in your computer) the file is located in, the `columns` you wish to extract, the `dates` of the experiment (a single date or a list of consecutive dates), and the optional `start_time` and `end_date`. The `columns` input can be a single integer if you want to extract one column, or it can be a list of integers if you want to extract multiple columns. Note: the 0<sup>th</sup> column of a ProCoDA datalog is the time column.
-
-The output is either
-1. a list of numbers (for a single column of data), or
-2. a list of lists of numbers (for multiple columns of data, in the order specified in the `columns` input)
-
-.. Therefore, if we want to graph it, we can pass it directly to the ``plot()`` function from ``matplotlib.pyplot`` (see sections [III](#plotting-with-matplotlib-one-y-axis) and [IV](#plotting-with-matplotlib-two-y-axes)).
-
-Here is an example that uses `get_data_by_time` to extract data from one column, for one day, and for specified start and end times.
+The outputs of both are Numpy arrays with units attached. For example,
 
 .. code-block:: python
 
-    import aguaclara.research.procoda_parser as pp
+  import aguaclara.research.procoda_parser as pp
 
-    # This is a relative path to the Data folder in this repository. If you
-    # have downloaded this repository onto your computer, you can also use
-    # an absolute path, which might look like C:\Users\...\team_resource\Data
-    # (Windows) or /Users/.../team_resources/Data (Mac/Linux)
-    data_path = "Data"
+  path = "https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/datalog%206-14-2018.tsv"
+  start = 1000
+  end = 3000
+  time = pp.column_of_time(path, start, end)
+  influent_turbidity = pp.column_of_data(path, start, 3, end, 'NTU')
+  effluent_turbidity = pp.column_of_data(path, start, 4, end, 'NTU')
+  influent_turbidity - effluent_turbidity
 
-    column = pp.get_data_by_time(path=data_path, columns=4,
-                                 dates="6-14-2018", start_time="15:40",
-                                 end_time="23:30")
-    print(column)
+  Output: <Quantity([73.05 74.77 80.66 ... 94.66 96.32 97.81], 'NTU')>
 
+Plotting Columns of Data
+^^^^^^^^^^^^^^^^^^^^^^^^
+To plot the columns we read above, we can give ``time``, ``influent_turbidity``, and ``effluent_turbidity`` as inputs to ``plt.plot()``. We can also use two functions in ``procoda_parser`` for quickly plotting one or more columns of data:
 
-Example 2: Reading multiple columns of data for a specified TIME
-----------------------------------------------------------------
-Here is another example that uses `get_data_by_time()` again to extract three columns (which happen to represent time, influent turbidity, and effluent turbidity) of data over the entirety of two days (since no start or end times are specified).
+1.  ``pp.plot_columns(path, columns, x_axis)``:
 
-.. code-block:: python
+    * ``columns`` is a single column label or list of labels
+    * ``x_axis`` is the label of the x-coordinate column (defaults to no column)
 
-    import aguaclara.research.procoda_parser as pp
+2.  ``pp.iplot_columns(path, columns, x_axis)``:
 
-    # This is a relative path to the Data folder in this repository. If you
-    # have downloaded this repository onto your computer, you can also use
-    # an absolute path, which might look like C:\Users\...\team_resource\Data
-    # (Windows) or /Users/.../team_resources/Data (Mac/Linux)
-    data_path = "Data"
+    * ``columns`` is a single column index or list of indexes
+    * ``x_axis`` is the index of the x-coordinate column (defaults to no column)
 
-    columns = pp.get_data_by_time(path=data_path, columns=[0, 3, 4],
-                                  dates=["6-14-2018", "6-15-2018"])
-    # columns is now a list of 3 elements, each of which is also a list:
-
-    # 1. a list of times (from the 0th column)
-    time = columns[0]
-    # 2. a list of influent turbidity values (from the 3rd column)
-    influent_turbidity = columns[1]
-    # 3. a list of effluent turbidity values (from the 4th column)
-    effluent_turbidity = columns[2]
-
-Example 3. Reading one column of data for a specified STATE
------------------------------------------------------------
-The function
+For both, ``path`` is the file path or URL of the file. Here's an example:
 
 .. code-block:: python
 
-    get_data_by_state(path, dates, state, column)
+  import aguaclara.research.procoda_parser as pp
+  import matplotlib.pyplot as plt
 
-in the ``procoda_parser`` module extracts data from a ProCoDA datalog based on the `path` (folder in your computer) the file is located in, the `dates` of the experiment (input as a list of one or more dates), the `state` of ProCoDA during which you collected your data of interest (this is an integer), and the `column` of the data that you want to extract. *Note that the 0<sup>th</sup> column of a ProCoDA datalog is the time column.*
+  path = "https://raw.githubusercontent.com/AguaClara/team_resources/master/Data/datalog%206-14-2018.xls"
+  pp.plot_columns(path, ['Influent Turbidity (NTU)', 'Effluent Turbidity ()'],
+                  'Day fraction since midnight on 6/14/2018')
+  plt.xlabel("Time (hr)")
+  plt.ylabel("Turbidity (NTU)")
+  plt.legend(("Influent", "Effluent"))
 
-The output of the function is a 3-dimension list (list of lists of lists), where the "smallest" lists are lists of time and data (from your desired column) from the ProCoDA datalog, the next level of lists contains contains time and data column pairs (one for each  iteration of your state), and the top level of lists contains these lists for each iteration.
+Replacing the 4th line with ``pp.iplot_columns(path, [3, 4], 0)`` outputs the same graph:
 
-Here is an example that uses `get_data_by_time` to extract and make simple calculations on data from a particular ProCoDA state.
-
-.. code-block:: python
-
-    import aguaclara.research.procoda_parser as pp
-
-    # This is a relative path to the Data folder in this repository. If you
-    # have downloaded this repository onto your computer, you can also use
-    # an absolute path, which might look like C:\Users\...\team_resource\Data
-    # (Windows) or /Users/.../team_resources/Data (Mac/Linux)
-    data_path = "Data"
-
-    data = pp.get_data_by_state(data_path, dates="6-19-2013", state=1, column=1)
-
-    # This empty list will be used later to hold the average pH reading from
-    # each iteration of the 1st state
-    pH_averages = []
-
-    for iteration in data:
-      # Here's how to extract time from the output:
-      time = iteration[:,0]
-      elapsed_time = time - iteration[0,0]
-
-      # Here's a way to extract and work with data from the output:
-      pH_readings = iteration[:,1]
-      pH_averages.append(sum(pH_readings)/len(pH_readings))
-
-    print(pH_averages)
-
-
-Reading Other Spreadsheets with the Pandas Package
---------------------------------------------------
-The [Pandas](http://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html) library is useful for reading and manipulating spreadsheets of data in Python.
-
-Below are some examples for using Pandas to read columns and rows from an Excel spreadsheet.
-
-.. code-block:: python
-
-    import pandas as pd
-
-    data = pd.read_excel("Data/Solubility of Oxygen.xlsx")
-    print(data)         # Run this to see the table of data
-    print(data.columns) # Run this to see the column labels
-
-    # Reading columns by name
-    temperature = data["Temperature (ºC)"]
-    solubility = data["Solubility of O2 (mg/L)"]
-
-    # Reading columns by index
-    temperature = data.iloc[:,0]
-    solubility = data.iloc[:,1]
-
-    # Reading rows by index
-    first_row = data.loc[0]
-    last_row = data.loc[data.shape[0]-1]
-
-Click [here](http://pandas.pydata.org/pandas-docs/stable/reference/index.html#api) for the full Pandas API Reference (a list of all its available functions and data types).
-
-Plotting with Matplotlib: One Y-Axis
-------------------------------------
-[Matplotlib](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html) is a great package for creating graphs, just as you may already do in Excel or Matlab. As a Python package, however, it can easily handle the data that you have already read and manipulated in Python.
-
-Below is an example of reading s of time and data from a ProCoDA data file (see [Reading ProCoDA Data with the AguaClara Package](#reading-procoda-data-with-the-aguaclara-package)) and graphing it on one y-axis, with labels for the x-axis and the y-axis.
-
-.. code-block:: python
-
-    import aguaclara.research.procoda_parser as pp
-    import matplotlib.pyplot as plt
-    import numpy as np
-
-    # Read the 0th column (time) and the 4th column (effluent turbidity)
-    time, effluent_turbidity = pp.get_data_by_time(
-          path="Data", columns=[0, 4], start_date="6-14-2018",
-          start_time="15:40", end_time="23:30")
-    elapsed_time = (np.array(time)-time[0])*24
-
-    plt.xlabel("Time (hours)")
-    plt.ylabel("Effluent Turbidity (NTU)")
-    plt.plot(time, effluent_turbidity, color="blue")
-
-Output:
-
-<img src="../Images/One Axis.png">
-
-
-Plotting with Matplotlib: Two Y-Axes
-------------------------------------
-Below is an example of reading multiple columns of data from a ProCoDA data file (see [Reading ProCoDA Data with the AguaClara Package](#reading-procoda-data-with-the-aguaclara-package)) and graphing it on two y-axes using [`matplotlib.pyplot.subplots()`](https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_demo.html).
-
-.. code-block:: python
-
-    import aguaclara.research.procoda_parser as pp
-    import matplotlib.pyplot as plt
-    import numpy as np
-
-    time, influent_turbidity, effluent_turbidity = pp.get_data_by_time(
-          path="Data", columns=[0, 3, 4], start_date="6-14-2018",
-          start_time="15:40", end_time="23:30")
-    elapsed_time = (np.array(time)-time[0])*24
-
-    # ax1 is the axis handle for the first y-axis
-    fig, ax1 = plt.subplots()
-    ax1.set_xlabel("Time (hours)")
-    ax1.set_ylabel("Effluent Turbidity (NTU)")
-    # line1 is the line handle for the effluent_turbidity graph
-    line1, = ax1.plot(elapsed_time, effluent_turbidity, color="blue")
-
-    # ax2 is an axis handle for the second y-axis, with the same x-axis as ax1
-    ax2 = ax1.twinx()
-    ax2.set_ylabel("Influent Turbidity (NTU)")
-    ax2.set_ylim(60,120)
-    # line1 is the line handle for the effluent_turbidity graph
-    line2, = ax2.plot(elapsed_time, influent_turbidity, color="green")
-
-    plt.legend((line1, line2), ("Effluent", "Influent"))
-
-
-Output:
-
-<img src="../Images/Two Axes.png">
-
+.. image:: Images/Data_Analysis/plot_columns.png
+    :align: center
 
 Regression Analysis and Curve Fitting
--------------------------------------
-The SciPy package, particularly the [`SciPy.stats` modules](https://docs.scipy.org/doc/scipy/reference/stats.html) and [`SciPy.optimize` module](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html) is useful for regression analyses and curve fitting in Python.
+=====================================
+The SciPy package, particularly `SciPy.stats <https://docs.scipy.org/doc/scipy/reference/stats.html>`_ and `SciPy.optimize <https://docs.scipy.org/doc/scipy/reference/optimize.html>`_, is useful for regression analysis and curve fitting in Python.
 
-Here is example of a linear regression on the Temperature and Oxygen Solubility Data in the Data folder of this repository:
+Linear Regression
+^^^^^^^^^^^^^^^^^
+``scipy.stats.linregress(x, y)`` returns a list of the slope, intercept, r-value, p-value, and standard error of a linear regression on the data sets ``x`` and ``y``.
 
 .. code-block:: python
 
     import pandas as pd
     import scipy.stats as stats
 
-    data = pd.read_excel("Data/Solubility of Oxygen.xlsx")
-    temperature = data["Temperature (ºC)"]
-    solubility = data["Solubility of O2 (mg/L)"]
+    path = 'https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv'
+    df = pd.read_csv(path, sep='\t')
+    temperature = df['Temperature (degC)']
+    solubility = df['Solubility (mg/L)']
 
     linreg = stats.linregress(temperature, solubility)
     slope, intercept, r_value = linreg[0:3]
 
     print("Slope:", slope)
-    print("Intercept:", intercept)
+    print("Y-intercept:", intercept)
     print("R-squared:", r_value ** 2)
 
-    # Here's a way to graph the regression line with the data:
-    import numpy as np
-    import matplotlib.pyplot as plt
-    x_range = np.arange(temperature.iloc[0], temperature.iloc[-1]+1)
+    Output:
+    Slope: -0.17145454545454547
+    Y-intercept: 13.277272727272727
+    R-squared: 0.944743216539532
 
-    plt.xlabel('Temperature (ºC)')
-    plt.ylabel('Solubility of O2 (mg/L)Y label')
-    plt.plot(temperature, solubility, 'o')
-    plt.plot(x_range, x_range * slope + intercept)
-
-
-Output:
-
-Slope: -0.17145454545454547
-
-Intercept: 13.277272727272727
-
-R-squared: 0.944743216539532
-
-<img src="../Images/Lin Reg.png">
-
-From the graph, we might judge that an exponential fit would be best for the data. We can also `SciPy.optimize.curve_fit()` for non-linear curve fitting. Here's an example found in SciPy's documentation:
+We can use the calculated slope and intercept to plot the data with the regression line.
 
 .. code-block:: python
 
-      import pandas as pd
-      import numpy as np
-      import matplotlib.pyplot as plt
-      import scipy.optimize as opt
-      import aguaclara.research.procoda_parser as pp
+    import matplotlib.pyplot as plt
 
-      data = pd.read_excel("Data/Solubility of Oxygen.xlsx")
-      # data = pd.read_csv("https://raw.githubusercontent.com/AguaClara/Dissolved-Gas/master/Data/TestingTemperatureDifference_Trial01_20190319.xls", delimiter='\t')
-      data = pp.remove_notes(data)
-      temperature = data["Temperature (ºC)"]
-      solubility = data["Solubility of O2 (mg/L)"]
+    plt.plot(temperature, solubility, 'o')
+    plt.plot(temperature, temperature * slope + intercept)
+    plt.xlabel('Temperature (degC)')
+    plt.ylabel('Solubility of O2 (mg/L)')
 
-      def exp_func(x, a, b, c):
-        return a * np.exp(-b * x) + c
+.. image:: Images/Data_Analysis/linear_regression.png
+    :align: center
 
-      cf_output = opt.curve_fit(exp_func, temperature, solubility)
-      optimal_parameters = cf_output[0]
-      print("a:", optimal_parameters[0])
-      print("b:", optimal_parameters[1])
-      print("c:", optimal_parameters[2])
+Non-Linear Regression
+^^^^^^^^^^^^^^^^^^^^^
+Judging from the graph, an exponential model might better fit the data. We can use ``scipy.optimize.curve_fit(f, xdata, ydata)`` for non-linear curve fitting, where ``f(x, ...)`` is a model function that takes the independent variable as the first argument and fitting parameters as remaining arguments and returns the predicted value of the dependent variable. In other words, it is expected that ``ydata ≈ f(xdata, ...)``.
 
-      x_range = np.arange(temperature.iloc[0], temperature.iloc[-1]+1, step=0.1)
+``curve_fit()`` itself has two outputs, an array of the optimal fitting parameters and an estimated covariance matrix. For example,
 
-      plt.xlabel('Temperature (ºC)')
-      plt.ylabel('Solubility of O2 (mg/L)Y label')
-      plt.plot(temperature, solubility, 'o')
-      plt.plot(x_range, exp_func(x_range, *optimal_parameters))
+.. code-block:: python
 
+    import numpy as np
+    import pandas as pd
+    import scipy.optimize as opt
 
-Output:
+    def exp_function(x, a, b, c):
+      return a * np.exp(-b * x) + c
 
-a: 10.694801786694969
+    path ='https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv'
+    df = pd.read_csv(path, sep='\t')
+    temperature = df['Temperature (degC)']
+    solubility = df['Solubility (mg/L)']
 
-b: 0.03546205767749912
+    popt, pcov = opt.curve_fit(exp_function, temperature, solubility)
+    print("a:", popt[0])
+    print("b:", popt[1])
+    print("c:", popt[2])
+    print('f(x) =', round(popt[0], 4), '* e^(-', round(popt[1], 4), '* x) +', round(popt[2], 4))
 
-c: 3.858064720006462
+    Output:
+    a: 10.694801786694969
+    b: 0.03546205767749912
+    c: 3.858064720006462
+    f(x) = 10.6948 * e^(- 0.0355 * x) + 3.8581
 
-<img src="../Images/Nonlin Reg.png">
+Now our graph looks much better!
+
+.. code-block:: python
+
+  import matplotlib.pyplot as plt
+
+  plt.xlabel('Temperature (degC)')
+  plt.ylabel('Solubility of O2 (mg/L)')
+  plt.plot(temperature, solubility, 'o')
+  plt.plot(temperature, exp_function(temperature, *popt))
+
+.. image:: Images/Data_Analysis/nonlinear_regression.png
+    :align: center
