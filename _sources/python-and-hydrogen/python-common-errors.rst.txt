@@ -11,7 +11,7 @@ A **syntax error** is an error in the syntax of a command, much like a typo. Pyt
 
 Some common syntax errors are:
 
-- Missing colon at the end of a ``def``,``if``, or ``for`` statement
+- Missing colon at the end of a ``def``, ``if``, or ``for`` statement
 - Missing quotation marks, either both single (``''``) or both double (``""``), around a string
 - Different number of open and closed brackets in a statement
 
@@ -121,7 +121,7 @@ This happens if you use a mixture of tabs and spaces when trying to indent your 
 .. code-block:: python
 
   x = 2
-  if x%2 == 0:
+  if x % 2 == 0:
   print("even")
 
   IndentationError: expected an indented block
@@ -166,4 +166,4 @@ A Key Error arises from looking up a nonexistent key in a Python dictionary. For
   KeyError: 4
 
 
-A key of 1 exists so the associated values for those keys are displayed. Key 4 does not exist.
+A key of ``1`` exists, so its associated values is displayed. A key of ``4`` does not exist.
