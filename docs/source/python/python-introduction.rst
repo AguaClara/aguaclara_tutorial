@@ -1,8 +1,8 @@
-.. _python-and-hydrogen-introduction:
+.. _python-introduction:
 
-********************************
-Python and Hydrogen Introduction
-********************************
+*******************
+Python Introduction
+*******************
 
 What is Python?
 ===============
@@ -10,7 +10,7 @@ What is Python?
 
 .. image:: https://www.python.org/static/opengraph-icon-200x200.png
    :target: https://www.python.org/static/opengraph-icon-200x200.png
-   :alt: 
+   :alt:
 
 
 **A powerful, yet easy to use, programming language.**
@@ -60,33 +60,3 @@ Apart from these tutorials, there are a number of great resources to learn more 
 * `Learn X in Y minutes: Python <https://learnxinyminutes.com/docs/python/>`_ is the fastest way to get a basic understanding of Python syntax.
 * `Code Academy <https://www.codecademy.com/catalog/subject/web-development>`_ and `Learn Python <https://www.learnpython.org>`_ have great interactive tutorials to learn how to code in Python.
 * `Stack Overflow <https://stackoverflow.com>`_ is a community-based website that has millions of questions and answers related to coding.
-
-What is Hydrogen?
-=================
-
-
-.. image:: https://i.github-camo.com/9e74bd571d2566963428069319f0db831a0d2463/68747470733a2f2f63646e2e7261776769742e636f6d2f6e7465726163742f687964726f67656e2f31376564613234352f7374617469632f616e696d6174652d6c6f676f2e737667
-   :target: https://i.github-camo.com/9e74bd571d2566963428069319f0db831a0d2463/68747470733a2f2f63646e2e7261776769742e636f6d2f6e7465726163742f687964726f67656e2f31376564613234352f7374617469632f616e696d6174652d6c6f676f2e737667
-   :alt: 
-
-
-**An Atom package that lets you run Python code within Markdown files.**
-
-If you have previous experience with Jupyter Notebooks, you'll find many of the same features with Hydrogen:
-
-
-* Running code interactively
-* Checking data from experiments
-* Performing calculations
-* Drawing data plots
-
-Why use Hydrogen?
------------------
-
-
-* Hydrogen allows you to complement the information in your reports with Python code.
-* Hydrogen and Python are open source, fulfilling AguaClara's devotion to open source software.
-
-**If you're new to Python, or would like a refresher, start with** :ref:`writing-python-code`.
-
-**If you have experience with Python, go to** :ref:`python-packages`.
