@@ -36,19 +36,18 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
 
    markdown/markdown-introduction
    markdown/markdown-basics
-   markdown/saving-markdown-to-pdf
 
 .. toctree::
    :maxdepth: 1
    :caption: Python
 
    python/python-introduction
+   python/python-basics
    python/python-packages
    python/data-analysis
-   python/writing-python-code
-   python/running-python-code
    python/python-common-errors
    python/good-coding-practices
+   python/python-in-command-line
 
 .. toctree::
    :maxdepth: 1
@@ -73,7 +72,6 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    other-tutorials/common-issues
    other-tutorials/transitioning-from-matlab
    other-tutorials/contributing-to-the-tutorial
-   other-tutorials/video-tutorials
 
 .. toctree::
    :maxdepth: 1
@@ -87,3 +85,6 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    atom/atom-and-hydrogen-introduction
    atom/teletype-basics
    atom/hydrogen-basics
+   atom/saving-markdown-to-pdf
+
+   other-tutorials/video-tutorials

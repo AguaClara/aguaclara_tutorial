@@ -1,21 +1,10 @@
-.. _writing-python-code:
+.. _python-basics:
 
-*******************
-Writing Python Code
-*******************
+*************
+Python Basics
+*************
 
 **NOTE: This is not a comprehensive guide to writing Python code!** We've only put the basics that would be useful in the context of an AguaClara research report. To continue learning Python, review these :ref:`python-and-hydrogen-introduction-external-resources`.
-
-Writing Python in Atom
-======================
-
-Like with Markdown, we'll be using **Atom** to edit Python files (also known as *scripts*\ ):
-
-
-#. Open **Atom** and open the ``aguaclara_tutorial/`` repository folder that you cloned (or any other project folder you have).
-#. Click on one of the ``*.py`` files in the left Project pane to open it.
-
-All Python scripts must be **files with the** ``.py`` **file extension**.
 
 How this tutorial works
 -----------------------
@@ -282,6 +271,4 @@ Functions
    >>> parity(40)
    40 is even.
 
-**Now, complete Lesson 2 of the interactive tutorials. It's in the** ``Interactive-Tutorial-2-Python-Basics.py`` **file in your** ``aguaclara_tutorial`` **repository.**
-
-**Then, continue with** :ref:`running-python-code`.
+**Now, complete Interactive Tutorial 2: Python Basics** `here <>`_.

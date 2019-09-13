@@ -63,7 +63,7 @@ To complete the AguaClara Tutorial assignment, you will need to open several
 Colab notebooks from the `aguaclara_tutorial Github repository
 <https://github.com/AguaClara/aguaclara_tutorial>`_. They are also linked below:
 
-* `Interactive Tutorial 1: Markdown <>`_
+* `Interactive Tutorial 1: Markdown <https://colab.research.google.com/drive/15yYapOXlOLOEYMttz8v1Vb5odRkkJdhO>`_
 * `Interactive Tutorial 2: Python Basics <>`_
 * `Interactive Tutorial 3: Python Packages <>`_
 
@@ -71,10 +71,10 @@ After opening an interactive tutorial in Colab,
 
 1. Save a copy of the notebook to your Drive and prefix the file name with your netID.
 
-   * For example, ``Interactive Tutorial 1: Markdown.ipynb`` becomes ``netID - Interactive Tutorial 1: Markdown.ipynb``
+   * For example, ``Interactive-Tutorial-1-Markdown.ipynb`` becomes ``netID-Interactive-Tutorial-1-Markdown.ipynb``
 
 2. Follow the instructions in the notebook, using the next sections of this tutorial wiki to guide you.
 
 3. Click the "Share" icon in the top left corner of the page and get a shareable link for your Colab notebook.
 
-4. Email links for all of your finished interactive tutorial to aguaclaragraders@gmail.com.
+4. Email links for all of your finished interactive tutorial to aguaclara@cornell.edu.

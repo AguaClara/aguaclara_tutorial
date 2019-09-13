@@ -53,6 +53,19 @@ Why use Atom?
 
 We've omitted an Atom-specific tutorial because it's so easy to use. But if you want to learn more about Atom, check out the `Atom Flight Manual <http://flight-manual.atom.io/getting-started/sections/why-atom/>`_.
 
+Markdown in Atom
+----------------
+
+Atom is useful for editing Markdown files and preview them nicely:
+
+#. Open **Atom** and open an already existing Markdown file or create one using the ``.md`` extension.
+#. Press ``Ctrl + Shift + M`` to open a formatted preview on the right.
+
+   * If a preview didn't show up, review the instructions on :ref:`installing-on-macos` or :ref:`installing-on-windows`.
+
+All Markdown files are simply **text files with the ``.md`` file extension**.
+
+
 What is Hydrogen?
 =================
 
@@ -74,6 +87,6 @@ Why use Hydrogen?
 * Hydrogen allows you to complement the information in your reports with Python code.
 * Hydrogen and Python are open source, fulfilling AguaClara's devotion to open source software.
 
-**If you're new to Python, or would like a refresher, start with** :ref:`writing-python-code`.
+**If you're new to Python, or would like a refresher, start with** :ref:`python-basics`.
 
 **If you have experience with Python, go to** :ref:`python-packages`.

@@ -38,6 +38,7 @@ If you run into any errors or bugs while writing Python code, follow these gener
 
 
 #. **Read the error message.** Error messages give very valuable information on how to solve code problems - don't ignore them! Many times, they'll tell you exactly how to fix your code.
+#. **Look for your error in** :ref:`python-common-errors`.
 #. **Search for a solution online.** It's very likely that someone else has experienced the same problem that you're facing, and discussed it online. Try searching for both
 
    * The error message

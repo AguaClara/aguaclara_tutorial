@@ -1,8 +1,8 @@
-.. _running-python-code:
+.. _python-in-command-line:
 
-*******************
-Running Python Code
-*******************
+**********************************
+Running Python in the Command Line
+**********************************
 
 Now that you've written Python code, it's time to see how to run it!
 
@@ -16,7 +16,7 @@ There are two methods to run Python code in the Command Line: the *Interactive P
 Interactive Python Interpreter
 ------------------------------
 
-Remember how the :ref:`writing-python-code` tutorial was formatted?
+Remember how the :ref:`python-basics` tutorial was formatted?
 
 .. code-block:: python
 
