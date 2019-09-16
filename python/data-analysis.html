@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Analysis in Python &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common Errors in Python" href="python-common-errors.html" />
+    <link rel="prev" title="Python Packages" href="python-packages.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-packages.html">Python Packages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Analysis in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calculations-on-sets-of-data">Calculations on Sets of Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multidimensional-numpy-arrays">Multidimensional NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numpy-arrays-and-units">NumPy Arrays and Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-numpy-array-functions">Other NumPy Array Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-data-files-with-pandas">Reading Data Files with Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loading-data-files">Loading Data Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-data">Getting Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-with-matplotlib">Plotting with Matplotlib</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plt-plot">Plt.plot()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#figure-formatting">Figure Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-plots">Multiple Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-legend">Adding a legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plotting-with-two-y-axes">Plotting with Two Y-Axes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#other-matplotlib-features">Other Matplotlib Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-procoda-data-with-the-aguaclara-package">Reading ProCoDA Data with the AguaClara Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reading-columns-of-data-and-time">Reading Columns of Data and Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plotting-columns-of-data">Plotting Columns of Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#regression-analysis-and-curve-fitting">Regression Analysis and Curve Fitting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#linear-regression">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#non-linear-regression">Non-Linear Regression</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Data Analysis in Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python/data-analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-analysis-in-python">
+<span id="data-analysis"></span><h1>Data Analysis in Python<a class="headerlink" href="#data-analysis-in-python" title="Permalink to this headline">¶</a></h1>
+<p>You may be familiar with viewing, graphing, and performing calculations on your data in Excel, MATLAB, or R. We’ll show you in this tutorial that Python can be just as useful for data analysis!</p>
+<div class="section" id="calculations-on-sets-of-data">
+<h2>Calculations on Sets of Data<a class="headerlink" href="#calculations-on-sets-of-data" title="Permalink to this headline">¶</a></h2>
+<p>Given a Python list of values and a calculation you need to perform on each value, you might write a loop that runs the calculation for each value. After all, Python can’t run calculations on every element in a list at once, called <em>element-wise operations</em>, using basic operators:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">/</span><span class="mi">2</span>
+<span class="go">TypeError: unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;</span>
+</pre></div>
+</div>
+<p>Fortunately, there are other data types that can do this! If our data is stored as a <strong>NumPy array</strong>, we can use the usual <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, and <code class="docutils literal notranslate"><span class="pre">**</span></code> operators to add (or subtract, etc.) each value in the array with either one constant value or values in another NumPy array (of the same dimension).</p>
+<p>We use <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> to convert Python lists to NumPy arrays. Also, many of NumPy’s mathematical functions, such as <code class="docutils literal notranslate"><span class="pre">np.sqrt()</span></code>, can perform both scalar (number to number) and element-wise (array to array) operations. Here is an example that calculates the hypotenuse for 5 right triangles.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">array([ 1.,  5., 13., 25., 41.])</span>
+</pre></div>
+</div>
+<div class="section" id="multidimensional-numpy-arrays">
+<h3>Multidimensional NumPy Arrays<a class="headerlink" href="#multidimensional-numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<p>The same <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> command can make a multidimensional array, or an array containing arrays (containing arrays, etc.). Below is an example of a 2D array.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my2DArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>The array can be indexed using <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">c]</span></code>, where <code class="docutils literal notranslate"><span class="pre">r</span></code> is either a single row index or a slice of rows indexes and <code class="docutils literal notranslate"><span class="pre">c</span></code> is a single column index or slice of column indexes (for a review on slices, see Lists in <a class="reference internal" href="python-basics.html#python-basics"><span class="std std-ref">Python Basics</span></a>). Here are examples for getting a single row or column for a 2D array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my2DArray</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">array([ 1,  4,  7, 10])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my2DArray</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+<span class="go">array([4, 5, 6])</span>
+</pre></div>
+</div>
+<p>Here are some functions for getting the length, size, and shape of an array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">my2DArray</span><span class="p">)</span> <span class="c1"># length of array</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">my2DArray</span><span class="p">)</span> <span class="c1"># number of elements in array</span>
+<span class="go">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">my2DArray</span><span class="p">)</span> <span class="c1"># dimensions of array</span>
+<span class="go">(4, 3)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="numpy-arrays-and-units">
+<h3>NumPy Arrays and Units<a class="headerlink" href="#numpy-arrays-and-units" title="Permalink to this headline">¶</a></h3>
+<p>NumPy functions and arrays are also compatible with units! Units must be attached to the <em>entire array</em>, not to each element. Here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="go">&lt;Quantity([0.25 0.5  0.75], &#39;meter / second&#39;)&gt;</span>
+</pre></div>
+</div>
+<p>WARNING: <code class="docutils literal notranslate"><span class="pre">np.append(array,</span> <span class="pre">values)</span></code>, which appends <code class="docutils literal notranslate"><span class="pre">values</span></code> to the end of <code class="docutils literal notranslate"><span class="pre">array</span></code>, removes units from both the NumPy array and the values. If you use this function, you may need to reapply units to the new array after doing so.</p>
+</div>
+<div class="section" id="other-numpy-array-functions">
+<h3>Other NumPy Array Functions<a class="headerlink" href="#other-numpy-array-functions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange([start],</span> <span class="pre">stop,</span> <span class="pre">[step])</span></code>: returns an array of values from <code class="docutils literal notranslate"><span class="pre">start</span></code> to <code class="docutils literal notranslate"><span class="pre">stop</span></code>, but not including <code class="docutils literal notranslate"><span class="pre">stop</span></code>, with an even spacing of <code class="docutils literal notranslate"><span class="pre">step</span></code>. If unspecified, <code class="docutils literal notranslate"><span class="pre">start</span></code> defaults to 0 and <code class="docutils literal notranslate"><span class="pre">step</span></code> defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.mean(arr,axis=0)</span></code>: returns the mean of <code class="docutils literal notranslate"><span class="pre">arr</span></code> along a specific axis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.std(arr,axis=1)</span></code>: returns the standard deviation of <code class="docutils literal notranslate"><span class="pre">arr</span></code> along a specific axis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.append(arr,</span> <span class="pre">values)</span></code>: appends <code class="docutils literal notranslate"><span class="pre">values</span></code> to the end of <code class="docutils literal notranslate"><span class="pre">arr</span></code></p></li>
+</ul>
+<p>For more functions, see this <a class="reference external" href="https://www.dataquest.io/blog/numpy-cheat-sheet/">cheat sheet</a> or the <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.html">documentation on NumPy arrays</a>.</p>
+</div>
+</div>
+<div class="section" id="reading-data-files-with-pandas">
+<h2>Reading Data Files with Pandas<a class="headerlink" href="#reading-data-files-with-pandas" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/reference/index.html">Pandas</a> is a Python package for data manipulation and analysis. We’ll use <code class="docutils literal notranslate"><span class="pre">pd</span></code> to refer to Pandas from here on.</p>
+<div class="section" id="loading-data-files">
+<h3>Loading Data Files<a class="headerlink" href="#loading-data-files" title="Permalink to this headline">¶</a></h3>
+<p>Most spreadsheets can be loaded into Python using the Pandas function <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>. A <strong>CSV (Comma Separated Value)</strong> file is a text file that represents a spreadsheet by separating rows with new lines and columns with commas. A <strong>TSV (Tab Separated Value)</strong> file separates columns with tabs and can be read with the same function. <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> outputs a <strong>DataFrame</strong>, a data structure in the Pandas package for tabular data. Each row and each column of a DataFrame is a <strong>Series</strong>, another data structure in Pandas.</p>
+<p>To read the CSV file <code class="docutils literal notranslate"><span class="pre">/path/to/file/filename.csv</span></code> and store the resulting DataFrame, we can write:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/path/to/file/filename.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To read the TSV file <code class="docutils literal notranslate"><span class="pre">/path/to/file/filename.tsv</span></code>, we do the same but specify that the separator is a tab (the default is a comma):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/path/to/file/filename.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition to local directories, <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> can also accept URL’s that lead to raw spreadsheet files.</p>
+</div>
+<div class="section" id="getting-data">
+<h3>Getting Data<a class="headerlink" href="#getting-data" title="Permalink to this headline">¶</a></h3>
+<p>Given a DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>, we can get its columns, rows, and specific entries with these functions:</p>
+<p><strong>Getting Labels and Shape</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.columns</span></code>: returns the column labels in <code class="docutils literal notranslate"><span class="pre">df</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.index</span></code>: returns the row labels in <code class="docutils literal notranslate"><span class="pre">df</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.shape</span></code>: returns a tuple of the number of rows and the number of columns in <code class="docutils literal notranslate"><span class="pre">df</span></code></p></li>
+</ul>
+<p><strong>Using Labels</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df[column_label(s)]</span></code>: returns the <strong>column(s)</strong> with the given label(s) (a string/string list) as a Series/DataFrame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[row_label(s)]</span></code>: returns the <strong>row(s)</strong> with the given label(s) (a string/string list) as a Series/DataFrame
+* Multiple row labels can also be given as a <em>slice</em>. For example, <code class="docutils literal notranslate"><span class="pre">df.loc[start_label</span> <span class="pre">:</span> <span class="pre">end_label]</span></code> returns the rows from the row labeled <code class="docutils literal notranslate"><span class="pre">start_label</span></code> to that labeled <code class="docutils literal notranslate"><span class="pre">end_label</span></code>, inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[row_label(s),</span> <span class="pre">column_label(s)]</span></code>: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame
+* Row slices also apply here (see above sub-bullet).</p></li>
+</ul>
+<p><strong>Using Positions</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[row_index(es)]</span></code>: returns the row(s) of the given index(es) (an integer/integer list) as a Series/DataFrame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[:,</span> <span class="pre">column_index(es)]</span></code>: returns the column(s) with the given index(es) (an integer/integer list) as a Series/DataFrame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[row_index(s),</span> <span class="pre">column_index(s)]</span></code>: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame</p></li>
+</ul>
+<p>IMPORTANT: All indexes start from 0. Also, both rows and columns can be given as slices. Unlike for the <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> function, the last index in a positional slice is exclusive. For example, <code class="docutils literal notranslate"><span class="pre">df.iloc[i</span> <span class="pre">:</span> <span class="pre">j]</span></code> returns the <a href="#id1"><span class="problematic" id="id2">``</span></a>i``th row to the <a href="#id3"><span class="problematic" id="id4">``</span></a>j-1``th row.</p>
+<p><strong>Using Conditionals</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[booleans]</span></code> or <code class="docutils literal notranslate"><span class="pre">df.iloc[booleans]</span></code>: returns a DataFrame of rows corresponding with values of <code class="docutils literal notranslate"><span class="pre">True</span></code> in the given boolean array or Series (the array/Series must have the same length as the row axis)</p></li>
+</ul>
+<p>Here are some example usages of the functions. Except for the last example, two lines of code (marked by <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>) followed by one output means that the two lines produce the same output.</p>
+<p>Note that for this data, we can use row numbers for both <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc[]</span></code> because the row labels are numbers (see the output of <code class="docutils literal notranslate"><span class="pre">oxygen_solubility.index</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">columns</span>
+<span class="go">Index([&#39;Temperature (degC)&#39;, &#39;Solubility (mg/L)&#39;,</span>
+<span class="go">       &#39;Dissolved Concentration (mg/L)&#39;],</span>
+<span class="go">      dtype=&#39;object&#39;)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">index</span>
+<span class="go">RangeIndex(start=0, stop=11, step=1)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="p">[</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">0      0</span>
+<span class="go">1      5</span>
+<span class="go">2     10</span>
+<span class="go">3     15</span>
+<span class="go">4     20</span>
+<span class="go">5     25</span>
+<span class="go">6     30</span>
+<span class="go">7     35</span>
+<span class="go">8     40</span>
+<span class="go">9     45</span>
+<span class="go">10    50</span>
+<span class="go">Name: Temperature (degC), dtype: int64</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="p">[[</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">,</span> <span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">    Temperature (degC)  Solubility (mg/L)</span>
+<span class="go">0                    0               14.6</span>
+<span class="go">1                    5               12.8</span>
+<span class="go">2                   10               11.3</span>
+<span class="go">3                   15               10.1</span>
+<span class="go">4                   20                9.1</span>
+<span class="go">5                   25                8.3</span>
+<span class="go">6                   30                7.6</span>
+<span class="go">7                   35                7.0</span>
+<span class="go">8                   40                6.5</span>
+<span class="go">9                   45                6.0</span>
+<span class="go">10                  50                5.6</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">Temperature (degC)                25.0</span>
+<span class="go">Solubility (mg/L)                  8.3</span>
+<span class="go">Dissolved Concentration (mg/L)     7.9</span>
+<span class="go">Name: 5, dtype: float64</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">    Temperature (degC)      Solubility (mg/L)       Dissolved Concentration (mg/L)</span>
+<span class="go">0                      0                 14.6                                 14.9</span>
+<span class="go">1                      5                 12.8                                 12.8</span>
+<span class="go">2                      10                11.3                                 11.4</span>
+<span class="go">3                      15              10.1                            9.8</span>
+<span class="go">4                      20                 9.1                                  8.5</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="go">9.1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">,</span> <span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">   Temperature (degC)  Solubility (mg/L)</span>
+<span class="go">0                   0               14.6</span>
+<span class="go">1                   5               12.8</span>
+<span class="go">2                  10               11.3</span>
+<span class="go">3                  15               10.1</span>
+<span class="go">4                  20                9.1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deficit</span> <span class="o">=</span> <span class="n">oxygen_solubility</span><span class="p">[</span><span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">oxygen_solubility</span><span class="p">[</span><span class="s1">&#39;Dissolved Concentration (mg/L)&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">deficit</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dissolved Concentration (mg/L)&#39;</span><span class="p">]</span>
+<span class="go">0    14.9</span>
+<span class="go">1    12.8</span>
+<span class="go">2    11.4</span>
+<span class="go">Name: Dissolved Concentration (mg/L), dtype: float64</span>
+</pre></div>
+</div>
+<p>The last example may look unfamiliar, but it’s actually demonstrating two element-wise operations! (Remember <a class="reference internal" href="#calculations-on-sets-of-data">Calculations on Sets of Data</a>?) Just like for NumPy arrays, ordinary math operators (e.g. <code class="docutils literal notranslate"><span class="pre">-</span></code>) can be used to subtract one Pandas Series from another or one constant from a Series. Logical operators (e.g. <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>) can also create a boolean Series from the comparison of one Series to another or one Series to a single constant.</p>
+</div>
+</div>
+<div class="section" id="plotting-with-matplotlib">
+<h2>Plotting with Matplotlib<a class="headerlink" href="#plotting-with-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html">Matplotlib</a> is a library for plotting in Python. Most of what you’ll need is in the collection of functions called <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>, which we’ll abbreviate to <code class="docutils literal notranslate"><span class="pre">plt</span></code> here on.</p>
+<div class="section" id="plt-plot">
+<h3>Plt.plot()<a class="headerlink" href="#plt-plot" title="Permalink to this headline">¶</a></h3>
+<p>To graph a set of data, we can simply use the function <code class="docutils literal notranslate"><span class="pre">plt.plot(x,y)</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are replaced with our sets of x- and y-coordinates, respectively. These sets can be Python lists, NumPy arrays, or Pandas series.
+For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">water_height</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.4</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">water_height</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>outputs the following graph:</p>
+<img alt="../_images/basic.png" class="align-center" src="../_images/basic.png" />
+</div>
+<div class="section" id="figure-formatting">
+<h3>Figure Formatting<a class="headerlink" href="#figure-formatting" title="Permalink to this headline">¶</a></h3>
+<p>However, there are several issues with this graph. Discrete data should plotted with data symbols, not a line. Also, both axes should be labeled, and these labels should include units when appropriate.
+(For more guidelines, see the Figure Requirements section of the <a class="reference external" href="https://github.com/AguaClara/team_resources/blob/master/Report_Template.md">Report Template</a>.) Fortunately, Matlotlib contains features for the formatting we need.</p>
+<ul class="simple">
+<li><p><strong>Line and marker style</strong>: These can be specified as additional inputs to the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> function. For example, <code class="docutils literal notranslate"><span class="pre">plt.plot(hour,</span> <span class="pre">water_height,</span> <span class="pre">'ro')</span></code> would plot our previous graph with red (r) circular (o) markers and no connecting lines.
+For more line specification options, visit the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> <a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.plot.html">documentation page</a>.</p></li>
+<li><p><strong>Axis labels</strong>: Use <code class="docutils literal notranslate"><span class="pre">plt.xlabel(&quot;...&quot;)</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylabel(&quot;...&quot;)</span></code> for your x- and y-axis labels, respectively.</p></li>
+<li><p><strong>Grid lines</strong>: Use <code class="docutils literal notranslate"><span class="pre">plt.grid(&quot;major&quot;)</span></code> for major grid lines or <code class="docutils literal notranslate"><span class="pre">plt.grid(&quot;minor&quot;)</span></code> for minor grid lines.</p></li>
+<li><p><strong>Manual axis ranges</strong>: <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> will automatically scale the graph to your data, but you can alter axis ranges manually with <code class="docutils literal notranslate"><span class="pre">plt.xlim(left,</span> <span class="pre">right)</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylim(bottom,</span> <span class="pre">top)</span></code>.</p></li>
+</ul>
+<p>Here is an improvement of the above graph:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">water_height</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.4</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">water_height</span><span class="p">,</span> <span class="s2">&quot;ro&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (hr)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Water Height (m)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/formatted.png" class="align-center" src="../_images/formatted.png" />
+</div>
+<div class="section" id="multiple-plots">
+<h3>Multiple Plots<a class="headerlink" href="#multiple-plots" title="Permalink to this headline">¶</a></h3>
+<p>To plot multiple sets of data, we can just call <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> multiple times, but adding a legend and plotting with two y-axes takes a few more steps.</p>
+<div class="section" id="adding-a-legend">
+<h4>Adding a legend<a class="headerlink" href="#adding-a-legend" title="Permalink to this headline">¶</a></h4>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> with the inputs <code class="docutils literal notranslate"><span class="pre">plt.legend(labels)</span></code> or <code class="docutils literal notranslate"><span class="pre">plt.legend(handles,</span> <span class="pre">labels)</span></code>.</p>
+<ol class="arabic simple">
+<li><p><strong>Labels only</strong>: Labels for data sets must be given as a tuple of strings. Matplotlib automatically labels data sets in the order in which they were plotted. For example:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">trial1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.4</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span>
+<span class="n">trial2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">6.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">9.4</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">trial1</span><span class="p">,</span> <span class="s2">&quot;ro&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">trial2</span><span class="p">,</span> <span class="s2">&quot;bs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (hr)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Water Height (m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s2">&quot;Trial 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Trial 2&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="../_images/legend.png" class="align-center" src="../_images/legend.png" />
+<ol class="arabic" start="2">
+<li><p><strong>Handles and labels</strong>: Using line handles gives full control over which label assignments. <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> outputs a list of objects representing the plotted data. The line handle we need is the <em>first</em> object in the list, so we’ll assign the output of <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> to a variable followed by a only comma, signaling that we want to ignore every object after the first.</p>
+<p>Then, we input our line handles and line labels as two tuples to <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code>, so that the data represented by the first handle gets the first label, the second handle gets the second label, etc.</p>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ... same as previous code block</span>
+<span class="n">line1</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">trial1</span><span class="p">,</span> <span class="s2">&quot;ro&quot;</span><span class="p">)</span>
+<span class="n">line2</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">trial2</span><span class="p">,</span> <span class="s2">&quot;bs&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Trial 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Trial 2&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The graph output by this code is the same as before.</p>
+</div>
+<div class="section" id="plotting-with-two-y-axes">
+<h4>Plotting with Two Y-Axes<a class="headerlink" href="#plotting-with-two-y-axes" title="Permalink to this headline">¶</a></h4>
+<p>To plot multiple data sets on the same x-axes but different y-axes, first use <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> to get an axis handle for the first (left) y-axis. The axis handle is the second output of <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code>, so in order to access it we need to also access the first output, which we’ll store as <code class="docutils literal notranslate"><span class="pre">fig</span></code>. From the axis handle for the first y-axis, create a second that shares the same x-axis using <code class="docutils literal notranslate"><span class="pre">twinx()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now, instead of <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code>, and <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code> we must call <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">set_xlabel</span></code>, <code class="docutils literal notranslate"><span class="pre">set_ylabel</span></code>, <code class="docutils literal notranslate"><span class="pre">set_xlim</span></code>, or <code class="docutils literal notranslate"><span class="pre">set_ylim</span></code> on a specific axis. Here is an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">t</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">line1</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Displacement (m)&quot;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">line2</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Velocity (m/s)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Displacement&quot;</span><span class="p">,</span> <span class="s2">&quot;Velocity&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="../_images/two_y_axes.png" class="align-center" src="../_images/two_y_axes.png" />
+</div>
+</div>
+<div class="section" id="other-matplotlib-features">
+<h3>Other Matplotlib Features<a class="headerlink" href="#other-matplotlib-features" title="Permalink to this headline">¶</a></h3>
+<p>Here are some other useful functions in <code class="docutils literal notranslate"><span class="pre">plt</span></code>. For more details and features, check out the <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html">Matplotlib Pyplot API</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.savefig(“/path/to/folder/figure_name.png”)</span></code>: include this after plotting your data to save the generated figure as an image. Replace <code class="docutils literal notranslate"><span class="pre">/path/to/folder/</span></code> with your desired directory and <code class="docutils literal notranslate"><span class="pre">figure_name.png</span></code> with your desired figure name (other image extensions, just as .jpeg, work as well).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.loglog(x,</span> <span class="pre">y)</span></code> plots <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> on logarithmic scales.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.semilogx(x,</span> <span class="pre">y)</span></code> plots <code class="docutils literal notranslate"><span class="pre">x</span></code> on a log scale and <code class="docutils literal notranslate"><span class="pre">y</span></code> on a linear scale.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.semilogy(x,</span> <span class="pre">y)</span></code> plots <code class="docutils literal notranslate"><span class="pre">x</span></code> on a linear scale and <code class="docutils literal notranslate"><span class="pre">y</span></code> on a log scale.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.text(x,</span> <span class="pre">y,</span> <span class="pre">text)</span></code> writes text on the figure at the coordinate (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>) according to your axis scales.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reading-procoda-data-with-the-aguaclara-package">
+<h2>Reading ProCoDA Data with the AguaClara Package<a class="headerlink" href="#reading-procoda-data-with-the-aguaclara-package" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://aguaclara.github.io/aguaclara/">AguaClara package</a> contains functions and modules for physical, chemical, and hydraulic calculations, experimental design, and data analysis. We’ll use the <code class="docutils literal notranslate"><span class="pre">aguaclara.research.procoda_parser</span></code> module, abbreviated to``pp``, to read data files from ProCoDA.</p>
+<div class="section" id="reading-columns-of-data-and-time">
+<h3>Reading Columns of Data and Time<a class="headerlink" href="#reading-columns-of-data-and-time" title="Permalink to this headline">¶</a></h3>
+<p>To read a column of data from a ProCoDA data file, we can use the function <code class="docutils literal notranslate"><span class="pre">pp.column_of_data(path,</span> <span class="pre">start,</span> <span class="pre">column,</span> <span class="pre">end,</span> <span class="pre">units)</span></code>, where</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> is the file path or URL of the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> are the first and last indexes of the rows of interest (<code class="docutils literal notranslate"><span class="pre">end</span></code> defaults to the last row)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code> is a column index or label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> is the units you wish to apply to the column (defaults to dimensionless).</p></li>
+</ul>
+<p>To read the time column, we can use <code class="docutils literal notranslate"><span class="pre">pp.column_of_time(path,</span> <span class="pre">start,</span> <span class="pre">end)</span></code>.</p>
+<p>The outputs of both are Numpy arrays with units attached. For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.research.procoda_parser</span> <span class="kn">as</span> <span class="nn">pp</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/datalog%206-14-2018.tsv&quot;</span>
+<span class="n">start</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">end</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">column_of_time</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+<span class="n">influent_turbidity</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">column_of_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span>
+<span class="n">effluent_turbidity</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">column_of_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span>
+<span class="n">influent_turbidity</span> <span class="o">-</span> <span class="n">effluent_turbidity</span>
+
+<span class="n">Output</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Quantity</span><span class="p">([</span><span class="mf">73.05</span> <span class="mf">74.77</span> <span class="mf">80.66</span> <span class="o">...</span> <span class="mf">94.66</span> <span class="mf">96.32</span> <span class="mf">97.81</span><span class="p">],</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting-columns-of-data">
+<h3>Plotting Columns of Data<a class="headerlink" href="#plotting-columns-of-data" title="Permalink to this headline">¶</a></h3>
+<p>To plot the columns we read above, we can give <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">influent_turbidity</span></code>, and <code class="docutils literal notranslate"><span class="pre">effluent_turbidity</span></code> as inputs to <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>. We can also use two functions in <code class="docutils literal notranslate"><span class="pre">procoda_parser</span></code> for quickly plotting one or more columns of data:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pp.plot_columns(path,</span> <span class="pre">columns,</span> <span class="pre">x_axis)</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> is a single column label or list of labels</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x_axis</span></code> is the label of the x-coordinate column (defaults to no column)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pp.iplot_columns(path,</span> <span class="pre">columns,</span> <span class="pre">x_axis)</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> is a single column index or list of indexes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x_axis</span></code> is the index of the x-coordinate column (defaults to no column)</p></li>
+</ul>
+</li>
+</ol>
+<p>For both, <code class="docutils literal notranslate"><span class="pre">path</span></code> is the file path or URL of the file. Here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.research.procoda_parser</span> <span class="kn">as</span> <span class="nn">pp</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/AguaClara/team_resources/master/Data/datalog%206-14-2018.xls&quot;</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">plot_columns</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Influent Turbidity (NTU)&#39;</span><span class="p">,</span> <span class="s1">&#39;Effluent Turbidity ()&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Day fraction since midnight on 6/14/2018&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (hr)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Turbidity (NTU)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s2">&quot;Influent&quot;</span><span class="p">,</span> <span class="s2">&quot;Effluent&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Replacing the 4th line with <code class="docutils literal notranslate"><span class="pre">pp.iplot_columns(path,</span> <span class="pre">[3,</span> <span class="pre">4],</span> <span class="pre">0)</span></code> outputs the same graph:</p>
+<img alt="../_images/plot_columns.png" class="align-center" src="../_images/plot_columns.png" />
+</div>
+</div>
+<div class="section" id="regression-analysis-and-curve-fitting">
+<h2>Regression Analysis and Curve Fitting<a class="headerlink" href="#regression-analysis-and-curve-fitting" title="Permalink to this headline">¶</a></h2>
+<p>The SciPy package, particularly <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/stats.html">SciPy.stats</a> and <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/optimize.html">SciPy.optimize</a>, is useful for regression analysis and curve fitting in Python.</p>
+<div class="section" id="linear-regression">
+<h3>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress(x,</span> <span class="pre">y)</span></code> returns a list of the slope, intercept, r-value, p-value, and standard error of a linear regression on the data sets <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="kn">as</span> <span class="nn">stats</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">]</span>
+<span class="n">solubility</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]</span>
+
+<span class="n">linreg</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">)</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span> <span class="o">=</span> <span class="n">linreg</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="n">slope</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Y-intercept:&quot;</span><span class="p">,</span> <span class="n">intercept</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;R-squared:&quot;</span><span class="p">,</span> <span class="n">r_value</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+<span class="n">Slope</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.17145454545454547</span>
+<span class="n">Y</span><span class="o">-</span><span class="n">intercept</span><span class="p">:</span> <span class="mf">13.277272727272727</span>
+<span class="n">R</span><span class="o">-</span><span class="n">squared</span><span class="p">:</span> <span class="mf">0.944743216539532</span>
+</pre></div>
+</div>
+<p>We can use the calculated slope and intercept to plot the data with the regression line.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">temperature</span> <span class="o">*</span> <span class="n">slope</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Solubility of O2 (mg/L)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/linear_regression.png" class="align-center" src="../_images/linear_regression.png" />
+</div>
+<div class="section" id="non-linear-regression">
+<h3>Non-Linear Regression<a class="headerlink" href="#non-linear-regression" title="Permalink to this headline">¶</a></h3>
+<p>Judging from the graph, an exponential model might better fit the data. We can use <code class="docutils literal notranslate"><span class="pre">scipy.optimize.curve_fit(f,</span> <span class="pre">xdata,</span> <span class="pre">ydata)</span></code> for non-linear curve fitting, where <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">...)</span></code> is a model function that takes the independent variable as the first argument and fitting parameters as remaining arguments and returns the predicted value of the dependent variable. In other words, it is expected that <code class="docutils literal notranslate"><span class="pre">ydata</span> <span class="pre">≈</span> <span class="pre">f(xdata,</span> <span class="pre">...)</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">curve_fit()</span></code> itself has two outputs, an array of the optimal fitting parameters and an estimated covariance matrix. For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="kn">as</span> <span class="nn">opt</span>
+
+<span class="k">def</span> <span class="nf">exp_function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+
+<span class="n">path</span> <span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">]</span>
+<span class="n">solubility</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]</span>
+
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">exp_function</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;a:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;b:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;c:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;f(x) =&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;* e^(-&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;* x) +&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">Output</span><span class="p">:</span>
+<span class="n">a</span><span class="p">:</span> <span class="mf">10.694801786694969</span>
+<span class="n">b</span><span class="p">:</span> <span class="mf">0.03546205767749912</span>
+<span class="n">c</span><span class="p">:</span> <span class="mf">3.858064720006462</span>
+<span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="mf">10.6948</span> <span class="o">*</span> <span class="n">e</span><span class="o">^</span><span class="p">(</span><span class="o">-</span> <span class="mf">0.0355</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mf">3.8581</span>
+</pre></div>
+</div>
+<p>Now our graph looks much better!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Solubility of O2 (mg/L)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">exp_function</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="../_images/nonlinear_regression.png" class="align-center" src="../_images/nonlinear_regression.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python-common-errors.html" class="btn btn-neutral float-right" title="Common Errors in Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python-packages.html" class="btn btn-neutral float-left" title="Python Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

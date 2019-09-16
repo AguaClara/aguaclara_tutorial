@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hydrogen Basics &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Saving Markdown to PDF" href="saving-markdown-to-pdf.html" />
+    <link rel="prev" title="Teletype Basics" href="teletype-basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hydrogen Basics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-i-write-python-code-in-a-md-file">How do I write Python code in a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-code-with-hydrogen">Running the code with Hydrogen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hydrogen-run"><code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydrogen-run-all-and-hydrogen-run-all-above"><code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span></code> and <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Above</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-i-know-if-my-code-has-been-executed-by-hydrogen">How do I know if my code has been executed by Hydrogen?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Hydrogen Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/atom/hydrogen-basics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hydrogen-basics">
+<span id="id1"></span><h1>Hydrogen Basics<a class="headerlink" href="#hydrogen-basics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-do-i-write-python-code-in-a-md-file">
+<h2>How do I write Python code in a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file?<a class="headerlink" href="#how-do-i-write-python-code-in-a-md-file" title="Permalink to this headline">¶</a></h2>
+<p>Markdown has a wonderfully easy function that enables you to insert blocks of code written in dozens of common programming languages like Python directly into the file itself. To do this, simply type three consecutive backticks/backquotes, that key with the tilda that you probably seldomly use, followed by the name of the programming language you wish to write in. In our case, we’ll always use Python. On a new line, you can begin writing your block of code. Once you finish writing your code, make sure to end the block with three more backticks/backquotes on the line below your final line of code. You should end up with something that looks like this:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="s">```python</span>
+<span class="n">myGreeting</span> <span class="o">=</span> <span class="s1">&#39;Welcome to AguaClara!&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myGreeting</span><span class="p">)</span>
+<span class="s">```</span>
+</pre></div>
+</div>
+<p>In your <code class="docutils literal notranslate"><span class="pre">.md</span></code> file, the resulting output will look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myGreeting</span> <span class="o">=</span> <span class="s1">&#39;Welcome to AguaClara!&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myGreeting</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now lets say I want to insert a block of plain text like this sentence after a block of code, but decide that I want to continue developing my code after the plain text. Instead of starting a new code block and adding everything I previously coded in the old block into my new code block, I can simply continue writing my code where I left off. For example, say I want to append something to <code class="docutils literal notranslate"><span class="pre">myGreeting</span></code> in a code block after this paragraph. All I have to do to implement this is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myNewGreeting</span> <span class="o">=</span> <span class="n">myGreeting</span> <span class="o">+</span> <span class="s1">&#39; I hope you have a fun time!&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myNewGreeting</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>My variable assignments from my first code block are recognized in my second code block, meaning my assignments for <code class="docutils literal notranslate"><span class="pre">myGreeting</span></code> carries between the two blocks.</p>
+</div>
+<div class="section" id="running-the-code-with-hydrogen">
+<h2>Running the code with Hydrogen<a class="headerlink" href="#running-the-code-with-hydrogen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hydrogen-run">
+<h3><code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code><a class="headerlink" href="#hydrogen-run" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code> is the most basic command for running your code, and will execute exactly what you tell it to. The quick keystroke to perform this action is <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Enter</span></code> or <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Enter</span></code>. There are several ways to use <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code>.</p>
+<ul class="simple">
+<li><p><strong>Selected Code:</strong> If you’ve highlighted a block of code and perform <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code>, the entire block of code will be executed.</p></li>
+<li><p><strong>Current Block:</strong> If you haven’t highlighted any code, Hydrogen will attempt to run code on or before the line your cursor is on.</p>
+<ul>
+<li><p>If you’re on a line with a complete code expression, <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code> will evaluate that line only.</p></li>
+<li><p>If you’re on a line that begins a loop, <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code> will evaluate the entire loop.</p></li>
+<li><p>If you’re on a blank line, <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code> will run the first block of code above your current position.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="hydrogen-run-all-and-hydrogen-run-all-above">
+<h3><code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span></code> and <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Above</span></code><a class="headerlink" href="#hydrogen-run-all-and-hydrogen-run-all-above" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span></code> and <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Above</span></code> are two useful functions that enable you to run an entire script without selecting all the code. Unfortunately, both commands are not supported within a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file, and will only be helpful if you work out of a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file.</p>
+<ul class="simple">
+<li><p>To use <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span></code>, simply press <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Enter</span></code> anywhere in your code.</p></li>
+<li><p>To use <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Above</span></code>, you’ll have to use <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> to open the Atom palette and search for the command itself since it doesn’t come with a keybinding by default.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-do-i-know-if-my-code-has-been-executed-by-hydrogen">
+<h2>How do I know if my code has been executed by Hydrogen?<a class="headerlink" href="#how-do-i-know-if-my-code-has-been-executed-by-hydrogen" title="Permalink to this headline">¶</a></h2>
+<p>The great thing about Hydrogen is that it’s incredibly easy to know if the Python code you wrote is syntactically correct and executable. If we look at the code I wrote above, and use <code class="docutils literal notranslate"><span class="pre">Hydrogen:</span> <span class="pre">Run</span></code> on the block, we’ll get two things to show up. The first thing we’ll see is a little check mark next to the line <code class="docutils literal notranslate"><span class="pre">myGreeting</span> <span class="pre">=</span> <span class="pre">'Welcome</span> <span class="pre">to</span> <span class="pre">AguaClara!'</span></code>. This check indicates that Hydrogen has evaluated that code, but since that line is purely a variable assignment with no output, Hydrogen won’t produce any output. In the line containing <code class="docutils literal notranslate"><span class="pre">print(myGreeting)</span></code>, Hydrogen outputs the string “Welcome to AguaClara!” because the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function in Python produces an output.</p>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GoodHydrogenRun.png"><img alt="GoodHydrogenRun" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GoodHydrogenRun.png" /></a>
+<p>Hydrogen will also tell you when your code is bad and won’t execute by giving you the error message that any other Python interpreter would give if you attempted to run the same bad code. In the case of our sample code, I left out a single quote at the end of my message, so Python couldn’t interpret it as a <code class="docutils literal notranslate"><span class="pre">string</span></code>, and Hydrogen told me what the syntax error was in the message.</p>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/BadHydrogenRun.png"><img alt="BadHydrogenRun" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/BadHydrogenRun.png" /></a>
+<p><strong>Now, complete Lesson 3 of the interactive tutorials. It’s in the</strong>
+<code class="docutils literal notranslate"><span class="pre">Interactive-Tutorial-3-Hydrogen.md</span></code> <strong>file in your</strong> <code class="docutils literal notranslate"><span class="pre">aguaclara_tutorial</span></code>
+<strong>repository.</strong></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="saving-markdown-to-pdf.html" class="btn btn-neutral float-right" title="Saving Markdown to PDF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="teletype-basics.html" class="btn btn-neutral float-left" title="Teletype Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
