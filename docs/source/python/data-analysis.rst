@@ -12,47 +12,74 @@ Given a Python list of values and a calculation you need to perform on each valu
 
 .. code-block:: python
 
-  x = [1, 2, 3, 4, 5]
-  x/2
-
+  >>> x = [1, 2, 3, 4, 5]
+  >>> x/2
   TypeError: unsupported operand type(s) for /: 'list' and 'int'
 
 Fortunately, there are other data types that can do this! If our data is stored as a **NumPy array**, we can use the usual ``+``, ``-``, ``*``, ``/``, ``%``, and ``**`` operators to add (or subtract, etc.) each value in the array with either one constant value or values in another NumPy array (of the same dimension).
 
-Here is an example that calculates the hypotenuse for 5 triangles. We use ``np.array()`` to convert Python lists to NumPy arrays. Also, many of NumPy's mathematical functions, such as ``np.sqrt()``, can perform both scalar (number to number) and element-wise (array to array) operations.
+We use ``np.array()`` to convert Python lists to NumPy arrays. Also, many of NumPy's mathematical functions, such as ``np.sqrt()``, can perform both scalar (number to number) and element-wise (array to array) operations. Here is an example that calculates the hypotenuse for 5 right triangles.
 
 .. code-block:: python
 
-  import numpy as np
+  >>> import numpy as np
 
-  a = np.array([1, 3, 5, 7, 9])
-  b = np.array([0, 4, 12, 24, 40])
-  c = np.sqrt(a ** 2 + b ** 2)
-  c
+  >>> a = np.array([1, 3, 5, 7, 9])
+  >>> b = np.array([0, 4, 12, 24, 40])
+  >>> c = np.sqrt(a ** 2 + b ** 2)
+  >>> c
+  array([ 1.,  5., 13., 25., 41.])
 
-  Output: array([ 1.,  5., 13., 25., 41.])
+Multidimensional NumPy Arrays
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The same ``np.array()`` command can make a multidimensional array, or an array containing arrays (containing arrays, etc.). Below is an example of a 2D array.
+
+.. code-block:: python
+
+   >>> my2DArray = np.array([[1 ,2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+
+The array can be indexed using ``[r, c]``, where ``r`` is either a single row index or a slice of rows indexes and ``c`` is a single column index or slice of column indexes (for a review on slices, see Lists in :ref:`python-basics`). Here are examples for getting a single row or column for a 2D array:
+
+.. code-block:: python
+
+   >>> my2DArray[:,0]
+   array([ 1,  4,  7, 10])
+
+   >>> my2DArray[1,:]
+   array([4, 5, 6])
+
+Here are some functions for getting the length, size, and shape of an array:
+
+.. code-block:: python
+
+   >>> len(my2DArray) # length of array
+   4
+   >>> np.size(my2DArray) # number of elements in array
+   12
+   >>> np.shape(my2DArray) # dimensions of array
+   (4, 3)
 
 NumPy Arrays and Units
 ^^^^^^^^^^^^^^^^^^^^^^
-NumPy functions and arrays are also compatible with units! However, units must be attached to the *entire array*, not to each element. To demonstrate,
+NumPy functions and arrays are also compatible with units! Units must be attached to the *entire array*, not to each element. Here's an example:
 
 .. code-block:: python
 
-  from aguaclara.core.units import u
-  x = np.array([1*u.m, 2*u.m, 3*u.m])
-
-  ValueError: setting an array element with a sequence.
-
-gives a ValueError, but the next example works.
-
-.. code-block:: python
-
-  x = np.array([1, 2, 3]) * u.m
-  x / (4 * u.s)
-
-  Output: <Quantity([0.25 0.5  0.75], 'meter / second')>
+  >>> x = np.array([1, 2, 3]) * u.m
+  >>> x / (4 * u.s)
+  <Quantity([0.25 0.5  0.75], 'meter / second')>
 
 WARNING: ``np.append(array, values)``, which appends ``values`` to the end of ``array``, removes units from both the NumPy array and the values. If you use this function, you may need to reapply units to the new array after doing so.
+
+Other NumPy Array Functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* ``np.arange([start], stop, [step])``: returns an array of values from ``start`` to ``stop``, but not including ``stop``, with an even spacing of ``step``. If unspecified, ``start`` defaults to 0 and ``step`` defaults to 1.
+* ``np.mean(arr,axis=0)``: returns the mean of ``arr`` along a specific axis
+* ``np.std(arr,axis=1)``: returns the standard deviation of ``arr`` along a specific axis
+* ``np.append(arr, values)``: appends ``values`` to the end of ``arr``
+
+For more functions, see this `cheat sheet <https://www.dataquest.io/blog/numpy-cheat-sheet/>`_ or the `documentation on NumPy arrays <https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.html>`_.
+
 
 Reading Data Files with Pandas
 ==============================

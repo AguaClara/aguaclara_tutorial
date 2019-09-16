@@ -4,10 +4,10 @@
 Python Basics
 *************
 
-**NOTE: This is not a comprehensive guide to writing Python code!** We've only put the basics that would be useful in the context of an AguaClara research report. To continue learning Python, review these :ref:`python-and-hydrogen-introduction-external-resources`.
+**NOTE: This is not a comprehensive guide to writing Python code!** We've only put the basics that would be useful in the context of an AguaClara research report. To continue learning Python, review these :ref:`python-external-resources`.
 
 How this tutorial works
------------------------
+=======================
 
 Some code examples will look like this:
 
@@ -18,7 +18,7 @@ Some code examples will look like this:
 
 The triple greater-than symbols ``>>>`` indicate that that line of Python code is being run in the **interactive Python interpreter** in the command line. The next line is what that line of Python code would output.
 
-The **interactive Python interpreter** will be explained later on.
+The **interactive Python interpreter** is explained in :ref:`python-in-command-line`.
 
 Basic Operations
 ================
@@ -131,13 +131,18 @@ Lists
    >>> a_list
    ['can store anything!', 5, 2.0, True, 'add an entry to the end']
 
-   >>> a_list.pop() # remove an entry from the end
+   >>> a_list.pop() # get and remove an entry from the end
+   'add an entry to the end'
    >>> a_list
    ['can store anything!', 5, 2.0, True]
 
    >>> a_list[0] = 'change an entry'
    >>> a_list
    ['change an entry', 5, 2.0, True]
+
+   >>> len(a_list) # length of list
+   4
+
 
 Dictionaries
 ------------
@@ -271,4 +276,4 @@ Functions
    >>> parity(40)
    40 is even.
 
-**Now, complete Interactive Tutorial 2: Python Basics** `here <>`_.
+**Now, complete Interactive Tutorial 2: Python Basics** `here <https://colab.research.google.com/drive/1Ksq6VuTxT6jBOfMbk1kDA2UWOPl-cy5v>`_.
