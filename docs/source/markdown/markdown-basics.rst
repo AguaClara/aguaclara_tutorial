@@ -4,20 +4,6 @@
 Markdown Basics
 ***************
 
-Using Markdown
-==============
-
-We'll be using **Atom** to edit Markdown files and preview them nicely:
-
-#. Open **Atom** and open the ``aguaclara_tutorial/`` repository folder that
-   you cloned (or any other project folder you have).
-#. Click on one of the ``*.md`` files in the left Project pane to open it.
-#. Press ``Ctrl + Shift + M`` to open a formatted preview on the right.
-
-   * If a preview didn't show up, review the instructions on :ref:`installing-on-macos` or :ref:`installing-on-windows`.
-
-All Markdown files must be **text files with the** ``.md`` **file extension**. All of the text files within the ``aguaclara_tutorial`` repository are already Markdown files.
-
 Basic Text
 ----------
 
@@ -141,16 +127,33 @@ Images
    You can also link to local files.
    ![This image is in ``docs/images``.](../images/logo.png)
 
+   Markdown supports HTML image rendering too. You can adjust the dimensions...
+   <img src="http://aguaclara.cornell.edu/images/logo.png" width=100>
+
+   ... and change the alignment.
+   <p align="center"> <img src="../images/logo.png"> </p>
+
 To insert an image, put an exclamation point (!) before a link.
 
 .. image:: http://aguaclara.cornell.edu/images/logo.png
    :target: http://aguaclara.cornell.edu/images/logo.png
    :alt: The display text appears when you hover over the image.
 
-You can also link to local files. 
+You can also link to local files.
 
 .. image:: ../images/logo.png
    :alt: This image is in ``docs/images``.
+
+Markdown supports HTML image rendering too. You can adjust the dimensions...
+
+.. image:: http://aguaclara.cornell.edu/images/logo.png
+   :target: http://aguaclara.cornell.edu/images/logo.png
+   :width: 100
+
+... and change the alignment.
+
+.. image:: ../images/logo.png
+   :align: center
 
 Code Formatting
 ---------------
@@ -179,10 +182,13 @@ The backtick is usually found under the Esc button on your keyboard. It is NOT a
 
    To make a block of formatted code, begin and end your code with triple backticks.
 
+
 .. code-block:: python
 
    def foo():
        print("Add the name of your programming language after the first triple backticks to add syntax highlighting.")
+
+**Note: In a Colab/Jupyter notebook, we replace blocks of Python code with runnable code cells.**
 
 Tables
 ------
@@ -243,9 +249,9 @@ To add a horizontal rule, put three dashes (-) on a line.
 *For some more ways to use Markdown, check out the* `Markdown Cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_.
 
 LaTeX Formatting
-================
+----------------
 
-In Atom, ``Ctrl + Shift + M`` will automatically display LaTeX formatted equations within Markdown files. They won't show up on this wiki page, but try pasting this line into a Markdown file in Atom:
+LaTeX formatted equations won't show up on this wiki page, but try pasting this line into a text cell in Colab:
 
 .. code-block:: md
 
@@ -253,6 +259,4 @@ In Atom, ``Ctrl + Shift + M`` will automatically display LaTeX formatted equatio
 
 Please refer to `this LaTeX tutorial <https://www.latex-tutorial.com/tutorials/amsmath/>`_ to learn how to write equations.
 
-**Now, complete Lesson 1 of the interactive tutorials. It's in the**
-``Interactive-Tutorial-1-Markdown.md`` **file in your** ``aguaclara_tutorial``
-**repository.**
+**Now, you're ready to complete Interactive Tutorial 1: Markdown** `here <https://colab.research.google.com/drive/15yYapOXlOLOEYMttz8v1Vb5odRkkJdhO>`_.

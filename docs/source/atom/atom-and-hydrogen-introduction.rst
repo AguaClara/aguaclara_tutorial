@@ -1,7 +1,7 @@
-.. _atom-and-markdown-introduction:
+.. _atom-and-hydrogen-introduction:
 
 ******************************
-Atom and Markdown Introduction
+Atom and Hydrogen Introduction
 ******************************
 
 What is Atom?
@@ -32,9 +32,9 @@ Programmers choose to write their code in one of two kinds of programs, each wit
      - Run code in the IDE
    * - Takes up less space
      - Restructure messy code
-   * - 
+   * -
      - Check code syntax
-   * - 
+   * -
      - *And many more...*
 
 
@@ -53,23 +53,40 @@ Why use Atom?
 
 We've omitted an Atom-specific tutorial because it's so easy to use. But if you want to learn more about Atom, check out the `Atom Flight Manual <http://flight-manual.atom.io/getting-started/sections/why-atom/>`_.
 
-What is Markdown?
+Markdown in Atom
+----------------
+
+Atom is useful for editing Markdown files and preview them nicely:
+
+#. Open **Atom** and open an already existing Markdown file or create one using the ``.md`` extension.
+#. Press ``Ctrl + Shift + M`` to open a formatted preview on the right.
+
+   * If a preview didn't show up, review the instructions on :ref:`installing-on-macos` or :ref:`installing-on-windows`.
+
+All Markdown files are simply **text files with the ``.md`` file extension**.
+
+
+What is Hydrogen?
 =================
 
-.. image:: https://www.fullstackpython.com/img/logos/markdown.png
-   :target: https://www.fullstackpython.com/img/logos/markdown.png
-   :alt: Markdown Logo
+.. image:: https://i.github-camo.com/9e74bd571d2566963428069319f0db831a0d2463/68747470733a2f2f63646e2e7261776769742e636f6d2f6e7465726163742f687964726f67656e2f31376564613234352f7374617469632f616e696d6174652d6c6f676f2e737667
+   :target: https://i.github-camo.com/9e74bd571d2566963428069319f0db831a0d2463/68747470733a2f2f63646e2e7261776769742e636f6d2f6e7465726163742f687964726f67656e2f31376564613234352f7374617469632f616e696d6174652d6c6f676f2e737667
+   :alt:
 
-**A text file format that is easy to use and read - perfect for research reports!**
+**An Atom package that lets you run Python code within Markdown files.**
 
-Markdown is derived from **HTML**, which makes up much of the websites you visit on a daily basis. Because of that, Markdown is used to format user-submitted content on many websites, like Github.
+If you have previous experience with Jupyter Notebooks, you'll find many of the same features with Hydrogen:
 
-Why use Markdown?
+* Running code interactively
+* Checking data from experiments
+* Performing calculations
+* Drawing data plots
+
+Why use Hydrogen?
 -----------------
+* Hydrogen allows you to complement the information in your reports with Python code.
+* Hydrogen and Python are open source, fulfilling AguaClara's devotion to open source software.
 
-* Markdown is *easy to read*, even when unformatted.
-* Markdown is an *open source format*, unlike Microsoft Word. Anyone can
-  create and edit Markdown files without paying for software, fulfilling
-  AguaClara's devotion to open source software.
-* Markdown is *easy to write*. You won't have to worry about line spacing,
-  margins, or anything else that makes Word documents difficult to use!
+**If you're new to Python, or would like a refresher, start with** :ref:`python-basics`.
+
+**If you have experience with Python, go to** :ref:`python-packages`.
