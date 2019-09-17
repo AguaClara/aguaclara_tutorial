@@ -330,10 +330,12 @@
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span>
 <span class="go">[&#39;can store anything!&#39;, 5, 2.0, True]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># returns 0th (first) element</span>
 <span class="go">can store anything!</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># returns 2nd to last element</span>
+<span class="go">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># list slice: returns list of elements 1 through (4-1)</span>
+<span class="go">[5, 2.0, True]</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;add an entry to the end&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span>

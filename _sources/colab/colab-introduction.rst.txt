@@ -77,4 +77,4 @@ After opening an interactive tutorial in Colab,
 
 3. Click the "Share" icon in the top left corner of the page and get a shareable link for your Colab notebook.
 
-4. Email links for all of your finished interactive tutorial to aguaclara@cornell.edu.
+4. Email links for all of your finished interactive tutorials to aguaclara@cornell.edu.

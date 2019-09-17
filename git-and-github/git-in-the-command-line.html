@@ -113,7 +113,6 @@
 <li class="toctree-l1"><a class="reference internal" href="git-basics.html">Git Basics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Git in the Command Line</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-git">What is Git?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-use-git-at-all-why-not-just-use-atom">Why use Git at all?  Why not just use Atom?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installing-git">Installing Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-the-command-line">Using the Command Line</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-git-in-the-command-line">Using Git in the command line</a><ul>
@@ -215,17 +214,12 @@
 <span id="id1"></span><h1>Git in the Command Line<a class="headerlink" href="#git-in-the-command-line" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-git">
 <h2>What is Git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">¶</a></h2>
-<p>Git is a free and open source control system used for managing projects through Github.  Every time you push or pull your work through Atom, Atom is running Git commands to facilitate this.</p>
-<p><strong>Note:</strong> This tutorial assumes some knowledge of the basic commands of Github.  To refresh on those, refer to <a class="reference internal" href="github-basics.html#github-basics"><span class="std std-ref">GitHub Basics</span></a></p>
-</div>
-<div class="section" id="why-use-git-at-all-why-not-just-use-atom">
-<h2>Why use Git at all?  Why not just use Atom?<a class="headerlink" href="#why-use-git-at-all-why-not-just-use-atom" title="Permalink to this headline">¶</a></h2>
-<p>Running Git offers a new level of flexibility for managing your repositories in Github.  Where in Atom, you can only push and pull, using Git from the command line offers up many new possible commands to help you manage your project.  Atom also can have many internal errors, so knowing Git allows you to work on your projects even when Atom is not cooperating.</p>
+<p>Git is a free and open source control system used for managing projects on Github. It offers many more commands and much more flexibility than Github’s online interface does.</p>
+<p><strong>Note:</strong> This tutorial assumes some knowledge of the basic commands of Github.  To refresh on those, refer to <a class="reference internal" href="github-basics.html#github-basics"><span class="std std-ref">GitHub Basics</span></a>.</p>
 </div>
 <div class="section" id="installing-git">
 <h2>Installing Git<a class="headerlink" href="#installing-git" title="Permalink to this headline">¶</a></h2>
 <p>To install Git, follow the instructions on <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">this page</a>.  For Windows, when installing Git through the installer, it is recommended you select the “Use Git from the Windows Command Prompt” option.  This will allow you to use all git commands through your terminal (CMD, Powershell, Anaconda) rather than having to use Git’s personal terminal, Git Bash.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git1.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git1.PNG" /></a>
 </div>
 <div class="section" id="using-the-command-line">
 <h2>Using the Command Line<a class="headerlink" href="#using-the-command-line" title="Permalink to this headline">¶</a></h2>
@@ -233,44 +227,44 @@
 <p>The command prompt/terminal is another way of interfacing with your computer, rather than the way you typically would use a computer by clicking different buttons.  While the terminal can be confusing at first, and requires some memorization of some commands, it provides a lot of power for using your computer in different ways.  Knowing how to use the terminal opens a lot of new doors and can ultimately make using your computer much easier and more accessible.</p>
 <p>Note that there are a few terminal options for Windows, such as CMD, Windows Powershell, and the Anaconda Prompt.  This tutorial will use Powershell, as it is most similar to the Mac terminal, and has all the necessary functionality.  However, all the other terminal options should accomplish everything you want, just with slightly different commands.</p>
 <p>To open your terminal in Windows, search for “Powershell” in your programs.  On Mac, just search for “Terminal” in your programs.  A prompt like the one below should open up.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git2.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git2.PNG" /></a>
+<img alt="../_images/git2.PNG" src="../_images/git2.PNG" />
 <p>Within this prompt, you will run commands by typing them directly into this prompt and hitting “Enter”.  The path listed before the where you type is the directory you are currently working in on your computer.  In order to run commands on a specific folder (such as your subteams repository) you will need to navigate to that folder.  The two commands to do this are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> (list): Lists all files in the current directory you are in</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> (change directory): changes your directory to the directory listed after cd</p></li>
 </ul>
-<p>For example, say I want to move to the “aguaclara_tutorial” repository to make some git changes.  First I use ls to see what files I can change to:</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git3.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git3.PNG" /></a>
+<p>For example, say I want to move to the “aguaclara_tutorial” repository to make some git changes.  First I use <code class="docutils literal notranslate"><span class="pre">ls</span></code> to see what files I can change to:</p>
+<img alt="../_images/git3.PNG" src="../_images/git3.PNG" />
 <p>I see the github folder, so I use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">github</span></code> to move to that folder.  From there I continue to use these commands until I find the folder I am looking for.</p>
 <p>If you ever need to move up one folder, you can use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> to accomplish this.  If you know the file path of the folder you want, you can also add that directly to move to your desired folder.  For example, I could move directly to the aguaclara_tutorial folder as shown below:</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git4.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git4.PNG" /></a>
-<p>One other important note for using the terminal is to always wait for the commands to finish running.  Sometimes when running a more complicated command, the computer will take a while to run, and the terminal will slowly show commands as they run.  In this case, make sure to wait until all the commands are done running, and you can see the blinking cursor before you type another command.  If you ever want to stop a command while its running, hold down the control button (or the command button on Mac) and hit c.</p>
+<img alt="../_images/git4.PNG" src="../_images/git4.PNG" />
+<p>One other important note for using the terminal is to always wait for the commands to finish running.  Sometimes when running a more complicated command, the computer will take a while to run, and the terminal will slowly show commands as they run.  In this case, make sure to wait until all the commands are done running, and you can see the blinking cursor before you type another command.  If you ever want to stop a command while its running, hold down the control button (or the command button on Mac) and hit “c”.</p>
 </div>
 <div class="section" id="using-git-in-the-command-line">
 <h2>Using Git in the command line<a class="headerlink" href="#using-git-in-the-command-line" title="Permalink to this headline">¶</a></h2>
 <p>Assuming you added Git to your command line during installation, you can run any Git command from the command line just by typing <code class="docutils literal notranslate"><span class="pre">git</span></code> adding a space, and writing the command.  For example, to use the simple command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>, which compares your local progress to the digital collection of Github, just type “git status” while in the folder you want to check.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git5.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git5.PNG" /></a>
+<img alt="../_images/git5.PNG" src="../_images/git5.PNG" />
 <div class="section" id="pulling">
 <h3>Pulling<a class="headerlink" href="#pulling" title="Permalink to this headline">¶</a></h3>
 <p>Most of what you will be doing with Git is pulling and pushing changes from Github.  To pull, just use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
 </div>
 <div class="section" id="pushing">
 <h3>Pushing<a class="headerlink" href="#pushing" title="Permalink to this headline">¶</a></h3>
-<p>To push your local changes, you will use the same process as you do in atom, staging your changes, committing them to your branch, and then pushing them to the origin.</p>
+<p>To push your local changes, first stage your changes, then commit them to your branch, and then push them to the origin.</p>
 <ul class="simple">
 <li><p>To stage your changes, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-A</span></code> The -A ensures you add all of your files you have worked on.</p></li>
 </ul>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git7.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git7.PNG" /></a>
+<img alt="../_images/git7.PNG" src="../_images/git7.PNG" />
 <ul class="simple">
 <li><p>To commit your changes, use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Commit</span> <span class="pre">Message&quot;</span></code> and fill in the commit message with whatever you want to say about your commit.  Note that it is very important to include the -m and the commit message.  If you do not, Git will take you to an interface using the text editor Vim, which is very challenging to use.</p></li>
 </ul>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git10.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git10.PNG" /></a>
+<img alt="../_images/git8.PNG" src="../_images/git8.PNG" />
 <p>Write your commit message, then to exit out of this editor, press Escape.  You cursor should appear in the bottom left corner.  From there type <code class="docutils literal notranslate"><span class="pre">:x</span></code> and hit enter to save your commit message.</p>
 <ul class="simple">
-<li><p>Finally, to push your changes, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.  If you have any merge errors, the terminal will notify you and you can go fix them in Atom like you would normally.</p></li>
+<li><p>Finally, to push your changes, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.  If you have any merge errors, the terminal will notify you and you can fix them manually.</p></li>
 </ul>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git5.PNG"><img alt="" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Git-and-Github/Images/git5.PNG" /></a>
-<p><strong>Note:</strong> This tutorial only covers the basics of using Git.  For the full list of commands, <a class="reference external" href="https://git-scm.com/doc">view the full documentation here</a></p>
+<img alt="../_images/git9.PNG" src="../_images/git9.PNG" />
+<p><strong>Note:</strong> This tutorial only covers the basics of using Git.  For the full list of commands, <a class="reference external" href="https://git-scm.com/doc">view the full documentation here</a>.</p>
 </div>
 </div>
 </div>

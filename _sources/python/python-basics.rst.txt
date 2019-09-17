@@ -122,10 +122,12 @@ Lists
 
    >>> a_list
    ['can store anything!', 5, 2.0, True]
-   >>> a_list[0]
+   >>> a_list[0] # returns 0th (first) element
    can store anything!
-   >>> a_list[3]
-   True
+   >>> a_list[-2] # returns 2nd to last element
+   2.0
+   >>> a_list[1:4] # list slice: returns list of elements 1 through (4-1)
+   [5, 2.0, True]
 
    >>> a_list.append('add an entry to the end')
    >>> a_list
