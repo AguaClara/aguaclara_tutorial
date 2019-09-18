@@ -22,9 +22,7 @@ A repository can have a number of different branches and forks. These branches a
 Clone
 -----
 
-When you first want to access a repository locally you'll have to clone it. By cloning the repository you make a local copy to which you'll be able to pull updates from online and push your changes to the repository. If pulling and pushing don't make sense yet don't worry, just read the sections below.
-
-P.S. I'm not sure how exactly cloning works in the sandwich analogy, ideas are welcome
+When you first want to access a repository locally you'll have to clone it. By cloning the repository you make a local copy to which you'll be able to pull updates from online and push your changes to the repository. If pulling and pushing don't make sense yet don't worry, just read the sections below. As for a sandwich analogy, imagine that a restaurant has the recipe for making a BLT and you wanted the recipe as well to make your own BLT. This way, both you and the restaurant have the exact same BLT recipe. However, if you modify your copy of the recipe, this does not affect the restaurant's original BLT recipe.
 
 Pull
 ----
@@ -44,4 +42,4 @@ Now that the chef has written down the recipe, she will want to update the resta
 Merge Conflicts
 ---------------
 
-Now let's say two chefs were working on changing the recipe for the same sandwich simultaneously. One decides to add cheese to the BLT, while the other doesn't like tomato so he takes that out and puts in avocado instead. When they go to publish the recipe (push), the restaurant manager won't know which recipe to use. This is called a merge conflict. How a merge conflict is resolved is explained in more detail below.
+Now let's say two chefs were working on changing the recipe for the same sandwich simultaneously. One decides to add cheese to the BLT, while the other doesn't like tomato so he takes that out and puts in avocado instead. When they go to publish the recipe (push), the restaurant manager won't know which recipe to use. This is called a merge conflict. How a merge conflict is resolved is explained in more detail `here <https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line>`_.
