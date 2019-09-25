@@ -18,17 +18,13 @@ Creating a Repository
 Creating a repository is simple. We'll do this through the `GitHub Website <https://www.github.com>`_. First go to the `AguaClara Team Page <https://github.com/AguaClara>`_.
 
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/AguaClaraHome.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/AguaClaraHome.png
-   :alt: AguaClaraHomePage
+.. image:: images/git11.PNG
 
 
 Now click on the green ``New`` button, and this will direct you to a repository creation page. Each subteam lead should create a repository with the name of their subteam. Put in a description of what your subteam does and check the create a README box. Now go ahead and click the green ``Create repository`` button.
 
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/CreateRepo.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/CreateRepo.png
-   :alt: CreateRepository
+.. image:: images/git12.png
 
 
 Cloning a Repository
@@ -43,28 +39,16 @@ Watching a Repository
 
 When you create or join a repository, you'll want to watch it. This means that every time someone posts an issue, you'll be notified of what they said. To make sure you get these notifications, you'll want to make sure you receive email notifications in your profile settings. To watch a repository, simply click the eyeball button at the top of your repository as shown below.
 
-[[/Images/WatchRepo.png|WatchRepository]]
-
-Editing a Wiki
-==============
-
-Once you've created and cloned your repository the wiki will be created automatically. Simply open your repository and click on the ``Wiki`` button in the top bar and you'll open your wiki. From there you have a few options. You can click ``Edit`` to modify the current page in the browser or ``Clone this wiki locally`` so that you'll be able to edit the wiki in a Markdown file in Atom. To create multiple pages just use the ``New Page`` button.
-
-
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GitHubTopBar.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GitHubTopBar.png
-   :alt: TopBarTest
+.. image:: images/git13.png
 
 
 Creating an Issue
 =================
 
-Creating an issue is as simple as editing the wiki. Just go to the ``Issues`` section on the top bar and then click ``New issue``. Let's call the first issue for each subteam "Update the wiki". You should put a good enough description of the issue so that anyone could read it and begin working on the problem. Attaching images can help explain the issue better. You can also assign people to the issue and add it to a project (more on that later) on the right side.
+Creating an issue is very simple. Just go to the ``Issues`` section on the top bar and then click ``New issue``. Let's call the first issue for each subteam "Update the wiki". You should put a good enough description of the issue so that anyone could read it and begin working on the problem. Attaching images can help explain the issue better. You can also assign people to the issue and add it to a project (more on that later) on the right side.
 
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/NewIssue.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/NewIssue.png
-   :alt: NewIssue
+.. image:: images/git14.png
 
 
 Creating a Project
@@ -73,9 +57,7 @@ Creating a Project
 First go to the ``Projects`` section of the top bar, then click ``Create a project``. Now name your project and add a description. You can change the project template through the dropdown, but for the task map we'll use the blank template.
 
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/TaskMap.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/TaskMap.png
-   :alt: TaskMap
+.. image:: images/git15.png
 
 
 You can edit the columns to have whatever organization you'd like, but if you're not sure what would work best we'd suggest trying the example above. Once the columns are created, just click ``+ Add cards`` to search through the issues associated with your subteam's repository and add them to the project board.
@@ -156,4 +138,3 @@ Most of you probably won't have merge conflicts, but if you do they're easy to r
 .. image:: https://user-images.githubusercontent.com/401128/27737141-6f7ae2f6-5d7d-11e7-9312-87c8611e7328.png
    :target: https://user-images.githubusercontent.com/401128/27737141-6f7ae2f6-5d7d-11e7-9312-87c8611e7328.png
    :alt: MergeConflict
-
