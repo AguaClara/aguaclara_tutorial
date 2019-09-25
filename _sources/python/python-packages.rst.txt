@@ -52,7 +52,7 @@ Just like with NumPy, we have to use dot notation. For example, here's code that
 
 .. code-block:: python
 
-    pc.re_pipe(1, 1, 1)
+    ac.re_pipe(1, 1, 1)
 
 Note that the 1's are the function's inputs: flow rate, pipe diameter, and kinematic viscosity. These quantities aren't obvious because they're missing scientific units, which we'll cover next.
 
@@ -67,7 +67,7 @@ In research and engineering, units are incredibly important. They give physical 
 
     from aguaclara.core.units import u
 
-Most common metric and imperial units are available as their full or abbreviated names. Here are some examples:
+The most commonly used units in AguaClara research and design are listed in the ``aguaclara`` documentation under the `Units module <https://aguaclara.github.io/aguaclara/core/units.html>`_. Here are some examples:
 
 .. code-block:: python
 
@@ -83,7 +83,7 @@ Say we want to convert ``flow_rate`` to its metric base units (meters cubed). We
 
     flow_rate.to_base_units()
 
-The unit registry also includes constants, which you can find in the `Pint documentation <https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt>`_. For example, ``1 * u.gravity`` is equivalent to ``9.80665 u.m / u.s ** 2``.
+The unit registry also includes constants, which you can also find in the ``aguaclara`` `Units module documentation <https://aguaclara.github.io/aguaclara/core/units.html#constants>`_. For example, ``1 * u.gravity`` is equivalent to ``9.80665 u.m / u.s ** 2``.
 
 Sig-Figs
 ~~~~~~~~
