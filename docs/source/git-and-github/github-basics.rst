@@ -103,17 +103,13 @@ Pushing and pulling
 On the same toolbar as the branch icon, there's an icon that enables you to push, pull, or fetch. It looks like this:
 
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullIcon.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullIcon.png
-   :alt: PushPullIcon
+.. image:: images/fetch.png
 
 
-Clicking on it will give you a window to push or pull.
+Right clicking on it will give you a window to push, pull, fetch, or force push.
 
 
-.. image:: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullWindow.png
-   :target: https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullWindow.png
-   :alt: PushPullWindow
+.. image:: images/fetch2.png
 
 
 Committing
