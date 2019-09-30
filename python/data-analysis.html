@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#reading-data-files-with-pandas">Reading Data Files with Pandas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#loading-data-files">Loading Data Files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#getting-data">Getting Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions-for-series">Functions for Series</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#plotting-with-matplotlib">Plotting with Matplotlib</a><ul>
@@ -128,6 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#reading-procoda-data-with-the-aguaclara-package">Reading ProCoDA Data with the AguaClara Package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#reading-columns-of-data-and-time">Reading Columns of Data and Time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#plotting-columns-of-data">Plotting Columns of Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#regression-analysis-and-curve-fitting">Regression Analysis and Curve Fitting</a><ul>
@@ -330,10 +332,16 @@
 <p><strong>Using Labels</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">df[column_label(s)]</span></code>: returns the <strong>column(s)</strong> with the given label(s) (a string/string list) as a Series/DataFrame</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[row_label(s)]</span></code>: returns the <strong>row(s)</strong> with the given label(s) (a string/string list) as a Series/DataFrame
-* Multiple row labels can also be given as a <em>slice</em>. For example, <code class="docutils literal notranslate"><span class="pre">df.loc[start_label</span> <span class="pre">:</span> <span class="pre">end_label]</span></code> returns the rows from the row labeled <code class="docutils literal notranslate"><span class="pre">start_label</span></code> to that labeled <code class="docutils literal notranslate"><span class="pre">end_label</span></code>, inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[row_label(s),</span> <span class="pre">column_label(s)]</span></code>: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame
-* Row slices also apply here (see above sub-bullet).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[row_label(s)]</span></code>: returns the <strong>row(s)</strong> with the given label(s) (a string/string list) as a Series/DataFrame</p>
+<ul>
+<li><p>Multiple row labels can also be given as a <em>slice</em>. For example, <code class="docutils literal notranslate"><span class="pre">df.loc[start_label</span> <span class="pre">:</span> <span class="pre">end_label]</span></code> returns the rows from the row labeled <code class="docutils literal notranslate"><span class="pre">start_label</span></code> to that labeled <code class="docutils literal notranslate"><span class="pre">end_label</span></code>, inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.loc[row_label(s),</span> <span class="pre">column_label(s)]</span></code>: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame</p>
+<ul>
+<li><p>Row slices also apply here (see above sub-bullet).</p></li>
+</ul>
+</li>
 </ul>
 <p><strong>Using Positions</strong></p>
 <ul class="simple">
@@ -341,7 +349,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[:,</span> <span class="pre">column_index(es)]</span></code>: returns the column(s) with the given index(es) (an integer/integer list) as a Series/DataFrame</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[row_index(s),</span> <span class="pre">column_index(s)]</span></code>: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame</p></li>
 </ul>
-<p>IMPORTANT: All indexes start from 0. Also, both rows and columns can be given as slices. Unlike for the <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> function, the last index in a positional slice is exclusive. For example, <code class="docutils literal notranslate"><span class="pre">df.iloc[i</span> <span class="pre">:</span> <span class="pre">j]</span></code> returns the <a href="#id1"><span class="problematic" id="id2">``</span></a>i``th row to the <a href="#id3"><span class="problematic" id="id4">``</span></a>j-1``th row.</p>
+<p>IMPORTANT: All indexes start from 0. Also, both rows and columns can be given as slices. Unlike for the <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> function, the last index in a positional slice is exclusive. For example, <code class="docutils literal notranslate"><span class="pre">df.iloc[i</span> <span class="pre">:</span> <span class="pre">j]</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row to the <code class="docutils literal notranslate"><span class="pre">j-1</span></code>th row.</p>
 <p><strong>Using Conditionals</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">df.loc[booleans]</span></code> or <code class="docutils literal notranslate"><span class="pre">df.iloc[booleans]</span></code>: returns a DataFrame of rows corresponding with values of <code class="docutils literal notranslate"><span class="pre">True</span></code> in the given boolean array or Series (the array/Series must have the same length as the row axis)</p></li>
@@ -428,6 +436,17 @@
 </pre></div>
 </div>
 <p>The last example may look unfamiliar, but it’s actually demonstrating two element-wise operations! (Remember <a class="reference internal" href="#calculations-on-sets-of-data">Calculations on Sets of Data</a>?) Just like for NumPy arrays, ordinary math operators (e.g. <code class="docutils literal notranslate"><span class="pre">-</span></code>) can be used to subtract one Pandas Series from another or one constant from a Series. Logical operators (e.g. <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>) can also create a boolean Series from the comparison of one Series to another or one Series to a single constant.</p>
+</div>
+<div class="section" id="functions-for-series">
+<h3>Functions for Series<a class="headerlink" href="#functions-for-series" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s.size</span></code>: if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a Series, this returns the length of <code class="docutils literal notranslate"><span class="pre">s</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.to_numeric(s)</span></code>: returns the Series (or scalar/single value) <code class="docutils literal notranslate"><span class="pre">s</span></code> with all values converted to numbers, is possible. For example, <code class="docutils literal notranslate"><span class="pre">[&quot;1.2&quot;,</span> <span class="pre">&quot;.34&quot;]</span></code> can be converted to <code class="docutils literal notranslate"><span class="pre">[1.2,</span> <span class="pre">0.34]</span></code>.</p>
+<ul>
+<li><p>See the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_numeric.html">documentation</a> or <code class="docutils literal notranslate"><span class="pre">ac.remove_notes</span></code> two sections down for how to discard non-numeric values.</p></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 <div class="section" id="plotting-with-matplotlib">
@@ -553,26 +572,26 @@ For more line specification options, visit the <code class="docutils literal not
 </div>
 <div class="section" id="reading-procoda-data-with-the-aguaclara-package">
 <h2>Reading ProCoDA Data with the AguaClara Package<a class="headerlink" href="#reading-procoda-data-with-the-aguaclara-package" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference external" href="https://aguaclara.github.io/aguaclara/">AguaClara package</a> contains functions and modules for physical, chemical, and hydraulic calculations, experimental design, and data analysis. We’ll use the <code class="docutils literal notranslate"><span class="pre">aguaclara.research.procoda_parser</span></code> module, abbreviated to``pp``, to read data files from ProCoDA.</p>
+<p>The <a class="reference external" href="https://aguaclara.github.io/aguaclara/">AguaClara package</a>, which we’ll abbreviate to <code class="docutils literal notranslate"><span class="pre">ac</span></code>, contains functions and modules for physical, chemical, and hydraulic calculations, experimental design, and data analysis. We’ll use the <code class="docutils literal notranslate"><span class="pre">aguaclara.research.procoda_parser</span></code> module to read data files from ProCoDA.</p>
 <div class="section" id="reading-columns-of-data-and-time">
 <h3>Reading Columns of Data and Time<a class="headerlink" href="#reading-columns-of-data-and-time" title="Permalink to this headline">¶</a></h3>
-<p>To read a column of data from a ProCoDA data file, we can use the function <code class="docutils literal notranslate"><span class="pre">pp.column_of_data(path,</span> <span class="pre">start,</span> <span class="pre">column,</span> <span class="pre">end,</span> <span class="pre">units)</span></code>, where</p>
+<p>To read a column of data from a ProCoDA data file, we can use the function <code class="docutils literal notranslate"><span class="pre">ac.column_of_data(path,</span> <span class="pre">start,</span> <span class="pre">column,</span> <span class="pre">end,</span> <span class="pre">units)</span></code>, where</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> is the file path or URL of the file</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> are the first and last indexes of the rows of interest (<code class="docutils literal notranslate"><span class="pre">end</span></code> defaults to the last row)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">column</span></code> is a column index or label</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> is the units you wish to apply to the column (defaults to dimensionless).</p></li>
 </ul>
-<p>To read the time column, we can use <code class="docutils literal notranslate"><span class="pre">pp.column_of_time(path,</span> <span class="pre">start,</span> <span class="pre">end)</span></code>.</p>
+<p>To read the time column, we can use <code class="docutils literal notranslate"><span class="pre">ac.column_of_time(path,</span> <span class="pre">start,</span> <span class="pre">end)</span></code>.</p>
 <p>The outputs of both are Numpy arrays with units attached. For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.research.procoda_parser</span> <span class="kn">as</span> <span class="nn">pp</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="kn">as</span> <span class="nn">ac</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/datalog%206-14-2018.tsv&quot;</span>
 <span class="n">start</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">end</span> <span class="o">=</span> <span class="mi">3000</span>
-<span class="n">time</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">column_of_time</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
-<span class="n">influent_turbidity</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">column_of_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span>
-<span class="n">effluent_turbidity</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">column_of_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">column_of_time</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+<span class="n">influent_turbidity</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">column_of_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span>
+<span class="n">effluent_turbidity</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">column_of_data</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span>
 <span class="n">influent_turbidity</span> <span class="o">-</span> <span class="n">effluent_turbidity</span>
 
 <span class="n">Output</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Quantity</span><span class="p">([</span><span class="mf">73.05</span> <span class="mf">74.77</span> <span class="mf">80.66</span> <span class="o">...</span> <span class="mf">94.66</span> <span class="mf">96.32</span> <span class="mf">97.81</span><span class="p">],</span> <span class="s1">&#39;NTU&#39;</span><span class="p">)</span><span class="o">&gt;</span>
@@ -583,13 +602,13 @@ For more line specification options, visit the <code class="docutils literal not
 <h3>Plotting Columns of Data<a class="headerlink" href="#plotting-columns-of-data" title="Permalink to this headline">¶</a></h3>
 <p>To plot the columns we read above, we can give <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">influent_turbidity</span></code>, and <code class="docutils literal notranslate"><span class="pre">effluent_turbidity</span></code> as inputs to <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>. We can also use two functions in <code class="docutils literal notranslate"><span class="pre">procoda_parser</span></code> for quickly plotting one or more columns of data:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pp.plot_columns(path,</span> <span class="pre">columns,</span> <span class="pre">x_axis)</span></code>:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ac.plot_columns(path,</span> <span class="pre">columns,</span> <span class="pre">x_axis)</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> is a single column label or list of labels</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x_axis</span></code> is the label of the x-coordinate column (defaults to no column)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pp.iplot_columns(path,</span> <span class="pre">columns,</span> <span class="pre">x_axis)</span></code>:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ac.iplot_columns(path,</span> <span class="pre">columns,</span> <span class="pre">x_axis)</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> is a single column index or list of indexes</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x_axis</span></code> is the index of the x-coordinate column (defaults to no column)</p></li>
@@ -597,19 +616,27 @@ For more line specification options, visit the <code class="docutils literal not
 </li>
 </ol>
 <p>For both, <code class="docutils literal notranslate"><span class="pre">path</span></code> is the file path or URL of the file. Here’s an example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.research.procoda_parser</span> <span class="kn">as</span> <span class="nn">pp</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="kn">as</span> <span class="nn">ac</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/AguaClara/team_resources/master/Data/datalog%206-14-2018.xls&quot;</span>
-<span class="n">pp</span><span class="o">.</span><span class="n">plot_columns</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Influent Turbidity (NTU)&#39;</span><span class="p">,</span> <span class="s1">&#39;Effluent Turbidity ()&#39;</span><span class="p">],</span>
+<span class="n">ac</span><span class="o">.</span><span class="n">plot_columns</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Influent Turbidity (NTU)&#39;</span><span class="p">,</span> <span class="s1">&#39;Effluent Turbidity ()&#39;</span><span class="p">],</span>
                 <span class="s1">&#39;Day fraction since midnight on 6/14/2018&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (hr)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Turbidity (NTU)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s2">&quot;Influent&quot;</span><span class="p">,</span> <span class="s2">&quot;Effluent&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Replacing the 4th line with <code class="docutils literal notranslate"><span class="pre">pp.iplot_columns(path,</span> <span class="pre">[3,</span> <span class="pre">4],</span> <span class="pre">0)</span></code> outputs the same graph:</p>
+<p>Replacing the 4th line with <code class="docutils literal notranslate"><span class="pre">ac.iplot_columns(path,</span> <span class="pre">[3,</span> <span class="pre">4],</span> <span class="pre">0)</span></code> outputs the same graph:</p>
 <img alt="../_images/plot_columns.png" class="align-center" src="../_images/plot_columns.png" />
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<p>If your ProCoDA data file contains experimental notes, i.e. lines aside from the headers that contain text rather than data, you can use these two functions to get or remove the notes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ac.notes(path)</span></code>: returns the notes in the data at <code class="docutils literal notranslate"><span class="pre">path</span></code> (a directory or URL) as a DataFrame. The DataFrame includes the row indexes in which the notes appear.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ac.remove_notes(data)</span></code>: returns the DataFrame <code class="docutils literal notranslate"><span class="pre">data</span></code> with no notes, only data values.</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="regression-analysis-and-curve-fitting">

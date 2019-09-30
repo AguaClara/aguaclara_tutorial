@@ -120,9 +120,11 @@ Given a DataFrame ``df``, we can get its columns, rows, and specific entries wit
 * ``df[column_label(s)]``: returns the **column(s)** with the given label(s) (a string/string list) as a Series/DataFrame
 
 * ``df.loc[row_label(s)]``: returns the **row(s)** with the given label(s) (a string/string list) as a Series/DataFrame
+
   * Multiple row labels can also be given as a *slice*. For example, ``df.loc[start_label : end_label]`` returns the rows from the row labeled ``start_label`` to that labeled ``end_label``, inclusive.
 
 * ``df.loc[row_label(s), column_label(s)]``: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame
+
   * Row slices also apply here (see above sub-bullet).
 
 **Using Positions**
@@ -131,7 +133,7 @@ Given a DataFrame ``df``, we can get its columns, rows, and specific entries wit
 * ``df.iloc[:, column_index(es)]``: returns the column(s) with the given index(es) (an integer/integer list) as a Series/DataFrame
 * ``df.iloc[row_index(s), column_index(s)]``: returns the entry/entries in the given row(s) that are also in the given column(s) as a single value/DataFrame
 
-IMPORTANT: All indexes start from 0. Also, both rows and columns can be given as slices. Unlike for the ``loc[]`` function, the last index in a positional slice is exclusive. For example, ``df.iloc[i : j]`` returns the ``i``th row to the ``j-1``th row.
+IMPORTANT: All indexes start from 0. Also, both rows and columns can be given as slices. Unlike for the ``loc[]`` function, the last index in a positional slice is exclusive. For example, ``df.iloc[i : j]`` returns the ``i``\ th row to the ``j-1``\ th row.
 
 **Using Conditionals**
 
@@ -223,6 +225,15 @@ Note that for this data, we can use row numbers for both ``loc[]`` and ``iloc[]`
     Name: Dissolved Concentration (mg/L), dtype: float64
 
 The last example may look unfamiliar, but it's actually demonstrating two element-wise operations! (Remember `Calculations on Sets of Data`_?) Just like for NumPy arrays, ordinary math operators (e.g. ``-``) can be used to subtract one Pandas Series from another or one constant from a Series. Logical operators (e.g. ``>=``) can also create a boolean Series from the comparison of one Series to another or one Series to a single constant.
+
+Functions for Series
+^^^^^^^^^^^^^^^^^^^^
+* ``s.size``: if ``s`` is a Series, this returns the length of ``s``
+
+* ``pd.to_numeric(s)``: returns the Series (or scalar/single value) ``s`` with all values converted to numbers, is possible. For example, ``["1.2", ".34"]`` can be converted to ``[1.2, 0.34]``.
+
+  * See the `documentation <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_numeric.html>`_ or ``ac.remove_notes`` two sections down for how to discard non-numeric values.
+
 
 Plotting with Matplotlib
 ========================
@@ -362,31 +373,31 @@ Here are some other useful functions in ``plt``. For more details and features, 
 
 Reading ProCoDA Data with the AguaClara Package
 ===============================================
-The `AguaClara package <https://aguaclara.github.io/aguaclara/>`_ contains functions and modules for physical, chemical, and hydraulic calculations, experimental design, and data analysis. We'll use the ``aguaclara.research.procoda_parser`` module, abbreviated to``pp``, to read data files from ProCoDA.
+The `AguaClara package <https://aguaclara.github.io/aguaclara/>`_, which we'll abbreviate to ``ac``, contains functions and modules for physical, chemical, and hydraulic calculations, experimental design, and data analysis. We'll use the ``aguaclara.research.procoda_parser`` module to read data files from ProCoDA.
 
 Reading Columns of Data and Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To read a column of data from a ProCoDA data file, we can use the function ``pp.column_of_data(path, start, column, end, units)``, where
+To read a column of data from a ProCoDA data file, we can use the function ``ac.column_of_data(path, start, column, end, units)``, where
 
 * ``path`` is the file path or URL of the file
 * ``start`` and ``end`` are the first and last indexes of the rows of interest (``end`` defaults to the last row)
 * ``column`` is a column index or label
 * ``units`` is the units you wish to apply to the column (defaults to dimensionless).
 
-To read the time column, we can use ``pp.column_of_time(path, start, end)``.
+To read the time column, we can use ``ac.column_of_time(path, start, end)``.
 
 The outputs of both are Numpy arrays with units attached. For example,
 
 .. code-block:: python
 
-  import aguaclara.research.procoda_parser as pp
+  import aguaclara as ac
 
   path = "https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/datalog%206-14-2018.tsv"
   start = 1000
   end = 3000
-  time = pp.column_of_time(path, start, end)
-  influent_turbidity = pp.column_of_data(path, start, 3, end, 'NTU')
-  effluent_turbidity = pp.column_of_data(path, start, 4, end, 'NTU')
+  time = ac.column_of_time(path, start, end)
+  influent_turbidity = ac.column_of_data(path, start, 3, end, 'NTU')
+  effluent_turbidity = ac.column_of_data(path, start, 4, end, 'NTU')
   influent_turbidity - effluent_turbidity
 
   Output: <Quantity([73.05 74.77 80.66 ... 94.66 96.32 97.81], 'NTU')>
@@ -395,12 +406,12 @@ Plotting Columns of Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 To plot the columns we read above, we can give ``time``, ``influent_turbidity``, and ``effluent_turbidity`` as inputs to ``plt.plot()``. We can also use two functions in ``procoda_parser`` for quickly plotting one or more columns of data:
 
-1.  ``pp.plot_columns(path, columns, x_axis)``:
+1.  ``ac.plot_columns(path, columns, x_axis)``:
 
     * ``columns`` is a single column label or list of labels
     * ``x_axis`` is the label of the x-coordinate column (defaults to no column)
 
-2.  ``pp.iplot_columns(path, columns, x_axis)``:
+2.  ``ac.iplot_columns(path, columns, x_axis)``:
 
     * ``columns`` is a single column index or list of indexes
     * ``x_axis`` is the index of the x-coordinate column (defaults to no column)
@@ -409,20 +420,28 @@ For both, ``path`` is the file path or URL of the file. Here's an example:
 
 .. code-block:: python
 
-  import aguaclara.research.procoda_parser as pp
+  import aguaclara as ac
   import matplotlib.pyplot as plt
 
   path = "https://raw.githubusercontent.com/AguaClara/team_resources/master/Data/datalog%206-14-2018.xls"
-  pp.plot_columns(path, ['Influent Turbidity (NTU)', 'Effluent Turbidity ()'],
+  ac.plot_columns(path, ['Influent Turbidity (NTU)', 'Effluent Turbidity ()'],
                   'Day fraction since midnight on 6/14/2018')
   plt.xlabel("Time (hr)")
   plt.ylabel("Turbidity (NTU)")
   plt.legend(("Influent", "Effluent"))
 
-Replacing the 4th line with ``pp.iplot_columns(path, [3, 4], 0)`` outputs the same graph:
+Replacing the 4th line with ``ac.iplot_columns(path, [3, 4], 0)`` outputs the same graph:
 
 .. image:: Images/Data_Analysis/plot_columns.png
     :align: center
+
+Notes
+^^^^^
+If your ProCoDA data file contains experimental notes, i.e. lines aside from the headers that contain text rather than data, you can use these two functions to get or remove the notes:
+
+* ``ac.notes(path)``: returns the notes in the data at ``path`` (a directory or URL) as a DataFrame. The DataFrame includes the row indexes in which the notes appear.
+* ``ac.remove_notes(data)``: returns the DataFrame ``data`` with no notes, only data values.
+
 
 Regression Analysis and Curve Fitting
 =====================================
