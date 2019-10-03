@@ -7,7 +7,7 @@ Git Basics
 Git Terminology
 ===============
 
-The purpose of GitHub is to allow multiple people to work on a coding project and maintain consistency. In order to accomplish this Git employs a number of tools such as pull, push, commit, and merge conflicts which are explained below. To aid(e) in this explanation let's imagine that AguaClara is a company which owns a chain of sandwich restaurants.
+The purpose of GitHub is to allow multiple people to work on a coding project and maintain consistency. In order to accomplish this, Git employs a number of tools such as pull, push, commit, and merge conflicts which are explained below. To aid(e) in this explanation let's imagine that AguaClara is a company which owns a chain of sandwich restaurants.
 
 Repository
 ----------
