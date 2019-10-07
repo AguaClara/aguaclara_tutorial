@@ -27,7 +27,7 @@ Note that there are a few terminal options for Windows, such as CMD, Windows Pow
 
 To open your terminal in Windows, search for "PowerShell" in your programs.  On Mac, just search for "Terminal" in your programs.  A prompt like the one below should open up.
 
-.. image:: images/git2.png
+.. image:: images/git2.PNG
 
 Within this prompt, you will run commands by typing them directly into this prompt and hitting "Enter".  The path listed before the where you type is the directory you are currently working in on your computer.  In order to run commands on a specific folder (such as your subteams repository) you will need to navigate to that folder.  The two commands to do this are:
 
@@ -37,13 +37,13 @@ Within this prompt, you will run commands by typing them directly into this prom
 
 For example, say I want to move to the "aguaclara_demo" repository to make some git changes.  First I use ``ls`` to see what files I can change to:
 
-.. image:: images/git3.png
+.. image:: images/git3.PNG
 
 I see the CS folder, so I use ``cd CS`` to move to that folder.  From there I continue to use these commands until I find the folder I am looking for.
 
 If you ever need to move up one folder, you can use ``cd ..`` to accomplish this.  If you know the file path of the folder you want, you can also add that directly to move to your desired folder.  For example, I could move directly to the aguaclara_demo folder as shown below:
 
-.. image:: images/git4.png
+.. image:: images/git4.PNG
 
 One other important note for using the terminal is to always wait for the commands to finish running.  Sometimes when running a more complicated command, the computer will take a while to run, and the terminal will slowly show commands as they run.  In this case, make sure to wait until all the commands are done running, and you can see the blinking cursor before you type another command.  If you ever want to stop a command while it's running, hold down the control button (or the command button on Mac) and hit "c".
 
@@ -59,7 +59,7 @@ Then, navigate to your command line. Go to the folder you would like your reposi
 
 Assuming you added Git to your command line during installation, you can run any Git command from the command line just by typing ``git`` adding a space, and writing the command.  For example, to use the simple command ``git status``\ , which compares your local progress to the digital collection of Github, just type "git status" while in the folder you want to check.
 
-.. image:: images/git5.png
+.. image:: images/git5.PNG
 
 Pulling
 -------
@@ -73,11 +73,11 @@ To push your local changes, first stage your changes, then commit them to your b
 
 * To stage your changes, use ``git add -A`` The -A ensures you add all of your files you have worked on.
 
-.. image:: images/git7.png
+.. image:: images/git7.PNG
 
 * To commit your changes, use the command ``git commit -m "Commit Message"`` and fill in the commit message with whatever you want to say about your commit.  Note that it is very important to include the -m and the commit message.  If you do not, Git will take you to an interface using the text editor Vim, which is very challenging to use.
 
-.. image:: images/git8.png
+.. image:: images/git8.PNG
 
 * If you happen to accidentally type ``git commit`` without the -m and the commit message and get taken to Vim, you can still write your commit message. Use your arrow keys to scroll up to the top line where it is blank. Write your commit message, then to exit out of this editor, press Escape. You cursor should appear in the bottom left corner. From there type ``:x`` and hit enter to save your commit message.
 
@@ -85,7 +85,7 @@ To push your local changes, first stage your changes, then commit them to your b
 
 * Finally, to push your changes, use ``git push``.  If you have any merge errors, the terminal will notify you and you can fix them manually.
 
-.. image:: images/git9.png
+.. image:: images/git9.PNG
 
 .. TODO: include an image of a merge conflict resolution here
 
