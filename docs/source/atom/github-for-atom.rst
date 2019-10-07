@@ -11,7 +11,7 @@ How to use GitHub in Atom
 The wonderful part about Atom is that GitHub is integrated directly into it. The GitHub GUI in Atom makes all of the Git commands easy to use.
 
 Cloning a Repository in Atom
---------------------
+----------------------------
 
 Once you've created a repository, you'll want to show your subteam members how to create a copy of it on their computers so that they'll be able to push and pull.
 This is done by cloning the repository. Let's all clone the aguaclara_tutorial repository so that you get the hang of it. First go to the `repository <https://github.com/AguaClara/aguaclara_tutorial>`_ and click on the green ``Clone or Download`` button. Copy the URL shown. Then open Atom and press ``Cmnd + Shift + P`` on mac, or ``Cntrl + Shift + P`` and search for ``GitHub: Clone``. Paste the URL into the ``Clone From`` box and put the path to your GitHub folder, e.g. for me it's ``Users/Fletch/Documents/GitHub/aguaclara_tutorial``\ , in the ``To directory`` box.
