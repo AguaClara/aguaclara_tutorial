@@ -120,18 +120,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#watching-a-repository">Watching a Repository</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#editing-a-wiki">Editing a Wiki</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-an-issue">Creating an Issue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-project">Creating a Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github-for-atom">GitHub for Atom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-use-github-in-atom">How to use GitHub in Atom</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#adding-a-project-folder">Adding a project folder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#navigating-branches">Navigating branches</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pushing-and-pulling">Pushing and pulling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#committing">Committing</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
 </ul>
 </li>
 </ul>
@@ -153,6 +143,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
@@ -232,75 +225,30 @@
 <div class="section" id="creating-a-repository">
 <h3>Creating a Repository<a class="headerlink" href="#creating-a-repository" title="Permalink to this headline">¶</a></h3>
 <p>Creating a repository is simple. We’ll do this through the <a class="reference external" href="https://www.github.com">GitHub Website</a>. First go to the <a class="reference external" href="https://github.com/AguaClara">AguaClara Team Page</a>.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/AguaClaraHome.png"><img alt="AguaClaraHomePage" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/AguaClaraHome.png" /></a>
+<img alt="../_images/git11.png" src="../_images/git11.png" />
 <p>Now click on the green <code class="docutils literal notranslate"><span class="pre">New</span></code> button, and this will direct you to a repository creation page. Each subteam lead should create a repository with the name of their subteam. Put in a description of what your subteam does and check the create a README box. Now go ahead and click the green <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">repository</span></code> button.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/CreateRepo.png"><img alt="CreateRepository" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/CreateRepo.png" /></a>
+<img alt="../_images/git12.png" src="../_images/git12.png" />
 </div>
 <div class="section" id="cloning-a-repository">
 <h3>Cloning a Repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this headline">¶</a></h3>
-<p>Once you’ve created a repository, you’ll want to show your subteam members how to create a copy of it on their computers so that they’ll be able to push and pull.
-This is done by cloning the repository. Let’s all clone the aguaclara_tutorial repository so that you get the hang of it. First go to the <a class="reference external" href="https://github.com/AguaClara/aguaclara_tutorial">repository</a> and click on the green <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">or</span> <span class="pre">Download</span></code> button. Copy the URL shown. Then open Atom and press <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> on mac, or <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> and search for <code class="docutils literal notranslate"><span class="pre">GitHub:</span> <span class="pre">Clone</span></code>. Paste the URL into the <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">From</span></code> box and put the path to your GitHub folder, e.g. for me it’s <code class="docutils literal notranslate"><span class="pre">Users/Fletch/Documents/GitHub/aguaclara_tutorial</span></code>, in the <code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">directory</span></code> box.
-<a class="reference external" href="https://knowledge.autodesk.com/community/screencast/cd8c1cb7-511e-45aa-a7b6-7af02b868bd0">Here</a> is a video demonstrating this.</p>
+<p>Go here <a class="reference internal" href="git-in-the-command-line.html#git-in-the-command-line"><span class="std std-ref">Git in the Command Line</span></a> to learn how to clone a repository to your local computer.</p>
 </div>
 <div class="section" id="watching-a-repository">
 <h3>Watching a Repository<a class="headerlink" href="#watching-a-repository" title="Permalink to this headline">¶</a></h3>
 <p>When you create or join a repository, you’ll want to watch it. This means that every time someone posts an issue, you’ll be notified of what they said. To make sure you get these notifications, you’ll want to make sure you receive email notifications in your profile settings. To watch a repository, simply click the eyeball button at the top of your repository as shown below.</p>
-<p>[[/Images/WatchRepo.png|WatchRepository]]</p>
+<img alt="../_images/git13.png" src="../_images/git13.png" />
 </div>
-</div>
-<div class="section" id="editing-a-wiki">
-<h2>Editing a Wiki<a class="headerlink" href="#editing-a-wiki" title="Permalink to this headline">¶</a></h2>
-<p>Once you’ve created and cloned your repository the wiki will be created automatically. Simply open your repository and click on the <code class="docutils literal notranslate"><span class="pre">Wiki</span></code> button in the top bar and you’ll open your wiki. From there you have a few options. You can click <code class="docutils literal notranslate"><span class="pre">Edit</span></code> to modify the current page in the browser or <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">this</span> <span class="pre">wiki</span> <span class="pre">locally</span></code> so that you’ll be able to edit the wiki in a Markdown file in Atom. To create multiple pages just use the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Page</span></code> button.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GitHubTopBar.png"><img alt="TopBarTest" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/GitHubTopBar.png" /></a>
 </div>
 <div class="section" id="creating-an-issue">
 <h2>Creating an Issue<a class="headerlink" href="#creating-an-issue" title="Permalink to this headline">¶</a></h2>
-<p>Creating an issue is as simple as editing the wiki. Just go to the <code class="docutils literal notranslate"><span class="pre">Issues</span></code> section on the top bar and then click <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">issue</span></code>. Let’s call the first issue for each subteam “Update the wiki”. You should put a good enough description of the issue so that anyone could read it and begin working on the problem. Attaching images can help explain the issue better. You can also assign people to the issue and add it to a project (more on that later) on the right side.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/NewIssue.png"><img alt="NewIssue" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/NewIssue.png" /></a>
+<p>Creating an issue is very simple. Just go to the <code class="docutils literal notranslate"><span class="pre">Issues</span></code> section on the top bar and then click <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">issue</span></code>. Let’s call the first issue for each subteam “Update the wiki”. You should put a good enough description of the issue so that anyone could read it and begin working on the problem. Attaching images can help explain the issue better. You can also assign people to the issue and add it to a project (more on that later) on the right side.</p>
+<img alt="../_images/git14.png" src="../_images/git14.png" />
 </div>
 <div class="section" id="creating-a-project">
 <h2>Creating a Project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h2>
 <p>First go to the <code class="docutils literal notranslate"><span class="pre">Projects</span></code> section of the top bar, then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">project</span></code>. Now name your project and add a description. You can change the project template through the dropdown, but for the task map we’ll use the blank template.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/TaskMap.png"><img alt="TaskMap" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/TaskMap.png" /></a>
+<img alt="../_images/git15.png" src="../_images/git15.png" />
 <p>You can edit the columns to have whatever organization you’d like, but if you’re not sure what would work best we’d suggest trying the example above. Once the columns are created, just click <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Add</span> <span class="pre">cards</span></code> to search through the issues associated with your subteam’s repository and add them to the project board.</p>
-</div>
-<div class="section" id="github-for-atom">
-<h2>GitHub for Atom<a class="headerlink" href="#github-for-atom" title="Permalink to this headline">¶</a></h2>
-<p>Perhaps the best part of Atom is GitHub integration, which comes installed with Atom. This means there’s no extra steps to install Git or GitHub packages! The beauty of GitHub integration is that all of your GitHub actions can be done through a GUI in the Atom IDE, which circumvents the need to install GitHub desktop or learn the tedious Command Shell or Terminal Git commands. To learn more about how to use the GitHub integration, check out <a class="reference internal" href="#github-basics"><span class="std std-ref">GitHub Basics</span></a> within aguaclara_tutorial. This page also has useful information about the different GitHub terminology and how to use GitHub in Atom.</p>
-</div>
-<div class="section" id="how-to-use-github-in-atom">
-<h2>How to use GitHub in Atom<a class="headerlink" href="#how-to-use-github-in-atom" title="Permalink to this headline">¶</a></h2>
-<p>The wonderful part about Atom is that GitHub is integrated directly into it. The GitHub GUI in Atom makes all of the Git commands easy to use.</p>
-<div class="section" id="adding-a-project-folder">
-<h3>Adding a project folder<a class="headerlink" href="#adding-a-project-folder" title="Permalink to this headline">¶</a></h3>
-<p>Before you can start working on a project, you’ll have to add the project folder to Atom. Project folders are the same things as repositories, so every time you add a project folder, you’re adding the entire repository to Atom. To add a project forlder, use <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">O</span></code> or <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">O</span></code>, and navigate to the repository you wish to work out of. Your project will then appear in a side bar within the Atom interface. Clicking on it enables you to open any file within the repository.</p>
-</div>
-<div class="section" id="navigating-branches">
-<h3>Navigating branches<a class="headerlink" href="#navigating-branches" title="Permalink to this headline">¶</a></h3>
-<p>On the bottom right hand corner of Atom, there’s a toolbar with many different icons. One of them shows what branch your file is in within a given repository. It should look something like this:</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Branch.png"><img alt="Branch" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Branch.png" /></a>
-<p>Clicking on that icon will being up a window that allows you to switch branches and create a new branch.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/SwitchNewBranch.png"><img alt="SwitchNewBranch" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/SwitchNewBranch.png" /></a>
-</div>
-<div class="section" id="pushing-and-pulling">
-<h3>Pushing and pulling<a class="headerlink" href="#pushing-and-pulling" title="Permalink to this headline">¶</a></h3>
-<p>On the same toolbar as the branch icon, there’s an icon that enables you to push, pull, or fetch. It looks like this:</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullIcon.png"><img alt="PushPullIcon" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullIcon.png" /></a>
-<p>Clicking on it will give you a window to push or pull.</p>
-<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullWindow.png"><img alt="PushPullWindow" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/PushPullWindow.png" /></a>
-</div>
-<div class="section" id="committing">
-<h3>Committing<a class="headerlink" href="#committing" title="Permalink to this headline">¶</a></h3>
-<p>To open the GitHub commit GUI, use <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">9</span></code>, or find it in <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Git</span> <span class="pre">Tab</span></code> within <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> under the <code class="docutils literal notranslate"><span class="pre">Packages</span></code> tab in the menu bar. The GUI looks like this:</p>
-<p>When you save a file that’s in one of the repositories your working on using <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code>, <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">S</span></code>, or <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">S</span></code>, the file name will appear uder the <code class="docutils literal notranslate"><span class="pre">Unstaged</span> <span class="pre">Changes</span></code> tab. In order to commit your files, you first have to stage them either using the <code class="docutils literal notranslate"><span class="pre">Stage</span> <span class="pre">All</span></code> button or selecting the files you want to stage and staging them using a right click on the file name. Once you’ve done that, the files will appear under <code class="docutils literal notranslate"><span class="pre">Staged</span> <span class="pre">Changes</span></code>.</p>
-<p>You won’t be able to commit your file until you write your <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">message</span></code>, so make sure you fill it out with detailed info about the changes made to the files. Once you’ve filled out your message, you can click <code class="docutils literal notranslate"><span class="pre">Commit</span></code>. After committing, you’re ready to push!</p>
-<p>If you ever want to modify a commit, click <code class="docutils literal notranslate"><span class="pre">Ammend</span></code>, and you can change anything you want about the last commit you made.</p>
-</div>
-</div>
-<div class="section" id="resolving-merge-conflicts">
-<h2>Resolving Merge Conflicts<a class="headerlink" href="#resolving-merge-conflicts" title="Permalink to this headline">¶</a></h2>
-<p>Most of you probably won’t have merge conflicts, but if you do they’re easy to resolve in Atom. When a merge conflict occurs during a push, Atom will pop up <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">me</span></code> buttons like in the picture below, and simply click on the button for the code block you’d like to keep.</p>
-<a class="reference external image-reference" href="https://user-images.githubusercontent.com/401128/27737141-6f7ae2f6-5d7d-11e7-9312-87c8611e7328.png"><img alt="MergeConflict" src="https://user-images.githubusercontent.com/401128/27737141-6f7ae2f6-5d7d-11e7-9312-87c8611e7328.png" /></a>
 </div>
 </div>
 

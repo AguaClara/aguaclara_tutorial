@@ -144,6 +144,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
@@ -216,7 +219,7 @@
 <span id="id1"></span><h1>Git Basics<a class="headerlink" href="#git-basics" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="git-terminology">
 <h2>Git Terminology<a class="headerlink" href="#git-terminology" title="Permalink to this headline">¶</a></h2>
-<p>The purpose of GitHub is to allow multiple people to work on a coding project and maintain consistency. In order to accomplish this Git employs a number of tools such as pull, push, commit, and merge conflicts which are explained below. To aid(e) in this explanation let’s imagine that AguaClara is a company which owns a chain of sandwich restaurants.</p>
+<p>The purpose of GitHub is to allow multiple people to work on a coding project and maintain consistency. In order to accomplish this, Git employs a number of tools such as pull, push, commit, and merge conflicts which are explained below. To aid(e) in this explanation let’s imagine that AguaClara is a company which owns a chain of sandwich restaurants.</p>
 <div class="section" id="repository">
 <h3>Repository<a class="headerlink" href="#repository" title="Permalink to this headline">¶</a></h3>
 <p>A repository is like a folder in Git. If AguaClara were a restaurant chain, then each individual restaurant would be a repository. You can save many associated files in a repository and give specific users permission to edit the files in the repository. There are a number of repositories on the AguaClara GitHub including this one, aguaclara_tutorial.</p>
@@ -227,8 +230,7 @@
 </div>
 <div class="section" id="clone">
 <h3>Clone<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h3>
-<p>When you first want to access a repository locally you’ll have to clone it. By cloning the repository you make a local copy to which you’ll be able to pull updates from online and push your changes to the repository. If pulling and pushing don’t make sense yet don’t worry, just read the sections below.</p>
-<p>P.S. I’m not sure how exactly cloning works in the sandwich analogy, ideas are welcome</p>
+<p>When you first want to access a repository locally you’ll have to clone it. By cloning the repository you make a local copy to which you’ll be able to pull updates from online and push your changes to the repository. If pulling and pushing don’t make sense yet don’t worry, just read the sections below. As for a sandwich analogy, imagine that a restaurant has the recipe for making a BLT and you wanted the recipe as well to make your own BLT. This way, both you and the restaurant have the exact same BLT recipe. However, if you modify your copy of the recipe, this does not affect the restaurant’s original BLT recipe.</p>
 </div>
 <div class="section" id="pull">
 <h3>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h3>
@@ -244,7 +246,7 @@
 </div>
 <div class="section" id="merge-conflicts">
 <h3>Merge Conflicts<a class="headerlink" href="#merge-conflicts" title="Permalink to this headline">¶</a></h3>
-<p>Now let’s say two chefs were working on changing the recipe for the same sandwich simultaneously. One decides to add cheese to the BLT, while the other doesn’t like tomato so he takes that out and puts in avocado instead. When they go to publish the recipe (push), the restaurant manager won’t know which recipe to use. This is called a merge conflict. How a merge conflict is resolved is explained in more detail below.</p>
+<p>Now let’s say two chefs were working on changing the recipe for the same sandwich simultaneously. One decides to add cheese to the BLT, while the other doesn’t like tomato so he takes that out and puts in avocado instead. When they go to publish the recipe (push), the restaurant manager won’t know which recipe to use. This is called a merge conflict. How a merge conflict is resolved is explained in more detail <a class="reference external" href="https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line">here</a>.</p>
 </div>
 </div>
 </div>
