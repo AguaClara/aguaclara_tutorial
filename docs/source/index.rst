@@ -83,6 +83,7 @@ If you would like to see a new section in this tutorial, visit :ref:`contributin
    installing-software/installing-interactive-tutorials
 
    atom/atom-and-hydrogen-introduction
+   atom/github-for-atom
    atom/teletype-basics
    atom/hydrogen-basics
    atom/saving-markdown-to-pdf
