@@ -89,7 +89,7 @@ kB = kB_sc * u.joule / u.kelvin # I've given kB units for you in J/K; you can us
 
 
 # GitHub Basics
-Congratulations! You've completed this interactive tutorial. Now all you need to do is save your work and put it on your personal repository. Toggle the Git Tab using `Cntrl + Shift + 9`.
+Congrats! You've completed this interactive tutorial. Now all you need to do is save your work and put it on your personal repository. Toggle the Git Tab using `Cntrl + Shift + 9`.
 
 1. Stage your changes.
 2. In your commit message write that you've completed the tutorial.
