@@ -10,15 +10,25 @@ Write two sentences about yourself, each in a different paragraph.
 
 <!--- Write your answer here. --->
 
+I like the color blue.
+
+I am a student at Cornell.
+
 ## Headers
 
 Make a 3rd level header with your name:
 
 <!--- Write your answer here. --->
 
+### Irena Gao
+
 ## Emphasis
 
 Write 4 of your favorite words using each type of emphasis:
+
+*yellow*
+**blue**
+***pink***
 
 <!--- Write your answer here. --->
 
@@ -28,17 +38,30 @@ Make an ordered list of 3 things you hope to achieve this semester, and elaborat
 
 <!--- Write your answer here. --->
 
+1. good grades
+2. good sleep
+3. good friends
+
+* java
+* web design
+* networks
+
 ## Links
 
 Write a sentence describing your major, and insert a link to your major's department website:
 
 <!--- Write your answer here. --->
 
+My major, Information Science, is an easier version of Computer Science. [hi](https://www.infosci.cornell.edu/)
+
 ## Images
 
 Insert the Cornell seal image with:
-  1. A relative file path(`/Images/Cornell_University_seal.png`) 
+  1. A relative file path(`/Images/Cornell_University_seal.png`)
   2. A URL (https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/master/Images/Cornell_University_seal.svg.png)
+
+![hi](/Images/Cornell_University_seal.png)
+![hi](https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/master/Images/Cornell_University_seal.svg.png)
 
 <!--- Write your answer here. --->
 
@@ -48,13 +71,15 @@ Put the name of this file in an in-line (single backtick) code format.
 
 <!-- Write your answer here. -->
 
+`markdown`
+
 Put the following text in a Python-formatted code block:
 
-```
+`
 def foo():
     print("Particles of a feather...")
     print("...floc together!")
-```
+`
 
 <!-- Write your answer here. -->
 
@@ -64,6 +89,11 @@ Create a table listing your 3 favorite animals, books, and places on campus. Use
 
 <!--- Write your answer here. --->
 
+| Fav Animal | Fav Books | Fav Places |
+| Horse | Cat | Bird |
+| --- | :---: | ---: |
+| Hunger Games | Catcher in the Rye | Brave New World |
+| Mann Lib | West Campus | Hollister |
 
 ## Blockquotes
 
@@ -71,14 +101,18 @@ Write your favorite quote. It must be attributed to Albert Einstein.
 
 <!-- Write your answer here. -->
 
+> Imagination is more important than knowledge.
+
 ## Horizontal Rules
 
 Add a horizontal rule:
 
 <!-- Write your answer here. -->
 
+---
+
 ## LaTeX Formatting
 
 Copy the equation towards the end of the [Markdown tutorial](https://github.com/AguaClara/aguaclara_tutorial/wiki/Markdown#latex-formatting) and paste it here:
-
+$$ a^2 + b^2 = c^2 $$
 <!-- Write your answer here. -->
