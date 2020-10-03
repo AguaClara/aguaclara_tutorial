@@ -532,3 +532,33 @@ Now our graph looks much better!
 
 .. image:: Images/Data_Analysis/nonlinear_regression.png
     :align: center
+
+Optimization
+============
+From the SciPy package, particularly `SciPy.signal <https://docs.scipy.org/doc/scipy/reference/signal.html>`_, we can use the function ``scipy.signal.find_peaks()`` for finding the peaks, i.e. local maxima or minima, in our data.
+
+Here are some of the arguments for ``find_peaks()``. You can learn more in the function's documentation page `here <https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html>`_.
+
+    * ``x`` is a list or a 1D array
+    * ``threshold`` is the optional argument that indicates the required vertical distance to its neighboring samples
+    * ``distance`` is the optional argument that provides the required minimal horizontal distance in samples between neighboring peaks
+
+The  ``find_peaks()`` function returns an ndarray of the indices of peaks in ``x``
+
+To maximize/minimize our data we would write:
+
+.. code-block:: python
+
+  from scipy.signal import find_peaks
+
+  #To maximize:
+  indexes = find_peaks(y,threshold=threshold,distance=distance)[0]
+  #To minimize:
+  indexes = find_peaks((1/y),threshold=threshold,distance=distance)[0]
+
+  x_points = x[indexes]
+  y_points = y[indexes]
+
+Now we have found how to optimize our data!
+
+You're in the home stretch! Now complete `Interactive Tutorial 4: Data Analysis in Python <https://colab.research.google.com/drive/1Z9f-5Nsv8ucmU93J-f5sQZ-uddYNHAJs?usp=sharing>`_.
