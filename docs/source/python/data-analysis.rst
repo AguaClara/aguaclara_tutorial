@@ -541,7 +541,7 @@ Here are some of the arguments for ``find_peaks()``. You can learn more in the f
 
     * ``x`` is a list or a 1D array
     * ``threshold`` is the optional argument that indicates the required vertical distance to its neighboring samples
-    * ``distance`` is the optional argument that provides the required minimal horizontal distance in samples between neighboring peaks
+    * ``distance`` is the optional argument that provides the required minimal horizontal distance in samples between neighboring peaks. Distance must be a non-negative whole number.
 
 The  ``find_peaks()`` function returns an ndarray of the indices of peaks in ``x``
 
@@ -550,14 +550,37 @@ To maximize/minimize our data we would write:
 .. code-block:: python
 
   from scipy.signal import find_peaks
+  #In this example we will use a threshold of 5 and a distance of 1
+  x = np.array([1,2,3,4,5,6])
+  y = np.array([3,10,2,20,16,18])
 
   #To maximize:
-  indexes = find_peaks(y,threshold=threshold,distance=distance)[0]
-  #To minimize:
-  indexes = find_peaks((1/y),threshold=threshold,distance=distance)[0]
+  max_indexes = find_peaks(y,threshold=5,distance=1)[0]
+  x_points_max = x[max_indexes]
+  y_points_max = y[max_indexes]
 
-  x_points = x[indexes]
-  y_points = y[indexes]
+  #To minimize:
+  min_indexes = find_peaks(-y,threshold=5,distance=1)[0]
+  x_points_min = x[min_indexes]
+  y_points_min = y[min_indexes]
+
+  #Plot our data
+  plt.plot(x,y)
+  plt.xlabel('Temperature (degC)')
+  plt.ylabel('Solubility of O2 (mg/L)')
+
+  #Plot the maximum points on the data plot as green stars
+  plt.plot(x_points_max, y_points_max, 'g*')
+
+  #Plot the minimum points on the data plot as red dots
+  plt.plot(x_points_min, y_points_min, 'ro')
+
+  #Since the point at the first max index passes the threshold requirement it is plotted,
+  #but the second max index does not pass the threshold requirement so it was NOT plotted.
+  plt.show()
+
+.. image:: Images/Data_Analysis/find_peaks.png
+    :align: center
 
 Now we have found how to optimize our data!
 
