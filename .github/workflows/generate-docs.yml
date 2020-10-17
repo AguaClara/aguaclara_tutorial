@@ -1,8 +1,10 @@
 name: generate-docs
+
 on:
   push:
     branches:
       - 'hs649/gh-actions'
+
 jobs:
   sphinx-build:
     runs-on: ubuntu-latest
