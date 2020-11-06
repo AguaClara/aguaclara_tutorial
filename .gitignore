@@ -1,9 +1,0 @@
-.DS_Store
-*.pyc
-
-build/
-_build/
-
-.vscode/
-
-.idea/
