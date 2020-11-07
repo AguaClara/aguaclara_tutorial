@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,22 +22,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Running Python in the Command Line" href="python-in-command-line.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
           
 
           
@@ -79,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -147,6 +149,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -185,7 +188,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Good Coding Practices</li>
     
@@ -258,7 +261,7 @@
   <span class="n">T</span> <span class="o">=</span> <span class="n">T</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kelvin</span> <span class="c1"># Applies units to temperature</span>
   <span class="k">return</span> <span class="p">((</span><span class="n">P</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now lets say I wrote the code a long time ago and the output that I got during testing at that point in the development gave me an ouput of <code class="docutils literal notranslate"><span class="pre">&lt;Quantity(10,</span> <span class="pre">'meter')&gt;</span></code>. My doctest would look like this:</p>
@@ -278,7 +281,7 @@
   <span class="n">T</span> <span class="o">=</span> <span class="n">T</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kelvin</span> <span class="c1"># Applies units to temperature</span>
   <span class="k">return</span> <span class="p">((</span><span class="n">P</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Since my new code has been updated to produce the output we previously saw, I should expect my test to fail.</p>
@@ -317,10 +320,10 @@
   <span class="n">P</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">atm</span> <span class="c1"># Applies units to pressure</span>
   <span class="n">V</span> <span class="o">=</span> <span class="n">V</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">liter</span> <span class="c1"># Applies units to volume</span>
   <span class="n">T</span> <span class="o">=</span> <span class="n">T</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kelvin</span> <span class="c1"># Applies units to temperature</span>
-  <span class="k">print</span><span class="p">((</span><span class="n">P</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span> <span class="c1"># This prints the number of moles</span>
+  <span class="nb">print</span><span class="p">((</span><span class="n">P</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span> <span class="c1"># This prints the number of moles</span>
   <span class="k">return</span> <span class="p">((</span><span class="n">P</span> <span class="o">*</span> <span class="n">V</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>It is important to note that any white spaces (spaces in your code) in your inputs or outputs of your doctest will be interpreted in the test. These will throw a failed test even if the output is correct, so it is extremely important to check that your doctests don’t have white spaces.</strong></p>
@@ -347,11 +350,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, AguaClara Cornell
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -362,7 +373,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

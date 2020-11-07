@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,22 +22,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Common Errors in Python" href="python-common-errors.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
           
 
           
@@ -79,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -137,6 +139,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#non-linear-regression">Non-Linear Regression</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#optimization">Optimization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="python-common-errors.html">Common Errors in Python</a></li>
@@ -180,6 +183,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -218,7 +222,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Data Analysis in Python</li>
     
@@ -252,7 +256,7 @@
 </div>
 <p>Fortunately, there are other data types that can do this! If our data is stored as a <strong>NumPy array</strong>, we can use the usual <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, and <code class="docutils literal notranslate"><span class="pre">**</span></code> operators to add (or subtract, etc.) each value in the array with either one constant value or values in another NumPy array (of the same dimension).</p>
 <p>We use <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> to convert Python lists to NumPy arrays. Also, many of NumPy’s mathematical functions, such as <code class="docutils literal notranslate"><span class="pre">np.sqrt()</span></code>, can perform both scalar (number to number) and element-wise (array to array) operations. Here is an example that calculates the hypotenuse for 5 right triangles.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
@@ -313,7 +317,7 @@
 <h3>Loading Data Files<a class="headerlink" href="#loading-data-files" title="Permalink to this headline">¶</a></h3>
 <p>Most spreadsheets can be loaded into Python using the Pandas function <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>. A <strong>CSV (Comma Separated Value)</strong> file is a text file that represents a spreadsheet by separating rows with new lines and columns with commas. A <strong>TSV (Tab Separated Value)</strong> file separates columns with tabs and can be read with the same function. <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> outputs a <strong>DataFrame</strong>, a data structure in the Pandas package for tabular data. Each row and each column of a DataFrame is a <strong>Series</strong>, another data structure in Pandas.</p>
 <p>To read the CSV file <code class="docutils literal notranslate"><span class="pre">/path/to/file/filename.csv</span></code> and store the resulting DataFrame, we can write:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/path/to/file/filename.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -359,7 +363,7 @@
 </ul>
 <p>Here are some example usages of the functions. Except for the last example, two lines of code (marked by <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>) followed by one output means that the two lines produce the same output.</p>
 <p>Note that for this data, we can use row numbers for both <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc[]</span></code> because the row labels are numbers (see the output of <code class="docutils literal notranslate"><span class="pre">oxygen_solubility.index</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">oxygen_solubility</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
 
@@ -459,7 +463,7 @@
 <h3>Plt.plot()<a class="headerlink" href="#plt-plot" title="Permalink to this headline">¶</a></h3>
 <p>To graph a set of data, we can simply use the function <code class="docutils literal notranslate"><span class="pre">plt.plot(x,y)</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are replaced with our sets of x- and y-coordinates, respectively. These sets can be Python lists, NumPy arrays, or Pandas series.
 For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">water_height</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.4</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span>
@@ -482,7 +486,7 @@ For more line specification options, visit the <code class="docutils literal not
 <li><p><strong>Manual axis ranges</strong>: <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> will automatically scale the graph to your data, but you can alter axis ranges manually with <code class="docutils literal notranslate"><span class="pre">plt.xlim(left,</span> <span class="pre">right)</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.ylim(bottom,</span> <span class="pre">top)</span></code>.</p></li>
 </ul>
 <p>Here is an improvement of the above graph:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">water_height</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.4</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span>
@@ -503,7 +507,7 @@ For more line specification options, visit the <code class="docutils literal not
 <ol class="arabic simple">
 <li><p><strong>Labels only</strong>: Labels for data sets must be given as a tuple of strings. Matplotlib automatically labels data sets in the order in which they were plotted. For example:</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">hour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">trial1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.4</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span>
@@ -539,8 +543,8 @@ For more line specification options, visit the <code class="docutils literal not
 </pre></div>
 </div>
 <p>Now, instead of <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code>, and <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code> we must call <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">set_xlabel</span></code>, <code class="docutils literal notranslate"><span class="pre">set_ylabel</span></code>, <code class="docutils literal notranslate"><span class="pre">set_xlim</span></code>, or <code class="docutils literal notranslate"><span class="pre">set_ylim</span></code> on a specific axis. Here is an example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">t</span>
@@ -587,7 +591,7 @@ For more line specification options, visit the <code class="docutils literal not
 </ul>
 <p>To read the time column, we can use <code class="docutils literal notranslate"><span class="pre">ac.column_of_time(path,</span> <span class="pre">start,</span> <span class="pre">end)</span></code>.</p>
 <p>The outputs of both are Numpy arrays with units attached. For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="kn">as</span> <span class="nn">ac</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/datalog%206-14-2018.tsv&quot;</span>
 <span class="n">start</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -619,8 +623,8 @@ For more line specification options, visit the <code class="docutils literal not
 </li>
 </ol>
 <p>For both, <code class="docutils literal notranslate"><span class="pre">path</span></code> is the file path or URL of the file. Here’s an example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="kn">as</span> <span class="nn">ac</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/AguaClara/team_resources/master/Data/datalog%206-14-2018.xls&quot;</span>
 <span class="n">ac</span><span class="o">.</span><span class="n">plot_columns</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Influent Turbidity (NTU)&#39;</span><span class="p">,</span> <span class="s1">&#39;Effluent Turbidity ()&#39;</span><span class="p">],</span>
@@ -648,8 +652,8 @@ For more line specification options, visit the <code class="docutils literal not
 <div class="section" id="linear-regression">
 <h3>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress(x,</span> <span class="pre">y)</span></code> returns a list of the slope, intercept, r-value, p-value, and standard error of a linear regression on the data sets <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="kn">as</span> <span class="nn">stats</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv&#39;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -659,9 +663,9 @@ For more line specification options, visit the <code class="docutils literal not
 <span class="n">linreg</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">)</span>
 <span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span> <span class="o">=</span> <span class="n">linreg</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="n">slope</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Y-intercept:&quot;</span><span class="p">,</span> <span class="n">intercept</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;R-squared:&quot;</span><span class="p">,</span> <span class="n">r_value</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope:&quot;</span><span class="p">,</span> <span class="n">slope</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Y-intercept:&quot;</span><span class="p">,</span> <span class="n">intercept</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R-squared:&quot;</span><span class="p">,</span> <span class="n">r_value</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="n">Output</span><span class="p">:</span>
 <span class="n">Slope</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.17145454545454547</span>
@@ -670,7 +674,7 @@ For more line specification options, visit the <code class="docutils literal not
 </pre></div>
 </div>
 <p>We can use the calculated slope and intercept to plot the data with the regression line.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">temperature</span> <span class="o">*</span> <span class="n">slope</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">)</span>
@@ -684,9 +688,9 @@ For more line specification options, visit the <code class="docutils literal not
 <h3>Non-Linear Regression<a class="headerlink" href="#non-linear-regression" title="Permalink to this headline">¶</a></h3>
 <p>Judging from the graph, an exponential model might better fit the data. We can use <code class="docutils literal notranslate"><span class="pre">scipy.optimize.curve_fit(f,</span> <span class="pre">xdata,</span> <span class="pre">ydata)</span></code> for non-linear curve fitting, where <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">...)</span></code> is a model function that takes the independent variable as the first argument and fitting parameters as remaining arguments and returns the predicted value of the dependent variable. In other words, it is expected that <code class="docutils literal notranslate"><span class="pre">ydata</span> <span class="pre">≈</span> <span class="pre">f(xdata,</span> <span class="pre">...)</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">curve_fit()</span></code> itself has two outputs, an array of the optimal fitting parameters and an estimated covariance matrix. For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="kn">as</span> <span class="nn">opt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="k">as</span> <span class="nn">opt</span>
 
 <span class="k">def</span> <span class="nf">exp_function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
@@ -697,10 +701,10 @@ For more line specification options, visit the <code class="docutils literal not
 <span class="n">solubility</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Solubility (mg/L)&#39;</span><span class="p">]</span>
 
 <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">exp_function</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">solubility</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;a:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;b:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;c:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;f(x) =&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;* e^(-&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;* x) +&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c:&quot;</span><span class="p">,</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f(x) =&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;* e^(-&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s1">&#39;* x) +&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
 
 <span class="n">Output</span><span class="p">:</span>
 <span class="n">a</span><span class="p">:</span> <span class="mf">10.694801786694969</span>
@@ -710,7 +714,7 @@ For more line specification options, visit the <code class="docutils literal not
 </pre></div>
 </div>
 <p>Now our graph looks much better!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Solubility of O2 (mg/L)&#39;</span><span class="p">)</span>
@@ -720,6 +724,54 @@ For more line specification options, visit the <code class="docutils literal not
 </div>
 <img alt="../_images/nonlinear_regression.png" class="align-center" src="../_images/nonlinear_regression.png" />
 </div>
+</div>
+<div class="section" id="optimization">
+<h2>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">¶</a></h2>
+<p>From the SciPy package, particularly <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/signal.html">SciPy.signal</a>, we can use the function <code class="docutils literal notranslate"><span class="pre">scipy.signal.find_peaks()</span></code> for finding the peaks, i.e. local maxima or minima, in our data.</p>
+<p>Here are some of the arguments for <code class="docutils literal notranslate"><span class="pre">find_peaks()</span></code>. You can learn more in the function’s documentation page <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html">here</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> is a list or a 1D array</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> is the optional argument that indicates the required vertical distance to its neighboring samples</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distance</span></code> is the optional argument that provides the required minimal horizontal distance in samples between neighboring peaks. Distance must be a non-negative whole number.</p></li>
+</ul>
+</div></blockquote>
+<p>The  <code class="docutils literal notranslate"><span class="pre">find_peaks()</span></code> function returns an ndarray of the indices of peaks in <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<p>To maximize/minimize our data we would write:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">find_peaks</span>
+<span class="c1">#In this example we will use a threshold of 5 and a distance of 1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">18</span><span class="p">])</span>
+
+<span class="c1">#To maximize:</span>
+<span class="n">max_indexes</span> <span class="o">=</span> <span class="n">find_peaks</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">distance</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">x_points_max</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">max_indexes</span><span class="p">]</span>
+<span class="n">y_points_max</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">max_indexes</span><span class="p">]</span>
+
+<span class="c1">#To minimize:</span>
+<span class="n">min_indexes</span> <span class="o">=</span> <span class="n">find_peaks</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">distance</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">x_points_min</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">min_indexes</span><span class="p">]</span>
+<span class="n">y_points_min</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">min_indexes</span><span class="p">]</span>
+
+<span class="c1">#Plot our data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Solubility of O2 (mg/L)&#39;</span><span class="p">)</span>
+
+<span class="c1">#Plot the maximum points on the data plot as green stars</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_points_max</span><span class="p">,</span> <span class="n">y_points_max</span><span class="p">,</span> <span class="s1">&#39;g*&#39;</span><span class="p">)</span>
+
+<span class="c1">#Plot the minimum points on the data plot as red dots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_points_min</span><span class="p">,</span> <span class="n">y_points_min</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+<span class="c1">#Since the point at the first max index passes the threshold requirement it is plotted,</span>
+<span class="c1">#but the second max index does not pass the threshold requirement so it was NOT plotted.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/find_peaks.png" class="align-center" src="../_images/find_peaks.png" />
+<p>Now we have found how to optimize our data!</p>
+<p>You’re in the home stretch! Now complete <a class="reference external" href="https://colab.research.google.com/drive/1Z9f-5Nsv8ucmU93J-f5sQZ-uddYNHAJs?usp=sharing">Interactive Tutorial 4: Data Analysis in Python</a>.</p>
 </div>
 </div>
 
@@ -743,11 +795,19 @@ For more line specification options, visit the <code class="docutils literal not
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, AguaClara Cornell
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -758,7 +818,6 @@ For more line specification options, visit the <code class="docutils literal not
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

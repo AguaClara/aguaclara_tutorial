@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,22 +22,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Good Coding Practices" href="good-coding-practices.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
           
 
           
@@ -79,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -153,6 +155,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -191,7 +194,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Common Errors in Python</li>
     
@@ -225,7 +228,7 @@
 </ul>
 <p>For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">whille</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You have entered an even number.&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You have entered an even number.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Since the keyword <code class="docutils literal notranslate"><span class="pre">whille</span></code> is misspelled, the Python interpreter will give the following error. Python often points to the first character after the actual syntax error. As seen below, the error is in the <code class="docutils literal notranslate"><span class="pre">whille</span></code>, not the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
@@ -290,7 +293,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">[]</span></code> operator can only be called on objects that are “subscriptable”, meaning they are containers for other objects. Elements in lists, tuples, dictionaries, and strings can be accessed using this operator, but an integer is not compatible.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span>
 
-<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">callable</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">callable</span>
 </pre></div>
 </div>
 <p>Unlike in math, multiplication in Python must <em>always</em> be represented with the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator. If you accidentally use parentheses for multiplication, Python will interpret the value preceding the parentheses a function and tell you the object is not “callable”, i.e. it is not a function.</p>
@@ -306,7 +309,7 @@
 <p>This happens if you use a mixture of tabs and spaces when trying to indent your lines, or if you haven’t indented all lines in a block equally. Also, Python is whitespace-sensitive, so all lines in the body of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement or a <code class="docutils literal notranslate"><span class="pre">for</span></code> must be indented.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
 
 <span class="ne">IndentationError</span><span class="p">:</span> <span class="n">expected</span> <span class="n">an</span> <span class="n">indented</span> <span class="n">block</span>
 </pre></div>
@@ -323,7 +326,7 @@
 <li><p>Calling a function before it is defined</p></li>
 </ul>
 <p>For example, if instead of <code class="docutils literal notranslate"><span class="pre">print(&quot;hello&quot;)</span></code>, we forget the quotation marks for a string and write the following, we get a name error:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
 
 <span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;hello&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
 </pre></div>
@@ -369,11 +372,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, AguaClara Cornell
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -384,7 +395,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,22 +22,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Saving Markdown to PDF" href="saving-markdown-to-pdf.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Tutorial
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
           
 
           
@@ -79,6 +80,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -153,6 +155,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -191,7 +194,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Hydrogen Basics</li>
     
@@ -217,20 +220,20 @@
 <div class="section" id="how-do-i-write-python-code-in-a-md-file">
 <h2>How do I write Python code in a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file?<a class="headerlink" href="#how-do-i-write-python-code-in-a-md-file" title="Permalink to this headline">¶</a></h2>
 <p>Markdown has a wonderfully easy function that enables you to insert blocks of code written in dozens of common programming languages like Python directly into the file itself. To do this, simply type three consecutive backticks/backquotes, that key with the tilda that you probably seldomly use, followed by the name of the programming language you wish to write in. In our case, we’ll always use Python. On a new line, you can begin writing your block of code. Once you finish writing your code, make sure to end the block with three more backticks/backquotes on the line below your final line of code. You should end up with something that looks like this:</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="s">```python</span>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```python</span>
 <span class="n">myGreeting</span> <span class="o">=</span> <span class="s1">&#39;Welcome to AguaClara!&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">myGreeting</span><span class="p">)</span>
-<span class="s">```</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myGreeting</span><span class="p">)</span>
+<span class="sb">```</span>
 </pre></div>
 </div>
 <p>In your <code class="docutils literal notranslate"><span class="pre">.md</span></code> file, the resulting output will look something like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myGreeting</span> <span class="o">=</span> <span class="s1">&#39;Welcome to AguaClara!&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">myGreeting</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myGreeting</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now lets say I want to insert a block of plain text like this sentence after a block of code, but decide that I want to continue developing my code after the plain text. Instead of starting a new code block and adding everything I previously coded in the old block into my new code block, I can simply continue writing my code where I left off. For example, say I want to append something to <code class="docutils literal notranslate"><span class="pre">myGreeting</span></code> in a code block after this paragraph. All I have to do to implement this is as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myNewGreeting</span> <span class="o">=</span> <span class="n">myGreeting</span> <span class="o">+</span> <span class="s1">&#39; I hope you have a fun time!&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">myNewGreeting</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myNewGreeting</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>My variable assignments from my first code block are recognized in my second code block, meaning my assignments for <code class="docutils literal notranslate"><span class="pre">myGreeting</span></code> carries between the two blocks.</p>
@@ -292,11 +295,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, AguaClara Cornell
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -307,7 +318,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

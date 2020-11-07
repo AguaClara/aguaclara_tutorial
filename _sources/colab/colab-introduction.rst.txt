@@ -66,6 +66,7 @@ Colab notebooks from the `aguaclara_tutorial Github repository
 * `Interactive Tutorial 1: Markdown <https://colab.research.google.com/drive/15yYapOXlOLOEYMttz8v1Vb5odRkkJdhO>`_
 * `Interactive Tutorial 2: Python Basics <https://colab.research.google.com/drive/1Ksq6VuTxT6jBOfMbk1kDA2UWOPl-cy5v>`_
 * `Interactive Tutorial 3: Python Packages <https://colab.research.google.com/drive/1DRpfOKOPi3KacFYoHn3fF3PW3zjgvT2H>`_
+* `Interactive Tutorial 4: Data Analysis in Python <https://colab.research.google.com/drive/1Z9f-5Nsv8ucmU93J-f5sQZ-uddYNHAJs?usp=sharing>`_
 
 After opening an interactive tutorial in Colab,
 
