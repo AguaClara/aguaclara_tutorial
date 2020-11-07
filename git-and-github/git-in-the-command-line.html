@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Git in the Command Line &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GitHub Basics" href="github-basics.html" />
+    <link rel="prev" title="Git Basics" href="git-basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-basics.html">Git Basics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git in the Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-git">Installing Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-command-line">Using the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-git-in-the-command-line">Using Git in the command line</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cloning-a-repository">Cloning a Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulling">Pulling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pushing">Pushing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Git in the Command Line</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/git-and-github/git-in-the-command-line.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git-in-the-command-line">
+<span id="id1"></span><h1>Git in the Command Line<a class="headerlink" href="#git-in-the-command-line" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-git">
+<h2>What is Git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">¶</a></h2>
+<p>Git is a free and open source control system used for managing projects on Github. It offers many more commands and much more flexibility than Github’s online interface does.</p>
+<p><strong>Note:</strong> This tutorial assumes some knowledge of the basic commands of Github.  To refresh on those, refer to <a class="reference internal" href="github-basics.html#github-basics"><span class="std std-ref">GitHub Basics</span></a>.</p>
+</div>
+<div class="section" id="installing-git">
+<h2>Installing Git<a class="headerlink" href="#installing-git" title="Permalink to this headline">¶</a></h2>
+<p>To install Git, follow the instructions on <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">this page</a>.  For Windows, when installing Git through the installer, it is recommended you select the “Use Git from the Windows Command Prompt” option.  This will allow you to use all git commands through your terminal (CMD, PowerShell, Anaconda) rather than having to use Git’s personal terminal, Git Bash.</p>
+</div>
+<div class="section" id="using-the-command-line">
+<h2>Using the Command Line<a class="headerlink" href="#using-the-command-line" title="Permalink to this headline">¶</a></h2>
+<p>If you are already familiar with using the command prompt, feel free to skip this section.</p>
+<p>The command prompt/terminal is another way of interfacing with your computer, rather than the way you typically would use a computer by clicking different buttons.  While the terminal can be confusing at first, and requires some memorization of some commands, it provides a lot of power for using your computer in different ways.  Knowing how to use the terminal opens a lot of new doors and can ultimately make using your computer much easier and more accessible.</p>
+<p>Note that there are a few terminal options for Windows, such as CMD, Windows PowerShell, and the Anaconda Prompt.  This tutorial will use PowerShell, as it is most similar to the Mac terminal, and has all the necessary functionality.  However, all the other terminal options should accomplish everything you want, just with slightly different commands.</p>
+<p>To open your terminal in Windows, search for “PowerShell” in your programs.  On Mac, just search for “Terminal” in your programs.  A prompt like the one below should open up.</p>
+<img alt="../_images/git2.PNG" src="../_images/git2.PNG" />
+<p>Within this prompt, you will run commands by typing them directly into this prompt and hitting “Enter”.  The path listed before the where you type is the directory you are currently working in on your computer.  In order to run commands on a specific folder (such as your subteams repository) you will need to navigate to that folder.  The two commands to do this are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> (list): Lists all files in the current directory you are in</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> (change directory): changes your directory to the directory listed after cd</p></li>
+</ul>
+<p>For example, say I want to move to the “aguaclara_demo” repository to make some git changes.  First I use <code class="docutils literal notranslate"><span class="pre">ls</span></code> to see what files I can change to:</p>
+<img alt="../_images/git3.PNG" src="../_images/git3.PNG" />
+<p>I see the CS folder, so I use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">CS</span></code> to move to that folder.  From there I continue to use these commands until I find the folder I am looking for.</p>
+<p>If you ever need to move up one folder, you can use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> to accomplish this.  If you know the file path of the folder you want, you can also add that directly to move to your desired folder.  For example, I could move directly to the aguaclara_demo folder as shown below:</p>
+<img alt="../_images/git4.PNG" src="../_images/git4.PNG" />
+<p>One other important note for using the terminal is to always wait for the commands to finish running.  Sometimes when running a more complicated command, the computer will take a while to run, and the terminal will slowly show commands as they run.  In this case, make sure to wait until all the commands are done running, and you can see the blinking cursor before you type another command.  If you ever want to stop a command while it’s running, hold down the control button (or the command button on Mac) and hit “c”.</p>
+</div>
+<div class="section" id="using-git-in-the-command-line">
+<h2>Using Git in the command line<a class="headerlink" href="#using-git-in-the-command-line" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cloning-a-repository">
+<h3>Cloning a Repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this headline">¶</a></h3>
+<p>To clone a repository from GitHub to your local computer, you can use the command line to accomplish this task. Let’s all clone the aguaclara_tutorial repository so that you get the hang of it. First go to the <a class="reference external" href="https://github.com/AguaClara/aguaclara_tutorial">repository</a> and click on the green <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">or</span> <span class="pre">Download</span></code> button. Copy the URL shown.</p>
+<p>Then, navigate to your command line. Go to the folder you would like your repository to be stored on your local computer. Then, type in <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;INSERT</span> <span class="pre">URL&gt;</span></code>. Wait until the command line finishes cloning the repository. Then you’re done!</p>
+<p>Assuming you added Git to your command line during installation, you can run any Git command from the command line just by typing <code class="docutils literal notranslate"><span class="pre">git</span></code> adding a space, and writing the command.  For example, to use the simple command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>, which compares your local progress to the digital collection of Github, just type “git status” while in the folder you want to check.</p>
+<img alt="../_images/git5.PNG" src="../_images/git5.PNG" />
+</div>
+<div class="section" id="pulling">
+<h3>Pulling<a class="headerlink" href="#pulling" title="Permalink to this headline">¶</a></h3>
+<p>Most of what you will be doing with Git is pulling and pushing changes from Github.  To pull, just use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
+</div>
+<div class="section" id="pushing">
+<h3>Pushing<a class="headerlink" href="#pushing" title="Permalink to this headline">¶</a></h3>
+<p>To push your local changes, first stage your changes, then commit them to your branch, and then push them to the origin.</p>
+<ul class="simple">
+<li><p>To stage your changes, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-A</span></code> The -A ensures you add all of your files you have worked on.</p></li>
+</ul>
+<img alt="../_images/git7.PNG" src="../_images/git7.PNG" />
+<ul class="simple">
+<li><p>To commit your changes, use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Commit</span> <span class="pre">Message&quot;</span></code> and fill in the commit message with whatever you want to say about your commit.  Note that it is very important to include the -m and the commit message.  If you do not, Git will take you to an interface using the text editor Vim, which is very challenging to use.</p></li>
+</ul>
+<img alt="../_images/git8.PNG" src="../_images/git8.PNG" />
+<ul class="simple">
+<li><p>If you happen to accidentally type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> without the -m and the commit message and get taken to Vim, you can still write your commit message. Use your arrow keys to scroll up to the top line where it is blank. Write your commit message, then to exit out of this editor, press Escape. You cursor should appear in the bottom left corner. From there type <code class="docutils literal notranslate"><span class="pre">:x</span></code> and hit enter to save your commit message.</p></li>
+</ul>
+<img alt="../_images/git16.png" src="../_images/git16.png" />
+<ul class="simple">
+<li><p>Finally, to push your changes, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.  If you have any merge errors, the terminal will notify you and you can fix them manually.</p></li>
+</ul>
+<img alt="../_images/git9.PNG" src="../_images/git9.PNG" />
+<p><strong>Note:</strong> This tutorial only covers the basics of using Git.  For the full list of commands, <a class="reference external" href="https://git-scm.com/doc">view the full documentation here</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="github-basics.html" class="btn btn-neutral float-right" title="GitHub Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="git-basics.html" class="btn btn-neutral float-left" title="Git Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

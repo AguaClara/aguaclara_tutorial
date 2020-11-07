@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Common Issues &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transitioning from MATLAB" href="transitioning-from-matlab.html" />
+    <link rel="prev" title="Turbidimeters" href="../research/turbidimeters.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common Issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-command-not-found"><code class="docutils literal notranslate"><span class="pre">python</span></code> Command Not Found</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-else-statements-in-hydrogen">If-Else Statements in Hydrogen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linter-pycodestyle-and-teletype">Linter/Pycodestyle and Teletype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clone-error-using-https">Clone Error Using <code class="docutils literal notranslate"><span class="pre">https</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tell-me-who-you-are-github-error">Tell Me Who You Are GitHub Error</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Common Issues</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/other-tutorials/common-issues.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common-issues">
+<span id="id1"></span><h1>Common Issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="python-command-not-found">
+<span id="id2"></span><h2><code class="docutils literal notranslate"><span class="pre">python</span></code> Command Not Found<a class="headerlink" href="#python-command-not-found" title="Permalink to this headline">¶</a></h2>
+<p>If you get an error that the <code class="docutils literal notranslate"><span class="pre">python</span></code> command can’t be found in the command line, that means that your command line doesn’t know where your Python interpreter is.</p>
+<p>Follow the steps for <a class="reference external" href="https://www.pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/">Windows</a> or <a class="reference external" href="https://python-docs.readthedocs.io/en/latest/starting/install3/osx.html">MacOS</a> to reinstall Python and add it to your computer’s PATH.</p>
+</div>
+<div class="section" id="if-else-statements-in-hydrogen">
+<h2>If-Else Statements in Hydrogen<a class="headerlink" href="#if-else-statements-in-hydrogen" title="Permalink to this headline">¶</a></h2>
+<p>If you are using Hydrogen and are using <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>, <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Enter</span></code>, or <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run python code then you may have noticed an error when trying to use if-else statements similar to the one below.</p>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/IfElse1.png"><img alt="IfElseError" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/IfElse1.png" /></a>
+<p>I think this error comes from the fact that by running an if-else statement line-by-line the else is not properly associated with the if, leading to a syntax error. Fortunately the solution is simple, just highlight the entire block of code containing the if-else statement and then use <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>, <code class="docutils literal notranslate"><span class="pre">Cmnd</span> <span class="pre">+</span> <span class="pre">Enter</span></code>, or <code class="docutils literal notranslate"><span class="pre">Cntrl</span> <span class="pre">+</span> <span class="pre">Enter</span></code> to run it.</p>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/IfElse2.png"><img alt="IfElseSolution" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/IfElse2.png" /></a>
+</div>
+<div class="section" id="linter-pycodestyle-and-teletype">
+<h2>Linter/Pycodestyle and Teletype<a class="headerlink" href="#linter-pycodestyle-and-teletype" title="Permalink to this headline">¶</a></h2>
+<p>When editing Python code while using Teletype you may see an error similar to the one in the picture below. This error stems from something Teletype does when you are accessing a file that’s not on your computer.</p>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/LinterError.png"><img alt="LinterError" src="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/LinterError.png" /></a>
+<p>At the moment we don’t have a fix, so just continue working as usual and try not to get too annoyed at all the red boxes popping up.</p>
+</div>
+<div class="section" id="clone-error-using-https">
+<h2>Clone Error Using <code class="docutils literal notranslate"><span class="pre">https</span></code><a class="headerlink" href="#clone-error-using-https" title="Permalink to this headline">¶</a></h2>
+<p>For some users, when attempting to clone a repository with a URL that contains <code class="docutils literal notranslate"><span class="pre">https</span></code>, they are given the error shown below. The current fix to this issue is to simply remove the “s” from <code class="docutils literal notranslate"><span class="pre">https</span></code> in the URL, and simply use <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p>
+<p>[[/Images/httpsCloneError.png|httpsCloneError]]</p>
+</div>
+<div class="section" id="tell-me-who-you-are-github-error">
+<h2>Tell Me Who You Are GitHub Error<a class="headerlink" href="#tell-me-who-you-are-github-error" title="Permalink to this headline">¶</a></h2>
+<p>When some people commit their changes to a file using Atom’s built in GitHub, they get a red error box that asks them who they are. The error message is shown below:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*** Please tell me who you are.
+
+Run
+
+  git config --global user.email &quot;you@example.com&quot;
+  git config --global user.name &quot;Your Name&quot;
+
+to set your account&#39;s default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got &#39;atomuser@WIN-VU79AHTD4PV.(none)&#39;)
+</pre></div>
+</div>
+<p>To fix this error there are two different methods. One of them requires installing Git onto your computer. Since this is laborious, and takes time, we’ll use a method that requires writing a <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> file.</p>
+<p>To write a <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> file, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Open TextEdit for Mac or Notepad for Windows.</p></li>
+<li><p>Write the following lines in TextEdit or Notepad:</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[user]
+      name = &quot;YOUR GITHUB USERNAME&quot;
+      email = &quot;YOUR GITHUB EMAIL&quot;
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Save the file with the name <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> to your desktop. When you do this, you will likely save it as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">.rtf</span></code> file. Locate the file on your desktop, and right click to get the file info and remove <code class="docutils literal notranslate"><span class="pre">.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">.rtf</span></code>, or any other extension that it may have saved as.</p></li>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">C:\Users\YOUR_COMPUTERS_USERNAME</span></code> for Windows or <code class="docutils literal notranslate"><span class="pre">/Users/YOUR_COMPUTERS_USERNAME</span></code> for Mac. These can be found in your File Navigator or Finder under your local drive.</p></li>
+<li><p>Move the <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> file to this location.</p></li>
+<li><p>Quit and restart Atom. You should now be able to commit without running into the error above.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transitioning-from-matlab.html" class="btn btn-neutral float-right" title="Transitioning from MATLAB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../research/turbidimeters.html" class="btn btn-neutral float-left" title="Turbidimeters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

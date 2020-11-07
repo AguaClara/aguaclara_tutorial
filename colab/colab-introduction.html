@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Google Colaboratory Introduction &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Collaboration in Colab" href="colab-collaboration.html" />
+    <link rel="prev" title="Welcome to the AguaClara Tutorial Wiki!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Google Colaboratory Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#colab-notebooks">Colab Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-notebooks">Saving Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#completing-the-aguaclara-tutorial-in-colab">Completing the AguaClara Tutorial in Colab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Google Colaboratory Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/colab/colab-introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-colaboratory-introduction">
+<span id="colab-introduction"></span><h1>Google Colaboratory Introduction<a class="headerlink" href="#google-colaboratory-introduction" title="Permalink to this headline">¶</a></h1>
+<img alt="https://colab.research.google.com/img/colab_favicon.ico" class="align-center" src="https://colab.research.google.com/img/colab_favicon.ico" />
+<p><a class="reference external" href="https://colab.research.google.com">Google Colaboratory, or Colab</a>, is a
+cloud-based environment for writing documents with live code, visualizations,
+and narrative text. For those who are familiar with Jupyter notebooks,
+Colab notebooks are the same, including the .ipynb extension. Unlike
+Jupyter and Atom (our previous editor for code and reports), however, Colab
+requires no setup on your computer! It also provides a large amount of free
+computing power and easy document sharing.</p>
+<div class="section" id="colab-notebooks">
+<h2>Colab Notebooks<a class="headerlink" href="#colab-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>A Colab notebook consists of <strong>text cells</strong>, <strong>code cells</strong>, and <strong>outputs of
+code cells</strong>.</p>
+<ol class="arabic">
+<li><p>Text cells are written in <strong>Markdown</strong>, a markup language we’ll learn about in the next section. This means they can contain formatted text, images, HTML, LaTeX, and more.</p></li>
+<li><p>Code cells are written in Python. We can also insert a system/terminal command by prefixing a line with !, like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>print(&quot;This is Python code.&quot;)
+!echo This is a system command.
+</pre></div>
+</div>
+</li>
+<li><p>Outputs of code cells appear below their corresponding cell. They can include text, graphics, and information about errors that occurred while executing the code.</p></li>
+</ol>
+<p>For a more in-depth explanation of a Colab notebook and an example, see the
+first 3 sections of Google Colab’s <a class="reference external" href="https://colab.research.google.com/notebooks/basic_features_overview.ipynb">Overview of Colaboratory Features</a>.</p>
+<a class="reference external image-reference" href="https://colab.research.google.com/notebooks/basic_features_overview.ipynb"><img alt="../_images/Overview-of-Colab.png" class="align-center" src="../_images/Overview-of-Colab.png" style="width: 700px;" /></a>
+</div>
+<div class="section" id="saving-notebooks">
+<h2>Saving Notebooks<a class="headerlink" href="#saving-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>Any notebook created through Colab is automatically saved to your Google Drive.
+You’ll find it in a golden colored folder named Colab Notebooks.</p>
+<a class="reference internal image-reference" href="../_images/Colab-Drive-Folder.png"><img alt="../_images/Colab-Drive-Folder.png" class="align-center" src="../_images/Colab-Drive-Folder.png" style="width: 500px;" /></a>
+<p>If you open a notebook that you do not have permission to edit, you can save an
+editable copy to your Google Drive by clicking <strong>File &gt; Save a copy to Drive…</strong>.
+For any notebook, you can also save it in an already existing Github repository
+by clicking <strong>File &gt; Save a copy in Github…</strong>.</p>
+<a class="reference internal image-reference" href="../_images/Colab-Saving.png"><img alt="../_images/Colab-Saving.png" class="align-center" src="../_images/Colab-Saving.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="completing-the-aguaclara-tutorial-in-colab">
+<h2>Completing the AguaClara Tutorial in Colab<a class="headerlink" href="#completing-the-aguaclara-tutorial-in-colab" title="Permalink to this headline">¶</a></h2>
+<p>To complete the AguaClara Tutorial assignment, you will need to open several
+Colab notebooks from the <a class="reference external" href="https://github.com/AguaClara/aguaclara_tutorial">aguaclara_tutorial Github repository</a>. They are also linked below:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/15yYapOXlOLOEYMttz8v1Vb5odRkkJdhO">Interactive Tutorial 1: Markdown</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1Ksq6VuTxT6jBOfMbk1kDA2UWOPl-cy5v">Interactive Tutorial 2: Python Basics</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1DRpfOKOPi3KacFYoHn3fF3PW3zjgvT2H">Interactive Tutorial 3: Python Packages</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1Z9f-5Nsv8ucmU93J-f5sQZ-uddYNHAJs?usp=sharing">Interactive Tutorial 4: Data Analysis in Python</a></p></li>
+</ul>
+<p>After opening an interactive tutorial in Colab,</p>
+<ol class="arabic simple">
+<li><p>Save a copy of the notebook to your Drive and prefix the file name with your netID.</p>
+<ul class="simple">
+<li><p>For example, <code class="docutils literal notranslate"><span class="pre">Interactive-Tutorial-1-Markdown.ipynb</span></code> becomes <code class="docutils literal notranslate"><span class="pre">netID-Interactive-Tutorial-1-Markdown.ipynb</span></code></p></li>
+</ul>
+</li>
+<li><p>Follow the instructions in the notebook, using the next sections of this tutorial wiki to guide you.</p></li>
+<li><p>Click the “Share” icon in the top left corner of the page and get a shareable link for your Colab notebook.</p></li>
+<li><p>Email links for all of your finished interactive tutorials to <a class="reference external" href="mailto:aguaclara&#37;&#52;&#48;cornell&#46;edu">aguaclara<span>&#64;</span>cornell<span>&#46;</span>edu</a>.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="colab-collaboration.html" class="btn btn-neutral float-right" title="Collaboration in Colab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to the AguaClara Tutorial Wiki!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

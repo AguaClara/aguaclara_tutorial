@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Turbidimeters &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common Issues" href="../other-tutorials/common-issues.html" />
+    <link rel="prev" title="ProCoDA" href="procoda.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="procoda.html">ProCoDA</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Turbidimeters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#turbidimeter-calibration">Turbidimeter Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#turbidimeter-cleaning">Turbidimeter Cleaning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cleaning-procedure">Cleaning Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dessicant-replacement">Dessicant Replacement</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Turbidimeters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/research/turbidimeters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="turbidimeters">
+<span id="id1"></span><h1>Turbidimeters<a class="headerlink" href="#turbidimeters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="turbidimeter-calibration">
+<h2>Turbidimeter Calibration<a class="headerlink" href="#turbidimeter-calibration" title="Permalink to this headline">¶</a></h2>
+<p>Turbidimeters need to be recalibrated every two months. The calibration kit is located in the AguaClara Lab in Hollister Hall. Perform the following steps to successfully calibrate turbidimeters.</p>
+<ol class="arabic simple">
+<li><p>Get the turbidity standards kit from the AguaClara lab in the basement of Hollister Hall.</p></li>
+<li><p>Wipe down the standards vials with Kim wipes if they have any dust on the outsides of them (the turbidimeters measure turbidity by shining a beam through the vial, so dust, dirt, or scratches messes that up).</p></li>
+<li><p>Turn on the power strip, and plug in the turbidimeters as necessary.</p></li>
+<li><p>Turn on the first turbidimeter (pick one).</p></li>
+<li><p>Remove the top of the turbidimeter (unhook the horizontal pins holding the top of the turbidimeter in place and slide the top of the turbidimeter up and out).</p></li>
+<li><p>Hit the ‘mode’ button to start calibration.</p></li>
+<li><p>When the screen displays ‘1000’ next to ‘config’, slide the 1000 NTU standard vial into the top of the turbidimeter and hit the ‘enter’ button (a leftward pointing arrow). Wait as the screen counts down to zero.</p></li>
+<li><p>When the countdown is done, the screen will flash ‘10’ next to ‘config’. Put the 1000 NTU vial back in the standards kit and slide the 10 NTU standard vial into the turbidimeter. Hit ‘enter’ again and wait for the screen to count down to zero.</p></li>
+<li><p>Repeat for the 0.2 NTU sample as above. Now the turbidimeter is calibrated.</p></li>
+<li><p>Turn off the turbidimeter. Repeat steps 4-9 for the remaining turbidimeters.</p></li>
+</ol>
+</div>
+<div class="section" id="turbidimeter-cleaning">
+<h2>Turbidimeter Cleaning<a class="headerlink" href="#turbidimeter-cleaning" title="Permalink to this headline">¶</a></h2>
+<p>Turbidimeters should be emptied and washed out before every experiment. Even if the reading displays 0.0 NTU, there may be clay or flocs that have collected in the top or bottom of the turbidimeter vials. These deposits can interfere with your experimental results, as they can be stirred up again by changes in flow rate.</p>
+<div class="section" id="cleaning-procedure">
+<h3>Cleaning Procedure<a class="headerlink" href="#cleaning-procedure" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Close the valves adjacent to the turbidimeter inlet and outlet so that water does not leak into it while cleaning.</p></li>
+</ol>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb1.jpeg"><img alt="../_images/CleanTurb1.jpeg" class="align-center" src="../_images/CleanTurb1.jpeg" style="height: 300px;" /></a>
+<ol class="arabic simple">
+<li><p>Unlock and take out the black cylinder on top of the turbidimeter.</p></li>
+</ol>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb2.jpeg"><img alt="../_images/CleanTurb2.jpeg" class="align-center" src="../_images/CleanTurb2.jpeg" style="height: 300px;" /></a>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb3.jpeg"><img alt="../_images/CleanTurb3.jpeg" class="align-center" src="../_images/CleanTurb3.jpeg" style="height: 300px;" /></a>
+<ol class="arabic simple">
+<li><p>Unscrew the glass vial, empty and rinse it, then fill it with clean water. Tap water is sufficient. If there is still buildup or the glass is dirty wrap two Kim wipes around a brush until it is covered and use that to scrub the inside of the vial.</p></li>
+</ol>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb4.jpeg"><img alt="../_images/CleanTurb4.jpeg" class="align-center" src="../_images/CleanTurb4.jpeg" style="height: 300px;" /></a>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb5.jpeg"><img alt="../_images/CleanTurb5.jpeg" class="align-center" src="../_images/CleanTurb5.jpeg" style="height: 300px;" /></a>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb6.jpeg"><img alt="../_images/CleanTurb6.jpeg" class="align-center" src="../_images/CleanTurb6.jpeg" style="height: 300px;" /></a>
+<ol class="arabic simple">
+<li><p>Tightly screw the vial back in, wipe it with a Kim wipe free from water droplets or fingerprints, and then lock the black cylinder back into the turbidimeter.</p></li>
+</ol>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb7.jpeg"><img alt="../_images/CleanTurb7.jpeg" class="align-center" src="../_images/CleanTurb7.jpeg" style="height: 300px;" /></a>
+<a class="reference external image-reference" href="https://github.com/AguaClara/aguaclara_tutorial/wiki/Images/Turbidimeter-Maintenance/CleanTurb8.png"><img alt="../_images/CleanTurb8.png" class="align-center" src="../_images/CleanTurb8.png" style="height: 300px;" /></a>
+<ol class="arabic simple">
+<li><p>If you used the white screws on the outflow turbidimeter tubes to block water passage, remember to unscrew them.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="dessicant-replacement">
+<h2>Dessicant Replacement<a class="headerlink" href="#dessicant-replacement" title="Permalink to this headline">¶</a></h2>
+<p>Turbidimeters need a desiccant to keep their vials dry. A humid chamber can cause condensation on vials, which leads to false readings. If a turbidimeter reads “dessicant”, its dessicant needs to be replaced or regenerated.</p>
+<ul class="simple">
+<li><p>Remove the four silver screws at each corner of the top of the turbidimeter.</p></li>
+<li><p>Lift off the entire top of the turbidimeter, including vial and display, to uncover the dessicant compartment.</p></li>
+<li><p>Replace the dessicant or regenerate it by heating overnight it in an oven at 100ºF.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../other-tutorials/common-issues.html" class="btn btn-neutral float-right" title="Common Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="procoda.html" class="btn btn-neutral float-left" title="ProCoDA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

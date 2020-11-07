@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Git and GitHub Introduction &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Git Basics" href="git-basics.html" />
+    <link rel="prev" title="Running Python in the Command Line" href="../python/python-in-command-line.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git and GitHub Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-are-git-and-github">What are Git and GitHub?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git-is-not-github">Git is not Github!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/procoda.html">ProCoDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Git and GitHub Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/git-and-github/git-and-github-introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git-and-github-introduction">
+<span id="id1"></span><h1>Git and GitHub Introduction<a class="headerlink" href="#git-and-github-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-are-git-and-github">
+<h2>What are Git and GitHub?<a class="headerlink" href="#what-are-git-and-github" title="Permalink to this headline">¶</a></h2>
+<p><strong>Git and Github are software tools for storing files in the cloud, keeping track of their changes, and organizing tasks among team members.</strong></p>
+<p>Much of the work done in AguaClara is collaborative, so we need to be able to share our work across different members and subteams. To accomplish this, we use two popular technologies: Git and Github.</p>
+<p><strong>Git</strong> is a Version Control System (VCS). Git allows you to have fine control over the changes you make to your files and revert any changes if necessary. Also, it allows you to make different “versions” of your files and edit them separately from each other.</p>
+<p><strong>Github</strong> is a cloud storage service for the files that you maintain with Git. The basic functions of Git on your computer can also be used online at <a class="reference external" href="http://github.com">github.com</a>. Additionally, Github offers collaborative tools for managing tasks within a subteam, discussing issues and problems, and accepting edits to your files. It also can host wikis, like the one you’re reading right now!</p>
+<div class="section" id="git-is-not-github">
+<h3>Git is not Github!<a class="headerlink" href="#git-is-not-github" title="Permalink to this headline">¶</a></h3>
+<p><strong>Just like how a jellyfish is not a fish.</strong></p>
+<p>A common misconception is that Git and Github are the same thing because of the similar names. However, there are key differences between the two software tools:</p>
+<ul class="simple">
+<li><p><strong>Git</strong> lives on your computer’s command line and gives you a lot of control over managing the files that you edit.</p></li>
+<li><p><strong>Github</strong> is an online service that mainly stores the files that you manage; it doesn’t offer as much control over them, though.</p></li>
+<li><p><strong>Git</strong> uploads and synchronizes the files you edit on your computer with files stored online on Github.</p></li>
+<li><p><strong>Github</strong> works as its own website to offer project management tools that complement your files.</p></li>
+</ul>
+<p>It’s important to make this distinction between Git and Github to fully understand how each software tool works on its own.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="git-basics.html" class="btn btn-neutral float-right" title="Git Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../python/python-in-command-line.html" class="btn btn-neutral float-left" title="Running Python in the Command Line" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

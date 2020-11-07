@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ProCoDA &mdash; AguaClara Tutorial v0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Turbidimeters" href="turbidimeters.html" />
+    <link rel="prev" title="GitHub Basics" href="../git-and-github/github-basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> AguaClara Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Google Colaboratory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-introduction.html">Google Colaboratory Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-collaboration.html">Collaboration in Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colab/colab-and-github.html">Colab and Github Workflow</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Markdown</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-introduction.html">Markdown Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/markdown-basics.html">Markdown Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-introduction.html">Python Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-basics.html">Python Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-packages.html">Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/data-analysis.html">Data Analysis in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-common-errors.html">Common Errors in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/good-coding-practices.html">Good Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-in-command-line.html">Running Python in the Command Line</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Git and GitHub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-and-github-introduction.html">Git and GitHub Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-basics.html">Git Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/git-in-the-command-line.html">Git in the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git-and-github/github-basics.html">GitHub Basics</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ProCoDA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#important-parts-of-procoda-imagine-it-as-a-washing-machine">Important Parts of ProCoDA (Imagine it as a washing machine)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-notes">General Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-a-turbidimeter">Connect a turbidimeter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-a-sensor">Connect a sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-a-pump">Connecting a pump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-save-data-from-a-test">How to save data from a test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-set-up-a-pump-for-a-test">How to set up a pump for a test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-set-up-a-timed-test">How to set up a timed test</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="turbidimeters.html">Turbidimeters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/common-issues.html">Common Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/transitioning-from-matlab.html">Transitioning from MATLAB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/contributing-to-the-tutorial.html">Contributing to the Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archived</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-software-introduction.html">Installing Software Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-macos.html">Installing on MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-on-windows.html">Installing on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing-software/installing-interactive-tutorials.html">Installing Interactive Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/atom-and-hydrogen-introduction.html">Atom and Hydrogen Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html">GitHub for Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#how-to-use-github-in-atom">How to use GitHub in Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/github-for-atom.html#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/teletype-basics.html">Teletype Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/hydrogen-basics.html">Hydrogen Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atom/saving-markdown-to-pdf.html">Saving Markdown to PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../other-tutorials/video-tutorials.html">Video Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ProCoDA</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/research/procoda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="procoda">
+<span id="id1"></span><h1>ProCoDA<a class="headerlink" href="#procoda" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="important-parts-of-procoda-imagine-it-as-a-washing-machine">
+<h2>Important Parts of ProCoDA (Imagine it as a washing machine)<a class="headerlink" href="#important-parts-of-procoda-imagine-it-as-a-washing-machine" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Setpoints: There are two types of setpoints in ProCoDA, constants and variables. These are the numbers thatProCoDA uses to run any of its functions (These are things like warm or cold water)</p></li>
+<li><p>States: States are the different ways ProCoDA can run (These are the parts of a laundry cycle like wash, rinse, spin)</p></li>
+<li><p>Rules: These control when ProCoDA changes between states (These are like going from rinse to spin)</p></li>
+</ul>
+</div>
+<div class="section" id="general-notes">
+<h2>General Notes<a class="headerlink" href="#general-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>When you input a value that it a decimal it will convert it into a form without the decimal (i.e. 0.3 will become 300m)</p></li>
+<li><p>The required set points give the order of the set points and the set points must be in the same order when you input them</p></li>
+<li><p>All added set points should be added after ON and OFF, always add setpoint after because it will mess with the selected set points</p></li>
+</ul>
+</div>
+<div class="section" id="connect-a-turbidimeter">
+<h2>Connect a turbidimeter<a class="headerlink" href="#connect-a-turbidimeter" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Edit Rules</p></li>
+<li><p>Add a set point for the unitID</p></li>
+<li><p>Set the value to usually 1</p></li>
+<li><p>Add a second setpoint the turbidity</p></li>
+<li><p>Change the turbidity from a constant to a variable</p></li>
+<li><p>Now more options will appear click on the folder which will open a window</p></li>
+<li><p>Click on HF Turbidimeter</p></li>
+<li><p>Then choose the com that the turbidimeter is connected to the computer with</p></li>
+<li><p>Select the required set points(If you don’t know you can always try all of them and see which one has the correct value displayed, if it is not the right one the value will be -999)</p></li>
+</ul>
+</div>
+<div class="section" id="connect-a-sensor">
+<h2>Connect a sensor<a class="headerlink" href="#connect-a-sensor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Go to Configuration → Click on the volts symbol</p></li>
+<li><p>Make sure your sensor is plugged into the procoda box</p></li>
+<li><p>Click insert sensor and change the channel to the correct port</p></li>
+<li><p>Then open the folder button and click the type of sensor you have and what you want it to record (i.e. cm of water for headloss)</p></li>
+<li><p>Name it sensor</p></li>
+<li><p>To zero the sensor, click the zero button</p></li>
+</ul>
+</div>
+<div class="section" id="connecting-a-pump">
+<h2>Connecting a pump<a class="headerlink" href="#connecting-a-pump" title="Permalink to this headline">¶</a></h2>
+<p>There are many ways to connect a pump, but I am going to stick to one pump head, since adding more is fairly straight-forward. I will also be doing it with the code that uses mL/s and tubing ID, but you can use the other codes as well, as long as you have the required set points.</p>
+<ul class="simple">
+<li><p>Add a constant set point with the mL/s that you want the pump to run at</p></li>
+<li><p>Add a constant set point with the tubing size that you will be using</p></li>
+<li><p>Add a variable set point</p></li>
+<li><p>Click on the folder and open the peristaltic folder and choose the right code you want to use for this tutorial it is single head pump control (mL per second, Tubing Size)</p></li>
+<li><p>Select the set points</p></li>
+<li><p>It should display the rpm of the pump as a decimal in the value</p></li>
+<li><p>You can calculate the rpm of the pump using the auto tutorial for peristaltic pumps on the wiki</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-save-data-from-a-test">
+<h2>How to save data from a test<a class="headerlink" href="#how-to-save-data-from-a-test" title="Permalink to this headline">¶</a></h2>
+<p>Under Datalog directory path, click on the folder, and choose where you want data to be stored. Procoda will store information from all variables and sensors there.</p>
+</div>
+<div class="section" id="how-to-set-up-a-pump-for-a-test">
+<h2>How to set up a pump for a test<a class="headerlink" href="#how-to-set-up-a-pump-for-a-test" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Edit Rules</p></li>
+<li><p>Click Rules and Outputs</p></li>
+<li><p>Add a new state</p></li>
+<li><p>Click on Outputs</p></li>
+<li><p>Look at which pump port it is connected to</p></li>
+<li><p>Turn pump on/off to on</p></li>
+<li><p>Turn pump cw/ccw on or off depending on which way you want it to turn</p></li>
+<li><p>For pump speed choose the variable set point you created when you connected the pump</p></li>
+<li><p>To test it go to process operation and change the state to the state you added</p></li>
+<li><p>If your pump is not running at the speed ProCoDA displays you can calibrate it using the pump calibration button</p></li>
+</ol>
+</div>
+<div class="section" id="how-to-set-up-a-timed-test">
+<h2>How to set up a timed test<a class="headerlink" href="#how-to-set-up-a-timed-test" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Edit Rules</p></li>
+<li><p>Create a constant set point with the value as the number of SECONDS you want to test to go on for</p></li>
+<li><p>Go to Rules &amp; Outputs</p></li>
+<li><p>Click on the state that runs the test then click on rules</p></li>
+<li><p>Then it is basically like a computer program</p></li>
+<li><p>If elapsed time in current state&gt; run time of test</p></li>
+<li><p>Then go to next state usually it is OFF</p></li>
+<li><p>You can also do many other conditional statements with this function like have pumps turn off based on pressure and such</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="turbidimeters.html" class="btn btn-neutral float-right" title="Turbidimeters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../git-and-github/github-basics.html" class="btn btn-neutral float-left" title="GitHub Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, AguaClara Cornell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
