@@ -3,7 +3,7 @@ name: generate-docs
 on:
   push:
     branches:
-      - 'hs649/gh-actions'
+      - 'master'
 
 jobs:
   sphinx-build:
@@ -16,10 +16,9 @@ jobs:
         with:
           python-version: '3.5'
 
-      - name: Install Sphinx and sphinx_rtd_theme
+      - name: Install sphinx_rtd_theme
         run: |
           python -m pip install --upgrade pip
-          pip install Sphinx
           pip install sphinx_rtd_theme
 
       - name: Build Sphinx documentation
@@ -32,6 +31,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/build/html/
-          publish_branch: mock-gh-pages
+          publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
