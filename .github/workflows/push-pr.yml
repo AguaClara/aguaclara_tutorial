@@ -3,7 +3,7 @@ name: Push or Pull Request
 on: [push, pull_request]
 
 jobs:
-  sphinx-build:
+  setup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,11 +18,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install sphinx_rtd_theme
 
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
       - name: Build Sphinx documentation
         run: |
           cd docs
           make html
 
+  check:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Run html-proofer
         uses: chabad360/htmlproofer@master
         with:

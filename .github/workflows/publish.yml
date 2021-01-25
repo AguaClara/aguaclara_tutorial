@@ -1,4 +1,4 @@
-name: generate-docs
+name: Publish Documentation
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'master'
 
 jobs:
-  sphinx-build:
+  publish_docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
           directory: docs/build/html
           arguments: --allow_hash_href --file_ignore "docs/build/html/search.html"
 
-      - name: Deploy
+      - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
