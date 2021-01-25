@@ -1,9 +1,6 @@
-name: generate-docs
+name: Push or Pull Request
 
-on:
-  push:
-    branches:
-      - 'master'
+on: [push, pull-request]
 
 jobs:
   sphinx-build:
@@ -31,12 +28,3 @@ jobs:
         with:
           directory: docs/build/html
           arguments: --allow_hash_href --file_ignore "docs/build/html/search.html"
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/build/html/
-          publish_branch: gh-pages
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
