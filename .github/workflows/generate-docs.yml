@@ -7,7 +7,7 @@ on:
 
 jobs:
   sphinx-build:
-    runs-on: [ubuntu-latest, macOS-latest]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
