@@ -261,7 +261,7 @@ outputs the following graph:
 Figure Formatting
 ^^^^^^^^^^^^^^^^^
 However, there are several issues with this graph. Discrete data should plotted with data symbols, not a line. Also, both axes should be labeled, and these labels should include units when appropriate.
-(For more guidelines, see the Figure Requirements section of the `Report Template <https://github.com/AguaClara/team_resources/blob/master/Report_Template.md>`_.) Fortunately, Matlotlib contains features for the formatting we need.
+(For more guidelines, see the Figure Requirements section of the latest report template in the `team resources repository <https://github.com/AguaClara/team_resources>`_.) Fortunately, Matlotlib contains features for the formatting we need.
 
 - **Line and marker style**: These can be specified as additional inputs to the ``plt.plot()`` function. For example, ``plt.plot(hour, water_height, 'ro')`` would plot our previous graph with red (r) circular (o) markers and no connecting lines.
   For more line specification options, visit the ``plt.plot()`` `documentation page <https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.plot.html>`_.

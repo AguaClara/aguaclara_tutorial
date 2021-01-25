@@ -1,4 +1,4 @@
-name: generate-docs
+name: Publish Documentation
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'master'
 
 jobs:
-  sphinx-build:
+  publish_docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +14,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.5'
+          python-version: '3.9'
 
       - name: Install sphinx_rtd_theme
         run: |
@@ -26,7 +26,13 @@ jobs:
           cd docs
           make html
 
-      - name: Deploy
+      - name: Run html-proofer
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: docs/build/html
+          arguments: --allow_hash_href --file_ignore "docs/build/html/search.html"
+
+      - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -24,7 +24,7 @@ Click on the Teletype icon (a radio tower) in the bottom right. You should see t
 
 When you use Teletype for the first time, you'll need to give it access to your Github account:
 
-#. Open the `teletype.atom.io/login <teletype.atom.io/login>`_ link. Log in to
+#. Open the `teletype.atom.io/login <https://teletype.atom.io/login>`_ link. Log in to
    Github if you haven't already.
 #. Click "Copy token", paste it in Teletype, then click "Sign in".
 
