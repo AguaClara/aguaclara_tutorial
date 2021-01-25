@@ -10,7 +10,7 @@ What is Python?
 
 .. image:: https://www.python.org/static/opengraph-icon-200x200.png
    :target: https://www.python.org/static/opengraph-icon-200x200.png
-   :alt:
+   :alt: Python Logo
 
 
 **A powerful, yet easy to use, programming language.**
