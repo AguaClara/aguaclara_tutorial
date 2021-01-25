@@ -27,7 +27,7 @@ When you first want to access a repository locally you'll have to clone it. By c
 Pull
 ----
 
-A pull request takes the most recent version of whatever branch you're in and downloads it onto your computer. Basically the chef double checks the recipe for his sandwich and updates it accordingly. Then from there he can modify the sandwich from the most recent recipe in order to minimize conflicts.
+A pull takes the most recent version of whatever branch you're in and downloads it onto your computer. Basically the chef double checks the recipe for his sandwich and updates it accordingly. Then from there he can modify the sandwich from the most recent recipe in order to minimize conflicts.
 
 Commit
 ------
@@ -37,7 +37,7 @@ Once the chef creates a new sandwich and taste tests it, she'll want to save the
 Push
 ----
 
-Now that the chef has written down the recipe, she will want to update the restaurant's recipe. Updating the branch on GitHub is accomplished through a push. Once a push occurs, other chefs will be able to pull request the most updated recipe so they can try the delicious sandwich and modify it themselves.
+Now that the chef has written down the recipe, she will want to update the restaurant's recipe. Updating the branch on GitHub is accomplished through a push. Once a push occurs, other chefs will be able to pull the most updated recipe so they can try the delicious sandwich and modify it themselves.
 
 Merge Conflicts
 ---------------

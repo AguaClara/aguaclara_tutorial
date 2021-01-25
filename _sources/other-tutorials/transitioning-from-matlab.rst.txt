@@ -99,6 +99,6 @@ External Resources
 ==================
 
 
-* `Numpy for MATLAB users <https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html>`_
+* `Numpy for MATLAB users <https://numpy.org/doc/stable/user/numpy-for-matlab-users.html>`_
 * `Stepping from MATLAB to Python <http://stsievert.com/blog/2015/09/01/matlab-to-python/>`_
 * `Python for MATLAB Users, UC Boulder <http://researchcomputing.github.io/meetup_fall_2014/pdfs/fall2014_meetup13_python_matlab.pdf>`_
