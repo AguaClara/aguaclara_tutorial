@@ -88,7 +88,7 @@ The unit registry also includes constants, which you can also find in the ``agua
 Sig-Figs
 ~~~~~~~~
 
-When you perform a calculation in Python and print the result, the output tends to contain an unnecessary number of decimal places. The ``set_fig_figs(n)`` function allows you to display only ``n`` significant figures when you print a value that has units. Note that this is only for printing; the actual value stored in Python still has its original precision.
+When you perform a calculation in Python and print the result, the output tends to contain an unnecessary number of decimal places. The ``set_sig_figs(n)`` function allows you to display only ``n`` significant figures when you print a value that has units. Note that this is only for printing; the actual value stored in Python still has its original precision.
 
 .. code-block:: python
 
