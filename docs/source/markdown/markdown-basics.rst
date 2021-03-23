@@ -259,4 +259,4 @@ LaTeX formatted equations won't show up on this wiki page, but try pasting this 
 
 Please refer to `this LaTeX tutorial <https://www.latex-tutorial.com/tutorials/amsmath/>`_ to learn how to write equations.
 
-**Now, you're ready to complete Interactive Tutorial 1: Markdown** `here <https://colab.research.google.com/drive/15yYapOXlOLOEYMttz8v1Vb5odRkkJdhO>`_.
+**Now, you're ready to complete Interactive Tutorial 1: Markdown** `here <https://colab.research.google.com/drive/19hswY4aTi7U624TKQGukdmXqtKENFBvO?usp=sharing>`_.

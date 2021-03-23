@@ -105,4 +105,4 @@ Packages for Data Analysis
 --------------------------
 There are several other packages important to Python programming, such as Matplotlib and Pandas, but we will cover these in :ref:`data-analysis`.
 
-So take a breath for now! Then dive into **Interactive Tutorial 3: Python Packages** `here <https://colab.research.google.com/drive/1DRpfOKOPi3KacFYoHn3fF3PW3zjgvT2H>`_.
+So take a breath for now! Then dive into **Interactive Tutorial 3: Python Packages** `here <https://colab.research.google.com/drive/1A0QPENOXXhVq8T4PL6sD0XCUCQ2LHmj5?usp=sharing>`_.

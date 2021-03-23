@@ -278,4 +278,4 @@ Functions
    >>> parity(40)
    40 is even.
 
-**Now, complete Interactive Tutorial 2: Python Basics** `here <https://colab.research.google.com/drive/1Ksq6VuTxT6jBOfMbk1kDA2UWOPl-cy5v>`_.
+**Now, complete Interactive Tutorial 2: Python Basics** `here <https://colab.research.google.com/drive/1HHg4HgPntj2e8OOTpWU3rYTFljx5o8Sr?usp=sharing>`_.
