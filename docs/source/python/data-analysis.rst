@@ -456,7 +456,7 @@ Linear Regression
     import pandas as pd
     import scipy.stats as stats
 
-    path = 'https://raw.githubusercontent.com/AguaClara/aguaclara_tutorial/research-docs/data/Oxygen%20Solubility.tsv'
+    path = 'https://github.com/AguaClara/aguaclara_tutorial/blob/292b9fe46af64c34789bc923cd17ddd499ec7a8b/data/Oxygen%20Solubility.tsv'
     df = pd.read_csv(path, sep='\t')
     temperature = df['Temperature (degC)']
     solubility = df['Solubility (mg/L)']
