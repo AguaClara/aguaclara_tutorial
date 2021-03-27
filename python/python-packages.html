@@ -281,7 +281,7 @@
 </div>
 <div class="section" id="sig-figs">
 <h3>Sig-Figs<a class="headerlink" href="#sig-figs" title="Permalink to this headline">¶</a></h3>
-<p>When you perform a calculation in Python and print the result, the output tends to contain an unnecessary number of decimal places. The <code class="docutils literal notranslate"><span class="pre">set_fig_figs(n)</span></code> function allows you to display only <code class="docutils literal notranslate"><span class="pre">n</span></code> significant figures when you print a value that has units. Note that this is only for printing; the actual value stored in Python still has its original precision.</p>
+<p>When you perform a calculation in Python and print the result, the output tends to contain an unnecessary number of decimal places. The <code class="docutils literal notranslate"><span class="pre">set_sig_figs(n)</span></code> function allows you to display only <code class="docutils literal notranslate"><span class="pre">n</span></code> significant figures when you print a value that has units. Note that this is only for printing; the actual value stored in Python still has its original precision.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ac</span><span class="o">.</span><span class="n">set_sig_figs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
