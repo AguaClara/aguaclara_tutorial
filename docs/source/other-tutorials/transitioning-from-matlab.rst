@@ -101,4 +101,4 @@ External Resources
 
 * `Numpy for MATLAB users <https://numpy.org/doc/stable/user/numpy-for-matlab-users.html>`_
 * `Stepping from MATLAB to Python <http://stsievert.com/blog/2015/09/01/matlab-to-python/>`_
-* `Python for MATLAB Users, UC Boulder <http://researchcomputing.github.io/meetup_fall_2014/pdfs/fall2014_meetup13_python_matlab.pdf>`_
+* `Python for MATLAB Users, UC Boulder <https://csdms.colorado.edu/w/images/Thomas_Hauser_CSDMS_2013_annual_meeting.pdf>`_
