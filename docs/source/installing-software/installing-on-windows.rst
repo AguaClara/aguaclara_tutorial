@@ -17,7 +17,7 @@ Atom & Sync Settings
 #. In the Atom ``sync-settings`` settings, paste your generated token in Personal Access Token.
 #. Set the Gist Id to ``8cb1fed2721e41873e9bcb315c804579``.
 
-   * This synchronizes your Atom settings and plug-ins with the required `AguaClara Atom configuration <https://gist.github.com/ethan92429/8cb1fed2721e41873e9bcb315c804579>`_.
+   * This synchronizes your Atom settings and plug-ins with the required AguaClara Atom configuration.
 
 #. Restart Atom. ``sync-settings`` will do its job in the background. You can check on its progress in File > Settings > Packages.
 
